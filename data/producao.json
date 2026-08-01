@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "alem-do-riso",
+    "titulo": "Além do riso",
+    "subtitulo": "Reflexões sobre o humor em toda parte",
+    "autores": "Elias Thomé Saliba; Thais Leão Vieira; Leandro Antônio de Almeida (orgs.)",
+    "tipo": "Livro",
+    "ano": "Exemplo",
+    "editora": "LiberArs",
+    "imagem": "alem-do-riso.jpg",
+    "resumo": "Obra coletiva dedicada a diferentes abordagens históricas e culturais do humor. Dados editoriais provisórios para demonstração do layout.",
+    "temas": [
+      "Humor",
+      "Cultura",
+      "História"
+    ]
+  },
+  {
+    "slug": "cacadores-de-baleias",
+    "titulo": "Caçadores de Baleias",
+    "subtitulo": "",
+    "autores": "Wellington Castellucci Júnior",
+    "tipo": "Livro",
+    "ano": "Exemplo",
+    "editora": "Cosac",
+    "imagem": "cacadores-de-baleias.jpg",
+    "resumo": "Página demonstrativa para apresentar capa, autoria, resumo, dados editoriais, temas e links relacionados.",
+    "temas": [
+      "História marítima",
+      "Trabalho",
+      "Cultura"
+    ]
+  },
+  {
+    "slug": "pugnas-renhidas",
+    "titulo": "Pugnas Renhidas",
+    "subtitulo": "Futebol, cultura e sociedade em Salvador (1901–1924)",
+    "autores": "Henrique Sena dos Santos",
+    "tipo": "Livro",
+    "ano": "Exemplo",
+    "editora": "EDUFBA",
+    "imagem": "pugnas-renhidas.jpg",
+    "resumo": "Estudo sobre futebol, cultura e sociedade em Salvador nas primeiras décadas do século XX.",
+    "temas": [
+      "Futebol",
+      "Salvador",
+      "Cultura"
+    ]
+  },
+  {
+    "slug": "encruzilhadas-da-liberdade",
+    "titulo": "Encruzilhadas da Liberdade",
+    "subtitulo": "",
+    "autores": "Walter Fraga Filho",
+    "tipo": "Livro",
+    "ano": "Exemplo",
+    "editora": "Editora da Unicamp",
+    "imagem": "encruzilhadas-da-liberdade.jpg",
+    "resumo": "Obra de referência sobre experiências de liberdade e o pós-abolição. Dados complementares provisórios para demonstração.",
+    "temas": [
+      "Escravidão",
+      "Liberdade",
+      "Pós-abolição"
+    ]
+  },
+  {
+    "slug": "longe-muito-longe",
+    "titulo": "Longe, muito longe",
+    "subtitulo": "Manoel Benício dos Passos, um capoeira no ativismo do pós-abolição",
+    "autores": "Walter Fraga",
+    "tipo": "Livro",
+    "ano": "Exemplo",
+    "editora": "Zahar",
+    "imagem": "longe-muito-longe.jpg",
+    "resumo": "Biografia histórica de Manoel Benício dos Passos, articulando capoeira, ativismo e pós-abolição.",
+    "temas": [
+      "Capoeira",
+      "Pós-abolição",
+      "Biografia"
+    ]
+  },
+  {
+    "slug": "artigo-exemplo-1",
+    "titulo": "Ensino de História, memória e território",
+    "subtitulo": "",
+    "autores": "Camila Santiago",
+    "tipo": "Artigo",
+    "ano": "2024",
+    "editora": "Revista de História — exemplo",
+    "imagem": "camila-santiago.jpg",
+    "resumo": "Artigo fictício incluído apenas para demonstrar o funcionamento dos filtros e do catálogo.",
+    "temas": [
+      "Ensino de História",
+      "Memória",
+      "Território"
+    ]
+  },
+  {
+    "slug": "artigo-exemplo-2",
+    "titulo": "Patrimônio, arquivo e experiências do Recôncavo",
+    "subtitulo": "",
+    "autores": "Isabel Reis",
+    "tipo": "Artigo",
+    "ano": "2022",
+    "editora": "Revista acadêmica — exemplo",
+    "imagem": "galeria-2.svg",
+    "resumo": "Artigo fictício para demonstrar a inclusão de artigos na Produção Intelectual.",
+    "temas": [
+      "Patrimônio",
+      "Arquivo",
+      "Recôncavo"
+    ]
+  }
+]

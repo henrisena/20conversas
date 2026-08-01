@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O curso em números | Memorial 20 anos</title>
+<link rel="stylesheet" href="../style.css?v=41">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a>
+  <button class="menu-button" aria-label="Abrir menu">☰</button>
+  <nav class="menu">
+    <a href="../index.html">Início</a><a href="curso.html">O curso</a><a href="linha-do-tempo.html">Linha do tempo</a>
+    <a href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a>
+    <a href="depoimentos.html">Depoimentos</a><a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a>
+  </nav>
+</header>
+
+<section class="numbers-hero">
+  <div class="numbers-hero-inner">
+    <p class="eyebrow">Memorial 20 anos</p>
+    <h1>O curso em números</h1>
+    <p>Uma leitura quantitativa da trajetória da Licenciatura em História da UFRB, construída a partir de relatórios do SIGAA emitidos em 28 de julho de 2026.</p>
+    <div class="numbers-hero-actions">
+      <a href="#panorama" class="button numbers-light">Ver panorama</a>
+      <a href="#turmas" class="button-outline numbers-outline">Explorar turmas</a>
+    </div>
+  </div>
+</section>
+
+<main class="numbers-main">
+  <nav class="course-subnav numbers-subnav" aria-label="Seções de O curso">
+    <a href="curso.html">Apresentação</a>
+    <a class="active" href="curso-em-numeros.html">O curso em números</a>
+  </nav>
+
+  <section id="panorama" class="numbers-section">
+    <div class="numbers-heading">
+      <div><p class="eyebrow">Panorama</p><h2>Uma comunidade construída ao longo de vinte anos</h2></div>
+      <p>Os dados reúnem as turmas dos turnos matutino e noturno. Ingressantes, concluintes e estudantes ativos são indicadores distintos e não devem ser somados como se representassem situações excludentes em uma mesma data.</p>
+    </div>
+
+    <div class="metric-grid">
+      <article class="metric-card metric-primary"><span class="metric-number" data-count="1437">0</span><strong>ingressantes</strong><p>Registros de ingresso entre 2006 e 2026.</p></article>
+      <article class="metric-card"><span class="metric-number" data-count="480">0</span><strong>egressos</strong><p>Estudantes que concluíram a licenciatura.</p></article>
+      <article class="metric-card"><span class="metric-number" data-count="323">0</span><strong>estudantes ativos</strong><p>Vínculos ativos em 28 de julho de 2026.</p></article>
+      <article class="metric-card"><span class="metric-number" data-count="20">0</span><strong>anos de história</strong><p>Da primeira turma, em 2006.2, ao ano de 2026.</p></article>
+    </div>
+  </section>
+
+  <section class="numbers-section split-insights">
+    <article class="insight-panel">
+      <p class="eyebrow">Marcos</p>
+      <h2>Datas que ajudam a contar essa história</h2>
+      <div class="milestone-list">
+        <div><span>2006.2</span><p>Primeira turma registrada nos relatórios.</p></div>
+        <div><span>2008.2</span><p>Primeiro ingresso regular do turno noturno.</p></div>
+        <div><span>2010</span><p>Primeiras conclusões registradas.</p></div>
+        <div><span>2026.1</span><p>47 novos ingressantes nos dois turnos.</p></div>
+      </div>
+    </article>
+    <article class="insight-panel turn-panel">
+      <div class="panel-title-row">
+        <div><p class="eyebrow">Ingressos por turno</p><h2>Matutino e noturno</h2></div>
+        <span class="data-badge">2006–2026</span>
+      </div>
+      <div class="turn-visual">
+        <div class="donut" role="img" aria-label="59,4% dos ingressos no noturno e 40,6% no matutino">
+          <div class="donut-center"><strong>1.437</strong><span>ingressos</span></div>
+        </div>
+        <div class="turn-legend">
+          <div><i class="legend-dot night"></i><span>Noturno</span><strong>853</strong><small>59,4%</small></div>
+          <div><i class="legend-dot morning"></i><span>Matutino</span><strong>584</strong><small>40,6%</small></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="numbers-section chart-section">
+    <div class="numbers-heading">
+      <div><p class="eyebrow">Evolução</p><h2>Ingressantes por ano</h2></div>
+      <p>Passe o cursor ou toque nas barras para ver os valores. Anos com entradas isoladas ou sem turma regular também aparecem no conjunto.</p>
+    </div>
+    <div class="chart-card">
+      <div class="chart-toolbar">
+        <button class="chart-mode active" data-chart="ingressos">Ingressantes</button>
+        <button class="chart-mode" data-chart="ativos">Ativos por ano de ingresso</button>
+      </div>
+      <div id="annualChart" class="bar-chart" aria-label="Gráfico de barras"></div>
+      <div id="chartCaption" class="chart-caption"></div>
+    </div>
+  </section>
+
+  <section id="turmas" class="numbers-section">
+    <div class="numbers-heading">
+      <div><p class="eyebrow">Exploração</p><h2>As turmas de ingresso</h2></div>
+      <p>Use os filtros para observar a distribuição das entradas por período e turno. O quadro não expõe nomes, matrículas, e-mails ou telefones.</p>
+    </div>
+
+    <div class="cohort-explorer">
+      <div class="cohort-controls">
+        <label>Turno
+          <select id="turnFilter">
+            <option value="todos">Todos</option>
+            <option value="MT">Matutino</option>
+            <option value="N">Noturno</option>
+          </select>
+        </label>
+        <label>Período
+          <select id="periodFilter">
+            <option value="todos">Todos os anos</option>
+          </select>
+        </label>
+        <div class="cohort-summary"><span id="cohortCount">0</span><small>turmas exibidas</small></div>
+        <div class="cohort-summary"><span id="cohortStudents">0</span><small>ingressantes</small></div>
+      </div>
+      <div id="cohortRows" class="cohort-rows"></div>
+    </div>
+  </section>
+
+  <section class="numbers-section active-history-section">
+    <div class="active-history-copy">
+      <p class="eyebrow">Permanência</p>
+      <h2>Diferentes gerações ainda convivem no curso</h2>
+      <p>Em julho de 2026, a lista de ativos reunia estudantes com anos de ingresso entre 2008 e 2026. O gráfico permite observar essa sobreposição geracional sem identificar individualmente os discentes.</p>
+      <div class="fact-strip">
+        <div><strong>2008</strong><span>ano de ingresso mais antigo entre os ativos</span></div>
+        <div><strong>46</strong><span>ativos com ingresso em 2026</span></div>
+        <div><strong>31</strong><span>ativos com ingresso em 2019</span></div>
+      </div>
+    </div>
+    <div class="mini-generation-chart" id="generationChart"></div>
+  </section>
+
+
+  
+  <section id="percurso" class="numbers-section cohort-path-section">
+    <div class="numbers-heading">
+      <div>
+        <p class="eyebrow">Do ingresso à conclusão</p>
+        <h2>O percurso das turmas</h2>
+      </div>
+      <p>Escolha entre todas as 50 turmas registradas para acompanhar o ciclo acadêmico: quantos ingressaram, quantos concluíram, quantos permanecem ativos e quantos aparecem em outras situações.</p>
+    </div>
+
+    <div class="cohort-path-controls">
+      <label>
+        Turma
+        <select id="pathCohort"></select>
+      </label>
+      <label>
+        Turno
+        <select id="pathShift">
+          <option value="todos">Todos</option>
+          <option value="Matutino">Matutino</option>
+          <option value="Noturno">Noturno</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="cohort-path-layout">
+      <article class="cohort-path-card">
+        <div class="path-card-head">
+          <div>
+            <span class="path-label">Turma selecionada</span>
+            <h3 id="pathTitle">2008.2 · Noturno</h3>
+          </div>
+          <span id="pathRate" class="path-rate">64,1% concluíram</span>
+        </div>
+        <div id="pathBars" class="path-bars" aria-live="polite"></div>
+      </article>
+
+      <aside class="path-insight">
+        <p class="eyebrow">Leitura histórica</p>
+        <h3 id="pathInsightTitle">Uma geração de expansão</h3>
+        <p id="pathInsightText">Esta turma integra o momento de consolidação do turno noturno e permite observar como ingresso, permanência e conclusão se distribuem ao longo do tempo.</p>
+        <div class="path-mini-stats">
+          <div><strong id="pathTotal">39</strong><span>ingressantes</span></div>
+          <div><strong id="pathGraduates">25</strong><span>egressos</span></div>
+          <div><strong id="pathActive">1</strong><span>ativos</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="egressos" class="numbers-section graduates-section">
+    <div class="numbers-heading">
+      <div>
+        <p class="eyebrow">A formação das gerações</p>
+        <h2>Quando o curso formou seus egressos?</h2>
+      </div>
+      <p>Explore a distribuição anual das conclusões e acompanhe o crescimento acumulado do número de egressos ao longo dos 20 anos.</p>
+    </div>
+
+    <div class="graduate-mode-row">
+      <button class="graduate-mode active" data-mode="annual">Conclusões por ano</button>
+      <button class="graduate-mode" data-mode="cumulative">Total acumulado</button>
+    </div>
+
+    <div class="graduates-layout">
+      <div class="graduates-chart-wrap">
+        <div id="graduatesChart" class="graduates-chart" aria-live="polite"></div>
+      </div>
+      <aside class="graduate-summary">
+        <p class="eyebrow">Destaques</p>
+        <div class="graduate-summary-grid">
+          <div><span>Primeiras conclusões</span><strong>2010</strong></div>
+          <div><span>Total de egressos</span><strong>480</strong></div>
+          <div><span>Ano de maior formação</span><strong id="peakYear">2014</strong></div>
+          <div><span>Maior número anual</span><strong id="peakValue">46</strong></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="comparar" class="numbers-section compare-section">
+    <div class="numbers-heading">
+      <div>
+        <p class="eyebrow">Gerações lado a lado</p>
+        <h2>Compare duas turmas</h2>
+      </div>
+      <p>Selecione duas turmas para comparar ingresso, conclusão, permanência, outras situações e percentual de formação.</p>
+    </div>
+
+    <div class="compare-controls">
+      <label>
+        Primeira turma
+        <select id="compareA"></select>
+      </label>
+      <span class="compare-versus">×</span>
+      <label>
+        Segunda turma
+        <select id="compareB"></select>
+      </label>
+    </div>
+
+    <div id="compareCards" class="compare-cards" aria-live="polite"></div>
+  </section>
+
+  <section id="tempo" class="numbers-section time-slider-section">
+    <div class="numbers-heading">
+      <div>
+        <p class="eyebrow">O curso através do tempo</p>
+        <h2>Em que momento da história estamos?</h2>
+      </div>
+      <p>Mova o controle para observar, de forma aproximada, quantos ingressantes, egressos e gerações já faziam parte do curso em cada ano.</p>
+    </div>
+
+    <div class="time-control-card">
+      <label for="historyYear">Ano selecionado: <strong id="historyYearLabel">2016</strong></label>
+      <input id="historyYear" type="range" min="2006" max="2026" value="2016" step="1">
+      <div class="time-range-labels"><span>2006</span><span>2026</span></div>
+      <div id="historySnapshot" class="history-snapshot"></div>
+    </div>
+  </section>
+
+
+  <section id="encontre" class="numbers-section people-section">
+    <div class="numbers-heading">
+      <div>
+        <p class="eyebrow">Pessoas dentro dos números</p>
+        <h2>Encontre sua história no curso</h2>
+      </div>
+      <p>Este protótipo utiliza dez nomes para testar a experiência: cinco egressos e cinco estudantes ativos. Digite um nome ou escolha uma pessoa da lista para visualizar sua trajetória em perspectiva.</p>
+    </div>
+
+    <div class="people-search-panel">
+      <div class="people-search-box">
+        <label for="peopleSearch">Digite o nome</label>
+        <div class="people-search-input">
+          <input id="peopleSearch" type="search" autocomplete="off" placeholder="Ex.: Camila Vieira Guerreiro">
+          <button id="clearPeopleSearch" type="button" aria-label="Limpar busca">×</button>
+        </div>
+        <div class="people-filter-row" role="group" aria-label="Filtrar pessoas">
+          <button class="people-filter active" data-status="todos">Todos</button>
+          <button class="people-filter" data-status="egresso">Egressos</button>
+          <button class="people-filter" data-status="ativo">Ativos</button>
+        </div>
+        <div id="peopleResults" class="people-results" aria-live="polite"></div>
+      </div>
+
+      <article id="personPerspective" class="person-perspective empty">
+        <div class="person-empty-state">
+          <span class="person-orbit">20</span>
+          <h3>Escolha um nome</h3>
+          <p>A trajetória individual aparecerá aqui, relacionada à história geral do curso.</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="prototype-note"><strong>Protótipo:</strong> os dez nomes foram inseridos apenas para testar o recurso. Uma versão pública definitiva deve utilizar autorização específica dos participantes e não deve expor matrícula, IRA, e-mail ou telefone.</p>
+  </section>
+
+  <section class="numbers-method">
+    <h2>Sobre os dados</h2>
+    <p>Este painel utiliza quatro relatórios do Sistema de Gestão das Atividades Acadêmicas (SIGAA): alunos concluídos, alunos ativos, ingressos/retenções/egressos de 2006 a 2016 e de 2016 a 2026. A contagem de ingressantes elimina a duplicação da coorte 2016.1, presente nos dois relatórios de intervalo. Os indicadores representam o estado da base na data de emissão dos documentos.</p>
+    <p><strong>Privacidade:</strong> o painel apresenta somente dados agregados. Informações pessoais presentes nos relatórios originais não são publicadas.</p>
+  </section>
+</main>
+
+<footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer>
+<script src="../script.js?v=41"></script>
+<script src="../curso-numeros.js?v=14"></script>
+</body>
+</html>

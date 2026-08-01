@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mapa dos egressos | Memorial 20 anos</title><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="../style.css?v=41"></head><body><header class="topbar">
+  <a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a>
+  <button class="menu-button" aria-label="Abrir menu">☰</button>
+  <nav class="menu">
+    <a href="../index.html">Início</a><a href="curso.html">O curso</a><a href="linha-do-tempo.html">Linha do tempo</a>
+    <a href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a>
+    <a href="depoimentos.html">Depoimentos</a><a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a>
+  </nav>
+</header><section class="page-hero hero-mapa"><div class="page-hero-inner"><p class="eyebrow">Memorial 20 anos</p><h1>Mapa dos egressos</h1><p>Conheça os lugares, trajetórias acadêmicas e atuações profissionais de quem passou pelo curso de História da UFRB.</p></div></section><main class="content">
+<section class="map-toolbar">
+  <div class="filters">
+    <button class="filter-btn active" data-filter="todos">Todos</button><button class="filter-btn" data-filter="ensino">Ensino</button><button class="filter-btn" data-filter="pesquisa">Pesquisa</button><button class="filter-btn" data-filter="extensao">Extensão</button><button class="filter-btn" data-filter="egressos">Egressos</button><button class="filter-btn" data-filter="professores">Professores</button>
+  </div>
+  <div class="year-control"><label>Linha do tempo: 2006–<strong id="yearLabel">2026</strong></label><input id="yearRange" type="range" min="2006" max="2026" value="2026"></div>
+</section>
+<section class="map-page-layout"><div id="mapFull" class="map-full"></div><aside class="map-detail" id="mapDetail"></aside></section>
+</main><footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer><script src="../script.js?v=41"></script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script>initFullMap();</script></body></html>

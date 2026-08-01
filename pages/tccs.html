@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa discente | Memorial 20 anos</title>
+  <link rel="stylesheet" href="../style.css?v=41">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a>
+  <button class="menu-button" aria-label="Abrir menu">☰</button>
+  <nav class="menu">
+    <a href="../index.html">Início</a><a href="curso.html">O curso</a><a href="linha-do-tempo.html">Linha do tempo</a>
+    <a href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a class="active" href="tccs.html">Pesquisa discente</a>
+    <a href="depoimentos.html">Depoimentos</a><a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a>
+  </nav>
+</header>
+
+<section class="page-hero hero-tccs">
+  <div class="page-hero-inner">
+    <p class="eyebrow">Produção discente</p>
+    <h1>Pesquisa discente</h1>
+    <p>Trabalhos de conclusão de curso e iniciações científicas produzidos por estudantes da Licenciatura em História da UFRB.</p>
+  </div>
+</section>
+
+<main class="content tcc-content">
+  <section class="tcc-intro research-intro">
+    <div>
+      <p class="eyebrow">Pesquisa discente</p>
+      <h2>Trabalhos de conclusão de curso e iniciações científicas</h2>
+    </div>
+    <p>Este espaço reúne pesquisas desenvolvidas por estudantes ao longo da trajetória do curso. Consulte os TCCs defendidos e as iniciações científicas concluídas, com dados recuperados dos currículos Lattes de docentes.</p>
+  </section>
+
+  <div class="research-tabs" role="tablist" aria-label="Tipos de pesquisa discente">
+    <button class="active" type="button" role="tab" aria-selected="true" data-research-tab="tcc">TCCs do curso</button>
+    <button type="button" role="tab" aria-selected="false" data-research-tab="ic">Iniciação científica</button>
+  </div>
+
+  <div data-research-panel="tcc">
+
+<section class="tcc-stats" aria-label="Números gerais">
+    <article><strong id="tccTotal">—</strong><span>TCCs identificados</span></article>
+    <article><strong id="tccYears">—</strong><span>Anos com registros</span></article>
+    <article><strong id="tccAdvisors">—</strong><span>Orientadores</span></article>
+    <article><strong id="tccPeak">—</strong><span>Ano com mais defesas</span></article>
+  </section>
+
+  <section class="tcc-section">
+    <div class="section-title split-title">
+      <div><p class="eyebrow">Quando pesquisamos</p><h2>Linha do tempo das defesas</h2></div>
+      <p>Clique em um ano para abrir os trabalhos daquele período.</p>
+    </div>
+    <div class="tcc-year-chart" id="tccYearChart" aria-label="TCCs por ano"></div>
+    <div class="tcc-year-detail" id="tccYearDetail" aria-live="polite"></div>
+  </section>
+
+  <section class="tcc-section tcc-cloud-section">
+    <div class="section-title split-title">
+      <div><p class="eyebrow">Quais palavras atravessam as pesquisas?</p><h2>Nuvem de palavras</h2></div>
+      <p>O tamanho indica frequência nos títulos. Clique em uma palavra para filtrar o catálogo.</p>
+    </div>
+    <div class="tcc-word-cloud" id="tccWordCloud"></div>
+    <button class="text-button" id="clearWord" hidden>Limpar palavra selecionada</button>
+  </section>
+
+  <section class="tcc-section">
+    <div class="section-title split-title">
+      <div><p class="eyebrow">Caminhos de leitura</p><h2>Percursos temáticos</h2></div>
+      <p>Categorias editoriais inferidas pelas palavras dos títulos, criadas apenas para facilitar a navegação.</p>
+    </div>
+    <div class="tcc-theme-grid" id="tccThemeGrid"></div>
+  </section>
+
+  <section class="tcc-section tcc-catalog-section" id="catalogo">
+    <div class="section-title split-title">
+      <div><p class="eyebrow">Consulte a base</p><h2>Catálogo completo</h2></div>
+      <p id="resultsCount">Carregando registros…</p>
+    </div>
+    <div class="tcc-toolbar">
+      <label class="tcc-search"><span>Busca livre</span><input id="tccSearch" type="search" placeholder="Autor, título ou orientador…"></label>
+      <label><span>Ano</span><select id="tccYear"><option value="">Todos os anos</option></select></label>
+      <label><span>Orientador</span><select id="tccAdvisor"><option value="">Todos os orientadores</option></select></label>
+      <label><span>Tema</span><select id="tccTheme"><option value="">Todos os temas</option></select></label>
+      <button class="button-outline tcc-clear" id="tccClear">Limpar filtros</button>
+    </div>
+    <div class="active-filter-row" id="activeFilters"></div>
+    <div class="tcc-table-wrap">
+      <table class="tcc-table">
+        <thead><tr><th>Ano</th><th>Autor(a)</th><th>Título do TCC</th><th>Orientador(a)</th></tr></thead>
+        <tbody id="tccTableBody"></tbody>
+      </table>
+    </div>
+    <div class="tcc-pagination">
+      <button id="tccPrev" class="button-outline">Anterior</button>
+      <span id="tccPageInfo"></span>
+      <button id="tccNext" class="button-outline">Próxima</button>
+    </div>
+  </section>
+
+  <section class="tcc-method-note">
+    <p class="eyebrow">Nota metodológica</p>
+    <h2>Sobre esta base</h2>
+    <p>Os registros foram extraídos exclusivamente da seção <em>“Orientações e supervisões concluídas — Trabalho de conclusão de curso de graduação”</em> dos currículos Lattes de 22 docentes. Foram mantidos os trabalhos vinculados à UFRB. A ausência de um trabalho pode decorrer de currículos incompletos ou não atualizados.</p>
+    <p>Os percursos temáticos e a nuvem de palavras são formas editoriais de leitura dos títulos. Não correspondem a palavras-chave oficiais nem substituem o conteúdo integral dos trabalhos.</p>
+  </section>
+
+  </div>
+
+  <div data-research-panel="ic" hidden>
+    <section class="tcc-stats" aria-label="Números da iniciação científica">
+      <article><strong id="icTotal">—</strong><span>orientações de IC</span></article>
+      <article><strong id="icStudents">—</strong><span>estudantes identificados</span></article>
+      <article><strong id="icYears">—</strong><span>período abrangido</span></article>
+      <article><strong id="icAdvisors">—</strong><span>orientadores</span></article>
+    </section>
+
+    <section class="tcc-section">
+      <div class="section-title split-title">
+        <div><p class="eyebrow">Trajetória da pesquisa</p><h2>Iniciações científicas por ano</h2></div>
+        <p>Clique em um ano para filtrar o catálogo de pesquisas concluídas.</p>
+      </div>
+      <div class="tcc-year-chart" id="icYearChart" aria-label="Iniciações científicas por ano"></div>
+    </section>
+
+
+    <section class="tcc-section tcc-cloud-section">
+      <div class="section-title split-title">
+        <div><p class="eyebrow">Quais palavras atravessam as pesquisas?</p><h2>Nuvem de palavras das iniciações científicas</h2></div>
+        <p>O tamanho indica frequência nos títulos. Clique em uma palavra para filtrar o catálogo.</p>
+      </div>
+      <div class="tcc-word-cloud" id="icWordCloud"></div>
+      <button class="text-button" id="icClearWord" hidden>Limpar palavra selecionada</button>
+    </section>
+
+    <section class="tcc-section">
+      <div class="section-title split-title">
+        <div><p class="eyebrow">Caminhos de leitura</p><h2>Temas das iniciações científicas</h2></div>
+        <p>Categorias editoriais inferidas a partir dos títulos, criadas para facilitar a exploração da base.</p>
+      </div>
+      <div class="tcc-theme-grid" id="icThemeGrid"></div>
+    </section>
+
+    <section class="tcc-section funding-section">
+      <div class="section-title split-title">
+        <div><p class="eyebrow">Apoio à pesquisa</p><h2>Financiamento informado nos currículos</h2></div>
+        <p>A ausência de indicação no Lattes não significa necessariamente que a pesquisa tenha sido realizada sem bolsa ou apoio institucional.</p>
+      </div>
+      <div class="funding-chart" id="icFunding"></div>
+    </section>
+
+    <section class="tcc-section tcc-catalog-section" id="catalogo-ic">
+      <div class="section-title split-title">
+        <div><p class="eyebrow">Consulte a base</p><h2>Catálogo de iniciações científicas</h2></div>
+        <p id="icResultsCount">Carregando registros…</p>
+      </div>
+      <div class="tcc-toolbar ic-toolbar">
+        <label class="tcc-search"><span>Busca livre</span><input id="icSearch" type="search" placeholder="Estudante, título, orientador ou financiamento…"></label>
+        <label><span>Ano</span><select id="icYear"><option value="">Todos os anos</option></select></label>
+        <label><span>Orientador</span><select id="icAdvisor"><option value="">Todos os orientadores</option></select></label>
+        <label><span>Financiamento</span><select id="icAgency"><option value="">Todas as fontes</option></select></label>
+        <label><span>Tema</span><select id="icTheme"><option value="">Todos os temas</option></select></label>
+        <button class="button-outline tcc-clear" id="icClear">Limpar filtros</button>
+      </div>
+      <div class="tcc-table-wrap">
+        <table class="tcc-table ic-table">
+          <thead><tr><th>Ano</th><th>Estudante</th><th>Título ou plano de trabalho</th><th>Orientador(a)</th><th>Financiamento informado</th></tr></thead>
+          <tbody id="icTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="tcc-method-note">
+      <p class="eyebrow">Nota metodológica</p>
+      <h2>Sobre a base de iniciação científica</h2>
+      <p>Os registros foram extraídos exclusivamente da seção <em>“Orientações e supervisões concluídas — Iniciação científica”</em> dos currículos Lattes de 22 docentes. Nesta visualização foram mantidas as orientações vinculadas à Universidade Federal do Recôncavo da Bahia.</p>
+      <p>As agências e formas de apoio foram padronizadas para facilitar a consulta. O texto completo informado pelo docente no currículo permanece associado a cada registro.</p>
+      <p>Os temas e a nuvem de palavras são formas editoriais de leitura dos títulos. Não correspondem a palavras-chave oficiais e devem ser revistos à medida que a base for conferida.</p>
+    </section>
+  </div>
+</main>
+<footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer>
+<script src="../script.js?v=41"></script>
+<script src="../tccs.js"></script>
+<script src="../ic.js"></script>
+</body>
+</html>

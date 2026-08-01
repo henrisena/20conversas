@@ -1,0 +1,432 @@
+{
+  "atualizadoEm": "28/07/2026",
+  "indicadores": {
+    "anos": 20,
+    "ingressantes": 1437,
+    "egressos": 480,
+    "ativos": 323,
+    "primeiraTurma": "2006.2",
+    "primeirasConclusoes": "2010",
+    "maiorTurma": 66
+  },
+  "turnos": {
+    "MT": 584,
+    "N": 853
+  },
+  "ingressantesPorAno": [
+    {
+      "ano": 2006,
+      "total": 42
+    },
+    {
+      "ano": 2007,
+      "total": 40
+    },
+    {
+      "ano": 2008,
+      "total": 79
+    },
+    {
+      "ano": 2009,
+      "total": 101
+    },
+    {
+      "ano": 2010,
+      "total": 114
+    },
+    {
+      "ano": 2011,
+      "total": 117
+    },
+    {
+      "ano": 2012,
+      "total": 103
+    },
+    {
+      "ano": 2013,
+      "total": 119
+    },
+    {
+      "ano": 2014,
+      "total": 96
+    },
+    {
+      "ano": 2015,
+      "total": 126
+    },
+    {
+      "ano": 2016,
+      "total": 58
+    },
+    {
+      "ano": 2017,
+      "total": 98
+    },
+    {
+      "ano": 2018,
+      "total": 49
+    },
+    {
+      "ano": 2019,
+      "total": 48
+    },
+    {
+      "ano": 2020,
+      "total": 42
+    },
+    {
+      "ano": 2021,
+      "total": 33
+    },
+    {
+      "ano": 2022,
+      "total": 45
+    },
+    {
+      "ano": 2023,
+      "total": 7
+    },
+    {
+      "ano": 2024,
+      "total": 31
+    },
+    {
+      "ano": 2025,
+      "total": 42
+    },
+    {
+      "ano": 2026,
+      "total": 47
+    }
+  ],
+  "ativosPorAnoIngresso": [
+    {
+      "ano": 2008,
+      "total": 1
+    },
+    {
+      "ano": 2009,
+      "total": 1
+    },
+    {
+      "ano": 2010,
+      "total": 3
+    },
+    {
+      "ano": 2011,
+      "total": 5
+    },
+    {
+      "ano": 2012,
+      "total": 7
+    },
+    {
+      "ano": 2013,
+      "total": 8
+    },
+    {
+      "ano": 2014,
+      "total": 16
+    },
+    {
+      "ano": 2015,
+      "total": 14
+    },
+    {
+      "ano": 2016,
+      "total": 20
+    },
+    {
+      "ano": 2017,
+      "total": 26
+    },
+    {
+      "ano": 2018,
+      "total": 11
+    },
+    {
+      "ano": 2019,
+      "total": 31
+    },
+    {
+      "ano": 2020,
+      "total": 24
+    },
+    {
+      "ano": 2021,
+      "total": 20
+    },
+    {
+      "ano": 2022,
+      "total": 21
+    },
+    {
+      "ano": 2023,
+      "total": 5
+    },
+    {
+      "ano": 2024,
+      "total": 27
+    },
+    {
+      "ano": 2025,
+      "total": 37
+    },
+    {
+      "ano": 2026,
+      "total": 46
+    }
+  ],
+  "turmas": [
+    {
+      "periodo": "2006.2",
+      "turno": "MT",
+      "ingressantes": 42
+    },
+    {
+      "periodo": "2007.1",
+      "turno": "MT",
+      "ingressantes": 40
+    },
+    {
+      "periodo": "2008.1",
+      "turno": "MT",
+      "ingressantes": 39
+    },
+    {
+      "periodo": "2008.2",
+      "turno": "MT",
+      "ingressantes": 1
+    },
+    {
+      "periodo": "2008.2",
+      "turno": "N",
+      "ingressantes": 39
+    },
+    {
+      "periodo": "2009.1",
+      "turno": "MT",
+      "ingressantes": 51
+    },
+    {
+      "periodo": "2009.2",
+      "turno": "MT",
+      "ingressantes": 1
+    },
+    {
+      "periodo": "2009.2",
+      "turno": "N",
+      "ingressantes": 49
+    },
+    {
+      "periodo": "2010.1",
+      "turno": "MT",
+      "ingressantes": 1
+    },
+    {
+      "periodo": "2010.1",
+      "turno": "N",
+      "ingressantes": 55
+    },
+    {
+      "periodo": "2010.2",
+      "turno": "MT",
+      "ingressantes": 56
+    },
+    {
+      "periodo": "2010.2",
+      "turno": "N",
+      "ingressantes": 2
+    },
+    {
+      "periodo": "2011.1",
+      "turno": "N",
+      "ingressantes": 56
+    },
+    {
+      "periodo": "2011.2",
+      "turno": "MT",
+      "ingressantes": 59
+    },
+    {
+      "periodo": "2011.2",
+      "turno": "N",
+      "ingressantes": 2
+    },
+    {
+      "periodo": "2012.1",
+      "turno": "N",
+      "ingressantes": 48
+    },
+    {
+      "periodo": "2012.2",
+      "turno": "MT",
+      "ingressantes": 52
+    },
+    {
+      "periodo": "2012.2",
+      "turno": "N",
+      "ingressantes": 3
+    },
+    {
+      "periodo": "2013.1",
+      "turno": "MT",
+      "ingressantes": 1
+    },
+    {
+      "periodo": "2013.1",
+      "turno": "N",
+      "ingressantes": 61
+    },
+    {
+      "periodo": "2013.2",
+      "turno": "MT",
+      "ingressantes": 52
+    },
+    {
+      "periodo": "2013.2",
+      "turno": "N",
+      "ingressantes": 5
+    },
+    {
+      "periodo": "2014.1",
+      "turno": "MT",
+      "ingressantes": 1
+    },
+    {
+      "periodo": "2014.1",
+      "turno": "N",
+      "ingressantes": 56
+    },
+    {
+      "periodo": "2014.2",
+      "turno": "MT",
+      "ingressantes": 33
+    },
+    {
+      "periodo": "2014.2",
+      "turno": "N",
+      "ingressantes": 6
+    },
+    {
+      "periodo": "2015.1",
+      "turno": "MT",
+      "ingressantes": 2
+    },
+    {
+      "periodo": "2015.1",
+      "turno": "N",
+      "ingressantes": 66
+    },
+    {
+      "periodo": "2015.2",
+      "turno": "MT",
+      "ingressantes": 56
+    },
+    {
+      "periodo": "2015.2",
+      "turno": "N",
+      "ingressantes": 2
+    },
+    {
+      "periodo": "2016.1",
+      "turno": "N",
+      "ingressantes": 58
+    },
+    {
+      "periodo": "2017.1",
+      "turno": "MT",
+      "ingressantes": 50
+    },
+    {
+      "periodo": "2017.2",
+      "turno": "MT",
+      "ingressantes": 1
+    },
+    {
+      "periodo": "2017.2",
+      "turno": "N",
+      "ingressantes": 47
+    },
+    {
+      "periodo": "2018.2",
+      "turno": "N",
+      "ingressantes": 49
+    },
+    {
+      "periodo": "2019.1",
+      "turno": "N",
+      "ingressantes": 1
+    },
+    {
+      "periodo": "2019.2",
+      "turno": "MT",
+      "ingressantes": 1
+    },
+    {
+      "periodo": "2019.2",
+      "turno": "N",
+      "ingressantes": 46
+    },
+    {
+      "periodo": "2020.1",
+      "turno": "N",
+      "ingressantes": 4
+    },
+    {
+      "periodo": "2020.2",
+      "turno": "N",
+      "ingressantes": 38
+    },
+    {
+      "periodo": "2021.1",
+      "turno": "N",
+      "ingressantes": 4
+    },
+    {
+      "periodo": "2021.2",
+      "turno": "N",
+      "ingressantes": 29
+    },
+    {
+      "periodo": "2022.1",
+      "turno": "N",
+      "ingressantes": 1
+    },
+    {
+      "periodo": "2022.2",
+      "turno": "N",
+      "ingressantes": 44
+    },
+    {
+      "periodo": "2023.1",
+      "turno": "N",
+      "ingressantes": 7
+    },
+    {
+      "periodo": "2024.1",
+      "turno": "N",
+      "ingressantes": 31
+    },
+    {
+      "periodo": "2025.1",
+      "turno": "N",
+      "ingressantes": 40
+    },
+    {
+      "periodo": "2025.2",
+      "turno": "N",
+      "ingressantes": 2
+    },
+    {
+      "periodo": "2026.1",
+      "turno": "MT",
+      "ingressantes": 45
+    },
+    {
+      "periodo": "2026.1",
+      "turno": "N",
+      "ingressantes": 2
+    }
+  ]
+}
