@@ -1,17 +1,17 @@
-ATUALIZAÇÃO — MAPA E DADOS DE ALFREDO
+ATUALIZAÇÃO — NOVA FOTO DE CAMILA SANTIAGO
 
-Uso no GitHub Desktop:
-1. Abra a pasta local do repositório do site.
-2. Copie todo o conteúdo deste ZIP para a raiz do repositório.
-3. Confirme a substituição dos arquivos existentes.
-4. No GitHub Desktop, revise as alterações, faça o commit e clique em Push origin.
+Copie as pastas e o arquivo deste pacote para a raiz do repositório 20anoshistoriaufrb.
+Quando o Windows perguntar, escolha “Substituir os arquivos no destino”.
 
-Conteúdo:
-- pages/mapa.html: mapa com recorte histórico e registros na barra lateral;
-- script.js e style.css: lógica e aparência atualizadas do mapa;
-- data/mapa.json: dados estruturados, incluindo Alfredo;
-- pages/egresso-alfredo-pinto.html: página individual de Alfredo;
-- pages/egressos.html: ligação da listagem para o perfil;
-- assets/alfredo-*: fotografias utilizadas no mapa, trajetória e perfil.
+Arquivos atualizados:
+- assets/camila-santiago.jpg
+- assets/abertura-professores.jpg
+- assets/abertura-depoimentos.jpg
+- pages/professora-camila.html
+- style.css
 
-Observação: este pacote não contém o site completo. Ele deve ser aplicado sobre o repositório atual.
+A nova foto será usada:
+- no ícone/carrossel de professores da página inicial;
+- no cartão de Camila na página Professores;
+- como imagem contextual de fundo na página individual de Camila;
+- no mosaico de abertura das páginas Professores e Depoimentos.
