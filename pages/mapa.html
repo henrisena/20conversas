@@ -1,17 +1,84 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mapa dos egressos | Memorial 20 anos</title><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="../style.css?v=41"></head><body><header class="topbar">
-  <a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a>
-  <button class="menu-button" aria-label="Abrir menu">☰</button>
-  <nav class="menu">
-    <a href="../index.html">Início</a><a href="curso.html">O curso</a><a href="linha-do-tempo.html">Linha do tempo</a>
-    <a href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a>
-    <a href="depoimentos.html">Depoimentos</a><a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a>
-  </nav>
-</header><section class="page-hero hero-mapa"><div class="page-hero-inner"><p class="eyebrow">Memorial 20 anos</p><h1>Mapa dos egressos</h1><p>Conheça os lugares, trajetórias acadêmicas e atuações profissionais de quem passou pelo curso de História da UFRB.</p></div></section><main class="content">
-<section class="map-toolbar">
-  <div class="filters">
-    <button class="filter-btn active" data-filter="todos">Todos</button><button class="filter-btn" data-filter="ensino">Ensino</button><button class="filter-btn" data-filter="pesquisa">Pesquisa</button><button class="filter-btn" data-filter="extensao">Extensão</button><button class="filter-btn" data-filter="egressos">Egressos</button><button class="filter-btn" data-filter="professores">Professores</button>
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mapa dos egressos | Memorial 20 anos</title><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="../style.css?v=54"></head><body class="map-page-wide"><header class="topbar">
+<a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a><button class="menu-button" aria-label="Abrir menu">☰</button><nav class="menu"><a href="../index.html">Início</a><a href="curso.html">O curso</a><a href="linha-do-tempo.html">Linha do tempo</a><a href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a><a href="depoimentos.html">Depoimentos</a><a class="active" href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a></nav></header>
+<section class="page-hero hero-mapa"><div class="page-hero-inner"><p class="eyebrow">Memorial 20 anos</p><h1>Mapa dos egressos</h1><p>Conheça os lugares, atividades e percursos acadêmicos e profissionais das pessoas formadas no Curso de História da UFRB.</p></div></section>
+<main class="content"><section class="map-intro"><h2>Trajetórias que partem do Recôncavo</h2><p>O mapa utiliza informações fornecidas voluntariamente pelos egressos. Ao abrir a página, o mapa apresenta onde os egressos estão e o que fazem atualmente. Os filtros permitem pesquisar por nome, localização, atuação atual e período de ingresso. A exploração de momentos anteriores fica disponível como uma opção secundária.</p></section>
+<section class="alumni-map-filters alumni-map-filters-compact" aria-label="Filtros do Mapa dos Egressos"><div class="filter-field filter-search"><label for="alumniName">Buscar por nome</label><input id="alumniName" type="search" placeholder="Digite o nome do egresso"></div><div class="filter-field"><label for="alumniLocation">Localização atual</label><select id="alumniLocation"><option value="">Todas as localizações</option></select></div><div class="filter-field"><label for="alumniActivity">Atuação</label><select id="alumniActivity"><option value="">Todas as atuações</option></select></div><button id="toggleAlumniDirectory" class="button-outline alumni-directory-toggle alumni-directory-toggle-filter" type="button" aria-expanded="false" aria-controls="alumniDirectoryPanel">Ver todos os egressos</button><button id="clearAlumniFilters" class="button-outline clear-map-filters" type="button">Limpar filtros</button></section>
+<section class="alumni-year-range" aria-labelledby="alumniYearRangeTitle">
+  <div class="alumni-year-range-heading">
+    <div>
+      <span class="eyebrow">Gerações do curso</span>
+      <h2 id="alumniYearRangeTitle">Período de ingresso</h2>
+    </div>
+    <output id="alumniYearRangeOutput" for="alumniYearStart alumniYearEnd">2006–2026</output>
   </div>
-  <div class="year-control"><label>Linha do tempo: 2006–<strong id="yearLabel">2026</strong></label><input id="yearRange" type="range" min="2006" max="2026" value="2026"></div>
+  <div class="dual-range" style="--range-start:0%;--range-end:100%">
+    <div class="dual-range-track" aria-hidden="true"></div>
+    <input id="alumniYearStart" type="range" min="2006" max="2026" value="2006" step="1" aria-label="Ano inicial de ingresso">
+    <input id="alumniYearEnd" type="range" min="2006" max="2026" value="2026" step="1" aria-label="Ano final de ingresso">
+  </div>
+  <div class="dual-range-scale" aria-hidden="true"><span>2006</span><span>2010</span><span>2014</span><span>2018</span><span>2022</span><span>2026</span></div>
+  <p class="alumni-year-range-note">A barra considera o ano de ingresso informado por cada egresso. Perfis sem esse dado permanecem visíveis apenas quando todo o período está selecionado.</p>
 </section>
-<section class="map-page-layout"><div id="mapFull" class="map-full"></div><aside class="map-detail" id="mapDetail"></aside></section>
-</main><footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer><script src="../script.js?v=41"></script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script>initFullMap();</script></body></html>
+<section class="alumni-history-access" aria-labelledby="alumniHistoryTitle">
+  <div>
+    <span class="eyebrow">Exploração opcional</span>
+    <h2 id="alumniHistoryTitle">Momentos das trajetórias</h2>
+    <p>Consulte os registros históricos informados pelos egressos sem alterar a visualização inicial da situação atual.</p>
+  </div>
+  <button id="toggleHistoryExplorer" class="button-outline" type="button" aria-expanded="false" aria-controls="historyExplorerPanel">Explorar momentos das trajetórias</button>
+</section>
+<section id="historyExplorerPanel" class="alumni-history-panel" hidden>
+  <div class="alumni-year-range-heading">
+    <div>
+      <span class="eyebrow">Registros disponíveis</span>
+      <h3>Período das trajetórias</h3>
+    </div>
+    <output id="alumniTimelineRangeOutput" for="alumniTimelineStart alumniTimelineEnd">2006–2026</output>
+  </div>
+  <div id="alumniTimelineRange" class="dual-range" style="--range-start:0%;--range-end:100%">
+    <div class="dual-range-track" aria-hidden="true"></div>
+    <input id="alumniTimelineStart" type="range" min="2006" max="2026" value="2006" step="1" aria-label="Ano inicial dos registros da trajetória">
+    <input id="alumniTimelineEnd" type="range" min="2006" max="2026" value="2026" step="1" aria-label="Ano final dos registros da trajetória">
+  </div>
+  <div class="dual-range-scale" aria-hidden="true"><span>2006</span><span>2010</span><span>2014</span><span>2018</span><span>2022</span><span>2026</span></div>
+  <div class="history-mode-field">
+    <label for="alumniTimelineMode">Forma de exibição</label>
+    <select id="alumniTimelineMode">
+      <option value="during">Durante o período selecionado</option>
+      <option value="until">Até o fim do período</option>
+    </select>
+  </div>
+  <p class="alumni-year-range-note">A visualização histórica apresenta somente os momentos efetivamente registrados nos formulários. O modo “Durante o período” mostra os registros entre os dois anos; “Até o fim do período” acumula os registros até o ano final.</p>
+  <div class="history-panel-actions">
+    <button id="showHistoricalPeriod" class="button" type="button">Mostrar registros do período</button>
+    <button id="returnCurrentMap" class="button-outline" type="button">Voltar à situação atual</button>
+  </div>
+</section>
+
+<section class="map-results-summary"><strong id="alumniResultCount">0 egressos encontrados</strong><span id="alumniMapModeSummary">Exibindo a situação atual dos egressos.</span></section>
+<section class="alumni-directory-control" aria-label="Lista de egressos representados">
+  <div id="alumniDirectoryPanel" class="alumni-directory-panel" hidden>
+    <div class="alumni-directory-heading">
+      <div><span class="eyebrow">Pessoas representadas</span><h2 id="alumniDirectoryTitle">Egressos no mapa</h2></div>
+      <p>Clique em um nome para localizar a pessoa no mapa e conhecer sua trajetória.</p>
+    </div>
+    <div id="alumniResultList" class="alumni-result-list" aria-live="polite"></div>
+  </div>
+</section>
+<section class="alumni-map-layout alumni-map-layout-full" id="alumniMapLayout">
+  <div class="alumni-map-main"><div id="mapFull" class="map-full"></div></div>
+  <aside class="map-detail" id="mapDetail"></aside>
+  <aside class="history-records-sidebar" id="historyRecordsSidebar" hidden aria-labelledby="historyRecordsTitle">
+    <div class="history-records-heading">
+      <div>
+        <span class="eyebrow">Recorte histórico</span>
+        <h2 id="historyRecordsTitle">Registros das trajetórias</h2>
+      </div>
+      <strong id="historyRecordsCount">0 momentos</strong>
+    </div>
+    <p id="historyRecordsPeriod" class="history-records-period">Selecione um período para visualizar os registros disponíveis.</p>
+    <div id="historyRecordsList" class="history-records-list" aria-live="polite"></div>
+  </aside>
+</section>
+<p class="prototype-note"><strong>Observação:</strong> Alfredo Pinto da Silva Júnior é um perfil enviado e autorizado. Os demais perfis desta versão continuam demonstrativos e deverão ser substituídos à medida que novos formulários forem recebidos.</p></main>
+<footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer><script src="../script.js?v=54"></script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script>initFullMap();</script></body></html>

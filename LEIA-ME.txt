@@ -1,0 +1,17 @@
+ATUALIZAÇÃO — MAPA E DADOS DE ALFREDO
+
+Uso no GitHub Desktop:
+1. Abra a pasta local do repositório do site.
+2. Copie todo o conteúdo deste ZIP para a raiz do repositório.
+3. Confirme a substituição dos arquivos existentes.
+4. No GitHub Desktop, revise as alterações, faça o commit e clique em Push origin.
+
+Conteúdo:
+- pages/mapa.html: mapa com recorte histórico e registros na barra lateral;
+- script.js e style.css: lógica e aparência atualizadas do mapa;
+- data/mapa.json: dados estruturados, incluindo Alfredo;
+- pages/egresso-alfredo-pinto.html: página individual de Alfredo;
+- pages/egressos.html: ligação da listagem para o perfil;
+- assets/alfredo-*: fotografias utilizadas no mapa, trajetória e perfil.
+
+Observação: este pacote não contém o site completo. Ele deve ser aplicado sobre o repositório atual.

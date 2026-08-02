@@ -1600,3 +1600,189 @@ body.gallery-modal-open{overflow:hidden}
 }
 @media(max-width:900px){.page-hero.alumni-profile-hero{background-position:center 25% !important;}}
 @media(max-width:620px){.page-hero.alumni-profile-hero{background-position:center 20% !important;}}
+
+/* Versão 43 — Mapa exclusivo dos egressos e filtros derivados do formulário */
+.map-intro{max-width:900px;margin:0 0 1.25rem}.map-intro h2{margin-bottom:.45rem}.alumni-map-filters{display:grid;grid-template-columns:minmax(230px,1.5fr) repeat(4,minmax(145px,1fr)) auto;gap:12px;align-items:end;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:12px;box-shadow:0 8px 22px rgba(0,0,0,.04)}.filter-field{display:flex;flex-direction:column;gap:6px}.filter-field label{font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em;color:var(--navy)}.filter-field input,.filter-field select{width:100%;min-height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;padding:10px 12px;color:var(--text);font:inherit}.filter-field input:focus,.filter-field select:focus{outline:3px solid rgba(93,55,124,.16);border-color:var(--purple)}.clear-map-filters{min-height:44px;white-space:nowrap}.map-results-summary{display:flex;justify-content:space-between;gap:18px;align-items:center;margin:0 0 16px;padding:0 4px;color:#665f59}.map-results-summary strong{color:var(--navy)}.alumni-map-layout{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:24px;align-items:start}.alumni-map-main{min-width:0}.alumni-result-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}.alumni-result{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px 14px;cursor:pointer;color:var(--text)}.alumni-result:hover,.alumni-result:focus{border-color:var(--purple);box-shadow:0 7px 18px rgba(0,0,0,.07);outline:none}.alumni-result strong{color:var(--navy)}.alumni-result span{font-size:.88rem}.alumni-result small{color:#756d67}.empty-results{grid-column:1/-1;background:#fff;border:1px dashed var(--line);border-radius:12px;padding:18px}.map-source{font-size:.78rem;color:#756d67;border-top:1px solid var(--line);padding-top:12px}.prototype-note{margin-top:20px;background:#fff7df;border:1px solid #ead9a6;border-radius:13px;padding:14px 16px}.pin.egressos{background:var(--purple)}
+@media(max-width:1250px){.alumni-map-filters{grid-template-columns:repeat(3,minmax(0,1fr))}.filter-search{grid-column:span 2}.clear-map-filters{width:100%}}
+@media(max-width:900px){.alumni-map-layout{grid-template-columns:1fr}.map-detail{position:static}.alumni-map-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.filter-search{grid-column:1/-1}.map-results-summary{align-items:flex-start;flex-direction:column}.alumni-result-list{grid-template-columns:1fr}}
+@media(max-width:560px){.alumni-map-filters{grid-template-columns:1fr}.filter-search{grid-column:auto}}
+
+/* Versão 44 — trajetórias individuais no Mapa dos Egressos */
+.pin.trajectory{background:#b36b32;border:3px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.24)}
+.pin.trajectory span{font-size:.75rem}
+.trajectory-popup{width:220px}.trajectory-popup img{width:100%;height:115px;object-fit:cover;border-radius:9px;margin-bottom:8px}.trajectory-popup strong,.trajectory-popup span{display:block}.trajectory-popup span{font-size:.82rem;color:#675f58;margin:3px 0 7px}.trajectory-popup p{font-size:.84rem;margin:0}
+.map-mini-timeline{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:15px 0}.map-mini-timeline h3{font-size:1rem;margin:0 0 9px}.map-mini-timeline div{display:grid;grid-template-columns:50px 1fr;gap:8px;padding:6px 0}.map-mini-timeline div+div{border-top:1px dashed var(--line)}.map-mini-timeline span{font-size:.84rem;color:#625b55}.trajectory-toggle{width:100%;margin-bottom:12px}.alumni-result em{font-size:.75rem;font-style:normal;font-weight:800;color:#8b542b;margin-top:3px}
+
+
+/* Versão 45 — barra de atuação em qualquer momento da trajetória */
+.activity-filter-section{margin:2rem 0 1.2rem;padding:1.35rem;border:1px solid rgba(111,79,45,.2);border-radius:18px;background:rgba(247,242,233,.78)}
+.activity-filter-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.8fr);gap:1.5rem;align-items:end;margin-bottom:1rem}
+.activity-filter-heading h2{margin:.15rem 0 0}.activity-filter-heading p{margin:0;color:var(--muted)}
+.activity-filter-bar{display:flex;gap:.65rem;overflow-x:auto;padding:.2rem .1rem .5rem;scrollbar-width:thin}
+.activity-chip{flex:0 0 auto;border:1px solid rgba(111,79,45,.28);border-radius:999px;background:#fff;color:var(--text);padding:.7rem 1rem;font:inherit;font-weight:650;cursor:pointer;transition:.2s ease}
+.activity-chip:hover,.activity-chip:focus-visible{border-color:var(--accent);transform:translateY(-1px)}
+.activity-chip.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.pin.trajectory.activity-match{background:#fff;border:3px solid var(--accent);color:var(--accent);box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.moment-activity-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin:.45rem 0}.moment-activity-tags span{font-size:.72rem;padding:.2rem .45rem;border-radius:999px;background:#efe4d4;color:#5c452e}
+@media(max-width:760px){.activity-filter-heading{grid-template-columns:1fr;gap:.55rem}.activity-filter-section{padding:1rem}.activity-filter-bar{margin-right:-.4rem}}
+
+
+/* Versão 46 — diretório alfabético clicável de egressos */
+.alumni-directory-map-layout{display:grid;grid-template-columns:minmax(250px,320px) minmax(0,1fr) 390px;gap:20px;align-items:start}
+.alumni-directory{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;position:sticky;top:96px;max-height:calc(100vh - 120px);overflow:auto}
+.alumni-directory-heading{padding:4px 4px 12px;border-bottom:1px solid var(--line);margin-bottom:10px}
+.alumni-directory-heading h2{margin:.15rem 0 .35rem}.alumni-directory-heading p{margin:0;color:#6f6761;font-size:.92rem}
+.alumni-directory .alumni-result-list{display:flex;flex-direction:column;gap:8px;margin-top:0}
+.alumni-directory .alumni-result{display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:start;width:100%;padding:10px 11px}
+.alumni-result-initial{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--purple);color:#fff;font-weight:900}
+.alumni-result-copy{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0}
+.alumni-result-copy strong,.alumni-result-copy span,.alumni-result-copy small,.alumni-result-copy em{max-width:100%}
+.alumni-result.active,.alumni-result[aria-current="true"]{border-color:var(--purple);background:#f7f2fa;box-shadow:0 0 0 2px rgba(93,55,124,.1)}
+.alumni-result.active .alumni-result-initial,.alumni-result[aria-current="true"] .alumni-result-initial{background:var(--navy)}
+@media(max-width:1250px){.alumni-directory-map-layout{grid-template-columns:280px minmax(0,1fr)}.alumni-directory-map-layout .map-detail{grid-column:1/-1;position:static}.alumni-directory{position:static;max-height:620px}}
+@media(max-width:820px){.alumni-directory-map-layout{grid-template-columns:1fr}.alumni-directory{max-height:none}.alumni-directory .alumni-result-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.alumni-directory-map-layout .map-detail{grid-column:auto}}
+@media(max-width:560px){.alumni-directory .alumni-result-list{grid-template-columns:1fr}}
+
+/* Versão 47 — lista de egressos recolhível e mapa em largura ampla */
+.alumni-directory-control{margin:0 0 16px}
+.alumni-directory-toggle{display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+.alumni-directory-toggle[aria-expanded="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.alumni-directory-panel{margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+.alumni-directory-panel[hidden]{display:none}
+.alumni-directory-panel .alumni-directory-heading{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(260px,1.2fr);gap:24px;align-items:end;padding:0 0 14px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.alumni-directory-panel .alumni-directory-heading h2{margin:.15rem 0 0}
+.alumni-directory-panel .alumni-directory-heading p{margin:0;color:#6f6761}
+.alumni-directory-panel .alumni-result-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:0;max-height:430px;overflow:auto;padding-right:4px}
+.alumni-directory-panel .alumni-result{display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:start;width:100%;padding:10px 11px}
+.alumni-map-layout-full{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:24px;align-items:start}
+.alumni-map-layout-full .alumni-map-main{min-width:0}
+.alumni-map-layout-full .map-full{min-height:620px}
+@media(max-width:1050px){.alumni-map-layout-full{grid-template-columns:1fr}.alumni-map-layout-full .map-detail{position:static}.alumni-directory-panel .alumni-result-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.alumni-directory-panel .alumni-directory-heading{grid-template-columns:1fr;gap:.5rem}.alumni-directory-panel .alumni-result-list{grid-template-columns:1fr;max-height:520px}.alumni-directory-toggle{width:100%}.alumni-map-layout-full .map-full{min-height:500px}}
+
+
+/* Versão 48 — filtros compactos do Mapa dos Egressos */
+.alumni-map-filters-compact{grid-template-columns:minmax(250px,1.55fr) minmax(180px,1fr) minmax(230px,1.2fr) auto auto;margin-top:1.4rem;margin-bottom:12px}
+.alumni-directory-toggle-filter{align-self:end;white-space:nowrap}
+.alumni-directory-control{margin-top:0}
+@media(max-width:1150px){.alumni-map-filters-compact{grid-template-columns:repeat(2,minmax(0,1fr))}.alumni-map-filters-compact .filter-search{grid-column:1/-1}.alumni-directory-toggle-filter,.alumni-map-filters-compact .clear-map-filters{width:100%}}
+@media(max-width:650px){.alumni-map-filters-compact{grid-template-columns:1fr}.alumni-map-filters-compact .filter-search{grid-column:auto}}
+
+
+/* Versão 49 — página do mapa ampliada e filtro temporal por período de ingresso */
+body.map-page-wide .content{width:min(calc(100% - 48px),1500px);max-width:none;padding-left:0;padding-right:0}
+body.map-page-wide .page-hero-inner{max-width:1500px;width:min(calc(100% - 48px),1500px)}
+body.map-page-wide .map-intro{max-width:1080px}
+body.map-page-wide .alumni-map-layout-full{grid-template-columns:minmax(0,1fr) minmax(360px,420px);gap:28px}
+body.map-page-wide .alumni-map-layout-full .map-full{min-height:680px}
+.alumni-year-range{margin:0 0 18px;padding:20px 24px 16px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 22px rgba(0,0,0,.04)}
+.alumni-year-range-heading{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:14px}
+.alumni-year-range-heading h2{margin:.18rem 0 0;color:var(--navy);font-family:Georgia,serif;font-size:1.45rem}
+.alumni-year-range-heading output{color:var(--purple);font-weight:900;font-size:1.05rem;background:#f3ecf7;border-radius:999px;padding:8px 13px;white-space:nowrap}
+.dual-range{position:relative;height:34px;margin:2px 3px 0}
+.dual-range-track{position:absolute;left:0;right:0;top:15px;height:6px;border-radius:999px;background:linear-gradient(to right,#ded6c8 0 var(--range-start),var(--purple) var(--range-start) var(--range-end),#ded6c8 var(--range-end) 100%)}
+.dual-range input[type="range"]{position:absolute;inset:0;width:100%;height:34px;margin:0;background:transparent;appearance:none;-webkit-appearance:none;pointer-events:none}
+.dual-range input[type="range"]::-webkit-slider-runnable-track{height:6px;background:transparent;border:0}
+.dual-range input[type="range"]::-moz-range-track{height:6px;background:transparent;border:0}
+.dual-range input[type="range"]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:22px;height:22px;margin-top:-8px;border-radius:50%;border:3px solid #fff;background:var(--purple);box-shadow:0 2px 8px rgba(0,0,0,.28);pointer-events:auto;cursor:grab}
+.dual-range input[type="range"]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;border:3px solid #fff;background:var(--purple);box-shadow:0 2px 8px rgba(0,0,0,.28);pointer-events:auto;cursor:grab}
+.dual-range input[type="range"]:focus-visible{outline:none}
+.dual-range input[type="range"]:focus-visible::-webkit-slider-thumb{outline:3px solid rgba(93,55,124,.28);outline-offset:3px}
+.dual-range-scale{display:flex;justify-content:space-between;color:#756d67;font-size:.78rem;font-weight:800;margin-top:-1px}
+.alumni-year-range-note{margin:10px 0 0;color:#756d67;font-size:.82rem;line-height:1.45}
+@media(max-width:1050px){body.map-page-wide .alumni-map-layout-full{grid-template-columns:1fr}body.map-page-wide .alumni-map-layout-full .map-full{min-height:600px}}
+@media(max-width:760px){body.map-page-wide .content,body.map-page-wide .page-hero-inner{width:min(calc(100% - 28px),1500px)}.alumni-year-range{padding:18px 16px 14px}.alumni-year-range-heading{align-items:flex-start;flex-direction:column;gap:10px}.dual-range-scale span:nth-child(even){display:none}body.map-page-wide .alumni-map-layout-full .map-full{min-height:480px}}
+
+/* Versão 50 — duas leituras temporais do mapa */
+.alumni-time-explorer{margin:1.25rem 0 1.5rem;padding:1.25rem 1.4rem;border:1px solid rgba(77,52,36,.16);border-radius:18px;background:rgba(255,252,246,.82)}
+.alumni-time-heading{display:flex;justify-content:space-between;gap:1.5rem;align-items:flex-start}.alumni-time-heading h2{margin:.15rem 0 .35rem}.alumni-time-heading p{margin:0;max-width:760px;color:var(--muted,#6d625a)}
+.time-mode-switch{display:flex;gap:.35rem;padding:.25rem;border:1px solid rgba(77,52,36,.14);border-radius:999px;background:#fff;flex:0 0 auto}.time-mode-button{border:0;border-radius:999px;padding:.7rem 1rem;background:transparent;color:inherit;cursor:pointer;font:inherit}.time-mode-button.active{background:var(--wine,#6f2439);color:#fff}
+.historical-timeline-controls{margin-top:1.15rem;opacity:.52;transition:opacity .2s ease}.historical-timeline-controls.is-active{opacity:1}.single-year-heading{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.35rem}.single-year-heading label{font-weight:700}.single-year-heading output{font-size:1.35rem;font-weight:700;color:var(--wine,#6f2439)}
+#alumniTimelineYear{width:100%;accent-color:var(--wine,#6f2439)}#alumniTimelineYear:disabled{cursor:not-allowed}
+@media (max-width:780px){.alumni-time-heading{display:block}.time-mode-switch{margin-top:1rem;width:100%}.time-mode-button{flex:1;padding:.65rem .55rem}}
+
+/* Versão 51 — mapa principal simplificado e exploração histórica secundária */
+.alumni-history-access{margin:1.25rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1rem 1.25rem;border-top:1px solid rgba(77,52,36,.14);border-bottom:1px solid rgba(77,52,36,.14)}
+.alumni-history-access h2{margin:.15rem 0 .25rem}.alumni-history-access p{margin:0;max-width:760px}.alumni-history-panel{margin:0 0 1.5rem;padding:1.2rem 1.35rem;border:1px solid rgba(77,52,36,.16);border-radius:18px;background:rgba(255,252,246,.82)}
+.history-panel-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}.trajectory-view-active .alumni-map-filters,.trajectory-view-active .alumni-year-range,.trajectory-view-active .alumni-history-access,.trajectory-view-active .alumni-history-panel,.trajectory-view-active .alumni-directory-control{display:none!important}.trajectory-view-active .map-results-summary{border-left:4px solid var(--wine,#6f2439);padding-left:1rem}.trajectory-view-active .map-detail .trajectory-toggle{font-weight:700}
+@media(max-width:760px){.alumni-history-access{align-items:flex-start;flex-direction:column}.alumni-history-access .button-outline{width:100%}.history-panel-actions>*{width:100%}}
+
+/* Versão 53 — intervalo temporal secundário */
+.history-mode-field{display:grid;gap:.45rem;max-width:340px;margin-top:1rem}.history-mode-field label{font-weight:700}.history-mode-field select{width:100%;padding:.72rem .85rem;border:1px solid var(--border,#d8d0c4);border-radius:.65rem;background:#fff;color:inherit}.alumni-history-panel .dual-range{margin-top:1rem}.alumni-history-panel h3{margin:.15rem 0 0;font-size:1.35rem}
+
+/* Versão 54 — painel lateral dos registros históricos */
+.alumni-map-layout.history-sidebar-active{
+  display:grid;
+  grid-template-columns:minmax(0,1.75fr) minmax(320px,.85fr);
+  gap:1.25rem;
+  align-items:start;
+}
+.alumni-map-layout.history-sidebar-active .alumni-map-main{min-width:0}
+.alumni-map-layout.history-sidebar-active .map-full{height:680px}
+.history-records-sidebar{
+  border:1px solid var(--border,#d8dee8);
+  border-radius:18px;
+  background:#fff;
+  padding:1rem;
+  max-height:680px;
+  overflow:auto;
+  position:sticky;
+  top:1rem;
+}
+.history-records-heading{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:1rem;
+  padding-bottom:.75rem;
+  border-bottom:1px solid var(--border,#e1e6ee);
+}
+.history-records-heading h2{margin:.2rem 0 0;font-size:1.25rem}
+.history-records-heading>strong{
+  white-space:nowrap;
+  border:1px solid var(--border,#d8dee8);
+  border-radius:999px;
+  padding:.35rem .65rem;
+  font-size:.82rem;
+}
+.history-records-period{margin:.8rem 0 1rem;color:var(--muted,#5e6878);font-size:.92rem}
+.history-records-list{display:grid;gap:.85rem}
+.history-record-card{
+  display:grid;
+  grid-template-columns:112px minmax(0,1fr);
+  gap:.85rem;
+  padding:.75rem;
+  border:1px solid var(--border,#d8dee8);
+  border-radius:14px;
+  background:#fff;
+  transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;
+}
+.history-record-card.active{
+  border-color:var(--accent,#1b5fc5);
+  box-shadow:0 0 0 2px color-mix(in srgb,var(--accent,#1b5fc5) 18%,transparent);
+  transform:translateY(-1px);
+}
+.history-record-card img{
+  width:112px;
+  height:112px;
+  border-radius:10px;
+  object-fit:cover;
+}
+.history-record-copy{min-width:0}
+.history-record-meta{display:grid;gap:.15rem}
+.history-record-meta strong{font-size:1rem}
+.history-record-meta span{font-size:.84rem;color:var(--muted,#5e6878)}
+.history-record-copy p{margin:.55rem 0 .35rem;line-height:1.4}
+.history-record-copy small{display:block;color:var(--muted,#5e6878);line-height:1.35}
+.history-record-actions{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.7rem}
+.history-record-actions .button-outline{padding:.48rem .65rem;font-size:.82rem}
+@media(max-width:980px){
+  .alumni-map-layout.history-sidebar-active{grid-template-columns:1fr}
+  .alumni-map-layout.history-sidebar-active .map-full{height:520px}
+  .history-records-sidebar{position:static;max-height:none}
+}
+@media(max-width:560px){
+  .history-record-card{grid-template-columns:84px minmax(0,1fr)}
+  .history-record-card img{width:84px;height:84px}
+  .history-record-actions{grid-column:1/-1}
+}
