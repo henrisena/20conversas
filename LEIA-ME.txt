@@ -1,18 +1,17 @@
-ATUALIZAÇÃO PARA GITHUB DESKTOP
+ATUALIZAÇÃO — CENTRALIZAÇÃO DAS FOTOS E LIMPEZA DA PÁGINA EGRESSOS
 
-Arquivos incluídos:
+Arquivos alterados:
 - style.css
 - pages/egressos.html
-- pages/mapa.html
-- pages/cartografia-pos-graduacao.html
-- pages/professora-camila.html
-- assets/camila-santiago.jpg
-- assets/abertura-professores.jpg
-- assets/abertura-depoimentos.jpg
+
+Como aplicar:
+1. Extraia este ZIP.
+2. Copie os arquivos para a raiz do repositório do site.
+3. Confirme a substituição dos arquivos existentes.
+4. No GitHub Desktop, faça Commit e Push origin.
 
 Mudanças:
-1. A página Egressos ficou dedicada somente aos perfis.
-2. Os dois mapas permanecem agrupados na aba Mapa dos egressos.
-3. A nova foto de Camila é usada no perfil, na capa contextual, no carrossel/cartão e nos mosaicos de Professores e Depoimentos.
-
-Copie estas pastas e arquivos para a raiz do repositório e confirme a substituição.
+- centralização dos rostos nas fotos individuais de professores e egressos;
+- reposicionamento das fotografias contextuais, especialmente Camila e Alfredo;
+- remoção defensiva dos links secundários duplicados de mapas na página Egressos;
+- a página Egressos permanece dedicada apenas aos perfis.

@@ -1827,3 +1827,47 @@ body.map-page-wide .alumni-map-layout-full .map-full{min-height:680px}
 .page-hero.hero-camila .page-hero-inner{width:100%;position:relative;z-index:2;}
 @media(max-width:900px){.page-hero.hero-camila{min-height:430px;background-position:center 30%;}}
 @media(max-width:620px){.page-hero.hero-camila{min-height:390px;background-position:center 25%;}}
+
+/* v57 — centralização dos rostos em retratos e fotografias contextuais */
+/* Retratos usados em cartões, carrosséis, mosaicos e páginas individuais. */
+img[src*="camila-santiago.jpg"]{object-position:38% 24% !important;}
+img[src*="alfredo-perfil.jpg"]{object-position:50% 18% !important;}
+img[src*="fabricio.jpg"]{object-position:58% 24% !important;}
+img[src*="sergio.jpg"]{object-position:50% 20% !important;}
+img[src*="walter.jpeg"]{object-position:50% 18% !important;}
+img[src*="isabel.jpg"]{object-position:50% 16% !important;}
+img[src*="martha.jpg"]{object-position:50% 20% !important;}
+img[src*="egresso-ficticio-1.jpg"],
+img[src*="egresso-ficticio-2.jpg"],
+img[src*="egresso-ficticio-3.jpg"],
+img[src*="egresso-ficticio-4.jpg"],
+img[src*="egresso-ficticio-5.jpg"],
+img[src*="egresso-ficticio-6.jpg"]{object-position:center 20% !important;}
+
+/* Fotografias contextuais das páginas de egressos. */
+.page-hero.alumni-profile-hero[style*="alfredo-trabalhando.jpg"]{background-position:56% 34% !important;}
+.page-hero.alumni-profile-hero[style*="egresso-local-ana-clara.jpg"]{background-position:24% 34% !important;}
+.page-hero.alumni-profile-hero[style*="egresso-local-lucas-menezes.jpg"]{background-position:72% 28% !important;}
+.page-hero.alumni-profile-hero[style*="egresso-local-mariana-jose.jpg"]{background-position:25% 32% !important;}
+.page-hero.alumni-profile-hero[style*="egresso-local-rafael-conceicao.jpg"]{background-position:22% 34% !important;}
+.page-hero.alumni-profile-hero[style*="egresso-local-beatriz-nascimento.jpg"]{background-position:30% 32% !important;}
+.page-hero.alumni-profile-hero[style*="egresso-local-joao-victor.jpg"]{background-position:42% 26% !important;}
+
+/* Fotografia contextual de Camila: rosto centralizado no campo útil da capa. */
+.page-hero.hero-camila{background-position:34% 26% !important;}
+
+/* Imagens de perfil em cartões internos. */
+.card > img,
+.alumni-profile-photo img,
+.alumni-card img,
+.person-card img,
+.voices-carousel img{object-fit:cover;}
+
+@media(max-width:900px){
+  .page-hero.hero-camila{background-position:32% 24% !important;}
+  .page-hero.alumni-profile-hero[style*="alfredo-trabalhando.jpg"]{background-position:56% 30% !important;}
+}
+@media(max-width:620px){
+  .page-hero.hero-camila{background-position:30% 22% !important;}
+  .page-hero.alumni-profile-hero[style*="alfredo-trabalhando.jpg"]{background-position:55% 27% !important;}
+}
