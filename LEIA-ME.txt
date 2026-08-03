@@ -1,17 +1,18 @@
-ATUALIZAÇÃO — NOVA FOTO DE CAMILA SANTIAGO
+ATUALIZAÇÃO PARA GITHUB DESKTOP
 
-Copie as pastas e o arquivo deste pacote para a raiz do repositório 20anoshistoriaufrb.
-Quando o Windows perguntar, escolha “Substituir os arquivos no destino”.
-
-Arquivos atualizados:
+Arquivos incluídos:
+- style.css
+- pages/egressos.html
+- pages/mapa.html
+- pages/cartografia-pos-graduacao.html
+- pages/professora-camila.html
 - assets/camila-santiago.jpg
 - assets/abertura-professores.jpg
 - assets/abertura-depoimentos.jpg
-- pages/professora-camila.html
-- style.css
 
-A nova foto será usada:
-- no ícone/carrossel de professores da página inicial;
-- no cartão de Camila na página Professores;
-- como imagem contextual de fundo na página individual de Camila;
-- no mosaico de abertura das páginas Professores e Depoimentos.
+Mudanças:
+1. A página Egressos ficou dedicada somente aos perfis.
+2. Os dois mapas permanecem agrupados na aba Mapa dos egressos.
+3. A nova foto de Camila é usada no perfil, na capa contextual, no carrossel/cartão e nos mosaicos de Professores e Depoimentos.
+
+Copie estas pastas e arquivos para a raiz do repositório e confirme a substituição.
