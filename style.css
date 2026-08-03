@@ -1788,16 +1788,28 @@ body.map-page-wide .alumni-map-layout-full .map-full{min-height:680px}
 }
 
 
-/* Foto contextual da página de Camila Santiago */
-.page-hero.hero-camila{
-  min-height:520px;
-  display:flex;
-  align-items:flex-end;
-  background-image:linear-gradient(90deg,rgba(7,30,70,.86),rgba(7,30,70,.34),rgba(7,30,70,.08)),url("assets/camila-santiago.jpg");
-  background-size:cover;
-  background-position:center 38%;
-}
-.page-hero.hero-camila .page-hero-inner{width:100%;}
-@media (max-width:760px){
-  .page-hero.hero-camila{min-height:430px;background-position:center 30%;}
-}
+/* Navegação integrada dos mapas de egressos — v55 */
+.egress-map-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 28px;padding:6px;background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:18px}
+.egress-map-tabs a{display:flex;flex-direction:column;gap:4px;padding:15px 18px;border-radius:13px;color:var(--text);text-decoration:none;border:1px solid transparent;transition:.2s ease}
+.egress-map-tabs a:hover{background:#fff;border-color:var(--line);transform:translateY(-1px)}
+.egress-map-tabs a.active{background:var(--green);color:#fff;box-shadow:0 8px 22px rgba(35,79,70,.16)}
+.egress-map-tabs span{font-weight:700}.egress-map-tabs small{font-size:.78rem;opacity:.78;line-height:1.35}
+.egress-map-intro-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0 0 34px}
+.egress-map-intro-card{display:block;padding:26px;border-radius:22px;border:1px solid var(--line);background:var(--paper);text-decoration:none;color:var(--text);transition:.2s ease}
+.egress-map-intro-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(31,48,43,.09)}
+.egress-map-intro-card h3{font-family:Georgia,serif;font-size:1.55rem;margin:.35rem 0 .65rem}.egress-map-intro-card p{color:var(--muted);line-height:1.6}.egress-map-intro-card strong{color:var(--green)}
+.cartography-intro{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:36px;align-items:end;margin:0 0 26px}
+.cartography-intro h2{font-family:Georgia,serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:500;margin:.3rem 0 .8rem}.cartography-intro p{color:var(--muted);line-height:1.7}
+.cartography-intro blockquote{margin:0;border-left:3px solid var(--gold);padding:12px 0 12px 20px;font-family:Georgia,serif;font-size:1.22rem;line-height:1.5;color:var(--text)}
+.cartography-stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-bottom:20px}
+.cartography-stats div{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:15px}.cartography-stats strong{display:block;font:500 1.75rem Georgia,serif;color:var(--green)}.cartography-stats span{display:block;margin-top:4px;color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;line-height:1.35}
+.cartography-workspace{display:grid;grid-template-columns:minmax(0,1fr) 410px;gap:18px;align-items:stretch;margin-bottom:28px}
+.cartography-map-card,.cartography-panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.cartography-controls{display:grid;grid-template-columns:190px 190px minmax(220px,1fr);gap:10px;padding:14px;border-bottom:1px solid var(--line)}
+.cartography-controls label{display:flex;flex-direction:column;gap:6px}.cartography-controls label span{font-size:.75rem;font-weight:700;color:var(--muted)}
+.cartography-controls select,.cartography-controls input{width:100%;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--text);padding:10px 12px;font:inherit}
+.cartography-map{height:700px;width:100%}.cartography-map #map-status{padding:24px;color:var(--muted)}
+.cartography-panel{display:flex;flex-direction:column;min-height:757px}.cartography-panel-head{padding:22px;border-bottom:1px solid var(--line)}.cartography-panel-head h2{font-family:Georgia,serif;font-size:1.8rem;font-weight:500;margin:.3rem 0}.cartography-panel-head p:last-child{color:var(--muted);margin:0}
+.cartography-results{padding:14px;overflow:auto;max-height:690px}.cartography-results .person{border:1px solid var(--line);border-radius:15px;padding:14px;margin-bottom:10px;background:#fff}.cartography-results .person h3{font-size:1rem;margin:0 0 8px}.cartography-results .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.cartography-results .chip{background:#edf3ef;color:var(--green);border-radius:999px;padding:5px 8px;font-size:.69rem}.cartography-results dl{display:grid;grid-template-columns:78px 1fr;gap:5px 8px;margin:0;font-size:.8rem}.cartography-results dt{color:var(--muted)}.cartography-results dd{margin:0}.cartography-results a{color:var(--green);font-weight:700}
+@media(max-width:1100px){.cartography-stats{grid-template-columns:repeat(3,1fr)}.cartography-workspace{grid-template-columns:1fr}.cartography-panel{min-height:auto}.cartography-map{height:600px}}
+@media(max-width:760px){.egress-map-tabs,.egress-map-intro-grid,.cartography-intro{grid-template-columns:1fr}.cartography-stats{grid-template-columns:repeat(2,1fr)}.cartography-controls{grid-template-columns:1fr}.cartography-map{height:520px}.egress-map-tabs a{padding:13px 14px}}

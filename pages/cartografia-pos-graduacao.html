@@ -1,188 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cartografia da pós-graduação | Memorial 20 anos</title>
-  <link rel="preconnect" href="https://unpkg.com">
-  <link rel="preconnect" href="https://tile.openstreetmap.org">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <style>
-    :root {
-      --bg:#f3eee4;
-      --paper:#fffdf8;
-      --ink:#17211f;
-      --muted:#68706d;
-      --green:#234f46;
-      --green2:#4f786f;
-      --gold:#b78a47;
-      --line:#d9d0c2;
-      --chip:#edf3ef;
-    }
-    * { box-sizing:border-box; }
-    body {
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
-      background:var(--bg);
-      color:var(--ink);
-    }
-    header {
-      background:rgba(243,238,228,.96);
-      border-bottom:1px solid var(--line);
-      position:sticky; top:0; z-index:1000;
-    }
-    .topbar {
-      max-width:1500px; margin:auto; padding:14px 24px;
-      display:flex; justify-content:space-between; align-items:center; gap:20px;
-    }
-    .brand { display:flex; align-items:center; gap:12px; }
-    .seal {
-      width:42px; height:42px; border-radius:50%;
-      border:1px solid var(--green); display:grid; place-items:center;
-      font-family:Georgia,serif;
-    }
-    .brand strong { display:block; font-size:14px; text-transform:uppercase; letter-spacing:.1em; }
-    .brand span { display:block; font-size:12px; color:var(--muted); }
-    .hero {
-      max-width:1500px; margin:auto; padding:46px 24px 26px;
-      display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:end;
-    }
-    .kicker { color:var(--green2); text-transform:uppercase; letter-spacing:.18em; font-size:12px; font-weight:700; }
-    h1 { font-family:Georgia,serif; font-weight:500; font-size:clamp(44px,6vw,82px); line-height:.95; margin:10px 0 18px; }
-    .hero p { color:#4f5955; line-height:1.65; font-size:18px; max-width:780px; }
-    .note { border-left:3px solid var(--gold); padding:16px 0 16px 20px; color:#4c5551; font-family:Georgia,serif; font-size:19px; line-height:1.5; }
-    .stats {
-      max-width:1500px; margin:auto; padding:0 24px 26px;
-      display:grid; grid-template-columns:repeat(6,1fr); gap:12px;
-    }
-    .stat { background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:15px; }
-    .stat b { display:block; font-family:Georgia,serif; color:var(--green); font-size:28px; }
-    .stat span { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
-    .workspace {
-      max-width:1500px; margin:auto; padding:0 24px 72px;
-      display:grid; grid-template-columns:minmax(0,1fr) 430px; gap:18px;
-    }
-    .map-card,.panel {
-      background:var(--paper); border:1px solid var(--line); border-radius:22px; overflow:hidden;
-    }
-    .controls {
-      padding:14px; border-bottom:1px solid var(--line);
-      display:grid; grid-template-columns:180px 180px 1fr; gap:10px;
-    }
-    select,input {
-      width:100%; border:1px solid var(--line); border-radius:12px;
-      background:#fff; color:var(--ink); padding:10px 12px; font:inherit;
-    }
-    #map { height:720px; width:100%; }
-    .panel { display:flex; flex-direction:column; min-height:778px; }
-    .panel-head { padding:21px; border-bottom:1px solid var(--line); }
-    .eyebrow { color:var(--green2); font-size:11px; letter-spacing:.13em; text-transform:uppercase; }
-    .panel h2 { font-family:Georgia,serif; font-size:29px; font-weight:500; margin:6px 0; }
-    .panel-head p { color:var(--muted); margin:0; }
-    .results { padding:14px; overflow:auto; max-height:690px; }
-    .person {
-      border:1px solid var(--line); border-radius:16px; padding:14px; margin-bottom:10px; background:#fff;
-    }
-    .person h3 { margin:0 0 8px; font-size:16px; }
-    .chips { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
-    .chip { background:var(--chip); color:var(--green); border-radius:999px; padding:5px 8px; font-size:11px; }
-    dl { display:grid; grid-template-columns:82px 1fr; gap:5px 8px; margin:0; font-size:13px; }
-    dt { color:var(--muted); } dd { margin:0; }
-    a { color:var(--green); font-weight:700; text-decoration:none; }
-    .empty { color:var(--muted); text-align:center; padding:32px 18px; }
-    .leaflet-popup-content-wrapper { border-radius:14px; }
-    .popup-title { font-weight:700; margin-bottom:4px; }
-    .popup-sub { color:#68706d; font-size:12px; }
-    .marker-cluster-small,.marker-cluster-medium,.marker-cluster-large {
-      background-color:rgba(35,79,70,.25);
-    }
-    .marker-cluster-small div,.marker-cluster-medium div,.marker-cluster-large div {
-      background-color:var(--green); color:#fff;
-    }
-    .footer {
-      max-width:1500px; margin:0 auto 54px; padding:0 24px; color:var(--muted); font-size:13px; line-height:1.6;
-    }
-    @media(max-width:1050px) {
-      .hero { grid-template-columns:1fr; }
-      .stats { grid-template-columns:repeat(3,1fr); }
-      .workspace { grid-template-columns:1fr; }
-      .panel { min-height:auto; }
-    }
-    @media(max-width:680px) {
-      .controls { grid-template-columns:1fr; }
-      .stats { grid-template-columns:repeat(2,1fr); }
-      #map { height:600px; }
-      .topbar,.hero,.stats,.workspace,.footer { padding-left:12px; padding-right:12px; }
-    }
-  </style>
-</head>
-<body>
-<header>
-  <div class="topbar">
-    <div class="brand">
-      <div class="seal">20</div>
-      <div><strong>História UFRB</strong><span>20 anos de conversas</span></div>
-    </div>
-    <nav style="display:flex;gap:14px;align-items:center;font-size:13px"><a href="../index.html">Início</a><a href="egressos.html">Voltar a Egressos</a></nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div>
-    <div class="kicker">Egressos · trajetórias acadêmicas</div>
-    <h1>Cartografia<br>da pós-graduação</h1>
-    <p>Uma visualização das instituições e cidades alcançadas pelos egressos do curso de História da UFRB em seus percursos de especialização, mestrado e doutorado. A participação na área de perfis do Memorial é voluntária; por isso, apenas alguns registros possuem página individual vinculada.</p>
-  </div>
-  <div class="note">Cada ponto registra um deslocamento acadêmico. Quando o egresso possui perfil voluntário publicado no Memorial, o registro oferece acesso à sua página individual.</div>
-</section>
-
-<section class="stats">
-  <div class="stat"><b id="stat-egressos">—</b><span>egressos mapeados</span></div>
-  <div class="stat"><b id="stat-registros">—</b><span>formações e indícios</span></div>
-  <div class="stat"><b id="stat-instituicoes">—</b><span>instituições</span></div>
-  <div class="stat"><b id="stat-especializacao">—</b><span>registros de especialização</span></div>
-  <div class="stat"><b id="stat-mestrado">—</b><span>registros de mestrado</span></div>
-  <div class="stat"><b id="stat-doutorado">—</b><span>registros de doutorado</span></div>
-</section>
-
-<main class="workspace">
-  <section class="map-card">
-    <div class="controls">
-      <select id="nivel">
-        <option value="">Todos os níveis</option>
-        <option value="Especialização">Especialização</option>
-        <option value="Mestrado">Mestrado</option>
-        <option value="Doutorado">Doutorado</option>
-      </select>
-      <select id="situacao">
-        <option value="">Todas as situações</option>
-        <option value="Conclu">Concluído</option>
-        <option value="andamento">Em andamento</option>
-        <option value="Vínculo">Vínculo localizado</option>
-        <option value="Indício">Indício</option>
-      </select>
-      <input id="busca" type="search" placeholder="Buscar egresso, programa ou instituição">
-    </div>
-    <div id="map"><div id="map-status" style="padding:24px;color:#68706d">Carregando o mapa…</div></div>
-  </section>
-
-  <aside class="panel">
-    <div class="panel-head">
-      <div class="eyebrow" id="place">Visão geral</div>
-      <h2 id="title">Selecione um ponto</h2>
-      <p id="subtitle">Clique em uma instituição para abrir os registros.</p>
-    </div>
-    <div class="results" id="results">
-      <div class="empty">Os marcadores estão agrupados por instituição. Use os filtros para refinar a pesquisa.</div>
-    </div>
-  </aside>
-</main>
-
-<div class="footer">
-  Levantamento parcial e em atualização. Os registros podem representar formação concluída, em andamento, vínculo localizado ou indício ainda não confirmado. O mapa utiliza OpenStreetMap e exige conexão com a internet.
-</div>
-
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartografia da pós-graduação | Memorial 20 anos</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="../style.css?v=55">
+</head><body class="map-page-wide cartography-page"><header class="topbar"><a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a><button class="menu-button" aria-label="Abrir menu">☰</button><nav class="menu"><a href="../index.html">Início</a><a href="curso.html">O curso</a><a href="linha-do-tempo.html">Linha do tempo</a><a href="professores.html">Professores</a><a href="egressos.html" class="active">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a><a href="depoimentos.html">Depoimentos</a><a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a></nav></header>
+<section class="page-hero hero-mapa"><div class="page-hero-inner"><p class="eyebrow">Egressos · formação continuada</p><h1>Cartografia da pós-graduação</h1><p>Instituições, cidades e programas alcançados pelos egressos do Curso de História da UFRB em percursos de especialização, mestrado e doutorado.</p></div></section>
+<main class="content"><nav class="egress-map-tabs" aria-label="Mapas de egressos">
+<a href="mapa.html" class=""><span>Mapa das trajetórias</span><small>Atuação atual e percursos individuais</small></a>
+<a href="cartografia-pos-graduacao.html" class="active"><span>Cartografia da pós-graduação</span><small>Especialização, mestrado e doutorado</small></a>
+</nav>
+<section class="cartography-intro"><div><p class="eyebrow">Levantamento parcial</p><h2>Os caminhos acadêmicos depois da graduação</h2><p>Cada ponto reúne registros de egressos vinculados a uma instituição. Nem todas as pessoas mapeadas possuem página individual no Memorial, pois a publicação de perfis depende de participação e autorização voluntárias.</p></div><blockquote>O mapa registra como a formação iniciada no Recôncavo circula, se transforma e reaparece em outros programas e instituições.</blockquote></section>
+<section class="cartography-stats" aria-label="Resumo da cartografia"><div><strong id="statPeople">80</strong><span>egressos mapeados</span></div><div><strong id="statRecords">97</strong><span>formações e indícios</span></div><div><strong id="statInstitutions">13</strong><span>instituições</span></div><div><strong id="statSpecialization">12</strong><span>especializações</span></div><div><strong id="statMasters">70</strong><span>mestrados</span></div><div><strong id="statDoctorates">14</strong><span>doutorados</span></div></section>
+<section class="cartography-workspace"><div class="cartography-map-card"><div class="cartography-controls"><label><span>Nível</span><select id="nivel"><option value="">Todos os níveis</option><option value="Especialização">Especialização</option><option value="Mestrado">Mestrado</option><option value="Doutorado">Doutorado</option></select></label><label><span>Situação</span><select id="situacao"><option value="">Todas as situações</option><option value="Conclu">Concluído</option><option value="andamento">Em andamento</option><option value="Vínculo">Vínculo localizado</option><option value="Indício">Indício</option></select></label><label class="cartography-search"><span>Busca</span><input id="busca" type="search" placeholder="Egresso, programa ou instituição"></label></div><div id="map" class="cartography-map"><div id="map-status">Carregando o mapa…</div></div></div>
+<aside class="cartography-panel"><div class="cartography-panel-head"><p class="eyebrow" id="place">Visão geral</p><h2 id="title">Selecione um ponto</h2><p id="subtitle">Clique em uma instituição para abrir os registros.</p></div><div class="cartography-results" id="results"><div class="empty">Os marcadores estão agrupados por instituição. Use os filtros para refinar a pesquisa.</div></div></aside></section>
+<section class="notice"><strong>Sobre os dados:</strong> este é um levantamento parcial, em atualização. Os cartões distinguem formações concluídas, atividades em andamento, vínculos localizados e indícios ainda não confirmados. O link para uma página individual aparece somente quando o egresso autorizou a publicação de um perfil no Memorial.</section>
+</main><footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
