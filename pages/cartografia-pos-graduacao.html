@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartografia da pós-graduação | Memorial 20 anos</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://tile.openstreetmap.org">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    :root {
+      --bg:#f3eee4;
+      --paper:#fffdf8;
+      --ink:#17211f;
+      --muted:#68706d;
+      --green:#234f46;
+      --green2:#4f786f;
+      --gold:#b78a47;
+      --line:#d9d0c2;
+      --chip:#edf3ef;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+    }
+    header {
+      background:rgba(243,238,228,.96);
+      border-bottom:1px solid var(--line);
+      position:sticky; top:0; z-index:1000;
+    }
+    .topbar {
+      max-width:1500px; margin:auto; padding:14px 24px;
+      display:flex; justify-content:space-between; align-items:center; gap:20px;
+    }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .seal {
+      width:42px; height:42px; border-radius:50%;
+      border:1px solid var(--green); display:grid; place-items:center;
+      font-family:Georgia,serif;
+    }
+    .brand strong { display:block; font-size:14px; text-transform:uppercase; letter-spacing:.1em; }
+    .brand span { display:block; font-size:12px; color:var(--muted); }
+    .hero {
+      max-width:1500px; margin:auto; padding:46px 24px 26px;
+      display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:end;
+    }
+    .kicker { color:var(--green2); text-transform:uppercase; letter-spacing:.18em; font-size:12px; font-weight:700; }
+    h1 { font-family:Georgia,serif; font-weight:500; font-size:clamp(44px,6vw,82px); line-height:.95; margin:10px 0 18px; }
+    .hero p { color:#4f5955; line-height:1.65; font-size:18px; max-width:780px; }
+    .note { border-left:3px solid var(--gold); padding:16px 0 16px 20px; color:#4c5551; font-family:Georgia,serif; font-size:19px; line-height:1.5; }
+    .stats {
+      max-width:1500px; margin:auto; padding:0 24px 26px;
+      display:grid; grid-template-columns:repeat(6,1fr); gap:12px;
+    }
+    .stat { background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:15px; }
+    .stat b { display:block; font-family:Georgia,serif; color:var(--green); font-size:28px; }
+    .stat span { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
+    .workspace {
+      max-width:1500px; margin:auto; padding:0 24px 72px;
+      display:grid; grid-template-columns:minmax(0,1fr) 430px; gap:18px;
+    }
+    .map-card,.panel {
+      background:var(--paper); border:1px solid var(--line); border-radius:22px; overflow:hidden;
+    }
+    .controls {
+      padding:14px; border-bottom:1px solid var(--line);
+      display:grid; grid-template-columns:180px 180px 1fr; gap:10px;
+    }
+    select,input {
+      width:100%; border:1px solid var(--line); border-radius:12px;
+      background:#fff; color:var(--ink); padding:10px 12px; font:inherit;
+    }
+    #map { height:720px; width:100%; }
+    .panel { display:flex; flex-direction:column; min-height:778px; }
+    .panel-head { padding:21px; border-bottom:1px solid var(--line); }
+    .eyebrow { color:var(--green2); font-size:11px; letter-spacing:.13em; text-transform:uppercase; }
+    .panel h2 { font-family:Georgia,serif; font-size:29px; font-weight:500; margin:6px 0; }
+    .panel-head p { color:var(--muted); margin:0; }
+    .results { padding:14px; overflow:auto; max-height:690px; }
+    .person {
+      border:1px solid var(--line); border-radius:16px; padding:14px; margin-bottom:10px; background:#fff;
+    }
+    .person h3 { margin:0 0 8px; font-size:16px; }
+    .chips { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+    .chip { background:var(--chip); color:var(--green); border-radius:999px; padding:5px 8px; font-size:11px; }
+    dl { display:grid; grid-template-columns:82px 1fr; gap:5px 8px; margin:0; font-size:13px; }
+    dt { color:var(--muted); } dd { margin:0; }
+    a { color:var(--green); font-weight:700; text-decoration:none; }
+    .empty { color:var(--muted); text-align:center; padding:32px 18px; }
+    .leaflet-popup-content-wrapper { border-radius:14px; }
+    .popup-title { font-weight:700; margin-bottom:4px; }
+    .popup-sub { color:#68706d; font-size:12px; }
+    .marker-cluster-small,.marker-cluster-medium,.marker-cluster-large {
+      background-color:rgba(35,79,70,.25);
+    }
+    .marker-cluster-small div,.marker-cluster-medium div,.marker-cluster-large div {
+      background-color:var(--green); color:#fff;
+    }
+    .footer {
+      max-width:1500px; margin:0 auto 54px; padding:0 24px; color:var(--muted); font-size:13px; line-height:1.6;
+    }
+    @media(max-width:1050px) {
+      .hero { grid-template-columns:1fr; }
+      .stats { grid-template-columns:repeat(3,1fr); }
+      .workspace { grid-template-columns:1fr; }
+      .panel { min-height:auto; }
+    }
+    @media(max-width:680px) {
+      .controls { grid-template-columns:1fr; }
+      .stats { grid-template-columns:repeat(2,1fr); }
+      #map { height:600px; }
+      .topbar,.hero,.stats,.workspace,.footer { padding-left:12px; padding-right:12px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <div class="brand">
+      <div class="seal">20</div>
+      <div><strong>História UFRB</strong><span>20 anos de conversas</span></div>
+    </div>
+    <nav style="display:flex;gap:14px;align-items:center;font-size:13px"><a href="../index.html">Início</a><a href="egressos.html">Voltar a Egressos</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="kicker">Egressos · trajetórias acadêmicas</div>
+    <h1>Cartografia<br>da pós-graduação</h1>
+    <p>Uma visualização das instituições e cidades alcançadas pelos egressos do curso de História da UFRB em seus percursos de especialização, mestrado e doutorado. A participação na área de perfis do Memorial é voluntária; por isso, apenas alguns registros possuem página individual vinculada.</p>
+  </div>
+  <div class="note">Cada ponto registra um deslocamento acadêmico. Quando o egresso possui perfil voluntário publicado no Memorial, o registro oferece acesso à sua página individual.</div>
+</section>
+
+<section class="stats">
+  <div class="stat"><b id="stat-egressos">—</b><span>egressos mapeados</span></div>
+  <div class="stat"><b id="stat-registros">—</b><span>formações e indícios</span></div>
+  <div class="stat"><b id="stat-instituicoes">—</b><span>instituições</span></div>
+  <div class="stat"><b id="stat-especializacao">—</b><span>registros de especialização</span></div>
+  <div class="stat"><b id="stat-mestrado">—</b><span>registros de mestrado</span></div>
+  <div class="stat"><b id="stat-doutorado">—</b><span>registros de doutorado</span></div>
+</section>
+
+<main class="workspace">
+  <section class="map-card">
+    <div class="controls">
+      <select id="nivel">
+        <option value="">Todos os níveis</option>
+        <option value="Especialização">Especialização</option>
+        <option value="Mestrado">Mestrado</option>
+        <option value="Doutorado">Doutorado</option>
+      </select>
+      <select id="situacao">
+        <option value="">Todas as situações</option>
+        <option value="Conclu">Concluído</option>
+        <option value="andamento">Em andamento</option>
+        <option value="Vínculo">Vínculo localizado</option>
+        <option value="Indício">Indício</option>
+      </select>
+      <input id="busca" type="search" placeholder="Buscar egresso, programa ou instituição">
+    </div>
+    <div id="map"><div id="map-status" style="padding:24px;color:#68706d">Carregando o mapa…</div></div>
+  </section>
+
+  <aside class="panel">
+    <div class="panel-head">
+      <div class="eyebrow" id="place">Visão geral</div>
+      <h2 id="title">Selecione um ponto</h2>
+      <p id="subtitle">Clique em uma instituição para abrir os registros.</p>
+    </div>
+    <div class="results" id="results">
+      <div class="empty">Os marcadores estão agrupados por instituição. Use os filtros para refinar a pesquisa.</div>
+    </div>
+  </aside>
+</main>
+
+<div class="footer">
+  Levantamento parcial e em atualização. Os registros podem representar formação concluída, em andamento, vínculo localizado ou indício ainda não confirmado. O mapa utiliza OpenStreetMap e exige conexão com a internet.
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+const DATA = [{"nome": "Alan Félix da Paixão dos Santos", "nivel": "Especialização", "programa": "História e Cultura Afro-Brasileira", "instituicao": "Faculdade Venda Nova do Imigrante", "cidade": "Venda Nova do Imigrante, ES", "lat": -20.327, "lon": -41.135, "inicio": 2022, "conclusao": 2023, "situacao": "Concluída", "fonte": "https://api.brtransparencia.com.br/storage/EF1662F7-9A2A-4FDB-ABAD-346211F97734/materia/35f844ee-5c13-4e7e-97fe-f18e342cab77.pdf", "observacoes": "Datas informadas na pesquisa anterior"}, {"nome": "Alan Félix da Paixão dos Santos", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": null, "conclusao": null, "situacao": "Em andamento na versão localizada", "fonte": "https://api.brtransparencia.com.br/storage/EF1662F7-9A2A-4FDB-ABAD-346211F97734/materia/35f844ee-5c13-4e7e-97fe-f18e342cab77.pdf", "observacoes": "Ano de início não consolidado"}, {"nome": "Camila Vieira Guerreiro", "nivel": "Mestrado acadêmico", "programa": "Museologia", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2021, "conclusao": null, "situacao": "Em andamento na fonte consultada", "fonte": "https://ppgmuseu.ffch.ufba.br/pt-br/corpo-discente?page=3", "observacoes": "A conclusão não foi confirmada"}, {"nome": "Gleysa Teixeira Siqueira", "nivel": "Especialização", "programa": "Teoria e Métodos em História", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": null, "conclusao": 2013, "situacao": "Concluída", "fonte": null, "observacoes": "Ano inicial não localizado"}, {"nome": "Gleysa Teixeira Siqueira", "nivel": "Mestrado acadêmico", "programa": "Ciências Sociais", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": null, "conclusao": 2017, "situacao": "Concluído", "fonte": null, "observacoes": "Ano inicial não localizado"}, {"nome": "Gracielma de Jesus Leão", "nivel": "Especialização", "programa": "Gestão de Políticas Públicas em Gênero e Raça", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": null, "situacao": "Concluída", "fonte": null, "observacoes": "Datas não localizadas"}, {"nome": "Gabriel Silva de Jesus", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2016, "conclusao": 2019, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/pt-br/gabriel-silva-de-jesus", "observacoes": null}, {"nome": "Geferson Santana de Jesus", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UNIFESP", "cidade": "Guarulhos, SP", "lat": -23.4538, "lon": -46.5333, "inicio": null, "conclusao": null, "situacao": "Concluído", "fonte": "https://bv.fapesp.br/pt/pesquisador/674019/geferson-santana-de-jesus/", "observacoes": "Datas não consolidadas"}, {"nome": "Geferson Santana de Jesus", "nivel": "Doutorado", "programa": "História Econômica", "instituicao": "USP", "cidade": "São Paulo, SP", "lat": -23.5614, "lon": -46.7308, "inicio": null, "conclusao": 2024, "situacao": "Concluído", "fonte": "https://bv.fapesp.br/pt/pesquisador/674019/geferson-santana-de-jesus/", "observacoes": "Ano inicial não consolidado"}, {"nome": "João Paulo Pinto do Carmo", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2014, "conclusao": 2016, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes/discentes", "observacoes": "Ano final pode corresponder ao período da turma"}, {"nome": "Fábio Santos Barreto", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2016, "conclusao": 2017, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes/discentes", "observacoes": "Ano final pode corresponder ao período da turma"}, {"nome": "Patrícia de Santana Souza", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2017, "conclusao": 2018, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes/discentes", "observacoes": "Ano final pode corresponder ao período da turma"}, {"nome": "Sandro Augusto da Silva Cerqueira Júnior", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2016, "conclusao": 2017, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes/discentes", "observacoes": "Ano final pode corresponder ao período da turma"}, {"nome": "Tamires Santos Teles", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2017, "conclusao": 2018, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes/discentes", "observacoes": "Ano final pode corresponder ao período da turma"}, {"nome": "Neusa Sacramento de Oliveira", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2019, "conclusao": 2020, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes/discentes", "observacoes": "Ano final pode corresponder ao período da turma"}, {"nome": "Camila Santos do Nascimento", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2016, "conclusao": 2017, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes/discentes", "observacoes": "Ano final pode corresponder ao período da turma"}, {"nome": "Elias dos Santos Conceição", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2019, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://ppgh.ufba.br/pt-br/elias-dos-santos-conceicao", "observacoes": "Conclusão não confirmada"}, {"nome": "Ileana Helen Cardoso Conceição", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": null, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Datas não localizadas"}, {"nome": "Raudiney dos Anjos da Conceição Silva", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": null, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Datas não localizadas"}, {"nome": "Joilson de Jesus Santana", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": null, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Datas não localizadas"}, {"nome": "Jorge Alves de Queiroz", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2025, "conclusao": null, "situacao": "Em andamento", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": null}, {"nome": "Uelinton Alves Barbosa", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2020, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Conclusão não localizada"}, {"nome": "Regiane Marques Lindner", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2020, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Conclusão não localizada"}, {"nome": "Jessica Souza da Silva Santana", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2021, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Conclusão não localizada"}, {"nome": "Samile Santos da Cruz", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2021, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Conclusão não localizada"}, {"nome": "Camila Sena da Luz", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2024, "conclusao": null, "situacao": "Em andamento", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": null}, {"nome": "Catia Cristina da Silva Santos", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2023, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Conclusão não localizada"}, {"nome": "Erick Borges de Souza", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2023, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Conclusão não localizada"}, {"nome": "Glenda de Castro Spósito", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2023, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Conclusão não localizada"}, {"nome": "Rogério Santos Souza", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2016, "conclusao": 2017, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/mphistoria/noticias/189-defesa-do-trabalho-de-conclusao-final-rogerio-santos-souza", "observacoes": null}, {"nome": "Tanise de Souza Andrade", "nivel": "Especialização", "programa": "Educação em Direitos Humanos", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2017, "conclusao": 2019, "situacao": "Concluída", "fonte": "https://sead.ufba.br/sites/sead.ufba.br/files/resultado_edital_05-2017_eedh2.pdf", "observacoes": null}, {"nome": "Fábio Américo Reis Santos", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2016, "conclusao": 2018, "situacao": "Concluído", "fonte": "https://ufrb.edu.br/mphistoria/images/Disserta%C3%A7%C3%B5es/Turma_2016/Dissertacao_Fabio_Reis_-_Correcao_Rosy_04_de_dezembro-convertido_assinatura.pdf", "observacoes": null}, {"nome": "Iracema Marques de Sant’Anna", "nivel": "Especialização", "programa": "História e Cultura Afro-Brasileira e Indígena", "instituicao": "IF Baiano", "cidade": "Governador Mangabeira, BA", "lat": -12.599, "lon": -39.041, "inicio": 2016, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://concurso.ifbaiano.edu.br/portal/pos-graduacao-campus-mangabeira/wp-content/uploads/sites/46/2016/10/RF-HISTORIA-E-CULTURA-AFRO-BRASILEIRA-E-INDIGENA-EDITAL-N-06-2016-DA-CI-06-2016.pdf", "observacoes": "Conclusão não localizada"}, {"nome": "Dandara Silva Matos", "nivel": "Doutorado", "programa": "História", "instituicao": "UNICAMP", "cidade": "Campinas, SP", "lat": -22.8184, "lon": -47.0647, "inicio": 2022, "conclusao": null, "situacao": "Indício de candidatura", "fonte": "https://www.ifch.unicamp.br/pf-ifch/public-files/pos-graduacao/edital-resultado/139156/01_inscricoes_deferidas_mestrado_e_doutorado.pdf", "observacoes": "Não comprova ingresso ou matrícula"}, {"nome": "Gilson dos Santos Filho", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2025, "conclusao": null, "situacao": "Em andamento", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": null}, {"nome": "John Anderson Macedo Santos", "nivel": "Especialização", "programa": "História e Cultura Afro-Brasileira e Indígena", "instituicao": "IF Baiano", "cidade": "Governador Mangabeira, BA", "lat": -12.599, "lon": -39.041, "inicio": 2016, "conclusao": null, "situacao": "Vínculo localizado", "fonte": null, "observacoes": "Conclusão não localizada"}, {"nome": "Joseane Pereira de Souza", "nivel": "Especialização", "programa": "História da África, da Cultura Afro-Brasileira e Africana", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2014, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/ppgci/images/documentos/resultado-final-especializacao-historia-da-africa.pdf", "observacoes": "Conclusão não localizada"}, {"nome": "Joseane Pereira de Souza", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2015, "conclusao": 2018, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/pt-br/joseane-pereira-de-souza", "observacoes": null}, {"nome": "Joseane Pereira de Souza", "nivel": "Doutorado", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": null, "situacao": "Em andamento na fonte consultada", "fonte": "https://ppgh.ufba.br/pt-br/joseane-pereira-de-souza", "observacoes": "Ano inicial não consolidado"}, {"nome": "José Carlos Ferreira dos Santos Filho", "nivel": "Especialização", "programa": "História da África, da Cultura Afro-Brasileira e Africana", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2014, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/ppgci/images/documentos/resultado-final-especializacao-historia-da-africa.pdf", "observacoes": "Conclusão não localizada"}, {"nome": "José Carlos Ferreira dos Santos Filho", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2015, "conclusao": 2016, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": null}, {"nome": "Josiane Rocha Conceição dos Santos", "nivel": "Especialização", "programa": "História e Cultura Afro-Brasileira e Indígena", "instituicao": "IF Baiano", "cidade": "Governador Mangabeira, BA", "lat": -12.599, "lon": -39.041, "inicio": null, "conclusao": null, "situacao": "Concluída", "fonte": null, "observacoes": "Datas não localizadas"}, {"nome": "Marivania de Lima Santana", "nivel": "Especialização", "programa": "História da África, da Cultura Afro-Brasileira e Africana", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2014, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/ppgci/images/documentos/resultado-final-especializacao-historia-da-africa.pdf", "observacoes": "Conclusão não localizada"}, {"nome": "Marivania de Lima Santana", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2021, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Conclusão não localizada"}, {"nome": "Elder Luan dos Santos Silva", "nivel": "Especialização", "programa": "História da África, da Cultura Afro-Brasileira e Africana", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2014, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/ppgci/images/documentos/resultado-final-especializacao-historia-da-africa.pdf", "observacoes": "Conclusão não localizada"}, {"nome": "Janete Ferreira dos Santos Marques", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2023, "conclusao": null, "situacao": "Vínculo localizado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Defesa não localizada"}, {"nome": "Wilson Oliveira Badaró", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2016, "conclusao": 2018, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": null}, {"nome": "Iansmin de Oliveira Gonçalves", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2017, "conclusao": 2018, "situacao": "Período oficial da turma", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes", "observacoes": "Defesa individual não conferida"}, {"nome": "Fabiano dos Santos Silva", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2020, "conclusao": null, "situacao": "Ingresso ou vínculo localizado", "fonte": "https://ufrb.edu.br/mphistoria/images/Resultado-parcial-do-processo-seletivo-2020.1-PPGMPH-03_20191.pdf", "observacoes": "Conclusão não localizada"}, {"nome": "Reinaldo Isidoro Ribeiro Correia", "nivel": "Especialização", "programa": "Gestão Pública", "instituicao": "UNILAB", "cidade": "Redenção, CE", "lat": -4.225, "lon": -38.73, "inicio": null, "conclusao": 2015, "situacao": "Concluída", "fonte": null, "observacoes": "Ano inicial não localizado"}, {"nome": "Reinaldo Isidoro Ribeiro Correia", "nivel": "Especialização", "programa": "História e Cultura Afro, Afro-Brasileira e Indígena", "instituicao": "Faculdade Iguaçu", "cidade": "Foz do Iguaçu, PR", "lat": -25.536, "lon": -54.589, "inicio": null, "conclusao": 2023, "situacao": "Concluída", "fonte": null, "observacoes": "Ano inicial não localizado"}, {"nome": "Reinaldo Isidoro Ribeiro Correia", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2023, "conclusao": 2025, "situacao": "Concluído", "fonte": "https://ufrb.edu.br/mphistoria/images/ATA_reunio_ordinria_-_PPGMPH_MARO.2023_2.pdf", "observacoes": null}, {"nome": "Claudio Emanuel Santana Reina", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2020, "conclusao": 2023, "situacao": "Concluído", "fonte": "https://ufrb.edu.br/mphistoria/images/Resultado-parcial-do-processo-seletivo-2020.1-PPGMPH-03_20191.pdf", "observacoes": null}, {"nome": "Laís de Jesus Santos", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2021, "conclusao": 2024, "situacao": "Concluído", "fonte": "https://www.ufrb.edu.br/ppgci/images/editais_ppq_pos/2021/Edital_PPQ-Pos_012021_resultado_final.pdf", "observacoes": null}, {"nome": "Leon Gabriel Santana Ferreira de Jesus", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2020, "conclusao": null, "situacao": "Aprovação localizada", "fonte": "https://ufrb.edu.br/mphistoria/images/Resultado-parcial-do-processo-seletivo-2020.1-PPGMPH-03_20191.pdf", "observacoes": "Matrícula e conclusão não confirmadas"}, {"nome": "Ricardo Benevides de Lima", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2021, "conclusao": null, "situacao": "Vínculo confirmado", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes/discentes", "observacoes": "Conclusão não verificada"}, {"nome": "Joice Nunes da Conceição Silva", "nivel": "Mestrado profissional", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2024, "conclusao": null, "situacao": "Em andamento", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes/discentes", "observacoes": null}, {"nome": "Maria Brenda da Silva Marques Barbosa", "nivel": "Doutorado", "programa": "História da África, da Diáspora e dos Povos Indígenas", "instituicao": "UFRB", "cidade": "Cachoeira, BA", "lat": -12.6013, "lon": -38.965, "inicio": 2025, "conclusao": null, "situacao": "Em andamento", "fonte": "https://www.ufrb.edu.br/mphistoria/integrantes/discentes/discentes", "observacoes": null}, {"nome": "Sulamita Pinto Lima", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2017, "conclusao": 2020, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/pt-br/sulamita-pinto-lima", "observacoes": "Dissertação registrada em 2020"}, {"nome": "Sulamita Pinto Lima", "nivel": "Doutorado", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2021, "conclusao": null, "situacao": "Em andamento", "fonte": "https://ppgh.ufba.br/en/discentes-doutorado?page=1", "observacoes": null}, {"nome": "Ana Claudia de Jesus Lopes", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2018, "conclusao": null, "situacao": "Vínculo confirmado", "fonte": "https://ppgh.ufba.br/pt-br/discentes-lista-das-pessoas", "observacoes": "Conclusão não localizada"}, {"nome": "Carlos Augusto Santos Neri Braga", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2018, "conclusao": 2021, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/sites/ppgh.ufba.br/files/2021_m_carlos_augusto_santos_neri_braga_0.pdf", "observacoes": null}, {"nome": "Dielson Bispo de Santana", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2017, "conclusao": 2020, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": null}, {"nome": "Géssica Bispo Souza", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2017, "conclusao": null, "situacao": "Vínculo confirmado", "fonte": "https://ppgh.ufba.br/pt-br/discentes-lista-das-pessoas", "observacoes": "Conclusão não localizada"}, {"nome": "Ludmila Maria Conceição dos Santos de Araujo", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2016, "conclusao": null, "situacao": "Vínculo confirmado", "fonte": "https://ppgh.ufba.br/pt-br/discentes-lista-das-pessoas", "observacoes": "Nome aparece sem o último sobrenome na página"}, {"nome": "Antonildo Santos de Magalhães", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2015, "conclusao": 2018, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": null}, {"nome": "Augusto Fagundes da Silva dos Santos", "nivel": "Mestrado acadêmico", "programa": "História Social", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2013, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/sites/ppgh.ufba.br/files/2013._santos_augusto_fagundes_da_silva_dos._a_misericordia_da_bahia_e_o_seu_sistema_de_concessao_de_credito_1701-1777.pdf", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Augusto Fagundes da Silva dos Santos", "nivel": "Doutorado", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2015, "conclusao": 2020, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/sites/ppgh.ufba.br/files/santos_augusto_fagundes_da_silva_dos._2020._e_fiado_ou_em_dinheiro_de_contado_o_credito_na_bahia_colonial_1777-1808.pdf", "observacoes": null}, {"nome": "Uelton Freitas Rocha", "nivel": "Mestrado acadêmico", "programa": "História Social", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2015, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/sites/ppgh.ufba.br/files/2015._rocha_uelton_freitas._reconcavas_fortunas_a_dinamica_da_riqueza_no_reconcavo_da_bahia_cachoeira_1834-1889.pdf", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Uelton Freitas Rocha", "nivel": "Doutorado", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2016, "conclusao": null, "situacao": "Vínculo confirmado", "fonte": "https://ppgh.ufba.br/pt-br/discentes-doutorado?page=2", "observacoes": "Conclusão não localizada"}, {"nome": "Eliseu Santos Ferreira Silva", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2016, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Eliseu Santos Ferreira Silva", "nivel": "Doutorado", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2017, "conclusao": null, "situacao": "Vínculo confirmado", "fonte": "https://ppgh.ufba.br/pt-br/discentes-lista-das-pessoas", "observacoes": "Conclusão não localizada"}, {"nome": "Clissio Santos Santana", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2014, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Clissio Santos Santana", "nivel": "Doutorado", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2024, "conclusao": null, "situacao": "Em andamento", "fonte": "https://ppgh.ufba.br/pt-br/discentes-doutorado", "observacoes": null}, {"nome": "Juliana de Oliveira Souza", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2019, "conclusao": null, "situacao": "Vínculo confirmado", "fonte": "https://ppgh.ufba.br/pt-br/discentes-mestrado?page=2", "observacoes": "Conclusão não localizada"}, {"nome": "Eliene de Jesus Sousa", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2019, "conclusao": null, "situacao": "Vínculo confirmado", "fonte": "https://ppgh.ufba.br/pt-br/discentes-mestrado?page=2", "observacoes": "Conclusão não localizada"}, {"nome": "Thiago Melo de Souza", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2017, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Thiago Melo de Souza", "nivel": "Doutorado", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2023, "conclusao": null, "situacao": "Em andamento", "fonte": "https://ppgh.ufba.br/pt-br/discentes-doutorado", "observacoes": null}, {"nome": "Alfredo Pinto da Silva Junior", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2016, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Alfredo Pinto da Silva Junior", "nivel": "Doutorado", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2025, "conclusao": null, "situacao": "Em andamento", "fonte": "https://ppgh.ufba.br/pt-br/discentes-doutorado", "observacoes": null}, {"nome": "Ana Paula de Albuquerque Silva", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2015, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Jamille Macedo Oliveira Santos", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2015, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Thiago Alberto Alves dos Santos", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2015, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Lucas Santos Cafe", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2013, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Mauricio Quadros da Mota", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2013, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Rodrigo do Nascimento Amorim", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": null, "conclusao": 2016, "situacao": "Concluído", "fonte": "https://ppgh.ufba.br/egressos-mestrado", "observacoes": "Ano de ingresso não localizado"}, {"nome": "Pablo Rezende da Silva", "nivel": "Doutorado", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2023, "conclusao": null, "situacao": "Em andamento", "fonte": "https://ppgh.ufba.br/pt-br/discentes-doutorado", "observacoes": null}, {"nome": "Eliadson Ferreira Bernardo Santos", "nivel": "Mestrado acadêmico", "programa": "História Regional e Local", "instituicao": "UNEB – Campus V", "cidade": "Santo Antônio de Jesus, BA", "lat": -12.9683, "lon": -39.2612, "inicio": null, "conclusao": 2021, "situacao": "Concluído", "fonte": "https://ppghis.uneb.br/wp-content/uploads/2024/09/Eliadson-Ferreira-Bernardo-Santos.pdf", "observacoes": "Defesa em 15/12/2021"}, {"nome": "Igor Roberto de Almeida Moreira", "nivel": "Mestrado acadêmico", "programa": "História Regional e Local", "instituicao": "UNEB – Campus V", "cidade": "Santo Antônio de Jesus, BA", "lat": -12.9683, "lon": -39.2612, "inicio": null, "conclusao": 2021, "situacao": "Concluído", "fonte": "https://ppghis.uneb.br/wp-content/uploads/2024/08/Igor-Roberto-de-Almeida-Moreira.pdf", "observacoes": "Defesa em 09/12/2021"}, {"nome": "Igor Roberto de Almeida Moreira", "nivel": "Doutorado", "programa": "História", "instituicao": "UFBA", "cidade": "Salvador, BA", "lat": -12.993, "lon": -38.521, "inicio": 2023, "conclusao": null, "situacao": "Em andamento", "fonte": "https://ppgh.ufba.br/pt-br/discentes-doutorado", "observacoes": null}, {"nome": "Felipe dos Santos", "nivel": "Mestrado acadêmico", "programa": "História Regional e Local", "instituicao": "UNEB – Campus V (Santo Antônio de Jesus)", "cidade": "Santo Antônio de Jesus, BA", "lat": -12.9683, "lon": -39.2612, "inicio": null, "conclusao": null, "situacao": "Concluído", "fonte": "https://ppghis.uneb.br/wp-content/uploads/2024/08/Felipe-dos-Santos.pdf", "observacoes": "Dissertação: Familiaturas recusadas pelo Tribunal do Santo Ofício na Vila de Cachoeira (Bahia)"}, {"nome": "Roberta Cristina Santos Leite Rocha", "nivel": "Mestrado acadêmico", "programa": "História Regional e Local", "instituicao": "UNEB – Campus V", "cidade": "Santo Antônio de Jesus, BA", "lat": -12.9683, "lon": -39.2612, "inicio": null, "conclusao": 2022, "situacao": "Concluído", "fonte": "https://ppghis.uneb.br/wp-content/uploads/2022/06/Roberta-Cristina-Santo-Leite-Rocha.pdf", "observacoes": null}, {"nome": "Antonio Gomes da Silva Neto", "nivel": "Mestrado acadêmico", "programa": "História Regional e Local", "instituicao": "UNEB – Campus V", "cidade": "Santo Antônio de Jesus, BA", "lat": -12.9683, "lon": -39.2612, "inicio": null, "conclusao": 2022, "situacao": "Concluído", "fonte": "https://ppghis.uneb.br/wp-content/uploads/2024/08/Antonio-Gomes-da-Silva-Neto.pdf", "observacoes": null}, {"nome": "Leila Maria de Jesus Pereira", "nivel": "Mestrado acadêmico", "programa": "História", "instituicao": "UEFS", "cidade": "Feira de Santana, BA", "lat": -12.2664, "lon": -38.9663, "inicio": null, "conclusao": 2021, "situacao": "Concluído", "fonte": "https://ppgh.uefs.br/dissertacoes/", "observacoes": "Dissertação: “Mulheres modernas” na imprensa baiana: ideal de feminilidade na Revista Renascença (1910–1928)"}, {"nome": "Aliciane da Fé Silva", "nivel": "Mestrado acadêmico", "programa": "História, Cultura e Práticas Sociais", "instituicao": "UNEB – Campus II (Alagoinhas)", "cidade": "Alagoinhas, BA", "lat": -12.1356, "lon": -38.4192, "inicio": 2022, "conclusao": 2024, "situacao": "Concluído", "fonte": "https://www.poshistoria.uneb.br/wp-content/uploads/2024/08/DISSERTACAO-ALICIANE-DA-FE-SILVA.pdf", "observacoes": "Dissertação: Fios da escravidão: subsistência, trabalho e “ofício da lavoura” no Vale do Copioba, São Felipe-BA, nos finais do século XIX (1870–1897)"}, {"nome": "Rosângela das Neves dos Santos Conceição", "nivel": "Mestrado acadêmico", "programa": "História, Cultura e Práticas Sociais", "instituicao": "UNEB – Campus II (Alagoinhas)", "cidade": "Alagoinhas, BA", "lat": -12.1356, "lon": -38.4192, "inicio": 2022, "conclusao": 2024, "situacao": "Concluído", "fonte": "https://www.poshistoria.uneb.br/wp-content/uploads/2021/11/RESULTADO-PUBLICAR-APOS-RECURSOS.pdf", "observacoes": "Dissertação: O muro que não se desfaz: a representação do tempo histórico nos romances. A data de 2024 aparece em registro acadêmico associado à dissertação."}, {"nome": "Lucas Santos Café", "nivel": "Doutorado", "programa": "História", "instituicao": "UFMT", "cidade": "Cuiabá, MT", "lat": -15.6092, "lon": -56.0665, "inicio": 2019, "conclusao": 2023, "situacao": "Concluído", "fonte": "https://integra.ifmt.edu.br/portfolio/pessoas/lucas-santos-cafe/hist%C3%B3ria%3B", "observacoes": "Defesa realizada em 2023; título começa por “Racismo...” no registro público localizado"}];
+
+const PROFILE_LINKS = {
+  "alfredo pinto da silva junior": "egresso-alfredo-pinto.html"
+};
+
+function normalizeName(value) {
+  return String(value || "")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().trim();
+}
+
+function profileLinkFor(name) {
+  return PROFILE_LINKS[normalizeName(name)] || null;
+}
+
+function updateStats() {
+  const uniquePeople = new Set(DATA.map(r => normalizeName(r.nome))).size;
+  const uniqueInstitutions = new Set(DATA.map(r => r.instituicao).filter(Boolean)).size;
+  const countLevel = term => DATA.filter(r => String(r.nivel).toLowerCase().includes(term)).length;
+  document.getElementById('stat-egressos').textContent = uniquePeople;
+  document.getElementById('stat-registros').textContent = DATA.length;
+  document.getElementById('stat-instituicoes').textContent = uniqueInstitutions;
+  document.getElementById('stat-especializacao').textContent = countLevel('especializa');
+  document.getElementById('stat-mestrado').textContent = countLevel('mestrado');
+  document.getElementById('stat-doutorado').textContent = countLevel('doutorado');
+}
+
+let map;
+try {
+  map = L.map('map', { zoomControl:true }).setView([-12.7,-41.7], 6);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors',
+    crossOrigin: true
+  }).addTo(map);
+  const status = document.getElementById('map-status');
+  if (status) status.remove();
+} catch (error) {
+  const status = document.getElementById('map-status');
+  if (status) {
+    status.innerHTML = '<strong>Não foi possível carregar o mapa.</strong><br>Verifique a conexão com a internet e abra o arquivo depois de descompactá-lo.';
+  }
+  console.error(error);
+}
+
+const levelEl = document.getElementById('nivel');
+const statusEl = document.getElementById('situacao');
+const searchEl = document.getElementById('busca');
+const resultsEl = document.getElementById('results');
+const placeEl = document.getElementById('place');
+const titleEl = document.getElementById('title');
+const subtitleEl = document.getElementById('subtitle');
+
+let markerLayer = map ? L.layerGroup().addTo(map) : null;
+
+function esc(v) {
+  return String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+function currentData() {
+  const level = levelEl.value.toLowerCase();
+  const status = statusEl.value.toLowerCase();
+  const q = searchEl.value.trim().toLowerCase();
+  return DATA.filter(r => {
+    const text = [r.nome,r.nivel,r.programa,r.instituicao,r.cidade,r.situacao].join(' ').toLowerCase();
+    return (!level || String(r.nivel).toLowerCase().includes(level))
+      && (!status || String(r.situacao).toLowerCase().includes(status))
+      && (!q || text.includes(q));
+  });
+}
+
+function grouped(data) {
+  const obj = {};
+  data.forEach(r => {
+    const key = r.lat + ',' + r.lon;
+    if (!obj[key]) obj[key] = {lat:r.lat,lon:r.lon,cidade:r.cidade,instituicao:r.instituicao,items:[]};
+    obj[key].items.push(r);
+  });
+  return Object.values(obj);
+}
+
+function showGroup(g) {
+  const people = [...new Set(g.items.map(i => i.nome))];
+  placeEl.textContent = g.cidade;
+  titleEl.textContent = g.instituicao;
+  subtitleEl.textContent = people.length + ' egresso(s) · ' + g.items.length + ' registro(s)';
+  resultsEl.innerHTML = g.items.map(r => `
+    <article class="person">
+      <h3>${esc(r.nome)}</h3>
+      <div class="chips">
+        <span class="chip">${esc(r.nivel)}</span>
+        <span class="chip">${esc(r.situacao)}</span>
+      </div>
+      <dl>
+        <dt>Programa</dt><dd>${esc(r.programa)}</dd>
+        <dt>Instituição</dt><dd>${esc(r.instituicao)}</dd>
+        <dt>Período</dt><dd>${esc(r.inicio || '—')}–${esc(r.conclusao || (String(r.situacao).toLowerCase().includes('andamento') ? 'atual' : '—'))}</dd>
+        ${r.observacoes ? `<dt>Nota</dt><dd>${esc(r.observacoes)}</dd>` : ''}
+        ${r.fonte ? `<dt>Fonte</dt><dd><a href="${esc(r.fonte)}" target="_blank" rel="noopener">Abrir registro</a></dd>` : ''}
+        ${profileLinkFor(r.nome) ? `<dt>Perfil</dt><dd><a href="${profileLinkFor(r.nome)}">Ver página no Memorial</a></dd>` : ''}
+      </dl>
+    </article>
+  `).join('');
+}
+
+function refresh() {
+  if (!map || !markerLayer) return;
+  markerLayer.clearLayers();
+  const groups = grouped(currentData());
+
+  groups.forEach(g => {
+    const unique = [...new Set(g.items.map(i => i.nome))].length;
+    const marker = L.circleMarker([g.lat,g.lon], {
+      radius: Math.min(18, 8 + unique * 0.7),
+      color: '#234f46',
+      weight: 3,
+      fillColor: '#fffdf8',
+      fillOpacity: 0.95
+    });
+    marker.bindTooltip(`<strong>${esc(g.instituicao)}</strong><br>${unique} egresso(s)`, {direction:'top'});
+    marker.on('click', () => showGroup(g));
+    marker.addTo(markerLayer);
+  });
+
+  if (groups.length) {
+    const bounds = L.latLngBounds(groups.map(g => [g.lat,g.lon]));
+    map.fitBounds(bounds.pad(0.18), {maxZoom:7});
+  }
+
+  if (!groups.length) {
+    titleEl.textContent = 'Nenhum resultado';
+    subtitleEl.textContent = 'Altere os filtros para visualizar os dados.';
+    resultsEl.innerHTML = '<div class="empty">Nenhum registro corresponde aos filtros atuais.</div>';
+  }
+}
+
+[levelEl,statusEl,searchEl].forEach(el => el.addEventListener('input', refresh));
+updateStats();
+refresh();
+</script>
+</body>
+</html>
