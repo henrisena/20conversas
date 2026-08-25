@@ -1,17 +1,12 @@
-ATUALIZAÇÃO — CENTRALIZAÇÃO DAS FOTOS E LIMPEZA DA PÁGINA EGRESSOS
+ATUALIZAÇÃO — PERFIS DOS 21 PROFESSORES
 
-Arquivos alterados:
-- style.css
-- pages/egressos.html
+Copie o conteúdo deste ZIP para a raiz do repositório do site e confirme a substituição dos arquivos.
 
-Como aplicar:
-1. Extraia este ZIP.
-2. Copie os arquivos para a raiz do repositório do site.
-3. Confirme a substituição dos arquivos existentes.
-4. No GitHub Desktop, faça Commit e Push origin.
+Esta atualização:
+- mantém as seis páginas docentes já existentes;
+- acrescenta páginas individuais preparadas para os 15 docentes que ainda não tinham página;
+- remove Eliazar da relação e inclui André de Almeida Rego;
+- inclui Paulo Cesar Oliveira de Jesus;
+- não inventa dados pessoais: as novas páginas contêm apenas espaços preparados para preenchimento posterior.
 
-Mudanças:
-- centralização dos rostos nas fotos individuais de professores e egressos;
-- reposicionamento das fotografias contextuais, especialmente Camila e Alfredo;
-- remoção defensiva dos links secundários duplicados de mapas na página Egressos;
-- a página Egressos permanece dedicada apenas aos perfis.
+Depois, no GitHub Desktop: Changes > Commit to main > Push origin.
