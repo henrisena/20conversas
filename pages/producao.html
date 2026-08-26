@@ -1,174 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produção Intelectual | Memorial 20 anos</title>
-  <link rel="stylesheet" href="../style.css?v=41">
-</head>
-<body>
-<header class="topbar">
-  <a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a>
-  <button class="menu-button" aria-label="Abrir menu">☰</button>
-  <nav class="menu">
-    <a href="../index.html">Início</a>
-    <a href="curso.html">O curso</a>
-    <a href="linha-do-tempo.html">Linha do tempo</a>
-    <a href="professores.html">Professores</a>
-    <a href="egressos.html">Egressos</a>
-    <a href="projetos.html">Projetos</a>
-    <a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a>
-    <a href="depoimentos.html">Depoimentos</a>
-    <a href="mapa.html">Mapa dos egressos</a>
-    <a href="galeria.html">Galeria</a>
-    <a href="documentos.html">Documentos</a>
-  </nav>
-</header>
-
-<section class="production-hero hero-producao">
-  <div class="production-hero-copy">
-    <p class="eyebrow">Biblioteca digital</p>
-    <h1>Produção Intelectual</h1>
-    <p>Livros e artigos publicados por docentes do curso de História da UFRB.</p>
-  </div>
-  <div class="featured-book" id="featuredBook"></div>
-</section>
-
-<main class="content">
-  <section class="production-stats">
-    <article><strong id="countAll">0</strong><span>Produções</span></article>
-    <article><strong id="countBooks">0</strong><span>Livros</span></article>
-    <article><strong id="countArticles">0</strong><span>Artigos</span></article>
-    <article><strong id="countAuthors">0</strong><span>Autores</span></article>
-  </section>
-
-  <section class="production-toolbar">
-    <input type="search" id="productionSearch" placeholder="Pesquisar por título, autor ou tema...">
-    <div class="filters">
-      <button class="filter-btn active" data-type="Todos">Todos</button>
-      <button class="filter-btn" data-type="Livro">Livros</button>
-      <button class="filter-btn" data-type="Artigo">Artigos</button>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">
-      <p class="eyebrow">Catálogo</p>
-      <h2>Biblioteca da produção docente</h2>
-    </div>
-    <div class="book-grid" id="bookGrid"></div>
-  </section>
-</main>
-
-<footer class="footer">
-  <p>Memorial dos 20 anos do Curso de História da UFRB</p>
-  <p>Cachoeira — Bahia</p>
-</footer>
-
-<div class="book-modal" id="bookModal" aria-hidden="true">
-  <div class="book-modal-backdrop" data-close-modal></div>
-  <article class="book-modal-content">
-    <button class="book-modal-close" data-close-modal aria-label="Fechar">×</button>
-    <div id="bookModalBody"></div>
-  </article>
-</div>
-
-<script src="../script.js?v=41"></script>
-<script>
-const productionItems = [{"slug": "alem-do-riso", "titulo": "Além do riso", "subtitulo": "Reflexões sobre o humor em toda parte", "autores": "Elias Thomé Saliba; Thais Leão Vieira; Leandro Antônio de Almeida (orgs.)", "tipo": "Livro", "ano": "Exemplo", "editora": "LiberArs", "imagem": "alem-do-riso.jpg", "resumo": "Obra coletiva dedicada a diferentes abordagens históricas e culturais do humor. Dados editoriais provisórios para demonstração do layout.", "temas": ["Humor", "Cultura", "História"]}, {"slug": "cacadores-de-baleias", "titulo": "Caçadores de Baleias", "subtitulo": "", "autores": "Wellington Castellucci Júnior", "tipo": "Livro", "ano": "Exemplo", "editora": "Cosac", "imagem": "cacadores-de-baleias.jpg", "resumo": "Página demonstrativa para apresentar capa, autoria, resumo, dados editoriais, temas e links relacionados.", "temas": ["História marítima", "Trabalho", "Cultura"]}, {"slug": "pugnas-renhidas", "titulo": "Pugnas Renhidas", "subtitulo": "Futebol, cultura e sociedade em Salvador (1901–1924)", "autores": "Henrique Sena dos Santos", "tipo": "Livro", "ano": "Exemplo", "editora": "EDUFBA", "imagem": "pugnas-renhidas.jpg", "resumo": "Estudo sobre futebol, cultura e sociedade em Salvador nas primeiras décadas do século XX.", "temas": ["Futebol", "Salvador", "Cultura"]}, {"slug": "encruzilhadas-da-liberdade", "titulo": "Encruzilhadas da Liberdade", "subtitulo": "", "autores": "Walter Fraga Filho", "tipo": "Livro", "ano": "Exemplo", "editora": "Editora da Unicamp", "imagem": "encruzilhadas-da-liberdade.jpg", "resumo": "Obra de referência sobre experiências de liberdade e o pós-abolição. Dados complementares provisórios para demonstração.", "temas": ["Escravidão", "Liberdade", "Pós-abolição"]}, {"slug": "longe-muito-longe", "titulo": "Longe, muito longe", "subtitulo": "Manoel Benício dos Passos, um capoeira no ativismo do pós-abolição", "autores": "Walter Fraga", "tipo": "Livro", "ano": "Exemplo", "editora": "Zahar", "imagem": "longe-muito-longe.jpg", "resumo": "Biografia histórica de Manoel Benício dos Passos, articulando capoeira, ativismo e pós-abolição.", "temas": ["Capoeira", "Pós-abolição", "Biografia"]}, {"slug": "artigo-exemplo-1", "titulo": "Ensino de História, memória e território", "subtitulo": "", "autores": "Camila Santiago", "tipo": "Artigo", "ano": "2024", "editora": "Revista de História — exemplo", "imagem": "camila-santiago.jpg", "resumo": "Artigo fictício incluído apenas para demonstrar o funcionamento dos filtros e do catálogo.", "temas": ["Ensino de História", "Memória", "Território"]}, {"slug": "artigo-exemplo-2", "titulo": "Patrimônio, arquivo e experiências do Recôncavo", "subtitulo": "", "autores": "Isabel Reis", "tipo": "Artigo", "ano": "2022", "editora": "Revista acadêmica — exemplo", "imagem": "galeria-2.svg", "resumo": "Artigo fictício para demonstrar a inclusão de artigos na Produção Intelectual.", "temas": ["Patrimônio", "Arquivo", "Recôncavo"]}];
-let currentType = "Todos";
-
-function renderStats() {
-  const authors = new Set(productionItems.flatMap(item => item.autores.split(";").map(a => a.trim())));
-  document.querySelector("#countAll").textContent = productionItems.length;
-  document.querySelector("#countBooks").textContent = productionItems.filter(i => i.tipo === "Livro").length;
-  document.querySelector("#countArticles").textContent = productionItems.filter(i => i.tipo === "Artigo").length;
-  document.querySelector("#countAuthors").textContent = authors.size;
-}
-
-function renderFeatured() {
-  const item = productionItems.find(i => i.slug === "encruzilhadas-da-liberdade") || productionItems[0];
-  document.querySelector("#featuredBook").innerHTML = `
-    <img src="../assets/${item.imagem}" alt="${item.titulo}">
-    <div>
-      <span class="production-type">${item.tipo} em destaque</span>
-      <h2>${item.titulo}</h2>
-      <p>${item.autores}</p>
-      <p>${item.resumo}</p>
-      <button class="button" onclick="openBook('${item.slug}')">Ver obra</button>
-    </div>
-  `;
-}
-
-function filteredItems() {
-  const search = document.querySelector("#productionSearch").value.toLowerCase();
-  return productionItems.filter(item => {
-    const matchesType = currentType === "Todos" || item.tipo === currentType;
-    const haystack = [item.titulo, item.subtitulo, item.autores, item.editora, item.temas.join(" ")].join(" ").toLowerCase();
-    return matchesType && haystack.includes(search);
-  });
-}
-
-function renderBooks() {
-  const grid = document.querySelector("#bookGrid");
-  grid.innerHTML = filteredItems().map(item => `
-    <article class="book-card" tabindex="0" onclick="openBook('${item.slug}')" onkeypress="if(event.key==='Enter') openBook('${item.slug}')">
-      <div class="book-cover-wrap">
-        <img src="../assets/${item.imagem}" alt="Capa de ${item.titulo}">
-        <span class="book-hover">Ver detalhes</span>
-      </div>
-      <div class="book-card-copy">
-        <span class="production-type">${item.tipo}</span>
-        <h3>${item.titulo}</h3>
-        <p>${item.autores}</p>
-        <small>${item.ano} · ${item.editora}</small>
-      </div>
-    </article>
-  `).join("");
-}
-
-function openBook(slug) {
-  const item = productionItems.find(i => i.slug === slug);
-  document.querySelector("#bookModalBody").innerHTML = `
-    <div class="book-detail">
-      <img src="../assets/${item.imagem}" alt="Capa de ${item.titulo}">
-      <div>
-        <span class="production-type">${item.tipo}</span>
-        <h2>${item.titulo}</h2>
-        ${item.subtitulo ? `<h3>${item.subtitulo}</h3>` : ""}
-        <p><strong>Autoria:</strong> ${item.autores}</p>
-        <p><strong>Ano:</strong> ${item.ano}</p>
-        <p><strong>Editora ou periódico:</strong> ${item.editora}</p>
-        <p>${item.resumo}</p>
-        <div class="theme-list">${item.temas.map(t => `<span>${t}</span>`).join("")}</div>
-        <div class="book-actions">
-          <a class="button-outline" href="#">Ver referência</a>
-          <a class="button-outline" href="#">Link externo</a>
-        </div>
-      </div>
-    </div>
-  `;
-  document.querySelector("#bookModal").classList.add("open");
-  document.querySelector("#bookModal").setAttribute("aria-hidden", "false");
-}
-
-function closeModal() {
-  document.querySelector("#bookModal").classList.remove("open");
-  document.querySelector("#bookModal").setAttribute("aria-hidden", "true");
-}
-
-document.querySelectorAll("[data-close-modal]").forEach(el => el.addEventListener("click", closeModal));
-document.querySelector("#productionSearch").addEventListener("input", renderBooks);
-document.querySelectorAll("[data-type]").forEach(btn => btn.addEventListener("click", () => {
-  document.querySelectorAll("[data-type]").forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
-  currentType = btn.dataset.type;
-  renderBooks();
-}));
-
-renderStats();
-renderFeatured();
-renderBooks();
-</script>
-</body>
-</html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Produção Intelectual | Memorial 20 anos</title><link rel="stylesheet" href="../style.css?v=60"></head><body>
+<header class="topbar"><a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a><button class="menu-button" aria-label="Abrir menu">☰</button><nav class="menu"><a href="../index.html">Início</a><a href="curso.html">O curso</a><a href="linha-do-tempo.html">Linha do tempo</a><a href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a><a href="depoimentos.html">Depoimentos</a><a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a></nav></header>
+<section class="production-hero hero-producao"><div class="production-hero-copy"><p class="eyebrow">Biblioteca digital</p><h1>Produção Intelectual</h1><p>Livros e coletâneas com participação de docentes do curso de História da UFRB.</p></div><div class="featured-book" id="featuredBook"></div></section>
+<main class="content"><section class="production-stats"><article><strong id="countAll">0</strong><span>Produções</span></article><article><strong id="countBooks">0</strong><span>Livros</span></article><article><strong id="countArticles">0</strong><span>Artigos</span></article><article><strong id="countAuthors">0</strong><span>Docentes</span></article></section>
+<section class="production-toolbar"><input type="search" id="productionSearch" placeholder="Pesquisar por título, docente ou tema..."><div class="filters"><button class="filter-btn active" data-type="Todos">Todos</button><button class="filter-btn" data-type="Livro">Livros</button><button class="filter-btn" data-type="Artigo">Artigos</button></div></section>
+<section><div class="section-title"><p class="eyebrow">Catálogo</p><h2>Biblioteca da produção docente</h2></div><div class="book-grid" id="bookGrid"></div></section></main>
+<footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer>
+<div class="book-modal" id="bookModal" aria-hidden="true"><div class="book-modal-backdrop" data-close-modal></div><article class="book-modal-content"><button class="book-modal-close" data-close-modal aria-label="Fechar">×</button><div id="bookModalBody"></div></article></div>
+<script src="../script.js?v=41"></script><script>
+const productionItems = [
+ {slug:'fazer-historia-reconcavo',titulo:'Fazer História no Recôncavo da Bahia',subtitulo:'',autores:'Fabrício Lyrio Santos; Luciana da Cruz Brito; Martha Rosa Figueira Queiroz; Nuno Gonçalves Pereira (orgs.); Camila Fernanda Guimarães Santiago (capítulo); Solyane Silveira Lima (capítulo); Sérgio Armando Diniz Guerra Filho (capítulos)',docentes:['Fabrício Lyrio Santos','Luciana da Cruz Brito','Martha Rosa Figueira Queiroz','Nuno Gonçalves Pereira','Camila Fernanda Guimarães Santiago','Solyane Silveira Lima','Sérgio Armando Diniz Guerra Filho'],tipo:'Livro',ano:'2021',editora:'EDUFRB',isbn:'978-65-84508-02-6',imagem:'https://www1.ufrb.edu.br/editora/components/com_chronoforms5/chronoforms/uploads/livro/20210922135709_Fazer_histria.jpg',link:'https://www.ufrb.edu.br/editora/component/chronoforms5/?chronoform=ver-livro&id=142',resumo:'Coletânea dedicada à produção histórica no Recôncavo da Bahia, com organização e capítulos de docentes do curso.',temas:['Recôncavo','História','Ensino','Pesquisa']},
+ {slug:'ensinar-historia-seculo-xxi',titulo:'Ensinar História no Século XXI',subtitulo:'Dilemas e perspectivas',autores:'Fabrício Lyrio Santos; Sérgio Armando Diniz Guerra Filho (orgs.); Leandro Antonio de Almeida (capítulo)',docentes:['Fabrício Lyrio Santos','Sérgio Armando Diniz Guerra Filho','Leandro Antonio de Almeida'],tipo:'Livro',ano:'2019',editora:'EDUFRB',isbn:'',imagem:'../assets/ensinar-historia-seculo-xxi.svg',link:'https://ri.ufrb.edu.br/jspui/bitstream/prefix/989/1/Ensinar_Historia_Seculo_Livro_2019.pdf',resumo:'Coletânea sobre dilemas, experiências e perspectivas do ensino de História no século XXI.',temas:['Ensino de História','Formação docente']},
+ {slug:'encruzilhadas-da-liberdade',titulo:'Encruzilhadas da Liberdade',subtitulo:'Histórias de escravos e libertos na Bahia (1870–1910)',autores:'Walter Fraga Filho',docentes:['Walter Fraga Filho'],tipo:'Livro',ano:'2006',editora:'Editora da Unicamp',isbn:'85-268-0741-2',imagem:'../assets/encruzilhadas-da-liberdade.jpg',link:'https://www2.unicamp.br/unicamp/unicamp_hoje/ju/novembro2006/ju344pag10d.html',resumo:'Estudo sobre escravidão, liberdade e experiências sociais no pós-abolição baiano.',temas:['Escravidão','Liberdade','Pós-abolição']},
+ {slug:'longe-muito-longe',titulo:'Longe, muito longe',subtitulo:'Manoel Benício dos Passos, um capoeira no ativismo do pós-abolição',autores:'Walter Fraga',docentes:['Walter Fraga Filho'],tipo:'Livro',ano:'2023',editora:'Zahar',isbn:'978-65-597-9118-7',imagem:'../assets/longe-muito-longe.jpg',link:'https://www.companhiadasletras.com.br/livro/9786559791187/longe-muito-longe',resumo:'Biografia histórica de Manoel Benício dos Passos, articulando capoeira, ativismo e pós-abolição.',temas:['Capoeira','Pós-abolição','Biografia']},
+ {slug:'luiza-mahin-rainha-africana',titulo:'Luiza Mahin: Uma Rainha Africana no Brasil',subtitulo:'',autores:'Aline Najara da Silva Gonçalves',docentes:['Aline Najara da Silva Gonçalves'],tipo:'Livro',ano:'2011',editora:'CEAP',isbn:'978-85-99889-24-4',imagem:'https://www.yumpu.com/en/image/facebook/52616577.jpg',link:'https://mst.org.br/download/luiza-mahin-uma-rainha-africana-no-brasil-aline-najara-da-silva-goncalves/',resumo:'Obra dedicada à trajetória e às representações de Luiza Mahin.',temas:['Luiza Mahin','Pós-abolição','História negra']}
+];
+let currentType='Todos';
+const coverSrc=i=>i.imagem;
+function renderStats(){const a=new Set(productionItems.flatMap(i=>i.docentes));document.querySelector('#countAll').textContent=productionItems.length;document.querySelector('#countBooks').textContent=productionItems.filter(i=>i.tipo==='Livro').length;document.querySelector('#countArticles').textContent=productionItems.filter(i=>i.tipo==='Artigo').length;document.querySelector('#countAuthors').textContent=a.size;}
+function renderFeatured(){const item=productionItems.find(i=>i.slug==='luiza-mahin-rainha-africana')||productionItems[0];document.querySelector('#featuredBook').innerHTML=`<img src="${coverSrc(item)}" alt="Capa de ${item.titulo}"><div><span class="production-type">${item.tipo} em destaque</span><h2>${item.titulo}</h2><p>${item.autores}</p><p>${item.resumo}</p><button class="button" onclick="openBook('${item.slug}')">Ver obra</button></div>`;}
+function filteredItems(){const q=document.querySelector('#productionSearch').value.toLowerCase();return productionItems.filter(i=>{const mt=currentType==='Todos'||i.tipo===currentType;const h=[i.titulo,i.subtitulo,i.autores,i.editora,i.temas.join(' ')].join(' ').toLowerCase();return mt&&h.includes(q);});}
+function renderBooks(){document.querySelector('#bookGrid').innerHTML=filteredItems().map(i=>`<article class="book-card" tabindex="0" onclick="openBook('${i.slug}')" onkeypress="if(event.key==='Enter') openBook('${i.slug}')"><div class="book-cover-wrap"><img src="${coverSrc(i)}" alt="Capa de ${i.titulo}"><span class="book-hover">Ver detalhes</span></div><div class="book-card-copy"><span class="production-type">${i.tipo}</span><h3>${i.titulo}</h3><p>${i.autores}</p><small>${i.ano} · ${i.editora}</small></div></article>`).join('');}
+function openBook(slug){const i=productionItems.find(x=>x.slug===slug);document.querySelector('#bookModalBody').innerHTML=`<div class="book-detail"><img src="${coverSrc(i)}" alt="Capa de ${i.titulo}"><div><span class="production-type">${i.tipo}</span><h2>${i.titulo}</h2>${i.subtitulo?`<h3>${i.subtitulo}</h3>`:''}<p><strong>Autoria/participação:</strong> ${i.autores}</p><p><strong>Ano:</strong> ${i.ano}</p><p><strong>Editora:</strong> ${i.editora}</p>${i.isbn?`<p><strong>ISBN:</strong> ${i.isbn}</p>`:''}<p>${i.resumo}</p><div class="theme-list">${i.temas.map(t=>`<span>${t}</span>`).join('')}</div><div class="book-actions"><a class="button-outline" href="${i.link}" target="_blank" rel="noopener noreferrer">Ver livro</a></div></div></div>`;document.querySelector('#bookModal').classList.add('open');document.querySelector('#bookModal').setAttribute('aria-hidden','false');}
+function closeModal(){document.querySelector('#bookModal').classList.remove('open');document.querySelector('#bookModal').setAttribute('aria-hidden','true');}
+document.querySelectorAll('[data-close-modal]').forEach(el=>el.addEventListener('click',closeModal));document.querySelector('#productionSearch').addEventListener('input',renderBooks);document.querySelectorAll('[data-type]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-type]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentType=btn.dataset.type;renderBooks();}));renderStats();renderFeatured();renderBooks();
+</script></body></html>

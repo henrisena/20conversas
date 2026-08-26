@@ -1,12 +1,11 @@
-ATUALIZAÇÃO — PERFIS DOS 21 PROFESSORES
+ATUALIZAÇÃO — PROFESSORES E PRODUÇÃO
 
-Copie o conteúdo deste ZIP para a raiz do repositório do site e confirme a substituição dos arquivos.
+1. Copie as pastas/arquivos deste pacote para a raiz do repositório e confirme a substituição.
+2. Exclua manualmente, no GitHub Desktop/Explorador, estes arquivos antigos se ainda existirem:
+   - pages/professor-wellington-castellucci.html
+   - pages/professora-carla-nova.html
+   - assets/cacadores-de-baleias.jpg (se não for usada em outra parte do site)
+3. Faça Commit e Push origin.
 
-Esta atualização:
-- mantém as seis páginas docentes já existentes;
-- acrescenta páginas individuais preparadas para os 15 docentes que ainda não tinham página;
-- remove Eliazar da relação e inclui André de Almeida Rego;
-- inclui Paulo Cesar Oliveira de Jesus;
-- não inventa dados pessoais: as novas páginas contêm apenas espaços preparados para preenchimento posterior.
-
-Depois, no GitHub Desktop: Changes > Commit to main > Push origin.
+A página Professores passa a incluir Aline Najara da Silva Gonçalves e deixa de listar Wellington Castellucci Junior e Carla Carolina Costa da Nova.
+A página Produção foi refeita sem qualquer obra de Wellington Castellucci Junior.

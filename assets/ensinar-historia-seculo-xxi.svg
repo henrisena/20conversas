@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <rect width="900" height="1200" fill="#efe9dd"/>
+  <rect x="70" y="70" width="760" height="1060" rx="10" fill="#fbf8f1" stroke="#244f46" stroke-width="5"/>
+  <text x="450" y="330" text-anchor="middle" font-family="Georgia,serif" font-size="66" fill="#193f39">ENSINAR HISTÓRIA</text>
+  <text x="450" y="410" text-anchor="middle" font-family="Georgia,serif" font-size="66" fill="#193f39">NO SÉCULO XXI</text>
+  <line x1="180" x2="720" y1="475" y2="475" stroke="#b58a3d" stroke-width="6"/>
+  <text x="450" y="555" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" fill="#4d5d58">Dilemas e Perspectivas</text>
+  <text x="450" y="760" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#4d5d58">Fabrício Lyrio Santos</text>
+  <text x="450" y="805" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#4d5d58">Sérgio A. D. Guerra Filho</text>
+  <text x="450" y="850" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" fill="#4d5d58">(Organizadores)</text>
+  <text x="450" y="1040" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#193f39">EDUFRB · 2019</text>
+</svg>
