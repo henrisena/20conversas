@@ -1,31 +1,27 @@
-ATUALIZAÇÃO — PRIMEIRA VERSÃO DO PERFIL DE LEANDRO ANTONIO DE ALMEIDA
+ATUALIZAÇÃO — PERFIL DE DÊNIS RENAN CORRÊA
 
 Substitui:
-- pages/professor-leandro-almeida.html
+- pages/professor-denis-correa.html
 - pages/professores.html
 
 Acrescenta:
-- assets/professores/leandro/perfil-leandro-almeida.jpg
-- assets/professores/leandro/capa-leandro-almeida.jpg
-- assets/professores/leandro/projeto-charuteiras.jpg
-- assets/professores/leandro/projeto-pibid.jpg
-- assets/professores/leandro/projeto-lehrb.jpg
+- assets/professores/denis/perfil-denis-correa.jpg
+- assets/professores/denis/capa-denis-correa.jpg
+- assets/professores/denis/projeto-historia-em-jogo.jpg
+- assets/professores/denis/encerramento-laboratorio.jpg
 
-A página foi montada a partir das respostas e materiais enviados pelo próprio docente no formulário do Memorial.
-O perfil geral de Professores também passa a utilizar a foto enviada por Leandro.
+A página foi construída a partir do formulário e das fotografias enviadas pelo próprio docente.
 
-TESTE RECOMENDADO
+IMPORTANTE
+- A fotografia contextual aparece apenas na abertura e não é repetida na página.
+- A fotografia do encerramento da turma é utilizada como registro de vida docente.
+- A seção automática “Livros”, já existente no site, continua sendo acrescentada pelo script.js ao final da página.
+- “Produções em destaque” contém apenas os cinco trabalhos selecionados pelo professor no formulário.
+- O arquivo pages/professores.html deste pacote parte da versão que já continha a atualização do perfil de Leandro, evitando perder aquela modificação.
+
+COMO TESTAR
 1. Extraia o ZIP na raiz do projeto.
-2. Confira no GitHub Desktop os arquivos alterados.
-3. Faça commit e Push origin.
-4. No GitHub Pages, abra primeiro pages/professores.html e depois o perfil de Leandro.
-5. Verifique especialmente: corte da foto de perfil, altura da foto de capa, leitura das imagens dos projetos no celular e no computador.
-
-
-CORREÇÃO DESTA VERSÃO
-- A seção automática “Livros” já existente no site NÃO foi removida.
-- Ela continuará sendo criada pelo script.js ao final da página, a partir do catálogo geral de Produção.
-- O novo bloco “Produções em destaque” é apenas a seleção de cinco trabalhos feita pelo próprio professor no formulário.
-- Portanto, a página passa a ter duas funções complementares:
-  1. Produções em destaque — seleção pessoal do docente;
-  2. Livros — catálogo completo vinculado automaticamente ao docente.
+2. Confira as alterações no GitHub Desktop.
+3. Commit e Push origin.
+4. No GitHub Pages, abra Professores e depois o perfil de Dênis.
+5. Confira especialmente a foto de capa, a imagem do Jogo das Cruzadas, a fotografia da turma e a seção automática de livros.

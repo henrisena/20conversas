@@ -1,35 +1,161 @@
-<!DOCTYPE html><html lang="pt-BR"><head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dênis Renan Corrêa | Memorial 20 anos</title><link rel="stylesheet" href="../style.css?v=58"></head><body>
+<title>Dênis Renan Corrêa | Memorial 20 anos</title>
+<link rel="stylesheet" href="../style.css?v=61">
+<style>
+.teacher-hero{position:relative;min-height:520px;display:flex;align-items:flex-end;overflow:hidden;background:#18202a}
+.teacher-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.teacher-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,34,.92) 0%,rgba(8,18,34,.44) 50%,rgba(8,18,34,.08) 100%)}
+.teacher-hero-copy{position:relative;z-index:2;width:min(1180px,92%);margin:0 auto;padding:54px 0;color:#fff}
+.teacher-hero-copy .eyebrow{color:#ead9a6}
+.teacher-hero-copy h1{font-family:Georgia,serif;font-size:clamp(2.3rem,5vw,4.5rem);line-height:1;margin:.25rem 0 .75rem;max-width:850px}
+.teacher-hero-copy p{max-width:760px;font-size:1.08rem;line-height:1.55;margin:0}
+.teacher-intro{display:grid;grid-template-columns:280px 1fr;gap:36px;align-items:start;margin:42px 0}
+.teacher-profile-photo{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:22px;box-shadow:0 18px 42px rgba(7,30,70,.14)}
+.teacher-facts{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 0}
+.teacher-facts span{padding:.42rem .7rem;border-radius:999px;background:#f0ebe4;color:#554638;font-size:.82rem}
+.teacher-intro h2,.teacher-section h2{font-family:Georgia,serif;color:var(--navy);font-size:clamp(1.7rem,3vw,2.35rem);margin:0 0 12px}
+.teacher-intro p,.teacher-section p{line-height:1.75;color:#4e4742}
+.teacher-section{margin:56px 0}
+.teacher-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.teacher-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 10px 26px rgba(7,30,70,.05)}
+.teacher-card h3{font-family:Georgia,serif;color:var(--navy);font-size:1.18rem;margin:0 0 8px}
+.teacher-card .tag{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;font-weight:900;color:var(--gold);margin-bottom:8px}
+.teacher-card a{font-weight:800}
+.project-feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 30px rgba(7,30,70,.055)}
+.project-feature img{width:100%;height:100%;min-height:390px;object-fit:contain;background:#eee9e2}
+.project-copy{padding:28px}
+.project-copy h3{font-family:Georgia,serif;color:var(--navy);font-size:1.45rem;margin:.2rem 0 .6rem}
+.project-meta{font-size:.78rem;text-transform:uppercase;letter-spacing:.055em;font-weight:900;color:var(--gold)}
+.memory-photo{margin:22px 0 0;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.memory-photo img{display:block;width:100%;height:auto}
+.memory-photo figcaption{padding:16px 18px;line-height:1.55;color:#62574f}
+.teacher-note{background:#f4efe7;border-left:4px solid var(--gold);border-radius:0 14px 14px 0;padding:18px 20px;line-height:1.7;color:#51473f}
+@media(max-width:800px){
+ .teacher-intro{grid-template-columns:1fr}.teacher-profile-photo{max-width:300px}
+ .teacher-grid{grid-template-columns:1fr}.project-feature{grid-template-columns:1fr}
+ .project-feature img{min-height:0;max-height:620px}
+ .teacher-hero{min-height:440px}
+}
+</style>
+</head>
+<body>
 <header class="topbar">
   <a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a>
   <button class="menu-button" aria-label="Abrir menu">☰</button>
   <nav class="menu">
     <a href="../index.html">Início</a><a href="curso.html">O curso</a><a href="linha-do-tempo.html">Linha do tempo</a>
-    <a href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a>
-    <a href="depoimentos.html">Depoimentos</a><a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a>
+    <a class="active" href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a>
+    <a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a><a href="depoimentos.html">Depoimentos</a>
+    <a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a>
   </nav>
 </header>
-<section class="page-hero"><div class="page-hero-inner"><p class="eyebrow">Memorial 20 anos · Perfil docente</p><h1>Dênis Renan Corrêa</h1><p>Professor(a) do Curso de História da UFRB</p></div></section>
+
+<section class="teacher-hero">
+  <img src="../assets/professores/denis/capa-denis-correa.jpg" alt="Dênis Renan Corrêa em atividade com estudantes">
+  <div class="teacher-hero-copy">
+    <p class="eyebrow">Memorial 20 anos · Perfil docente</p>
+    <h1>Dênis Renan Corrêa</h1>
+    <p>História Antiga e Medieval</p>
+  </div>
+</section>
+
 <main class="content">
   <p style="margin-top:0"><a href="professores.html">← Voltar aos professores</a></p>
-  <div class="grid">
-    <article class="card">
-      <div class="faculty-profile-placeholder"><div><strong>DR</strong><span>Fotografia do perfil a inserir</span></div></div>
-      <h3>Perfil</h3>
-      <p>Espaço preparado para apresentar a trajetória docente e a relação com o Curso de História da UFRB.</p>
+
+  <section class="teacher-intro">
+    <img class="teacher-profile-photo" src="../assets/professores/denis/perfil-denis-correa.jpg" alt="Retrato de Dênis Renan Corrêa">
+    <div>
+      <p class="eyebrow">Trajetória no curso</p>
+      <h2>História Antiga e Medieval, pesquisa e gestão acadêmica</h2>
+      <p>Docente efetivo do Curso de História da UFRB desde 2012, Dênis Renan Corrêa atua nas áreas de História Antiga e Medieval. Em sua trajetória no curso, exerceu atividades de docência e pesquisa e também atuou como coordenador do curso e coordenador da área de História.</p>
+      <div class="teacher-facts">
+        <span>Ingresso: 2012</span><span>Docente efetivo</span><span>História Antiga</span><span>História Medieval</span><span>Ex-coordenador do curso</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="teacher-section">
+    <p class="eyebrow">Seleção do professor</p>
+    <h2>Produções em destaque</h2>
+    <p>Dênis selecionou cinco trabalhos representativos de sua trajetória no período de atuação na UFRB. A relação mais ampla de livros vinculados ao docente permanece disponível na seção <strong>Livros</strong>, ao final desta página.</p>
+
+    <div class="teacher-grid">
+      <article class="teacher-card">
+        <span class="tag">Livro · Tradução · 2023</span>
+        <h3>A República dos Atenienses</h3>
+        <p>Aristóteles. Tradução de Dênis Renan Corrêa.</p>
+        <p><a href="https://www.madamu.com.br/atenienses" target="_blank" rel="noopener noreferrer">Conhecer a publicação →</a></p>
+      </article>
+
+      <article class="teacher-card">
+        <span class="tag">Capítulo de livro · 2025</span>
+        <h3>Misinformed Rivals</h3>
+        <p>“Agonistic Intertextuality and Hypoleptic Discourse in Herodotus”, em <em>Misinformation, Disinformation, and Propaganda in Greek Historiography</em>.</p>
+        <p><a href="https://www.bloomsbury.com/us/misinformation-disinformation-and-propaganda-in-greek-historiography-9781350358713/" target="_blank" rel="noopener noreferrer">Conhecer a coletânea →</a></p>
+      </article>
+
+      <article class="teacher-card">
+        <span class="tag">Capítulo de livro · 2024</span>
+        <h3>Tempo em disputa</h3>
+        <p>“Problemas do tempo na historiografia grega”, em <em>Problemas de historiografia antiga e moderna: estudos e discussões em tempos de pandemia</em>, p. 17–48.</p>
+        <p><a href="https://www.academia.edu/143263809/Tempo_em_disputa_problemas_do_tempo_na_historiografia_grega" target="_blank" rel="noopener noreferrer">Acessar o texto →</a></p>
+      </article>
+
+      <article class="teacher-card">
+        <span class="tag">Artigo · 2019</span>
+        <h3>The Aristotelian Athenaion Politeia as “poor history”?</h3>
+        <p>“Historiography, rhetoric, and the controversies about Solon in the Fourth Century”. <em>Histos</em>, n. 13, p. 129–145.</p>
+        <p><a href="https://www.academia.edu/39850863/The_Aristotelian_Athenaion_Politeia_as_poor_history_Historiography_Rhetoric_and_the_Controversies_about_Solon_in_the_Fourth_Century" target="_blank" rel="noopener noreferrer">Acessar o texto →</a></p>
+      </article>
+
+      <article class="teacher-card">
+        <span class="tag">Artigo · 2016</span>
+        <h3>A base e o edifício</h3>
+        <p>“Balanço e apontamentos sobre a fortuna crítica da BNCC”. <em>Revista do Lhiste</em>, v. 3, n. 4, jan./jun. 2016.</p>
+        <p><a href="https://www.academia.edu/43278922/A_base_e_o_edifício_balanço_e_apontamentos_sobre_a_fortuna_crítica_da_BNCC" target="_blank" rel="noopener noreferrer">Acessar o texto →</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="teacher-section">
+    <p class="eyebrow">Extensão</p>
+    <h2>História em Jogo</h2>
+
+    <article class="project-feature">
+      <a href="../assets/professores/denis/projeto-historia-em-jogo.jpg" target="_blank" rel="noopener noreferrer">
+        <img src="../assets/professores/denis/projeto-historia-em-jogo.jpg" alt="Jogo das Cruzadas, material do projeto História em Jogo">
+      </a>
+      <div class="project-copy">
+        <span class="project-meta">Projeto de extensão · 2013–2017</span>
+        <h3>História em Jogo</h3>
+        <p>Projeto de extensão indicado por Dênis como uma das experiências de sua trajetória no curso, desenvolvido entre 2013 e 2017.</p>
+        <p>A imagem enviada pelo docente registra o <strong>“Jogo das Cruzadas”</strong>, material elaborado no contexto do projeto e relacionado ao ensino de História Antiga e Medieval.</p>
+      </div>
     </article>
-    <article class="card">
-      <h3>Depoimento oral</h3>
-      <p>Espaço preparado para áudio ou vídeo do(a) professor(a).</p>
-    </article>
-    <article class="card">
-      <h3>Atividades no curso</h3>
-      <p>Espaço para disciplinas, projetos, orientações, eventos, pesquisa, extensão e outras atividades.</p>
-    </article>
-    <article class="card">
-      <h3>Produção e memória</h3>
-      <p>Espaço para publicações, fotografias, documentos, registros e outros materiais selecionados para o Memorial.</p>
-    </article>
-  </div>
-</main><footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer><script src="../script.js?v=41"></script></body></html>
+  </section>
+
+  <section class="teacher-section">
+    <p class="eyebrow">Vida docente</p>
+    <h2>Uma turma do Laboratório de Ensino de História Antiga e Medieval</h2>
+    <figure class="memory-photo">
+      <a href="../assets/professores/denis/encerramento-laboratorio.jpg" target="_blank" rel="noopener noreferrer">
+        <img src="../assets/professores/denis/encerramento-laboratorio.jpg" alt="Dênis Renan Corrêa e estudantes em encerramento de turma no CAHL">
+      </a>
+      <figcaption><strong>Encerramento de uma turma de Laboratório de Ensino de História Antiga e Medieval.</strong> CAHL/UFRB, c. 2017. A data é apresentada de forma aproximada porque o próprio registro enviado ao Memorial indica “2017?”.</figcaption>
+    </figure>
+  </section>
+
+  <section class="teacher-section">
+    <p class="eyebrow">Depoimento</p>
+    <h2>Memórias do curso</h2>
+    <div class="teacher-note">O espaço permanece aberto para a incorporação futura de um depoimento em texto, áudio ou vídeo.</div>
+  </section>
+</main>
+
+<footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer>
+<script src="../script.js?v=61"></script>
+</body>
+</html>
