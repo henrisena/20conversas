@@ -1,54 +1,31 @@
-ATUALIZAÇÃO DOS MARCOS 2006–2016–2026
+ATUALIZAÇÃO — PRIMEIRA VERSÃO DO PERFIL DE LEANDRO ANTONIO DE ALMEIDA
 
-Este pacote preserva a atualização mais recente da Home (incluindo os três formulários de colaboração)
-e a versão comentada da aba Documentos.
+Substitui:
+- pages/professor-leandro-almeida.html
+- pages/professores.html
 
-ALTERAÇÕES PRINCIPAIS
+Acrescenta:
+- assets/professores/leandro/perfil-leandro-almeida.jpg
+- assets/professores/leandro/capa-leandro-almeida.jpg
+- assets/professores/leandro/projeto-charuteiras.jpg
+- assets/professores/leandro/projeto-pibid.jpg
+- assets/professores/leandro/projeto-lehrb.jpg
 
-HOME
-- corrige “Pra começo de conversa” para “Para início de conversa...”;
-- corrige o texto histórico da introdução;
-- torna 2006 clicável;
-- torna 2016 clicável;
-- mantém 2026 sem link, identificado como “Este memorial”.
+A página foi montada a partir das respostas e materiais enviados pelo próprio docente no formulário do Memorial.
+O perfil geral de Professores também passa a utilizar a foto enviada por Leandro.
 
-2006
-- cria pages/2006.html;
-- utiliza o folder horizontal completo enviado pelo acervo;
-- contextualiza o documento e sua importância para a história do curso.
+TESTE RECOMENDADO
+1. Extraia o ZIP na raiz do projeto.
+2. Confira no GitHub Desktop os arquivos alterados.
+3. Faça commit e Push origin.
+4. No GitHub Pages, abra primeiro pages/professores.html e depois o perfil de Leandro.
+5. Verifique especialmente: corte da foto de perfil, altura da foto de capa, leitura das imagens dos projetos no celular e no computador.
 
-2016
-- cria pages/2016.html;
-- incorpora cartaz, convite, texto curatorial, painel de egressos e painel de docentes;
-- incorpora o vídeo produzido para os 10 anos;
-- estabelece documentalmente a ligação entre 2006 e 2016.
 
-DOCUMENTOS
-- mantém o acervo comentado já preparado;
-- substitui o folder de 2006 pela versão horizontal;
-- acrescenta um registro agrupado “10 Anos de Histórias: continuando a conversa...”;
-- cria links diretos para as páginas especiais de 2006 e 2016.
-
-ARQUIVOS SUBSTITUÍDOS
-- index.html
-- style.css
-- pages/documentos.html
-
-ARQUIVOS NOVOS
-- pages/2006.html
-- pages/2016.html
-- assets/marcos/2006/*
-- assets/marcos/2016/*
-- assets/documentos/acervo/* (incluído para garantir que a versão comentada da aba Documentos permaneça completa)
-
-COMO ATUALIZAR
-1. Extraia o ZIP dentro da pasta principal do projeto.
-2. Aceite a substituição dos arquivos existentes.
-3. Abra o GitHub Desktop e confira as mudanças.
-4. Faça Commit.
-5. Clique em Push origin.
-
-OBSERVAÇÃO
-O vídeo de 2016 tem aproximadamente 15 MB, portanto o primeiro carregamento da página de 2016 pode levar
-alguns segundos em conexões lentas. O vídeo usa preload="metadata", evitando baixar o arquivo inteiro
-automaticamente ao abrir a página.
+CORREÇÃO DESTA VERSÃO
+- A seção automática “Livros” já existente no site NÃO foi removida.
+- Ela continuará sendo criada pelo script.js ao final da página, a partir do catálogo geral de Produção.
+- O novo bloco “Produções em destaque” é apenas a seleção de cinco trabalhos feita pelo próprio professor no formulário.
+- Portanto, a página passa a ter duas funções complementares:
+  1. Produções em destaque — seleção pessoal do docente;
+  2. Livros — catálogo completo vinculado automaticamente ao docente.
