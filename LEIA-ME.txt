@@ -1,19 +1,16 @@
-CORREÇÃO DEFINITIVA DAS CAPAS – PRODUÇÃO
+CORREÇÃO V3 — PRODUÇÃO E CAPAS
 
-Este pacote corrige o problema de cache do pacote anterior.
+Esta versão elimina a dependência de data/producao-docentes-v2.js.
+A base dos livros agora está embutida em script.js, para evitar o problema que deixava a página Produção com 0 itens no GitHub Pages.
 
-O que muda:
-- cria data/producao-docentes-v2.js (novo nome, para o navegador não reutilizar a base antiga em cache);
-- pages/producao.html passa a carregar a base v2;
-- script.js passa a carregar a base v2 nas páginas individuais dos professores;
-- todas as 37 capas enviadas por você ficam locais em assets/producao/capas/;
-- os caminhos das imagens locais recebem ?v=2 para evitar cache de erros 404 antigos.
+Copie o conteúdo deste ZIP para a RAIZ do repositório e substitua os arquivos existentes.
+Depois faça Commit e Push origin no GitHub Desktop.
 
-COMO INSTALAR:
-1. Extraia este ZIP na raiz do repositório 20conversas.
-2. Confirme a substituição de pages/producao.html e script.js.
-3. Mantenha/adicone a pasta data e assets conforme o ZIP.
-4. Commit e Push origin no GitHub Desktop.
-5. Aguarde a publicação do GitHub Pages. Não é necessário apagar os arquivos antigos.
+Arquivos principais alterados:
+- script.js
+- style.css
+- pages/producao.html
+- assets/producao-mosaico-atualizado.jpg
+- assets/producao/capas/*.jpg
 
-Se uma capa ainda não aparecer depois desta correção, o problema não será mais cache/base antiga: será possível identificar exatamente qual arquivo individual está faltando no repositório.
+Não é necessário apagar data/producao-docentes-v2.js; ele simplesmente deixa de ser usado.
