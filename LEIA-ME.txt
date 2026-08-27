@@ -1,11 +1,22 @@
-ATUALIZAÇÃO — PROFESSORES E PRODUÇÃO
+ATUALIZAÇÃO — PRODUÇÃO DOCENTE (LIVROS)
 
-1. Copie as pastas/arquivos deste pacote para a raiz do repositório e confirme a substituição.
-2. Exclua manualmente, no GitHub Desktop/Explorador, estes arquivos antigos se ainda existirem:
-   - pages/professor-wellington-castellucci.html
-   - pages/professora-carla-nova.html
-   - assets/cacadores-de-baleias.jpg (se não for usada em outra parte do site)
-3. Faça Commit e Push origin.
+Este pacote foi preparado para não substituir as páginas individuais dos professores.
+Assim, fotos, textos e demais ajustes já existentes nos perfis são preservados.
 
-A página Professores passa a incluir Aline Najara da Silva Gonçalves e deixa de listar Wellington Castellucci Junior e Carla Carolina Costa da Nova.
-A página Produção foi refeita sem qualquer obra de Wellington Castellucci Junior.
+O que muda:
+- pages/producao.html: catálogo geral ampliado;
+- data/producao-docentes.js: base única com os livros mapeados;
+- script.js: injeta automaticamente a seção “Livros” nas páginas dos 20 professores;
+- style.css: estilos da seção de livros e da nova abertura de Produção;
+- assets/: capas já disponíveis, placeholders para capas ainda não localizadas e novo mosaico da página Produção.
+
+Foram cadastrados 85 registros de livros/coletâneas, distribuídos entre 20 professores.
+Quando faltam capa, editora, ano, ISBN ou link, o registro permanece no site com indicação de que os dados estão em atualização.
+
+Como atualizar no GitHub Desktop:
+1. Extraia este ZIP.
+2. Copie pages/, data/, assets/, style.css e script.js para a raiz do repositório.
+3. Confirme a substituição dos arquivos existentes.
+4. Faça Commit to main e Push origin.
+
+IMPORTANTE: este pacote não contém páginas individuais de professores, justamente para evitar apagar ou reverter fotografias, textos e enquadramentos que você já ajustou.
