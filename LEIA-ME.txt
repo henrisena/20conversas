@@ -1,18 +1,12 @@
-ATUALIZAÇÃO — NOVAS CAPAS DE LIVROS
+ATUALIZAÇÃO — REVISÃO GERAL DOS PROFESSORES
 
-Este pacote usa as 32 imagens enviadas em “novas capas.zip”.
+Este pacote foi montado sobre a versão atual reconstruída após as últimas atualizações de Produção, quatro novos livros, novas capas e carrossel.
 
-Arquivos alterados:
-- data/producao-docentes-v2.js
-- script.js
-- assets/producao/capas/*.jpg (32 capas)
+Alterações:
+1. Professores em ordem alfabética na página Professores.
+2. Nomes padronizados com nome completo nos cartões e títulos das páginas individuais.
+3. Remoção das seções de Livros gravadas diretamente no HTML que causavam duplicação. Os livros continuam sendo exibidos dinamicamente a partir da base atual de Produção.
+4. Remoção dos players de áudio quebrados nas páginas que apontavam para MP3 inexistentes; o espaço de depoimento permanece preparado para receber o material depois.
+5. Não altera a base de livros, as capas, a página Produção nem o carrossel já atualizado.
 
-Também foi acrescentado ao catálogo o livro “Imagem, devoção e escravidão”, de Tânia Maria Pinto de Santana (EDUFRB, 2018), pois a capa enviada correspondia a uma obra que ainda não estava cadastrada na base.
-
-Como aplicar:
-1. Extraia o conteúdo na raiz do repositório 20conversas.
-2. Aceite substituir os arquivos existentes.
-3. No GitHub Desktop, faça Commit e Push origin.
-4. Após o GitHub Pages atualizar, use Ctrl+F5 no navegador.
-
-As capas aparecem tanto na aba Produção quanto nas páginas individuais dos professores, porque as duas visualizações usam a mesma base de registros.
+Observação: arquivos antigos de professores que já não fazem parte da lista podem permanecer fisicamente no repositório sem aparecer no site. Não é necessário apagá-los para esta atualização funcionar.
