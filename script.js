@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded',initHomeEgressMap);
   section.innerHTML='<div class="section-heading-row"><div><p class="eyebrow">Produção intelectual</p><h2>Livros</h2><p>Livros de autoria, organização, tradução ou com participação em capítulos. Alguns registros ainda estão em processo de complementação editorial.</p></div><a class="button-outline" href="producao.html">Ver catálogo completo</a></div><div class="profile-book-grid" id="profileBookGrid"></div>';
   main.appendChild(section);
   const dataScript=document.createElement('script');
-  dataScript.src='../data/producao-docentes.js?v=1';
+  dataScript.src='../data/producao-docentes-v2.js?v=2';
   dataScript.onload=function(){ if(window.renderProfessorBooks) window.renderProfessorBooks(nome); };
   document.body.appendChild(dataScript);
 })();

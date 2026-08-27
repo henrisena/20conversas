@@ -1,18 +1,19 @@
-CORREÇÃO — CAPAS LOCAIS DA PRODUÇÃO
+CORREÇÃO DEFINITIVA DAS CAPAS – PRODUÇÃO
 
-Este pacote foi criado para ser aplicado SOBRE o repositório que já recebeu os pacotes anteriores de Produção.
+Este pacote corrige o problema de cache do pacote anterior.
 
 O que muda:
-- 35 registros existentes passam a usar capas reais locais enviadas no ZIP do usuário.
-- As capas foram convertidas para JPG e colocadas em assets/producao/capas/.
-- Guerras da conquista (Fabrício Lyrio Santos e Felipe Milanez) foi acrescentado à base porque a capa veio no ZIP, mas o título não estava no pacote anterior.
-- O registro de Henrique foi ajustado para o título real do volume da capa: Os sports e as cidades brasileiras: transição dos séculos XIX e XX.
+- cria data/producao-docentes-v2.js (novo nome, para o navegador não reutilizar a base antiga em cache);
+- pages/producao.html passa a carregar a base v2;
+- script.js passa a carregar a base v2 nas páginas individuais dos professores;
+- todas as 37 capas enviadas por você ficam locais em assets/producao/capas/;
+- os caminhos das imagens locais recebem ?v=2 para evitar cache de erros 404 antigos.
 
-Como aplicar:
-1. Extraia este ZIP.
-2. Copie as pastas assets e data para a raiz do repositório.
-3. Confirme a substituição de data/producao-docentes.js.
+COMO INSTALAR:
+1. Extraia este ZIP na raiz do repositório 20conversas.
+2. Confirme a substituição de pages/producao.html e script.js.
+3. Mantenha/adicone a pasta data e assets conforme o ZIP.
 4. Commit e Push origin no GitHub Desktop.
-5. No navegador, faça Ctrl+F5.
+5. Aguarde a publicação do GitHub Pages. Não é necessário apagar os arquivos antigos.
 
-Observação: livros cujas capas NÃO estavam no ZIP enviado continuam com o estado anterior (capa externa ou 'capa não localizada').
+Se uma capa ainda não aparecer depois desta correção, o problema não será mais cache/base antiga: será possível identificar exatamente qual arquivo individual está faltando no repositório.
