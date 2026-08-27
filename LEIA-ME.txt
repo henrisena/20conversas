@@ -1,14 +1,14 @@
-ATUALIZAÇÃO — PRODUÇÃO EM ORDEM ALFABÉTICA
+ATUALIZAÇÃO — CARROSSEL DO ÍCONE PRODUÇÃO
 
-Este pacote altera somente a ordenação dos cartões na aba Produção.
+Arquivos alterados:
+- index.html
 
-Arquivo alterado:
-- pages/producao-page.js
-
-Os livros passam a ser exibidos em ordem alfabética pelo título, inclusive quando filtros ou a busca estiverem ativos.
+A mudança troca o carrossel antigo do cartão Produção da página inicial por capas reais dos livros atualmente cadastrados no site.
 
 Como atualizar:
-1. Extraia este ZIP na raiz do repositório 20conversas.
-2. Confirme a substituição de pages/producao-page.js.
-3. No GitHub Desktop, faça Commit e Push origin.
-4. Após a atualização do GitHub Pages, use Ctrl+F5 no navegador.
+1. Extraia o ZIP.
+2. Copie index.html para a raiz do repositório 20conversas, substituindo o existente.
+3. Commit no GitHub Desktop.
+4. Push origin.
+
+Nenhuma capa nova é incluída neste pacote porque ele usa imagens que já existem no site atual em assets/ e assets/producao/capas/.
