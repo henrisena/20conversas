@@ -21,9 +21,9 @@ window.PRODUCAO_DOCENTES = [
       "Bahia",
       "Cultura negra"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/bimba-pastinha-besouro.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "capoeira-bahia-todos-santos",
@@ -47,9 +47,9 @@ window.PRODUCAO_DOCENTES = [
       "Bahia",
       "Cultura popular"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/capoeira-bahia-todos-santos.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "associacoes-homens-cor",
@@ -99,9 +99,9 @@ window.PRODUCAO_DOCENTES = [
       "Cultura",
       "História social"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/culturas-circulares.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "memorias-resistencias-negras",
@@ -179,9 +179,9 @@ window.PRODUCAO_DOCENTES = [
       "Liberdade",
       "Pós-abolição"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/da-escravidao-liberdade.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "territorios-gente-negra",
@@ -205,9 +205,9 @@ window.PRODUCAO_DOCENTES = [
       "População negra",
       "Recôncavo"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/territorios-gente-negra.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "atlantico-de-dor",
@@ -256,9 +256,9 @@ window.PRODUCAO_DOCENTES = [
       "Capoeira",
       "Cultura afro-brasileira"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/capoeira-multiplos-olhares.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "vidas-impressas",
@@ -341,9 +341,9 @@ window.PRODUCAO_DOCENTES = [
       "Liberdade",
       "Pós-abolição"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9788535930948-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/dicionario-escravidao-liberdade.jpg",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local"
   },
   {
     "slug": "novas-historias-povos-indigenas",
@@ -367,9 +367,9 @@ window.PRODUCAO_DOCENTES = [
       "Território",
       "Historiografia"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/novas-historias-povos-indigenas.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "indios-historia-bahia",
@@ -395,9 +395,9 @@ window.PRODUCAO_DOCENTES = [
       "Bahia",
       "Colonização"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/indios-historia-bahia.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "vila-ricas-festas",
@@ -421,9 +421,9 @@ window.PRODUCAO_DOCENTES = [
       "Vila Rica",
       "Cultura política"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/vila-ricas-festas.jpg",
     "observacao": "Ano, editora e ISBN em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "igrejas-cachoeira",
@@ -448,9 +448,9 @@ window.PRODUCAO_DOCENTES = [
       "Arquitetura",
       "Arte sacra"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9786589378013-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/igrejas-cachoeira.jpg",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local"
   },
   {
     "slug": "barroco-america-portuguesa",
@@ -631,9 +631,9 @@ window.PRODUCAO_DOCENTES = [
       "Colonização",
       "Bahia"
     ],
-    "imagem": "https://www1.ufrb.edu.br/editora/components/com_chronoforms5/chronoforms/uploads/livro/20160810115325_livro_4a.jpg",
+    "imagem": "../assets/producao/capas/catequese-civilizacao.jpg",
     "observacao": "",
-    "capa_status": "real"
+    "capa_status": "local"
   },
   {
     "slug": "te-deum-laudamus",
@@ -657,9 +657,37 @@ window.PRODUCAO_DOCENTES = [
       "Bahia",
       "Período pombalino"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/te-deum-laudamus.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
+  },
+  {
+    "slug": "guerras-da-conquista",
+    "titulo": "Guerras da conquista",
+    "subtitulo": "Da invasão dos portugueses até os dias de hoje",
+    "docentes": [
+      "Fabrício Lyrio Santos"
+    ],
+    "participacoes": {
+      "Fabrício Lyrio Santos": "Coautor"
+    },
+    "tipo": "Livro",
+    "ano": "2021",
+    "editora": "HarperCollins Brasil",
+    "isbn": "978-65-5511-114-9",
+    "paginas": "304",
+    "link": "https://books.google.com/books/about/Guerras_da_conquista.html?id=ZUcdEAAAQBAJ",
+    "resumo": "Obra de Felipe Milanez e Fabrício Lyrio Santos sobre as guerras de conquista, a invasão portuguesa e as resistências indígenas no Brasil.",
+    "temas": [
+      "Povos indígenas",
+      "Colonização",
+      "Conquista",
+      "Resistência indígena",
+      "Brasil"
+    ],
+    "imagem": "../assets/producao/capas/guerras-da-conquista.jpg",
+    "observacao": "Coautoria com Felipe Milanez.",
+    "capa_status": "local"
   },
   {
     "slug": "ensinar-historia-seculo-xxi",
@@ -752,9 +780,9 @@ window.PRODUCAO_DOCENTES = [
       "América Portuguesa",
       "Século XVIII"
     ],
-    "imagem": "https://martinsfontespaulista.vteximg.com.br/arquivos/ids/1724937-1000-1000/1157444.jpg?v=638917226968430000",
+    "imagem": "../assets/producao/capas/diretorio-indios-america-portuguesa.jpg",
     "observacao": "",
-    "capa_status": "real"
+    "capa_status": "local"
   },
   {
     "slug": "epistemologia-conflito",
@@ -778,9 +806,9 @@ window.PRODUCAO_DOCENTES = [
       "Epistemologia",
       "Guerras da Ciência"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9788580541120-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/epistemologia-conflito.jpg",
     "observacao": "Livro derivado da dissertação de mestrado.",
-    "capa_status": "isbn"
+    "capa_status": "local"
   },
   {
     "slug": "ciencia-objeto-historia",
@@ -804,14 +832,14 @@ window.PRODUCAO_DOCENTES = [
       "Historiografia",
       "Epistemologia"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9788579395802-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/ciencia-objeto-historia.jpg",
     "observacao": "Livro derivado da tese de doutorado.",
-    "capa_status": "isbn"
+    "capa_status": "local"
   },
   {
     "slug": "sport-cidade-modernidade",
-    "titulo": "Sport, Cidade e Modernidade",
-    "subtitulo": "",
+    "titulo": "Os sports e as cidades brasileiras",
+    "subtitulo": "transição dos séculos XIX e XX",
     "docentes": [
       "Henrique Sena dos Santos"
     ],
@@ -824,16 +852,16 @@ window.PRODUCAO_DOCENTES = [
     "isbn": "",
     "paginas": "",
     "link": "",
-    "resumo": "Henrique participa do capítulo dedicado a Salvador, com Rinaldo Cesar Nascimento Leite e Coriolano Pereira da Rocha Junior.",
+    "resumo": "Henrique Sena dos Santos participa de capítulo dedicado a Salvador, em volume organizado por Victor Andrade de Melo.",
     "temas": [
       "Esporte",
       "Cidade",
       "Modernidade",
       "Salvador"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
-    "observacao": "",
-    "capa_status": "nao-localizada"
+    "imagem": "../assets/producao/capas/sport-cidade-modernidade.jpg",
+    "observacao": "Participação em capítulo; a capa corresponde ao livro coletivo.",
+    "capa_status": "local"
   },
   {
     "slug": "pugnas-renhidas",
@@ -912,9 +940,9 @@ window.PRODUCAO_DOCENTES = [
       "Afetividade",
       "Bahia"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/historias-vida-familiar-afetiva.jpg",
     "observacao": "Ano e demais dados editoriais em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "diaspora-africana-americas",
@@ -938,9 +966,9 @@ window.PRODUCAO_DOCENTES = [
       "Américas",
       "Escravidão"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/diaspora-africana-americas.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "bahia-ensaios-historia-social",
@@ -966,9 +994,9 @@ window.PRODUCAO_DOCENTES = [
       "História social",
       "Ensino de História"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/bahia-ensaios-historia-social.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "reflexoes-africa-contemporanea",
@@ -992,9 +1020,9 @@ window.PRODUCAO_DOCENTES = [
       "História contemporânea",
       "Diáspora"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/reflexoes-africa-contemporanea.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "descolonizacao-conhecimento-afro",
@@ -1018,9 +1046,9 @@ window.PRODUCAO_DOCENTES = [
       "Conhecimento",
       "Afro-brasileiro"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/descolonizacao-conhecimento-afro.jpg",
     "observacao": "Dados editoriais em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "encruzilhadas-historia-educacao-diaspora",
@@ -1047,9 +1075,9 @@ window.PRODUCAO_DOCENTES = [
       "História",
       "Relações étnico-raciais"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9786587743394-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/encruzilhadas-historia-educacao-diaspora.jpg",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local"
   },
   {
     "slug": "nas-margens-tempo",
@@ -1104,9 +1132,9 @@ window.PRODUCAO_DOCENTES = [
       "Povos indígenas",
       "História afro-brasileira"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/caminhos-lei-11645.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "professor-historia-produtor",
@@ -1130,9 +1158,9 @@ window.PRODUCAO_DOCENTES = [
       "Materiais didáticos",
       "Recôncavo"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/professor-historia-produtor.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "charuteiras-sala-aula",
@@ -1209,9 +1237,9 @@ window.PRODUCAO_DOCENTES = [
       "Século XIX",
       "Legislação"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9788523214449-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/temores-africa.jpg",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local"
   },
   {
     "slug": "ventres-livres",
@@ -1236,9 +1264,9 @@ window.PRODUCAO_DOCENTES = [
       "Escravidão",
       "Legislação"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/ventres-livres.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "avesso-raca",
@@ -1263,9 +1291,9 @@ window.PRODUCAO_DOCENTES = [
       "Brasil",
       "Estados Unidos"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/avesso-raca.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "reparacao-memoria-reconhecimento",
@@ -1289,9 +1317,9 @@ window.PRODUCAO_DOCENTES = [
       "Memória",
       "Reconhecimento"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/reparacao-memoria-reconhecimento.jpg",
     "observacao": "Detalhes da participação em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "praticas-vivencias-religiosas",
@@ -1315,9 +1343,9 @@ window.PRODUCAO_DOCENTES = [
       "Mundo luso-brasileiro",
       "História"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9788523213404-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/praticas-vivencias-religiosas.jpg",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local"
   },
   {
     "slug": "estudos-inquisitoriais",
@@ -1368,9 +1396,9 @@ window.PRODUCAO_DOCENTES = [
       "Religião",
       "Atlântico"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9786556300191-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/inquisicoes-modernas.jpg",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local"
   },
   {
     "slug": "poder-religiao-ibero-atlantico",
@@ -1394,9 +1422,9 @@ window.PRODUCAO_DOCENTES = [
       "Poder",
       "Mundo Ibero-Atlântico"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9786556303277-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/poder-religiao-ibero-atlantico.jpg",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local"
   },
   {
     "slug": "estertor-santo-oficio",
@@ -1725,9 +1753,9 @@ window.PRODUCAO_DOCENTES = [
       "Guerras",
       "Brasil"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/guerras-toda-parte.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "dois-julho-escola",
@@ -1907,9 +1935,9 @@ window.PRODUCAO_DOCENTES = [
       "Educação",
       "História da Educação"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/novas-viagens-pedagogicas.jpg",
     "observacao": "Tipo de participação e dados completos em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "descaminhos-fe",
@@ -1933,9 +1961,9 @@ window.PRODUCAO_DOCENTES = [
       "Mundo Atlântico",
       "Religiosidades"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/descaminhos-fe.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "negros-cristaos-catolicos",
@@ -1986,9 +2014,9 @@ window.PRODUCAO_DOCENTES = [
       "Religiosidade",
       "Século XVIII"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/charitas-misericordia.jpg",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local"
   },
   {
     "slug": "fontes-viver-religioso",
@@ -2254,16 +2282,3 @@ window.PRODUCAO_DOCENTES = [
     "capa_status": "isbn"
   }
 ];
-
-
-window.escapeHtml = function(v){return String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));};
-window.renderProfessorBooks = function(nome, targetId='profileBookGrid'){
-  const target=document.getElementById(targetId); if(!target) return;
-  const items=window.PRODUCAO_DOCENTES.filter(i=>i.docentes.includes(nome));
-  if(!items.length){target.innerHTML='<p class="production-empty">Nenhum livro cadastrado até o momento.</p>';return;}
-  target.innerHTML=items.map(i=>{
-    const role=i.participacoes[nome]||'Participação';
-    const pub=[i.editora,i.ano].filter(Boolean).join(' · ') || 'Dados editoriais em atualização';
-    return `<article class="profile-book-card"><a class="profile-book-cover" href="producao.html#${i.slug}" aria-label="Ver detalhes de ${escapeHtml(i.titulo)}"><img src="${i.imagem}" alt="Capa de ${escapeHtml(i.titulo)}" onerror="this.onerror=null;this.src='../assets/producao/capa-nao-localizada.svg'"></a><div><span class="production-type">${escapeHtml(role)}</span><h3><a href="producao.html#${i.slug}">${escapeHtml(i.titulo)}</a></h3>${i.subtitulo?`<p>${escapeHtml(i.subtitulo)}</p>`:''}<small>${escapeHtml(pub)}</small><a class="profile-book-details" href="producao.html#${i.slug}">Ver detalhes</a></div></article>`;
-  }).join('');
-};
