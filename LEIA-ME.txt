@@ -1,12 +1,14 @@
-ATUALIZAÇÃO — REVISÃO GERAL DOS PROFESSORES
+ATUALIZAÇÃO — PRODUÇÃO EM ORDEM ALFABÉTICA
 
-Este pacote foi montado sobre a versão atual reconstruída após as últimas atualizações de Produção, quatro novos livros, novas capas e carrossel.
+Este pacote altera somente a ordenação dos cartões na aba Produção.
 
-Alterações:
-1. Professores em ordem alfabética na página Professores.
-2. Nomes padronizados com nome completo nos cartões e títulos das páginas individuais.
-3. Remoção das seções de Livros gravadas diretamente no HTML que causavam duplicação. Os livros continuam sendo exibidos dinamicamente a partir da base atual de Produção.
-4. Remoção dos players de áudio quebrados nas páginas que apontavam para MP3 inexistentes; o espaço de depoimento permanece preparado para receber o material depois.
-5. Não altera a base de livros, as capas, a página Produção nem o carrossel já atualizado.
+Arquivo alterado:
+- pages/producao-page.js
 
-Observação: arquivos antigos de professores que já não fazem parte da lista podem permanecer fisicamente no repositório sem aparecer no site. Não é necessário apagá-los para esta atualização funcionar.
+Os livros passam a ser exibidos em ordem alfabética pelo título, inclusive quando filtros ou a busca estiverem ativos.
+
+Como atualizar:
+1. Extraia este ZIP na raiz do repositório 20conversas.
+2. Confirme a substituição de pages/producao-page.js.
+3. No GitHub Desktop, faça Commit e Push origin.
+4. Após a atualização do GitHub Pages, use Ctrl+F5 no navegador.
