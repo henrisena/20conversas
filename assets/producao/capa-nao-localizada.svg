@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900" role="img" aria-label="Capa ainda não localizada">
+  <rect width="600" height="900" fill="#eee9df"/>
+  <rect x="35" y="35" width="530" height="830" rx="18" fill="none" stroke="#a79d8d" stroke-width="3"/>
+  <g fill="#3d4856" text-anchor="middle" font-family="Georgia, serif">
+    <text x="300" y="390" font-size="42">Capa ainda</text>
+    <text x="300" y="445" font-size="42">não localizada</text>
+    <text x="300" y="520" font-size="24" fill="#6c6a65">Dados bibliográficos disponíveis</text>
+  </g>
+</svg>
