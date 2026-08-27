@@ -1,6 +1,39 @@
-<!DOCTYPE html><html lang="pt-BR"><head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Documentos | Memorial 20 anos</title><link rel="stylesheet" href="../style.css?v=41"></head><body>
+<title>Documentos | Memorial 20 anos</title>
+<link rel="stylesheet" href="../style.css?v=41">
+<style>
+.archive-intro{max-width:920px;margin:0 auto 2rem;text-align:center}
+.archive-intro p{font-size:1.05rem;line-height:1.75;color:#4d4742}
+.archive-filter{display:flex;gap:.55rem;flex-wrap:wrap;justify-content:center;margin:1.6rem 0 2.4rem}
+.archive-filter button{border:1px solid rgba(70,49,34,.26);background:#fff;padding:.62rem .95rem;border-radius:999px;cursor:pointer;font:inherit;color:#3e3028}
+.archive-filter button.active,.archive-filter button:hover{background:#2f2119;color:#fff;border-color:#2f2119}
+.archive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;align-items:start}
+.archive-card{background:#fff;border:1px solid rgba(64,47,37,.13);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(44,31,22,.07)}
+.archive-card[hidden]{display:none}
+.archive-image{display:block;width:100%;height:310px;padding:0;border:0;background:#e8e2da;position:relative;cursor:zoom-in;overflow:hidden}
+.archive-image img{width:100%;height:100%;object-fit:contain;background:#eee9e2;transition:transform .25s ease}
+.archive-image:hover img{transform:scale(1.018)}
+.archive-image span{position:absolute;right:12px;bottom:12px;background:rgba(25,19,15,.86);color:#fff;padding:.42rem .68rem;border-radius:999px;font-size:.78rem}
+.archive-copy{padding:1.25rem 1.35rem 1.45rem}
+.archive-meta{display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:.72rem}
+.archive-meta span{font-size:.73rem;text-transform:uppercase;letter-spacing:.06em;padding:.25rem .48rem;border-radius:999px;background:#f0ebe4;color:#68584b}
+.archive-copy h2{font-size:1.27rem;line-height:1.23;margin:.15rem 0 .42rem;color:#291d16}
+.archive-copy p{line-height:1.62;margin:.6rem 0;color:#504740}
+.archive-copy .archive-subtitle{font-size:.91rem;color:#79695c;margin-top:0}
+.archive-note{margin:2.4rem auto 0;max-width:900px;padding:1.15rem 1.25rem;background:#f2eee8;border-left:4px solid #775c45;border-radius:0 10px 10px 0;line-height:1.6;color:#51463e}
+.archive-dialog{width:min(94vw,1050px);max-height:92vh;border:0;border-radius:16px;padding:0;background:#1d1713;box-shadow:0 22px 80px rgba(0,0,0,.45)}
+.archive-dialog::backdrop{background:rgba(15,12,10,.82)}
+.archive-dialog figure{margin:0;display:flex;flex-direction:column;max-height:92vh}
+.archive-dialog img{display:block;max-width:100%;max-height:82vh;object-fit:contain;margin:auto}
+.archive-dialog figcaption{display:flex;justify-content:space-between;align-items:center;gap:1rem;color:#fff;padding:.8rem 1rem;background:#1d1713}
+.archive-dialog button{border:1px solid rgba(255,255,255,.35);background:transparent;color:white;border-radius:999px;padding:.4rem .75rem;cursor:pointer}
+@media(max-width:760px){.archive-grid{grid-template-columns:1fr}.archive-image{height:270px}}
+</style>
+</head>
+<body>
 <header class="topbar">
   <a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a>
   <button class="menu-button" aria-label="Abrir menu">☰</button>
@@ -9,5 +42,268 @@
     <a href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a>
     <a href="depoimentos.html">Depoimentos</a><a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a class="active" href="documentos.html">Documentos</a>
   </nav>
-</header><section class="page-hero hero-documentos"><div class="page-hero-inner"><p class="eyebrow">Memorial 20 anos</p><h1>Documentos</h1><p>Acervo de PDFs, cartazes, programas, relatórios e materiais institucionais.</p></div></section>
-<main class="content"><div class="doc-list"><article class="doc-item"><div><strong>Projeto Pedagógico do Curso</strong><p>PDF provisório para teste.</p></div><a class="button-outline" href="#">Abrir</a></article><article class="doc-item"><div><strong>Cartazes de eventos</strong><p>Acervo visual e documentos de memória.</p></div><a class="button-outline" href="#">Abrir</a></article><article class="doc-item"><div><strong>Relatórios de projetos</strong><p>Ensino, pesquisa e extensão.</p></div><a class="button-outline" href="#">Abrir</a></article></div></main><footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer><script src="../script.js?v=41"></script></body></html>
+</header>
+
+<section class="page-hero hero-documentos">
+  <div class="page-hero-inner">
+    <p class="eyebrow">Memorial 20 anos</p>
+    <h1>Documentos</h1>
+    <p>Vestígios da vida acadêmica, institucional e estudantil do Curso de História.</p>
+  </div>
+</section>
+
+<main class="content">
+  <section class="archive-intro">
+    <p>Folders, cartazes, jornais e manifestos não apenas registram acontecimentos: eles guardam linguagens, disputas, expectativas e formas de participação que marcaram diferentes momentos do curso. Esta seleção apresenta os documentos como fontes históricas, acompanhados de breves comentários sobre seus contextos de produção.</p>
+  </section>
+
+  <nav class="archive-filter" aria-label="Filtrar documentos">
+    <button class="active" type="button" data-filter="all">Todos</button>
+    <button type="button" data-filter="fundacao">Primeiros anos</button>
+    <button type="button" data-filter="academica">Vida acadêmica</button>
+    <button type="button" data-filter="recepcao">Recepções</button>
+    <button type="button" data-filter="estudantil">Organização estudantil</button>
+    <button type="button" data-filter="movimento">Movimento estudantil</button>
+  </nav>
+
+  <section class="archive-grid">
+    
+<article class="archive-card" data-category="fundacao">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/para-inicio-conversa.jpg" data-title="Para início de conversa..." aria-label="Ampliar Para início de conversa...">
+    <img src="../assets/documentos/acervo/para-inicio-conversa.jpg" alt="Para início de conversa..." loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2006</span><span>Primeiros anos</span></div>
+    <h2>Para início de conversa...</h2>
+    <p class="archive-subtitle">Semana de Recepção aos Alunos do Curso de História · 16 a 20 de outubro de 2006</p>
+    <p>Folder da semana de recepção realizada no primeiro ano de funcionamento do curso. O título registra simbolicamente um momento fundador: a apresentação da nova graduação, o encontro entre estudantes e professores e o início de uma experiência acadêmica que, vinte anos depois, dá nome a este memorial.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="fundacao">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/nota-alunos-comunicacao-2006.jpg" data-title="Nota em nome dos alunos de Comunicação" aria-label="Ampliar Nota em nome dos alunos de Comunicação">
+    <img src="../assets/documentos/acervo/nota-alunos-comunicacao-2006.jpg" alt="Nota em nome dos alunos de Comunicação" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2006</span><span>Primeiros anos</span></div>
+    <h2>Nota em nome dos alunos de Comunicação</h2>
+    <p class="archive-subtitle">Campus de Cachoeira · novembro de 2006</p>
+    <p>Nota produzida no contexto de um conflito entre estudantes de História e de Comunicação no recém-criado Campus de Cachoeira. Como fonte, documenta tensões e formas de negociação nos primeiros meses de convivência entre os cursos do CAHL, preservando uma perspectiva situada sobre aquele episódio.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="fundacao">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/primeiro-seminario-cartaz.jpg" data-title="1º Seminário de História" aria-label="Ampliar 1º Seminário de História">
+    <img src="../assets/documentos/acervo/primeiro-seminario-cartaz.jpg" alt="1º Seminário de História" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2007</span><span>Primeiros anos</span></div>
+    <h2>1º Seminário de História</h2>
+    <p class="archive-subtitle">Entre Histórias e perspectivas: trajetórias e caminhos da investigação docente na UFRB · 22 a 26 de janeiro de 2007</p>
+    <p>Registro de um dos primeiros eventos acadêmicos do curso. A programação apresentou trajetórias de pesquisa dos docentes e promoveu interlocuções entre História, Literatura, Filosofia e Sociologia, revelando a preocupação inicial com a pesquisa e com o diálogo interdisciplinar.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="fundacao">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/forum-graduacao-2007.jpg" data-title="I Fórum Interdisciplinar de Ensino de Graduação" aria-label="Ampliar I Fórum Interdisciplinar de Ensino de Graduação">
+    <img src="../assets/documentos/acervo/forum-graduacao-2007.jpg" alt="I Fórum Interdisciplinar de Ensino de Graduação" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2007</span><span>Primeiros anos</span></div>
+    <h2>I Fórum Interdisciplinar de Ensino de Graduação</h2>
+    <p class="archive-subtitle">Projetos Político-Pedagógicos de Cursos: construindo caminhos interdisciplinares · 4 de julho de 2007</p>
+    <p>Folder de atividade dedicada à construção e ao debate dos projetos político-pedagógicos dos cursos. Embora não seja exclusivo de História, ajuda a compreender o ambiente institucional em que a graduação se estruturou e a busca, naquele momento, por caminhos interdisciplinares no CAHL.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="academica">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/palestra-crise-sistema-colonial.jpg" data-title="A crise do sistema colonial e a abertura dos portos" aria-label="Ampliar A crise do sistema colonial e a abertura dos portos">
+    <img src="../assets/documentos/acervo/palestra-crise-sistema-colonial.jpg" alt="A crise do sistema colonial e a abertura dos portos" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>s/d</span><span>Vida acadêmica</span></div>
+    <h2>A crise do sistema colonial e a abertura dos portos</h2>
+    <p class="archive-subtitle">Palestra promovida pelo Colegiado de História e pelo grupo Economia e Sociedade no Recôncavo</p>
+    <p>Cartaz de uma atividade acadêmica realizada fora da sala de aula. O documento registra a articulação entre o Colegiado, grupos de pesquisa e convidados externos na construção de espaços de discussão historiográfica no curso.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="academica">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/segunda-semana-historia-cahl.png" data-title="II Semana de História do CAHL" aria-label="Ampliar II Semana de História do CAHL">
+    <img src="../assets/documentos/acervo/segunda-semana-historia-cahl.png" alt="II Semana de História do CAHL" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>s/d</span><span>Vida acadêmica</span></div>
+    <h2>II Semana de História do CAHL</h2>
+    <p class="archive-subtitle">Rememorando a História: personagens e práticas do ensino e da historiografia</p>
+    <p>Cartaz de uma das semanas acadêmicas do curso, organizada em torno da historiografia, do ensino e da memória da própria disciplina. O material permite acompanhar a consolidação de eventos científicos como parte da formação oferecida no campus.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="estudantil">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/segunda-semana-estudantes.jpg" data-title="II Semana dos Estudantes de História da UFRB" aria-label="Ampliar II Semana dos Estudantes de História da UFRB">
+    <img src="../assets/documentos/acervo/segunda-semana-estudantes.jpg" alt="II Semana dos Estudantes de História da UFRB" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2013</span><span>Organização estudantil</span></div>
+    <h2>II Semana dos Estudantes de História da UFRB</h2>
+    <p class="archive-subtitle">9 a 11 de julho de 2013</p>
+    <p>Material de divulgação de evento organizado pelos próprios estudantes. A Semana evidencia a construção de espaços autônomos de debate acadêmico, político e cultural e a participação estudantil na vida pública do curso.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="estudantil">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/segunda-semana-estudantes-programacao.jpg" data-title="Programação da II Semana dos Estudantes de História" aria-label="Ampliar Programação da II Semana dos Estudantes de História">
+    <img src="../assets/documentos/acervo/segunda-semana-estudantes-programacao.jpg" alt="Programação da II Semana dos Estudantes de História" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2013</span><span>Organização estudantil</span></div>
+    <h2>Programação da II Semana dos Estudantes de História</h2>
+    <p class="archive-subtitle">Programação detalhada do encontro</p>
+    <p>A programação complementa o cartaz do evento e permite observar os temas, mesas e atividades escolhidos pelos estudantes. Lidos em conjunto, os dois documentos ajudam a reconstruir práticas de organização e formação para além da grade curricular.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="recepcao">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/terceira-recepcao.jpg" data-title="III Recepção dos Calouros de História" aria-label="Ampliar III Recepção dos Calouros de História">
+    <img src="../assets/documentos/acervo/terceira-recepcao.jpg" alt="III Recepção dos Calouros de História" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2014</span><span>Recepção</span></div>
+    <h2>III Recepção dos Calouros de História</h2>
+    <p class="archive-subtitle">20, 21 e 22 de janeiro de 2014</p>
+    <p>Cartaz de uma das recepções organizadas para os novos estudantes. A continuidade dessas atividades revela a formação de uma cultura de acolhimento e de apresentação da vida acadêmica construída ao longo dos primeiros anos do curso.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="recepcao">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/quarta-recepcao.jpg" data-title="IV Recepção dos Calouros de História" aria-label="Ampliar IV Recepção dos Calouros de História">
+    <img src="../assets/documentos/acervo/quarta-recepcao.jpg" alt="IV Recepção dos Calouros de História" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>s/d</span><span>Recepção</span></div>
+    <h2>IV Recepção dos Calouros de História</h2>
+    <p class="archive-subtitle">Assistência estudantil, pesquisa, África e o ofício do historiador</p>
+    <p>A programação combina apresentação da universidade com discussões sobre assistência estudantil, projetos de pesquisa, ensino de África e o ofício do historiador. O documento mostra quais questões eram consideradas centrais para introduzir os ingressantes à formação e à vida universitária.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="recepcao">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/quinta-recepcao.png" data-title="V Recepção dos Calouros de História" aria-label="Ampliar V Recepção dos Calouros de História">
+    <img src="../assets/documentos/acervo/quinta-recepcao.png" alt="V Recepção dos Calouros de História" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2015</span><span>Recepção</span></div>
+    <h2>V Recepção dos Calouros de História</h2>
+    <p class="archive-subtitle">23 de outubro de 2015</p>
+    <p>Cartaz de recepção com apresentação do Centro Acadêmico e do Colegiado, discussão sobre auxílios e projetos de pesquisa e debate sobre greves na universidade. A programação aproxima acolhimento, formação acadêmica e participação política.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="recepcao">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/sexta-recepcao.png" data-title="VI Recepção dos Calouros de História" aria-label="Ampliar VI Recepção dos Calouros de História">
+    <img src="../assets/documentos/acervo/sexta-recepcao.png" alt="VI Recepção dos Calouros de História" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2016</span><span>Recepção</span></div>
+    <h2>VI Recepção dos Calouros de História</h2>
+    <p class="archive-subtitle">19 de abril de 2016</p>
+    <p>Material dedicado à recepção dos ingressantes, com destaque para assistência estudantil e apresentação do movimento estudantil. A recorrência dessas pautas permite acompanhar preocupações concretas com permanência, representação e integração dos novos alunos.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="movimento">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/mapa-desgraca.jpg" data-title="Mapa da desgraça: isso é História" aria-label="Ampliar Mapa da desgraça: isso é História">
+    <img src="../assets/documentos/acervo/mapa-desgraca.jpg" alt="Mapa da desgraça: isso é História" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2013</span><span>Movimento estudantil</span></div>
+    <h2>Mapa da desgraça: isso é História</h2>
+    <p class="archive-subtitle">Manifesto estudantil · novembro de 2013</p>
+    <p>Documento de intervenção política produzido no contexto da mobilização estudantil. O texto denuncia problemas como carência docente, dificuldades na oferta de componentes e prejuízos à formação. Trata-se de uma perspectiva crítica dos estudantes sobre o processo de consolidação institucional do curso.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="movimento">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/desordem-excluidos.jpg" data-title="“@s Excluíd@s da História”" aria-label="Ampliar “@s Excluíd@s da História”">
+    <img src="../assets/documentos/acervo/desordem-excluidos.jpg" alt="“@s Excluíd@s da História”" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2015</span><span>Movimento estudantil</span></div>
+    <h2>“@s Excluíd@s da História”</h2>
+    <p class="archive-subtitle">Jornal A Desordem · ano 1, nº 1</p>
+    <p>Texto do jornal estudantil que problematiza gênero, sexualidade e os limites de sua presença na formação em História. A fonte documenta demandas curriculares e políticas formuladas por estudantes e amplia a memória do curso para além de seus registros administrativos.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="movimento">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/desordem-qualidade-ensino.jpg" data-title="“Queremos qualidade de ensino!”" aria-label="Ampliar “Queremos qualidade de ensino!”">
+    <img src="../assets/documentos/acervo/desordem-qualidade-ensino.jpg" alt="“Queremos qualidade de ensino!”" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>2015</span><span>Movimento estudantil</span></div>
+    <h2>“Queremos qualidade de ensino!”</h2>
+    <p class="archive-subtitle">Jornal A Desordem · ano 1, nº 2 · 20 de abril de 2015</p>
+    <p>Edição do jornal estudantil dedicada às condições de funcionamento da graduação e à mobilização em defesa da qualidade do ensino. O documento registra formas de organização coletiva e de crítica institucional construídas pelos estudantes.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="movimento">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/nota-repudio-reitoria.jpg" data-title="Nota de repúdio à Reitoria" aria-label="Ampliar Nota de repúdio à Reitoria">
+    <img src="../assets/documentos/acervo/nota-repudio-reitoria.jpg" alt="Nota de repúdio à Reitoria" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>s/d</span><span>Movimento estudantil</span></div>
+    <h2>Nota de repúdio à Reitoria</h2>
+    <p class="archive-subtitle">Coordenação Executiva do Centro Acadêmico de História Dina do Araguaia</p>
+    <p>Nota que critica decisões administrativas e seus efeitos sobre a continuidade das atividades acadêmicas, destacando a falta de professores e o prejuízo pedagógico percebido pelos estudantes. É uma fonte sobre conflitos institucionais e sobre a atuação política do Centro Acadêmico.</p>
+  </div>
+</article>
+<article class="archive-card" data-category="movimento">
+  <button class="archive-image" type="button" data-image="../assets/documentos/acervo/chapa-maria-felipa.jpg" data-title="Chapa de Construção Coletiva Maria Felipa" aria-label="Ampliar Chapa de Construção Coletiva Maria Felipa">
+    <img src="../assets/documentos/acervo/chapa-maria-felipa.jpg" alt="Chapa de Construção Coletiva Maria Felipa" loading="lazy">
+    <span>Ampliar documento</span>
+  </button>
+  <div class="archive-copy">
+    <div class="archive-meta"><span>s/d</span><span>Movimento estudantil</span></div>
+    <h2>Chapa de Construção Coletiva Maria Felipa</h2>
+    <p class="archive-subtitle">Material do movimento estudantil de História</p>
+    <p>Peça gráfica de uma chapa estudantil que mobiliza Maria Felipa como referência histórica e política. O documento registra linguagens, símbolos e escolhas de memória utilizados pelos estudantes na construção de suas formas de representação.</p>
+  </div>
+</article>
+  </section>
+
+  <aside class="archive-note">
+    <strong>Nota sobre o acervo.</strong> Os textos acima contextualizam os documentos sem tomar seus argumentos como uma descrição neutra dos acontecimentos. Manifestos, jornais e notas são apresentados como posições produzidas por sujeitos e grupos em circunstâncias específicas. Documentos que contêm dados pessoais de estudantes, como telefones e endereços de e-mail, foram preservados fora da exibição pública.
+  </aside>
+</main>
+
+<dialog class="archive-dialog" id="docViewer">
+  <figure>
+    <img id="docViewerImage" alt="">
+    <figcaption><span id="docViewerTitle"></span><button type="button" id="docViewerClose">Fechar</button></figcaption>
+  </figure>
+</dialog>
+
+<footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer>
+<script src="../script.js?v=41"></script>
+<script>
+document.querySelectorAll('.archive-filter button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.archive-filter button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.filter;
+    document.querySelectorAll('.archive-card').forEach(card=>card.hidden=!(f==='all'||card.dataset.category===f));
+  });
+});
+const viewer=document.getElementById('docViewer'), viewerImage=document.getElementById('docViewerImage'), viewerTitle=document.getElementById('docViewerTitle');
+document.querySelectorAll('.archive-image').forEach(btn=>btn.addEventListener('click',()=>{
+  viewerImage.src=btn.dataset.image; viewerImage.alt=btn.dataset.title; viewerTitle.textContent=btn.dataset.title;
+  if(typeof viewer.showModal==='function') viewer.showModal(); else window.open(btn.dataset.image,'_blank');
+}));
+document.getElementById('docViewerClose').addEventListener('click',()=>viewer.close());
+viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close();});
+</script>
+</body>
+</html>

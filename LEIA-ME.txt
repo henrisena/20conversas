@@ -1,14 +1,21 @@
-ATUALIZAÇÃO — CARROSSEL DO ÍCONE PRODUÇÃO
+ATUALIZAÇÃO — ABA DOCUMENTOS
 
-Arquivos alterados:
-- index.html
+Este pacote substitui apenas:
+- pages/documentos.html
 
-A mudança troca o carrossel antigo do cartão Produção da página inicial por capas reais dos livros atualmente cadastrados no site.
+E acrescenta:
+- assets/documentos/acervo/ (imagens do acervo documental)
 
-Como atualizar:
-1. Extraia o ZIP.
-2. Copie index.html para a raiz do repositório 20conversas, substituindo o existente.
-3. Commit no GitHub Desktop.
-4. Push origin.
+O novo desenho:
+- organiza os documentos por eixos históricos;
+- apresenta um comentário breve para cada documento;
+- permite filtrar a coleção por categoria;
+- permite ampliar cada imagem em uma janela de visualização;
+- não publica a lista de delegados de 2015 porque ela contém telefones e e-mails pessoais;
+- mantém a imagem de abertura já existente da página Documentos.
 
-Nenhuma capa nova é incluída neste pacote porque ele usa imagens que já existem no site atual em assets/ e assets/producao/capas/.
+Para atualizar:
+1. Extraia este ZIP dentro da pasta principal do projeto.
+2. Aceite a substituição de pages/documentos.html.
+3. Confira as mudanças no GitHub Desktop.
+4. Commit e Push origin.
