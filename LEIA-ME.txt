@@ -1,21 +1,19 @@
-ATUALIZAÇÃO — ABA DOCUMENTOS
+ATUALIZAÇÃO DA HOME — FORMULÁRIOS DE COLABORAÇÃO
 
-Este pacote substitui apenas:
-- pages/documentos.html
+Arquivos substituídos:
+- index.html
+- style.css
 
-E acrescenta:
-- assets/documentos/acervo/ (imagens do acervo documental)
+Alterações:
+- link público para docentes e ex-docentes;
+- link público para discentes e egressos;
+- novo cartão “Compartilhe uma memória” com formulário geral;
+- os três formulários abrem em nova aba;
+- o botão “Participar do mapa” também passa a levar ao formulário de discentes/egressos;
+- a área de colaboração passa a ter três cartões em telas largas e continua responsiva em telas menores.
 
-O novo desenho:
-- organiza os documentos por eixos históricos;
-- apresenta um comentário breve para cada documento;
-- permite filtrar a coleção por categoria;
-- permite ampliar cada imagem em uma janela de visualização;
-- não publica a lista de delegados de 2015 porque ela contém telefones e e-mails pessoais;
-- mantém a imagem de abertura já existente da página Documentos.
-
-Para atualizar:
-1. Extraia este ZIP dentro da pasta principal do projeto.
-2. Aceite a substituição de pages/documentos.html.
-3. Confira as mudanças no GitHub Desktop.
-4. Commit e Push origin.
+Como atualizar:
+1. Extraia o ZIP dentro da pasta principal do projeto.
+2. Aceite a substituição de index.html e style.css.
+3. Confira os dois arquivos no GitHub Desktop.
+4. Faça Commit e Push origin.
