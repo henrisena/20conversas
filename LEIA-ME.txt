@@ -1,8 +1,3 @@
-CORREÇÃO DA PÁGINA PRODUÇÃO
-
-Problema corrigido: os contadores carregavam (86 produções), mas os cartões não eram renderizados porque a função escapeHtml não estava definida na página.
-
-Arquivos a substituir:
-- pages/producao.html
-
-Copie o conteúdo deste pacote para a raiz do repositório, substitua o arquivo existente, faça Commit e Push origin no GitHub Desktop.
+Atualização: acrescenta Festa, Um mundo sobre papel, Depois da Avenida Central e Além do riso ao catálogo e às páginas individuais dos docentes.
+Substitua os arquivos na raiz do repositório e faça Commit + Push.
+As capas desses quatro títulos permanecem como capa não localizada; quando as imagens forem enviadas, basta atualizar os caminhos.

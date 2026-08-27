@@ -2280,5 +2280,122 @@ window.PRODUCAO_DOCENTES = [
     "imagem": "https://covers.openlibrary.org/b/isbn/9788599889244-L.jpg?default=false",
     "observacao": "",
     "capa_status": "isbn"
-  }
+  },
+{
+  "slug": "festa-cultura-sociabilidade-america-portuguesa",
+  "titulo": "Festa: cultura e sociabilidade na América Portuguesa",
+  "subtitulo": "Volume II",
+  "docentes": [
+    "Camila Fernanda Guimarães Santiago"
+  ],
+  "participacoes": {
+    "Camila Fernanda Guimarães Santiago": "Autora de capítulo"
+  },
+  "tipo": "Livro",
+  "ano": "2001",
+  "editora": "Hucitec / Edusp / Imprensa Oficial / FAPESP",
+  "isbn": "978-85-314-0620-1",
+  "paginas": "2 v., 992 p.",
+  "link": "https://www.edusp.com.br/livros/festa/",
+  "resumo": "Coletânea organizada por István Jancsó e Iris Kantor sobre cultura festiva e sociabilidade na América Portuguesa. Camila Santiago participa do volume II com o capítulo “Os gastos do Senado da Câmara de Vila Rica com festas: destaque para Corpus Christi (1720–1750)”, p. 487–501.",
+  "temas": [
+    "Festas",
+    "América Portuguesa",
+    "Vila Rica",
+    "Corpus Christi",
+    "Cultura política",
+    "Sociabilidade"
+  ],
+  "imagem": "../assets/producao/capa-nao-localizada.svg?v=3",
+  "observacao": "Capítulo de Camila Santiago: “Os gastos do Senado da Câmara de Vila Rica com festas: destaque para Corpus Christi (1720–1750)”, v. 2, p. 487–501.",
+  "capa_status": "nao-localizada"
+},
+{
+  "slug": "um-mundo-sobre-papel",
+  "titulo": "Um mundo sobre papel",
+  "subtitulo": "Livros, gravuras e impressos flamengos nos Impérios português e espanhol (séculos XVI–XVIII)",
+  "docentes": [
+    "Camila Fernanda Guimarães Santiago"
+  ],
+  "participacoes": {
+    "Camila Fernanda Guimarães Santiago": "Autora de capítulo"
+  },
+  "tipo": "Livro",
+  "ano": "2014",
+  "editora": "Edusp / Editora UFMG",
+  "isbn": "978-85-314-1353-7",
+  "paginas": "584 p.",
+  "link": "https://www.edusp.com.br/livros/mundo-sobre-papel/",
+  "resumo": "Coletânea organizada por Werner Thomas, Eddy Stols, Iris Kantor e Júnia Furtado sobre circulação de livros, gravuras e impressos flamengos nos mundos ibéricos. Camila Santiago assina o capítulo “Circulação e usos em Minas Gerais de gravuras religiosas da oficina Plantiniana”, p. 495–511.",
+  "temas": [
+    "História do livro",
+    "Gravuras",
+    "Oficina Plantiniana",
+    "Minas Gerais",
+    "História da arte",
+    "Circulação de impressos"
+  ],
+  "imagem": "../assets/producao/capa-nao-localizada.svg?v=3",
+  "observacao": "Capítulo de Camila Santiago: “Circulação e usos em Minas Gerais de gravuras religiosas da oficina Plantiniana”, p. 495–511.",
+  "capa_status": "nao-localizada"
+},
+{
+  "slug": "depois-da-avenida-central",
+  "titulo": "Depois da Avenida Central",
+  "subtitulo": "Cultura, lazer e esportes nos sertões do Brasil",
+  "docentes": [
+    "Henrique Sena dos Santos"
+  ],
+  "participacoes": {
+    "Henrique Sena dos Santos": "Autor de capítulo"
+  },
+  "tipo": "Livro",
+  "ano": "2020",
+  "editora": "Editora Jaguatirica",
+  "isbn": "978-85-5662-260-0",
+  "paginas": "302 p.",
+  "link": "https://museudofutebol.org.br/crfb/acervo/797674",
+  "resumo": "Coletânea organizada por Cleber Dias dedicada à cultura, ao lazer e aos esportes para além do eixo Rio–São Paulo. Henrique Sena dos Santos assina o capítulo “Futebol no interior da Bahia, 1920–1940”, iniciado na p. 153.",
+  "temas": [
+    "Futebol",
+    "Interior da Bahia",
+    "Esporte",
+    "Lazer",
+    "Sertões",
+    "Cultura urbana"
+  ],
+  "imagem": "../assets/producao/capa-nao-localizada.svg?v=3",
+  "observacao": "Capítulo de Henrique Sena dos Santos: “Futebol no interior da Bahia, 1920–1940”, p. 153–196.",
+  "capa_status": "nao-localizada"
+},
+{
+  "slug": "alem-do-riso",
+  "titulo": "Além do riso",
+  "subtitulo": "Reflexões sobre o humor em toda parte",
+  "docentes": [
+    "Leandro Antonio de Almeida"
+  ],
+  "participacoes": {
+    "Leandro Antonio de Almeida": "Organizador e autor de capítulo"
+  },
+  "tipo": "Livro",
+  "ano": "2021",
+  "editora": "LiberArs",
+  "isbn": "978-65-5953-042-7",
+  "paginas": "330 p.",
+  "link": "https://www.liberars.com.br/alem-do-riso-reflexoes-sobre-o-humor-em-toda-parte.html",
+  "resumo": "Coletânea organizada por Elias Thomé Saliba, Thaís Leão Vieira e Leandro Antonio de Almeida sobre a história cultural do humor. Leandro também assina o capítulo “O mistério dos Sherlocks risíveis”, p. 109–130.",
+  "temas": [
+    "Humor",
+    "Riso",
+    "História cultural",
+    "Imprensa",
+    "Sherlock Holmes",
+    "Modernidade"
+  ],
+  "imagem": "../assets/producao/capa-nao-localizada.svg?v=3",
+  "observacao": "Leandro Antonio de Almeida é coorganizador e autor do capítulo “O mistério dos Sherlocks risíveis”, p. 109–130.",
+  "capa_status": "nao-localizada"
+}
+
 ];
