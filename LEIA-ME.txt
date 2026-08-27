@@ -1,19 +1,54 @@
-ATUALIZAÇÃO DA HOME — FORMULÁRIOS DE COLABORAÇÃO
+ATUALIZAÇÃO DOS MARCOS 2006–2016–2026
 
-Arquivos substituídos:
+Este pacote preserva a atualização mais recente da Home (incluindo os três formulários de colaboração)
+e a versão comentada da aba Documentos.
+
+ALTERAÇÕES PRINCIPAIS
+
+HOME
+- corrige “Pra começo de conversa” para “Para início de conversa...”;
+- corrige o texto histórico da introdução;
+- torna 2006 clicável;
+- torna 2016 clicável;
+- mantém 2026 sem link, identificado como “Este memorial”.
+
+2006
+- cria pages/2006.html;
+- utiliza o folder horizontal completo enviado pelo acervo;
+- contextualiza o documento e sua importância para a história do curso.
+
+2016
+- cria pages/2016.html;
+- incorpora cartaz, convite, texto curatorial, painel de egressos e painel de docentes;
+- incorpora o vídeo produzido para os 10 anos;
+- estabelece documentalmente a ligação entre 2006 e 2016.
+
+DOCUMENTOS
+- mantém o acervo comentado já preparado;
+- substitui o folder de 2006 pela versão horizontal;
+- acrescenta um registro agrupado “10 Anos de Histórias: continuando a conversa...”;
+- cria links diretos para as páginas especiais de 2006 e 2016.
+
+ARQUIVOS SUBSTITUÍDOS
 - index.html
 - style.css
+- pages/documentos.html
 
-Alterações:
-- link público para docentes e ex-docentes;
-- link público para discentes e egressos;
-- novo cartão “Compartilhe uma memória” com formulário geral;
-- os três formulários abrem em nova aba;
-- o botão “Participar do mapa” também passa a levar ao formulário de discentes/egressos;
-- a área de colaboração passa a ter três cartões em telas largas e continua responsiva em telas menores.
+ARQUIVOS NOVOS
+- pages/2006.html
+- pages/2016.html
+- assets/marcos/2006/*
+- assets/marcos/2016/*
+- assets/documentos/acervo/* (incluído para garantir que a versão comentada da aba Documentos permaneça completa)
 
-Como atualizar:
+COMO ATUALIZAR
 1. Extraia o ZIP dentro da pasta principal do projeto.
-2. Aceite a substituição de index.html e style.css.
-3. Confira os dois arquivos no GitHub Desktop.
-4. Faça Commit e Push origin.
+2. Aceite a substituição dos arquivos existentes.
+3. Abra o GitHub Desktop e confira as mudanças.
+4. Faça Commit.
+5. Clique em Push origin.
+
+OBSERVAÇÃO
+O vídeo de 2016 tem aproximadamente 15 MB, portanto o primeiro carregamento da página de 2016 pode levar
+alguns segundos em conexões lentas. O vídeo usa preload="metadata", evitando baixar o arquivo inteiro
+automaticamente ao abrir a página.
