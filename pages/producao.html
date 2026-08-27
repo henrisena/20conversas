@@ -10,6 +10,7 @@
 <div aria-hidden="true" class="book-modal" id="bookModal"><div class="book-modal-backdrop" data-close-modal=""></div><article class="book-modal-content"><button aria-label="Fechar" class="book-modal-close" data-close-modal="">×</button><div id="bookModalBody"></div></article></div>
 <script src="../script.js?v=73"></script><script>
 const productionItems=window.PRODUCAO_DOCENTES;
+const escapeHtml = value => String(value ?? '').replace(/[&<>\"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[ch]));
 let currentType='Todos';
 const coverSrc=i=>i.imagem;
 function renderStats(){const a=new Set(productionItems.flatMap(i=>i.docentes));document.querySelector('#countAll').textContent=productionItems.length;document.querySelector('#countBooks').textContent=productionItems.filter(i=>i.tipo==='Livro').length;document.querySelector('#countArticles').textContent=productionItems.filter(i=>i.tipo==='Artigo').length;document.querySelector('#countAuthors').textContent=a.size;}

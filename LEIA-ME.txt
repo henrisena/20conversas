@@ -1,16 +1,8 @@
-CORREÇÃO V3 — PRODUÇÃO E CAPAS
+CORREÇÃO DA PÁGINA PRODUÇÃO
 
-Esta versão elimina a dependência de data/producao-docentes-v2.js.
-A base dos livros agora está embutida em script.js, para evitar o problema que deixava a página Produção com 0 itens no GitHub Pages.
+Problema corrigido: os contadores carregavam (86 produções), mas os cartões não eram renderizados porque a função escapeHtml não estava definida na página.
 
-Copie o conteúdo deste ZIP para a RAIZ do repositório e substitua os arquivos existentes.
-Depois faça Commit e Push origin no GitHub Desktop.
-
-Arquivos principais alterados:
-- script.js
-- style.css
+Arquivos a substituir:
 - pages/producao.html
-- assets/producao-mosaico-atualizado.jpg
-- assets/producao/capas/*.jpg
 
-Não é necessário apagar data/producao-docentes-v2.js; ele simplesmente deixa de ser usado.
+Copie o conteúdo deste pacote para a raiz do repositório, substitua o arquivo existente, faça Commit e Push origin no GitHub Desktop.
