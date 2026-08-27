@@ -1,3 +1,18 @@
-Atualização: acrescenta Festa, Um mundo sobre papel, Depois da Avenida Central e Além do riso ao catálogo e às páginas individuais dos docentes.
-Substitua os arquivos na raiz do repositório e faça Commit + Push.
-As capas desses quatro títulos permanecem como capa não localizada; quando as imagens forem enviadas, basta atualizar os caminhos.
+ATUALIZAÇÃO — NOVAS CAPAS DE LIVROS
+
+Este pacote usa as 32 imagens enviadas em “novas capas.zip”.
+
+Arquivos alterados:
+- data/producao-docentes-v2.js
+- script.js
+- assets/producao/capas/*.jpg (32 capas)
+
+Também foi acrescentado ao catálogo o livro “Imagem, devoção e escravidão”, de Tânia Maria Pinto de Santana (EDUFRB, 2018), pois a capa enviada correspondia a uma obra que ainda não estava cadastrada na base.
+
+Como aplicar:
+1. Extraia o conteúdo na raiz do repositório 20conversas.
+2. Aceite substituir os arquivos existentes.
+3. No GitHub Desktop, faça Commit e Push origin.
+4. Após o GitHub Pages atualizar, use Ctrl+F5 no navegador.
+
+As capas aparecem tanto na aba Produção quanto nas páginas individuais dos professores, porque as duas visualizações usam a mesma base de registros.
