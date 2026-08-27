@@ -1,0 +1,36 @@
+REVISÃO BIBLIOGRÁFICA DA ABA PRODUÇÃO — MEMORIAL 20 ANOS HISTÓRIA UFRB
+
+Total de registros revisados: 91
+Registros enriquecidos/corrigidos com dados bibliográficos adicionais nesta rodada: 80
+Com ano: 89/91
+Com editora: 89/91
+Com ISBN: 65/91
+Com paginação: 69/91
+Com local de publicação: 78/91
+Com edição explicitada: 31/91
+
+Critério adotado:
+- Todos os 91 registros foram conferidos.
+- Dados novos foram inseridos apenas quando havia confirmação suficientemente segura.
+- Quando ISBN, paginação, local ou edição não puderam ser confirmados, o campo foi mantido vazio.
+- O site agora pode exibir Local, Edição e Observação bibliográfica no modal.
+- A ordenação alfabética já está incluída em pages/producao.html.
+
+Registros ainda sem enriquecimento bibliográfico adicional nesta rodada:
+- Memórias de resistências negras (2015)
+- Novas Histórias dos Povos Indígenas no Brasil (2018)
+- Te Deum laudamus (2019)
+- Caminhos para a efetivação da Lei n.º 11.645/2008 (2016)
+- Abibiman (2023)
+- Griôs da Diáspora (ano não confirmado)
+- Sinfonia em prosa (ano não confirmado)
+- Diálogos entre a UFRB, as escolas de ensino médio e as comunidades populares do Recôncavo (2008)
+- Guerras por Toda a Parte (2023)
+- Sujeitos, Culturas e Instituições na Educação (2023)
+- Uma luz na noite do Brasil (2000)
+
+Arquivos a substituir ao extrair o ZIP na raiz do projeto:
+- script.js
+- data/producao-docentes.js
+- data/producao-docentes-v2.js
+- pages/producao.html

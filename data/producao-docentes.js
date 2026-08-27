@@ -11,9 +11,9 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2002",
-    "editora": "UNITINS / Grafset",
+    "editora": "Núcleo de Estudos Afro-Brasileiros do Tocantins / UNITINS / Grafset",
     "isbn": "",
-    "paginas": "",
+    "paginas": "106",
     "link": "",
     "resumo": "Estudo sobre personagens centrais da história da capoeira baiana.",
     "temas": [
@@ -21,9 +21,11 @@ window.PRODUCAO_DOCENTES = [
       "Bahia",
       "Cultura negra"
     ],
-    "imagem": "../assets/producao/capas/bimba-pastinha-besouro.jpg",
+    "imagem": "../assets/producao/capas/bimba-pastinha-besouro.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Porto Nacional / Goiânia",
+    "edicao": "2ª"
   },
   {
     "slug": "capoeira-bahia-todos-santos",
@@ -36,8 +38,8 @@ window.PRODUCAO_DOCENTES = [
       "Antonio Liberac Cardoso Simões Pires": "Autor"
     },
     "tipo": "Livro",
-    "ano": "2005",
-    "editora": "Grafset",
+    "ano": "2004",
+    "editora": "Fundação Universidade Federal do Tocantins / NEAB / Grafset",
     "isbn": "",
     "paginas": "",
     "link": "",
@@ -47,9 +49,11 @@ window.PRODUCAO_DOCENTES = [
       "Bahia",
       "Cultura popular"
     ],
-    "imagem": "../assets/producao/capas/capoeira-bahia-todos-santos.jpg",
+    "imagem": "../assets/producao/capas/capoeira-bahia-todos-santos.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Goiânia",
+    "edicao": ""
   },
   {
     "slug": "associacoes-homens-cor",
@@ -63,7 +67,7 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2006",
-    "editora": "Daliana / MEC",
+    "editora": "Daliana / MEC-SESu-SECAD / NEAB-UFT",
     "isbn": "",
     "paginas": "",
     "link": "",
@@ -73,9 +77,11 @@ window.PRODUCAO_DOCENTES = [
       "Associativismo",
       "Pós-abolição"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "Belo Horizonte",
+    "edicao": ""
   },
   {
     "slug": "culturas-circulares",
@@ -89,7 +95,7 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2010",
-    "editora": "Editora Progressiva",
+    "editora": "Editora Progressiva / Fundação Jair Moura",
     "isbn": "",
     "paginas": "",
     "link": "",
@@ -99,9 +105,11 @@ window.PRODUCAO_DOCENTES = [
       "Cultura",
       "História social"
     ],
-    "imagem": "../assets/producao/capas/culturas-circulares.jpg",
+    "imagem": "../assets/producao/capas/culturas-circulares.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Curitiba / Salvador",
+    "edicao": "1ª"
   },
   {
     "slug": "memorias-resistencias-negras",
@@ -125,9 +133,11 @@ window.PRODUCAO_DOCENTES = [
       "Memória",
       "História negra"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "reconcavo-olhar-jomar",
@@ -141,9 +151,9 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2015",
-    "editora": "UFRB / Fino Traço",
-    "isbn": "",
-    "paginas": "",
+    "editora": "EDUFRB / Fino Traço",
+    "isbn": "978-85-67589-14-1",
+    "paginas": "101",
     "link": "",
     "resumo": "",
     "temas": [
@@ -151,9 +161,11 @@ window.PRODUCAO_DOCENTES = [
       "Fotografia",
       "Memória"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "Cruz das Almas / Belo Horizonte",
+    "edicao": ""
   },
   {
     "slug": "da-escravidao-liberdade",
@@ -169,9 +181,9 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2016",
-    "editora": "UFRB / Fino Traço",
+    "editora": "EDUFRB / Fino Traço",
     "isbn": "",
-    "paginas": "",
+    "paginas": "328",
     "link": "",
     "resumo": "",
     "temas": [
@@ -179,9 +191,11 @@ window.PRODUCAO_DOCENTES = [
       "Liberdade",
       "Pós-abolição"
     ],
-    "imagem": "../assets/producao/capas/da-escravidao-liberdade.jpg",
+    "imagem": "../assets/producao/capas/da-escravidao-liberdade.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Cruz das Almas / Belo Horizonte",
+    "edicao": "1ª"
   },
   {
     "slug": "territorios-gente-negra",
@@ -195,9 +209,9 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2016",
-    "editora": "UFRB / Fino Traço",
-    "isbn": "",
-    "paginas": "",
+    "editora": "EDUFRB / Fino Traço",
+    "isbn": "978-85-67589-50-3",
+    "paginas": "393",
     "link": "",
     "resumo": "",
     "temas": [
@@ -205,9 +219,11 @@ window.PRODUCAO_DOCENTES = [
       "População negra",
       "Recôncavo"
     ],
-    "imagem": "../assets/producao/capas/territorios-gente-negra.jpg",
+    "imagem": "../assets/producao/capas/territorios-gente-negra.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Cruz das Almas / Belo Horizonte",
+    "edicao": ""
   },
   {
     "slug": "atlantico-de-dor",
@@ -221,9 +237,9 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2016",
-    "editora": "UFRB / Fino Traço",
-    "isbn": "",
-    "paginas": "",
+    "editora": "EDUFRB / Fino Traço",
+    "isbn": "978-85-67589-23-7",
+    "paginas": "742",
     "link": "",
     "resumo": "",
     "temas": [
@@ -231,9 +247,11 @@ window.PRODUCAO_DOCENTES = [
       "Escravidão",
       "Diáspora"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/atlantico-de-dor.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Cruz das Almas / Belo Horizonte",
+    "edicao": ""
   },
   {
     "slug": "capoeira-multiplos-olhares",
@@ -248,22 +266,24 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2020",
     "editora": "Fino Traço / EDUFBA",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-65-990137-1-3",
+    "paginas": "678",
     "link": "",
     "resumo": "",
     "temas": [
       "Capoeira",
       "Cultura afro-brasileira"
     ],
-    "imagem": "../assets/producao/capas/capoeira-multiplos-olhares.jpg",
+    "imagem": "../assets/producao/capas/capoeira-multiplos-olhares.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Belo Horizonte",
+    "edicao": "2ª"
   },
   {
     "slug": "vidas-impressas",
     "titulo": "Vidas impressas",
-    "subtitulo": "",
+    "subtitulo": "Intelectuais negras e negros na escravidão e na liberdade",
     "docentes": [
       "Antonio Liberac Cardoso Simões Pires"
     ],
@@ -271,19 +291,21 @@ window.PRODUCAO_DOCENTES = [
       "Antonio Liberac Cardoso Simões Pires": "Autor de capítulo"
     },
     "tipo": "Livro",
-    "ano": "",
-    "editora": "Selo Negro / Summus",
-    "isbn": "",
-    "paginas": "",
+    "ano": "2024",
+    "editora": "Selo Negro Edições",
+    "isbn": "978-85-8455-016-6",
+    "paginas": "280",
     "link": "",
     "resumo": "",
     "temas": [
       "Biografia",
       "História negra"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/vidas-impressas.jpg?v=4",
     "observacao": "Dados editoriais complementares em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": "1ª"
   },
   {
     "slug": "mulheres-negras-brasil",
@@ -298,10 +320,10 @@ window.PRODUCAO_DOCENTES = [
       "Isabel Cristina Ferreira dos Reis": "Autora de capítulo"
     },
     "tipo": "Livro",
-    "ano": "",
-    "editora": "Selo Negro / Summus",
-    "isbn": "",
-    "paginas": "",
+    "ano": "2012",
+    "editora": "Selo Negro Edições",
+    "isbn": "978-85-87478-70-2",
+    "paginas": "320",
     "link": "",
     "resumo": "",
     "temas": [
@@ -309,9 +331,11 @@ window.PRODUCAO_DOCENTES = [
       "Escravidão",
       "Pós-emancipação"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/mulheres-negras-brasil.jpg?v=4",
     "observacao": "Dados do capítulo e da edição em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": "1ª"
   },
   {
     "slug": "dicionario-escravidao-liberdade",
@@ -341,9 +365,11 @@ window.PRODUCAO_DOCENTES = [
       "Liberdade",
       "Pós-abolição"
     ],
-    "imagem": "../assets/producao/capas/dicionario-escravidao-liberdade.jpg",
+    "imagem": "../assets/producao/capas/dicionario-escravidao-liberdade.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": "1ª"
   },
   {
     "slug": "novas-historias-povos-indigenas",
@@ -367,9 +393,11 @@ window.PRODUCAO_DOCENTES = [
       "Território",
       "Historiografia"
     ],
-    "imagem": "../assets/producao/capas/novas-historias-povos-indigenas.jpg",
+    "imagem": "../assets/producao/capas/novas-historias-povos-indigenas.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "indios-historia-bahia",
@@ -386,8 +414,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2016",
     "editora": "EDUFRB / Fino Traço",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-85-67589-21-3",
+    "paginas": "150",
     "link": "https://www.finotracoeditora.com.br/os-indios-na-historia-da-bahia",
     "resumo": "",
     "temas": [
@@ -395,9 +423,11 @@ window.PRODUCAO_DOCENTES = [
       "Bahia",
       "Colonização"
     ],
-    "imagem": "../assets/producao/capas/indios-historia-bahia.jpg",
+    "imagem": "../assets/producao/capas/indios-historia-bahia.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Cruz das Almas / Belo Horizonte",
+    "edicao": "1ª"
   },
   {
     "slug": "vila-ricas-festas",
@@ -410,10 +440,10 @@ window.PRODUCAO_DOCENTES = [
       "Camila Fernanda Guimarães Santiago": "Autora"
     },
     "tipo": "Livro",
-    "ano": "",
-    "editora": "",
-    "isbn": "",
-    "paginas": "",
+    "ano": "2003",
+    "editora": "C/Arte / FACE-FUMEC",
+    "isbn": "978-85-87073-74-7",
+    "paginas": "136",
     "link": "",
     "resumo": "",
     "temas": [
@@ -421,9 +451,11 @@ window.PRODUCAO_DOCENTES = [
       "Vila Rica",
       "Cultura política"
     ],
-    "imagem": "../assets/producao/capas/vila-ricas-festas.jpg",
+    "imagem": "../assets/producao/capas/vila-ricas-festas.jpg?v=2",
     "observacao": "Ano, editora e ISBN em atualização.",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Belo Horizonte",
+    "edicao": ""
   },
   {
     "slug": "igrejas-cachoeira",
@@ -439,7 +471,7 @@ window.PRODUCAO_DOCENTES = [
     "ano": "2020",
     "editora": "Clio Gestão Cultural e Editora",
     "isbn": "978-65-89378-01-3",
-    "paginas": "",
+    "paginas": "194",
     "link": "",
     "resumo": "",
     "temas": [
@@ -448,9 +480,11 @@ window.PRODUCAO_DOCENTES = [
       "Arquitetura",
       "Arte sacra"
     ],
-    "imagem": "../assets/producao/capas/igrejas-cachoeira.jpg",
-    "observacao": "",
-    "capa_status": "local"
+    "imagem": "../assets/producao/capas/igrejas-cachoeira.jpg?v=2",
+    "observacao": "E-book em PDF; ISBN informado para a edição digital.",
+    "capa_status": "local",
+    "local": "Belo Horizonte",
+    "edicao": ""
   },
   {
     "slug": "barroco-america-portuguesa",
@@ -464,9 +498,9 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2019",
-    "editora": "",
-    "isbn": "",
-    "paginas": "",
+    "editora": "EnRedARS / Universidad Pablo de Olavide / Editora CCTA-UFPB",
+    "isbn": "978-85-9559-218-6",
+    "paginas": "255",
     "link": "",
     "resumo": "Inclui capítulo de Camila sobre a Ordem Terceira do Carmo de Cachoeira.",
     "temas": [
@@ -474,9 +508,11 @@ window.PRODUCAO_DOCENTES = [
       "Arte sacra",
       "Cachoeira"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "Editora e ISBN em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "Sevilha / João Pessoa",
+    "edicao": ""
   },
   {
     "slug": "republica-atenienses",
@@ -500,9 +536,11 @@ window.PRODUCAO_DOCENTES = [
       "Atenas",
       "Historiografia antiga"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9786586224405-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/republica-atenienses.jpg?v=4",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": "1ª"
   },
   {
     "slug": "crises-staseis-metabolai",
@@ -517,8 +555,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2022",
     "editora": "Firenze University Press",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-88-5518-611-7",
+    "paginas": "140",
     "link": "",
     "resumo": "",
     "temas": [
@@ -526,9 +564,11 @@ window.PRODUCAO_DOCENTES = [
       "Democracia",
       "Antiguidade"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/crises-staseis-metabolai.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Florença",
+    "edicao": ""
   },
   {
     "slug": "our-beloved-polites",
@@ -543,8 +583,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2022",
     "editora": "Archaeopress",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-1-80327-170-5",
+    "paginas": "373",
     "link": "",
     "resumo": "",
     "temas": [
@@ -552,9 +592,11 @@ window.PRODUCAO_DOCENTES = [
       "Heródoto",
       "Hecateu"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/our-beloved-polites.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Oxford",
+    "edicao": ""
   },
   {
     "slug": "misinformation-greek-historiography",
@@ -568,9 +610,9 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2024",
-    "editora": "Bloomsbury",
-    "isbn": "",
-    "paginas": "",
+    "editora": "Bloomsbury Academic",
+    "isbn": "978-1-3503-5871-3",
+    "paginas": "272",
     "link": "",
     "resumo": "",
     "temas": [
@@ -578,14 +620,16 @@ window.PRODUCAO_DOCENTES = [
       "Informação",
       "Propaganda"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
-    "observacao": "",
-    "capa_status": "nao-localizada"
+    "imagem": "../assets/producao/capas/misinformation-greek-historiography.jpg?v=4",
+    "observacao": "Há catálogos posteriores que registram 2025/288 p.; mantida aqui a ficha da publicação de 2024.",
+    "capa_status": "local",
+    "local": "London / New York",
+    "edicao": ""
   },
   {
     "slug": "problemas-historiografia-antiga-moderna",
     "titulo": "Problemas de historiografia antiga e moderna",
-    "subtitulo": "",
+    "subtitulo": "Estudos e discussões em tempos de pandemia",
     "docentes": [
       "Dênis Renan Corrêa"
     ],
@@ -604,9 +648,11 @@ window.PRODUCAO_DOCENTES = [
       "Antiguidade",
       "Tempo"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "Serra (ES)",
+    "edicao": "1ª"
   },
   {
     "slug": "catequese-civilizacao",
@@ -631,9 +677,11 @@ window.PRODUCAO_DOCENTES = [
       "Colonização",
       "Bahia"
     ],
-    "imagem": "../assets/producao/capas/catequese-civilizacao.jpg",
+    "imagem": "../assets/producao/capas/catequese-civilizacao.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Cruz das Almas",
+    "edicao": ""
   },
   {
     "slug": "te-deum-laudamus",
@@ -657,9 +705,11 @@ window.PRODUCAO_DOCENTES = [
       "Bahia",
       "Período pombalino"
     ],
-    "imagem": "../assets/producao/capas/te-deum-laudamus.jpg",
+    "imagem": "../assets/producao/capas/te-deum-laudamus.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "guerras-da-conquista",
@@ -685,9 +735,11 @@ window.PRODUCAO_DOCENTES = [
       "Resistência indígena",
       "Brasil"
     ],
-    "imagem": "../assets/producao/capas/guerras-da-conquista.jpg",
+    "imagem": "../assets/producao/capas/guerras-da-conquista.jpg?v=2",
     "observacao": "Coautoria com Felipe Milanez.",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Rio de Janeiro",
+    "edicao": ""
   },
   {
     "slug": "ensinar-historia-seculo-xxi",
@@ -707,16 +759,18 @@ window.PRODUCAO_DOCENTES = [
     "ano": "2019",
     "editora": "EDUFRB",
     "isbn": "",
-    "paginas": "",
+    "paginas": "204",
     "link": "https://ri.ufrb.edu.br/jspui/bitstream/prefix/989/1/Ensinar_Historia_Seculo_Livro_2019.pdf",
     "resumo": "",
     "temas": [
       "Ensino de História",
       "Formação docente"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/ensinar-historia-seculo-xxi.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Cruz das Almas",
+    "edicao": ""
   },
   {
     "slug": "fazer-historia-reconcavo",
@@ -755,7 +809,9 @@ window.PRODUCAO_DOCENTES = [
     ],
     "imagem": "https://www1.ufrb.edu.br/editora/components/com_chronoforms5/chronoforms/uploads/livro/20210922135709_Fazer_histria.jpg",
     "observacao": "",
-    "capa_status": "real"
+    "capa_status": "real",
+    "local": "Cruz das Almas",
+    "edicao": ""
   },
   {
     "slug": "diretorio-indios-america-portuguesa",
@@ -780,9 +836,11 @@ window.PRODUCAO_DOCENTES = [
       "América Portuguesa",
       "Século XVIII"
     ],
-    "imagem": "../assets/producao/capas/diretorio-indios-america-portuguesa.jpg",
+    "imagem": "../assets/producao/capas/diretorio-indios-america-portuguesa.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": "1ª"
   },
   {
     "slug": "epistemologia-conflito",
@@ -806,9 +864,11 @@ window.PRODUCAO_DOCENTES = [
       "Epistemologia",
       "Guerras da Ciência"
     ],
-    "imagem": "../assets/producao/capas/epistemologia-conflito.jpg",
+    "imagem": "../assets/producao/capas/epistemologia-conflito.jpg?v=2",
     "observacao": "Livro derivado da dissertação de mestrado.",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Belo Horizonte",
+    "edicao": ""
   },
   {
     "slug": "ciencia-objeto-historia",
@@ -832,9 +892,11 @@ window.PRODUCAO_DOCENTES = [
       "Historiografia",
       "Epistemologia"
     ],
-    "imagem": "../assets/producao/capas/ciencia-objeto-historia.jpg",
+    "imagem": "../assets/producao/capas/ciencia-objeto-historia.jpg?v=2",
     "observacao": "Livro derivado da tese de doutorado.",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": ""
   },
   {
     "slug": "sport-cidade-modernidade",
@@ -849,7 +911,7 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2010",
     "editora": "Apicuri",
-    "isbn": "",
+    "isbn": "978-85-61022-43-3",
     "paginas": "",
     "link": "",
     "resumo": "Henrique Sena dos Santos participa de capítulo dedicado a Salvador, em volume organizado por Victor Andrade de Melo.",
@@ -859,9 +921,11 @@ window.PRODUCAO_DOCENTES = [
       "Modernidade",
       "Salvador"
     ],
-    "imagem": "../assets/producao/capas/sport-cidade-modernidade.jpg",
+    "imagem": "../assets/producao/capas/sport-cidade-modernidade.jpg?v=2",
     "observacao": "Participação em capítulo; a capa corresponde ao livro coletivo.",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Rio de Janeiro",
+    "edicao": ""
   },
   {
     "slug": "pugnas-renhidas",
@@ -887,9 +951,11 @@ window.PRODUCAO_DOCENTES = [
       "Imprensa",
       "Raça"
     ],
-    "imagem": "../assets/pugnas-renhidas.jpg",
+    "imagem": "../assets/pugnas-renhidas.jpg?v=2",
     "observacao": "",
-    "capa_status": "real"
+    "capa_status": "real",
+    "local": "Salvador",
+    "edicao": ""
   },
   {
     "slug": "primordios-esporte-salvador",
@@ -905,7 +971,7 @@ window.PRODUCAO_DOCENTES = [
     "ano": "2015",
     "editora": "Reggo",
     "isbn": "978-85-63651-67-9",
-    "paginas": "",
+    "paginas": "136",
     "link": "https://www.cev.org.br/biblioteca/primordios-do-esporte-no-brasil-salvador/",
     "resumo": "",
     "temas": [
@@ -915,7 +981,9 @@ window.PRODUCAO_DOCENTES = [
     ],
     "imagem": "https://cdn.awsli.com.br/600x700/765/765972/produto/35940453/f50b432207.jpg",
     "observacao": "",
-    "capa_status": "real"
+    "capa_status": "real",
+    "local": "Rio de Janeiro",
+    "edicao": ""
   },
   {
     "slug": "historias-vida-familiar-afetiva",
@@ -928,10 +996,10 @@ window.PRODUCAO_DOCENTES = [
       "Isabel Cristina Ferreira dos Reis": "Autora"
     },
     "tipo": "Livro",
-    "ano": "",
+    "ano": "2001",
     "editora": "Centro de Estudos Baianos / UFBA",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-85-232-0252-1",
+    "paginas": "163",
     "link": "",
     "resumo": "",
     "temas": [
@@ -940,9 +1008,11 @@ window.PRODUCAO_DOCENTES = [
       "Afetividade",
       "Bahia"
     ],
-    "imagem": "../assets/producao/capas/historias-vida-familiar-afetiva.jpg",
+    "imagem": "../assets/producao/capas/historias-vida-familiar-afetiva.jpg?v=2",
     "observacao": "Ano e demais dados editoriais em atualização.",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": ""
   },
   {
     "slug": "diaspora-africana-americas",
@@ -956,9 +1026,9 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2016",
-    "editora": "Coleção UNIAFRO / UFRB-Fino Traço",
-    "isbn": "",
-    "paginas": "",
+    "editora": "EDUFRB / Fino Traço",
+    "isbn": "978-85-67589-12-1",
+    "paginas": "231",
     "link": "",
     "resumo": "",
     "temas": [
@@ -966,9 +1036,11 @@ window.PRODUCAO_DOCENTES = [
       "Américas",
       "Escravidão"
     ],
-    "imagem": "../assets/producao/capas/diaspora-africana-americas.jpg",
+    "imagem": "../assets/producao/capas/diaspora-africana-americas.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Cruz das Almas / Belo Horizonte",
+    "edicao": ""
   },
   {
     "slug": "bahia-ensaios-historia-social",
@@ -985,8 +1057,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2014",
     "editora": "EDUNEB",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-85-7887-239-7",
+    "paginas": "318",
     "link": "",
     "resumo": "",
     "temas": [
@@ -994,9 +1066,11 @@ window.PRODUCAO_DOCENTES = [
       "História social",
       "Ensino de História"
     ],
-    "imagem": "../assets/producao/capas/bahia-ensaios-historia-social.jpg",
+    "imagem": "../assets/producao/capas/bahia-ensaios-historia-social.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": "1ª"
   },
   {
     "slug": "reflexoes-africa-contemporanea",
@@ -1010,9 +1084,9 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2016",
-    "editora": "Coleção UNIAFRO / UFRB-Fino Traço",
-    "isbn": "",
-    "paginas": "",
+    "editora": "EDUFRB / Fino Traço",
+    "isbn": "978-85-67589-17-6",
+    "paginas": "151",
     "link": "",
     "resumo": "",
     "temas": [
@@ -1020,9 +1094,11 @@ window.PRODUCAO_DOCENTES = [
       "História contemporânea",
       "Diáspora"
     ],
-    "imagem": "../assets/producao/capas/reflexoes-africa-contemporanea.jpg",
+    "imagem": "../assets/producao/capas/reflexoes-africa-contemporanea.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Cruz das Almas / Belo Horizonte",
+    "edicao": ""
   },
   {
     "slug": "descolonizacao-conhecimento-afro",
@@ -1035,10 +1111,10 @@ window.PRODUCAO_DOCENTES = [
       "Juvenal de Carvalho Conceição": "Coorganizador"
     },
     "tipo": "Livro",
-    "ano": "",
-    "editora": "",
-    "isbn": "",
-    "paginas": "",
+    "ano": "2019",
+    "editora": "EDUFRB",
+    "isbn": "978-85-5971-077-9",
+    "paginas": "318",
     "link": "",
     "resumo": "",
     "temas": [
@@ -1046,9 +1122,11 @@ window.PRODUCAO_DOCENTES = [
       "Conhecimento",
       "Afro-brasileiro"
     ],
-    "imagem": "../assets/producao/capas/descolonizacao-conhecimento-afro.jpg",
+    "imagem": "../assets/producao/capas/descolonizacao-conhecimento-afro.jpg?v=2",
     "observacao": "Dados editoriais em atualização.",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Cruz das Almas",
+    "edicao": "2ª"
   },
   {
     "slug": "encruzilhadas-historia-educacao-diaspora",
@@ -1075,9 +1153,11 @@ window.PRODUCAO_DOCENTES = [
       "História",
       "Relações étnico-raciais"
     ],
-    "imagem": "../assets/producao/capas/encruzilhadas-historia-educacao-diaspora.jpg",
+    "imagem": "../assets/producao/capas/encruzilhadas-historia-educacao-diaspora.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Cruz das Almas",
+    "edicao": ""
   },
   {
     "slug": "nas-margens-tempo",
@@ -1095,7 +1175,7 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2010",
-    "editora": "Editora Progressiva / Coleção UNIAFRO",
+    "editora": "Editora Progressiva",
     "isbn": "",
     "paginas": "",
     "link": "",
@@ -1105,9 +1185,11 @@ window.PRODUCAO_DOCENTES = [
       "Recôncavo",
       "Ensino"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "Curitiba",
+    "edicao": "1ª"
   },
   {
     "slug": "caminhos-lei-11645",
@@ -1132,9 +1214,11 @@ window.PRODUCAO_DOCENTES = [
       "Povos indígenas",
       "História afro-brasileira"
     ],
-    "imagem": "../assets/producao/capas/caminhos-lei-11645.jpg",
+    "imagem": "../assets/producao/capas/caminhos-lei-11645.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "professor-historia-produtor",
@@ -1149,8 +1233,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2026",
     "editora": "Roda de Histórias",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-65-02-15853-1",
+    "paginas": "216",
     "link": "",
     "resumo": "",
     "temas": [
@@ -1158,9 +1242,11 @@ window.PRODUCAO_DOCENTES = [
       "Materiais didáticos",
       "Recôncavo"
     ],
-    "imagem": "../assets/producao/capas/professor-historia-produtor.jpg",
+    "imagem": "../assets/producao/capas/professor-historia-produtor.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Cachoeira",
+    "edicao": ""
   },
   {
     "slug": "charuteiras-sala-aula",
@@ -1173,10 +1259,10 @@ window.PRODUCAO_DOCENTES = [
       "Leandro Antonio de Almeida": "Prefácio"
     },
     "tipo": "Livro",
-    "ano": "",
-    "editora": "",
-    "isbn": "",
-    "paginas": "",
+    "ano": "2024",
+    "editora": "Roda de Histórias",
+    "isbn": "978-65-01-02435-6",
+    "paginas": "100",
     "link": "",
     "resumo": "",
     "temas": [
@@ -1184,9 +1270,11 @@ window.PRODUCAO_DOCENTES = [
       "Cachoeira",
       "Ensino de História"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "Dados editoriais em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "Salvador",
+    "edicao": ""
   },
   {
     "slug": "topicos-historia-negro",
@@ -1202,7 +1290,7 @@ window.PRODUCAO_DOCENTES = [
     "ano": "2011/2014",
     "editora": "NEPRE",
     "isbn": "",
-    "paginas": "",
+    "paginas": "34",
     "link": "",
     "resumo": "",
     "temas": [
@@ -1210,9 +1298,11 @@ window.PRODUCAO_DOCENTES = [
       "Brasil",
       "Relações raciais"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
-    "observacao": "",
-    "capa_status": "nao-localizada"
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
+    "observacao": "Há registro de edição inicial em 2011 e de 2ª edição em 2014.",
+    "capa_status": "nao-localizada",
+    "local": "Cuiabá",
+    "edicao": "2ª (2014)"
   },
   {
     "slug": "temores-africa",
@@ -1237,9 +1327,11 @@ window.PRODUCAO_DOCENTES = [
       "Século XIX",
       "Legislação"
     ],
-    "imagem": "../assets/producao/capas/temores-africa.jpg",
+    "imagem": "../assets/producao/capas/temores-africa.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": "1ª"
   },
   {
     "slug": "ventres-livres",
@@ -1254,8 +1346,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2021",
     "editora": "Editora Unesp",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-65-5711-068-3",
+    "paginas": "592",
     "link": "",
     "resumo": "",
     "temas": [
@@ -1264,14 +1356,16 @@ window.PRODUCAO_DOCENTES = [
       "Escravidão",
       "Legislação"
     ],
-    "imagem": "../assets/producao/capas/ventres-livres.jpg",
+    "imagem": "../assets/producao/capas/ventres-livres.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": "1ª"
   },
   {
     "slug": "avesso-raca",
     "titulo": "O avesso da raça",
-    "subtitulo": "escravidão, abolicionismo e racismo entre os Estados Unidos e o Brasil",
+    "subtitulo": "Escravidão, abolicionismo e racismo entre os Estados Unidos e o Brasil",
     "docentes": [
       "Luciana da Cruz Brito"
     ],
@@ -1281,8 +1375,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2023",
     "editora": "Bazar do Tempo",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-65-84515-65-9",
+    "paginas": "320",
     "link": "https://clubef.bazardotempo.com.br/edicoes/o-avesso-da-raca/",
     "resumo": "",
     "temas": [
@@ -1291,14 +1385,16 @@ window.PRODUCAO_DOCENTES = [
       "Brasil",
       "Estados Unidos"
     ],
-    "imagem": "../assets/producao/capas/avesso-raca.jpg",
+    "imagem": "../assets/producao/capas/avesso-raca.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Rio de Janeiro",
+    "edicao": "1ª"
   },
   {
     "slug": "reparacao-memoria-reconhecimento",
     "titulo": "Reparação",
-    "subtitulo": "memória e reconhecimento",
+    "subtitulo": "Memória e reconhecimento",
     "docentes": [
       "Luciana da Cruz Brito"
     ],
@@ -1308,8 +1404,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2025",
     "editora": "Fósforo",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-65-6000-106-0",
+    "paginas": "296",
     "link": "",
     "resumo": "",
     "temas": [
@@ -1317,9 +1413,11 @@ window.PRODUCAO_DOCENTES = [
       "Memória",
       "Reconhecimento"
     ],
-    "imagem": "../assets/producao/capas/reparacao-memoria-reconhecimento.jpg",
+    "imagem": "../assets/producao/capas/reparacao-memoria-reconhecimento.jpg?v=2",
     "observacao": "Detalhes da participação em atualização.",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": "1ª"
   },
   {
     "slug": "praticas-vivencias-religiosas",
@@ -1343,9 +1441,11 @@ window.PRODUCAO_DOCENTES = [
       "Mundo luso-brasileiro",
       "História"
     ],
-    "imagem": "../assets/producao/capas/praticas-vivencias-religiosas.jpg",
+    "imagem": "../assets/producao/capas/praticas-vivencias-religiosas.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": ""
   },
   {
     "slug": "estudos-inquisitoriais",
@@ -1369,9 +1469,11 @@ window.PRODUCAO_DOCENTES = [
       "Historiografia",
       "Religião"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9788559710922-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/estudos-inquisitoriais.jpg?v=4",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local",
+    "local": "Cruz das Almas",
+    "edicao": ""
   },
   {
     "slug": "inquisicoes-modernas",
@@ -1396,9 +1498,11 @@ window.PRODUCAO_DOCENTES = [
       "Religião",
       "Atlântico"
     ],
-    "imagem": "../assets/producao/capas/inquisicoes-modernas.jpg",
+    "imagem": "../assets/producao/capas/inquisicoes-modernas.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": ""
   },
   {
     "slug": "poder-religiao-ibero-atlantico",
@@ -1422,9 +1526,11 @@ window.PRODUCAO_DOCENTES = [
       "Poder",
       "Mundo Ibero-Atlântico"
     ],
-    "imagem": "../assets/producao/capas/poder-religiao-ibero-atlantico.jpg",
+    "imagem": "../assets/producao/capas/poder-religiao-ibero-atlantico.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": ""
   },
   {
     "slug": "estertor-santo-oficio",
@@ -1437,9 +1543,9 @@ window.PRODUCAO_DOCENTES = [
       "Marco Antônio Nunes da Silva": "Organizador/participação"
     },
     "tipo": "Livro",
-    "ano": "",
-    "editora": "",
-    "isbn": "",
+    "ano": "2023",
+    "editora": "Editorial Brujas / Cero Impacto",
+    "isbn": "978-1-68490-124-1",
     "paginas": "",
     "link": "",
     "resumo": "",
@@ -1448,9 +1554,11 @@ window.PRODUCAO_DOCENTES = [
       "Iluminismo",
       "Santo Ofício"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/estertor-santo-oficio.jpg?v=4",
     "observacao": "Editora, ano e demais dados em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Córdoba",
+    "edicao": "1ª"
   },
   {
     "slug": "caderno-dialogo-cultura-afro",
@@ -1464,7 +1572,7 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2014",
-    "editora": "",
+    "editora": "Fundação Cultural Palmares",
     "isbn": "",
     "paginas": "",
     "link": "",
@@ -1473,9 +1581,11 @@ window.PRODUCAO_DOCENTES = [
       "Cultura afro-brasileira",
       "Políticas culturais"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "Brasília",
+    "edicao": ""
   },
   {
     "slug": "ensino-historia-relacoes-etnico-raciais",
@@ -1489,7 +1599,7 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2021",
-    "editora": "Editora Unitins",
+    "editora": "Universidade Estadual do Tocantins (Unitins)",
     "isbn": "",
     "paginas": "",
     "link": "",
@@ -1498,9 +1608,11 @@ window.PRODUCAO_DOCENTES = [
       "Ensino de História",
       "Relações étnico-raciais"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
-    "observacao": "",
-    "capa_status": "nao-localizada"
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
+    "observacao": "Trata-se de dossiê temático da revista Humanidades & Inovação (v. 8, n. 67), e não de monografia autônoma.",
+    "capa_status": "nao-localizada",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "abibiman",
@@ -1524,9 +1636,11 @@ window.PRODUCAO_DOCENTES = [
       "Pernambuco",
       "Memória"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/abibiman.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "feira-negra",
@@ -1541,8 +1655,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2024",
     "editora": "EDUFRB",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-65-84508-97-2",
+    "paginas": "64",
     "link": "https://www.ufrb.edu.br/editora/component/phocadownload/category/2-e-books?download=432:a-feira-negra-construindo-as-nossas-historias",
     "resumo": "",
     "temas": [
@@ -1550,9 +1664,11 @@ window.PRODUCAO_DOCENTES = [
       "Educação",
       "Memória"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/feira-negra.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Cruz das Almas",
+    "edicao": ""
   },
   {
     "slug": "tramas-negras",
@@ -1565,18 +1681,20 @@ window.PRODUCAO_DOCENTES = [
       "Martha Rosa Figueira Queiroz": "Autora de capítulo"
     },
     "tipo": "Livro",
-    "ano": "",
-    "editora": "",
-    "isbn": "",
-    "paginas": "",
+    "ano": "2016",
+    "editora": "EDUFRB / Fino Traço",
+    "isbn": "978-85-67589-29-9",
+    "paginas": "278",
     "link": "",
     "resumo": "",
     "temas": [
       "História negra"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "Dados editoriais em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "Cruz das Almas / Belo Horizonte",
+    "edicao": ""
   },
   {
     "slug": "grios-diaspora",
@@ -1599,9 +1717,11 @@ window.PRODUCAO_DOCENTES = [
       "Diáspora",
       "Memória"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "Dados editoriais em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "sinfonia-prosa",
@@ -1624,14 +1744,16 @@ window.PRODUCAO_DOCENTES = [
       "Cultura",
       "Memória"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/sinfonia-prosa.jpg?v=4",
     "observacao": "Dados editoriais em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "africanidades-relacoes-raciais",
     "titulo": "Africanidades e relações raciais",
-    "subtitulo": "",
+    "subtitulo": "Insumos para políticas públicas na área do livro, leitura e bibliotecas no Brasil",
     "docentes": [
       "Martha Rosa Figueira Queiroz"
     ],
@@ -1639,19 +1761,21 @@ window.PRODUCAO_DOCENTES = [
       "Martha Rosa Figueira Queiroz": "Autora de capítulo"
     },
     "tipo": "Livro",
-    "ano": "",
-    "editora": "",
+    "ano": "2014",
+    "editora": "Fundação Cultural Palmares",
     "isbn": "",
-    "paginas": "",
+    "paginas": "402",
     "link": "",
     "resumo": "",
     "temas": [
       "Africanidades",
       "Relações raciais"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/africanidades-relacoes-raciais.jpg?v=4",
     "observacao": "Dados editoriais em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Brasília",
+    "edicao": ""
   },
   {
     "slug": "dialogos-ufrb-escolas",
@@ -1675,9 +1799,11 @@ window.PRODUCAO_DOCENTES = [
       "Educação",
       "História"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "barganhas-querelas-escravidao",
@@ -1692,8 +1818,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2014",
     "editora": "EDUFBA",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-85-232-1101-1",
+    "paginas": "358",
     "link": "",
     "resumo": "Inclui capítulo de Paulo César Oliveira de Jesus.",
     "temas": [
@@ -1702,9 +1828,11 @@ window.PRODUCAO_DOCENTES = [
       "Alforria",
       "Liberdade"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/barganhas-querelas-escravidao.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": ""
   },
   {
     "slug": "capitulos-historia-bahia",
@@ -1719,17 +1847,19 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2017",
     "editora": "Assembleia Legislativa da Bahia / EDUNEB",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-85-71962-78-1",
+    "paginas": "441",
     "link": "",
     "resumo": "Inclui o capítulo “Anúncios de tempestade...”.",
     "temas": [
       "Bahia",
       "História social"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/capitulos-historia-bahia.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": "1ª"
   },
   {
     "slug": "guerras-toda-parte",
@@ -1753,9 +1883,11 @@ window.PRODUCAO_DOCENTES = [
       "Guerras",
       "Brasil"
     ],
-    "imagem": "../assets/producao/capas/guerras-toda-parte.jpg",
+    "imagem": "../assets/producao/capas/guerras-toda-parte.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "dois-julho-escola",
@@ -1771,7 +1903,7 @@ window.PRODUCAO_DOCENTES = [
     "ano": "2023",
     "editora": "EDUFRB",
     "isbn": "978-65-88622-11-7",
-    "paginas": "",
+    "paginas": "92",
     "link": "",
     "resumo": "",
     "temas": [
@@ -1779,9 +1911,11 @@ window.PRODUCAO_DOCENTES = [
       "Ensino de História",
       "Independência da Bahia"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9786588622117-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/dois-julho-escola.jpg?v=4",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local",
+    "local": "Cruz das Almas",
+    "edicao": ""
   },
   {
     "slug": "dois-julho-200-anos",
@@ -1806,9 +1940,11 @@ window.PRODUCAO_DOCENTES = [
       "Memória",
       "Lutas populares"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9788584044894-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/dois-julho-200-anos.jpg?v=4",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": "1ª"
   },
   {
     "slug": "recruta-los-jovens",
@@ -1833,14 +1969,16 @@ window.PRODUCAO_DOCENTES = [
       "Sergipe",
       "Lisboa"
     ],
-    "imagem": "https://covers.openlibrary.org/b/isbn/9788563318398-L.jpg?default=false",
+    "imagem": "../assets/producao/capas/recruta-los-jovens.jpg?v=4",
     "observacao": "Livro derivado da tese de doutorado.",
-    "capa_status": "isbn"
+    "capa_status": "local",
+    "local": "Aracaju",
+    "edicao": ""
   },
   {
     "slug": "programa-universidade-todos-ufrb",
     "titulo": "O Programa Universidade Para Todos UFRB",
-    "subtitulo": "sujeitos plurais, trajetórias e acesso à universidade",
+    "subtitulo": "Sujeitos plurais, trajetórias e acesso à universidade",
     "docentes": [
       "Solyane Silveira Lima"
     ],
@@ -1848,7 +1986,7 @@ window.PRODUCAO_DOCENTES = [
       "Solyane Silveira Lima": "Coorganizadora"
     },
     "tipo": "Livro",
-    "ano": "",
+    "ano": "2025",
     "editora": "Paco Editorial",
     "isbn": "",
     "paginas": "",
@@ -1859,9 +1997,11 @@ window.PRODUCAO_DOCENTES = [
       "Acesso",
       "Educação"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/programa-universidade-todos-ufrb.jpg?v=4",
     "observacao": "Ano e ISBN em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Jundiaí",
+    "edicao": ""
   },
   {
     "slug": "historias-memorias-educacao-brasileira",
@@ -1876,17 +2016,19 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2023",
     "editora": "Editora Fi",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-65-85725-09-5",
+    "paginas": "340",
     "link": "",
     "resumo": "",
     "temas": [
       "História da Educação",
       "Memória"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/historias-memorias-educacao-brasileira.jpg?v=4",
     "observacao": "Tipo de participação e dados completos em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "sujeitos-culturas-instituicoes-educacao",
@@ -1910,14 +2052,16 @@ window.PRODUCAO_DOCENTES = [
       "Cultura",
       "Instituições"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "Tipo de participação e dados completos em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "novas-viagens-pedagogicas",
     "titulo": "Novas Viagens Pedagógicas",
-    "subtitulo": "",
+    "subtitulo": "Memórias e relatos de professores em formação",
     "docentes": [
       "Solyane Silveira Lima"
     ],
@@ -1927,17 +2071,19 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2020",
     "editora": "Appris",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-65-5523-401-5",
+    "paginas": "185",
     "link": "",
     "resumo": "",
     "temas": [
       "Educação",
       "História da Educação"
     ],
-    "imagem": "../assets/producao/capas/novas-viagens-pedagogicas.jpg",
+    "imagem": "../assets/producao/capas/novas-viagens-pedagogicas.jpg?v=2",
     "observacao": "Tipo de participação e dados completos em atualização.",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Curitiba",
+    "edicao": "1ª"
   },
   {
     "slug": "descaminhos-fe",
@@ -1952,8 +2098,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2020",
     "editora": "Sagga",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-85-93123-52-8",
+    "paginas": "232",
     "link": "",
     "resumo": "",
     "temas": [
@@ -1961,9 +2107,11 @@ window.PRODUCAO_DOCENTES = [
       "Mundo Atlântico",
       "Religiosidades"
     ],
-    "imagem": "../assets/producao/capas/descaminhos-fe.jpg",
+    "imagem": "../assets/producao/capas/descaminhos-fe.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": "1ª"
   },
   {
     "slug": "negros-cristaos-catolicos",
@@ -1987,9 +2135,11 @@ window.PRODUCAO_DOCENTES = [
       "População negra",
       "Bahia colonial"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/negros-cristaos-catolicos.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": ""
   },
   {
     "slug": "charitas-misericordia",
@@ -2014,9 +2164,11 @@ window.PRODUCAO_DOCENTES = [
       "Religiosidade",
       "Século XVIII"
     ],
-    "imagem": "../assets/producao/capas/charitas-misericordia.jpg",
+    "imagem": "../assets/producao/capas/charitas-misericordia.jpg?v=2",
     "observacao": "",
-    "capa_status": "local"
+    "capa_status": "local",
+    "local": "Salvador",
+    "edicao": ""
   },
   {
     "slug": "fontes-viver-religioso",
@@ -2031,8 +2183,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2024",
     "editora": "Paco Editorial",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-85-4622-814-0",
+    "paginas": "264",
     "link": "",
     "resumo": "",
     "temas": [
@@ -2040,9 +2192,11 @@ window.PRODUCAO_DOCENTES = [
       "Bahia",
       "Fontes históricas"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
-    "observacao": "",
-    "capa_status": "nao-localizada"
+    "imagem": "../assets/producao/capas/fontes-viver-religioso.jpg?v=4",
+    "observacao": "Alguns catálogos comerciais registram circulação em 2025; mantido o ano de 2024 usado no registro acadêmico.",
+    "capa_status": "local",
+    "local": "Jundiaí",
+    "edicao": "1ª"
   },
   {
     "slug": "mendigos-moleques-vadios",
@@ -2057,8 +2211,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "1996",
     "editora": "Hucitec / EDUFBA",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-85-2710-335-0",
+    "paginas": "188",
     "link": "",
     "resumo": "",
     "temas": [
@@ -2067,9 +2221,11 @@ window.PRODUCAO_DOCENTES = [
       "Século XIX",
       "História social"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/mendigos-moleques-vadios.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "São Paulo / Salvador",
+    "edicao": ""
   },
   {
     "slug": "luz-noite-brasil",
@@ -2092,9 +2248,11 @@ window.PRODUCAO_DOCENTES = [
       "História negra",
       "Brasil"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
     "observacao": "Dados complementares em atualização.",
-    "capa_status": "nao-localizada"
+    "capa_status": "nao-localizada",
+    "local": "",
+    "edicao": ""
   },
   {
     "slug": "historia-negro-brasil",
@@ -2108,9 +2266,9 @@ window.PRODUCAO_DOCENTES = [
     },
     "tipo": "Livro",
     "ano": "2006",
-    "editora": "Fundação Cultural Palmares",
-    "isbn": "",
-    "paginas": "",
+    "editora": "CEAO-UFBA / Fundação Cultural Palmares",
+    "isbn": "85-88070-02-2",
+    "paginas": "320",
     "link": "",
     "resumo": "",
     "temas": [
@@ -2118,9 +2276,11 @@ window.PRODUCAO_DOCENTES = [
       "Brasil",
       "Escravidão"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/historia-negro-brasil.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "Salvador / Brasília",
+    "edicao": ""
   },
   {
     "slug": "encruzilhadas-liberdade",
@@ -2145,9 +2305,11 @@ window.PRODUCAO_DOCENTES = [
       "Pós-abolição",
       "Bahia"
     ],
-    "imagem": "../assets/encruzilhadas-da-liberdade.jpg",
+    "imagem": "../assets/producao/capas/encruzilhadas-liberdade.jpg?v=4",
     "observacao": "",
-    "capa_status": "real"
+    "capa_status": "local",
+    "local": "Rio de Janeiro",
+    "edicao": "1ª"
   },
   {
     "slug": "historia-cultura-afro-brasileira",
@@ -2162,8 +2324,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2009",
     "editora": "Moderna",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-85-1604-710-8",
+    "paginas": "120",
     "link": "https://www.moderna.com.br/literatura/livro/uma-historia-da-cultura-afro-brasileira",
     "resumo": "",
     "temas": [
@@ -2173,7 +2335,9 @@ window.PRODUCAO_DOCENTES = [
     ],
     "imagem": "https://down-br.img.susercontent.com/file/1b3ab3bed19356635d2e3362130c2df1",
     "observacao": "",
-    "capa_status": "real"
+    "capa_status": "real",
+    "local": "São Paulo",
+    "edicao": "1ª"
   },
   {
     "slug": "que-ha-africa-nos",
@@ -2188,8 +2352,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2013",
     "editora": "Moderna",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-85-1608-476-9",
+    "paginas": "80",
     "link": "",
     "resumo": "",
     "temas": [
@@ -2197,9 +2361,11 @@ window.PRODUCAO_DOCENTES = [
       "Cultura afro-brasileira",
       "Diáspora"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
+    "imagem": "../assets/producao/capas/que-ha-africa-nos.jpg?v=4",
     "observacao": "",
-    "capa_status": "nao-localizada"
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": "1ª"
   },
   {
     "slug": "crossroads-freedom",
@@ -2214,8 +2380,8 @@ window.PRODUCAO_DOCENTES = [
     "tipo": "Livro",
     "ano": "2016",
     "editora": "Duke University Press",
-    "isbn": "",
-    "paginas": "",
+    "isbn": "978-0-8223-6090-2",
+    "paginas": "344",
     "link": "",
     "resumo": "",
     "temas": [
@@ -2224,9 +2390,11 @@ window.PRODUCAO_DOCENTES = [
       "Bahia",
       "Post-emancipation"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg",
-    "observacao": "",
-    "capa_status": "nao-localizada"
+    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
+    "observacao": "ISBN da edição em brochura; tradução de Mary Ann Mahony.",
+    "capa_status": "nao-localizada",
+    "local": "Durham",
+    "edicao": ""
   },
   {
     "slug": "longe-muito-longe",
@@ -2242,7 +2410,7 @@ window.PRODUCAO_DOCENTES = [
     "ano": "2023",
     "editora": "Zahar",
     "isbn": "978-65-5979-118-7",
-    "paginas": "",
+    "paginas": "376",
     "link": "https://www.companhiadasletras.com.br/livro/9786559791187/longe-muito-longe",
     "resumo": "",
     "temas": [
@@ -2251,9 +2419,11 @@ window.PRODUCAO_DOCENTES = [
       "Ativismo negro",
       "Bahia"
     ],
-    "imagem": "../assets/longe-muito-longe.jpg",
+    "imagem": "../assets/longe-muito-longe.jpg?v=2",
     "observacao": "",
-    "capa_status": "real"
+    "capa_status": "real",
+    "local": "Rio de Janeiro",
+    "edicao": "1ª"
   },
   {
     "slug": "luiza-mahin",
@@ -2279,6 +2449,163 @@ window.PRODUCAO_DOCENTES = [
     ],
     "imagem": "https://covers.openlibrary.org/b/isbn/9788599889244-L.jpg?default=false",
     "observacao": "",
-    "capa_status": "isbn"
+    "capa_status": "isbn",
+    "local": "Rio de Janeiro",
+    "edicao": ""
+  },
+  {
+    "slug": "festa-cultura-sociabilidade-america-portuguesa",
+    "titulo": "Festa: cultura e sociabilidade na América Portuguesa",
+    "subtitulo": "Volume II",
+    "docentes": [
+      "Camila Fernanda Guimarães Santiago"
+    ],
+    "participacoes": {
+      "Camila Fernanda Guimarães Santiago": "Autora de capítulo"
+    },
+    "tipo": "Livro",
+    "ano": "2001",
+    "editora": "Hucitec / Edusp / Imprensa Oficial / FAPESP",
+    "isbn": "978-85-314-0620-1",
+    "paginas": "2 v., 992 p.",
+    "link": "https://www.edusp.com.br/livros/festa/",
+    "resumo": "Coletânea organizada por István Jancsó e Iris Kantor sobre cultura festiva e sociabilidade na América Portuguesa. Camila Santiago participa do volume II com o capítulo “Os gastos do Senado da Câmara de Vila Rica com festas: destaque para Corpus Christi (1720–1750)”, p. 487–501.",
+    "temas": [
+      "Festas",
+      "América Portuguesa",
+      "Vila Rica",
+      "Corpus Christi",
+      "Cultura política",
+      "Sociabilidade"
+    ],
+    "imagem": "../assets/producao/capas/festa-cultura-sociabilidade-america-portuguesa.jpg?v=4",
+    "observacao": "Capítulo de Camila Santiago: “Os gastos do Senado da Câmara de Vila Rica com festas: destaque para Corpus Christi (1720–1750)”, v. 2, p. 487–501.",
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": "1ª"
+  },
+  {
+    "slug": "um-mundo-sobre-papel",
+    "titulo": "Um mundo sobre papel",
+    "subtitulo": "Livros, gravuras e impressos flamengos nos Impérios português e espanhol (séculos XVI–XVIII)",
+    "docentes": [
+      "Camila Fernanda Guimarães Santiago"
+    ],
+    "participacoes": {
+      "Camila Fernanda Guimarães Santiago": "Autora de capítulo"
+    },
+    "tipo": "Livro",
+    "ano": "2014",
+    "editora": "Edusp / Editora UFMG",
+    "isbn": "978-85-314-1353-7",
+    "paginas": "584",
+    "link": "https://www.edusp.com.br/livros/mundo-sobre-papel/",
+    "resumo": "Coletânea organizada por Werner Thomas, Eddy Stols, Iris Kantor e Júnia Furtado sobre circulação de livros, gravuras e impressos flamengos nos mundos ibéricos. Camila Santiago assina o capítulo “Circulação e usos em Minas Gerais de gravuras religiosas da oficina Plantiniana”, p. 495–511.",
+    "temas": [
+      "História do livro",
+      "Gravuras",
+      "Oficina Plantiniana",
+      "Minas Gerais",
+      "História da arte",
+      "Circulação de impressos"
+    ],
+    "imagem": "../assets/producao/capas/um-mundo-sobre-papel.jpg?v=4",
+    "observacao": "Capítulo de Camila Santiago: “Circulação e usos em Minas Gerais de gravuras religiosas da oficina Plantiniana”, p. 495–511.",
+    "capa_status": "local",
+    "local": "São Paulo / Belo Horizonte",
+    "edicao": "1ª"
+  },
+  {
+    "slug": "depois-da-avenida-central",
+    "titulo": "Depois da Avenida Central",
+    "subtitulo": "Cultura, lazer e esportes nos sertões do Brasil",
+    "docentes": [
+      "Henrique Sena dos Santos"
+    ],
+    "participacoes": {
+      "Henrique Sena dos Santos": "Autor de capítulo"
+    },
+    "tipo": "Livro",
+    "ano": "2020",
+    "editora": "Editora Jaguatirica",
+    "isbn": "978-85-5662-260-0",
+    "paginas": "302",
+    "link": "https://museudofutebol.org.br/crfb/acervo/797674",
+    "resumo": "Coletânea organizada por Cleber Dias dedicada à cultura, ao lazer e aos esportes para além do eixo Rio–São Paulo. Henrique Sena dos Santos assina o capítulo “Futebol no interior da Bahia, 1920–1940”, iniciado na p. 153.",
+    "temas": [
+      "Futebol",
+      "Interior da Bahia",
+      "Esporte",
+      "Lazer",
+      "Sertões",
+      "Cultura urbana"
+    ],
+    "imagem": "../assets/producao/capas/depois-da-avenida-central.jpg?v=4",
+    "observacao": "Capítulo de Henrique Sena dos Santos: “Futebol no interior da Bahia, 1920–1940”, p. 153–196.",
+    "capa_status": "local",
+    "local": "Rio de Janeiro",
+    "edicao": ""
+  },
+  {
+    "slug": "alem-do-riso",
+    "titulo": "Além do riso",
+    "subtitulo": "Reflexões sobre o humor em toda parte",
+    "docentes": [
+      "Leandro Antonio de Almeida"
+    ],
+    "participacoes": {
+      "Leandro Antonio de Almeida": "Organizador e autor de capítulo"
+    },
+    "tipo": "Livro",
+    "ano": "2021",
+    "editora": "LiberArs",
+    "isbn": "978-65-5953-042-7",
+    "paginas": "330",
+    "link": "https://www.liberars.com.br/alem-do-riso-reflexoes-sobre-o-humor-em-toda-parte.html",
+    "resumo": "Coletânea organizada por Elias Thomé Saliba, Thaís Leão Vieira e Leandro Antonio de Almeida sobre a história cultural do humor. Leandro também assina o capítulo “O mistério dos Sherlocks risíveis”, p. 109–130.",
+    "temas": [
+      "Humor",
+      "Riso",
+      "História cultural",
+      "Imprensa",
+      "Sherlock Holmes",
+      "Modernidade"
+    ],
+    "imagem": "../assets/producao/capas/alem-do-riso.jpg?v=4",
+    "observacao": "Leandro Antonio de Almeida é coorganizador e autor do capítulo “O mistério dos Sherlocks risíveis”, p. 109–130.",
+    "capa_status": "local",
+    "local": "São Paulo",
+    "edicao": ""
+  },
+  {
+    "slug": "imagem-devocao-escravidao",
+    "titulo": "Imagem, devoção e escravidão",
+    "subtitulo": "",
+    "docentes": [
+      "Tânia Maria Pinto de Santana"
+    ],
+    "participacoes": {
+      "Tânia Maria Pinto de Santana": "Autora"
+    },
+    "tipo": "Livro",
+    "ano": "2018",
+    "editora": "EDUFRB",
+    "isbn": "978-85-5971-074-8",
+    "paginas": "162",
+    "link": "https://www.ufrb.edu.br/editora/component/chronoforms5/?chronoform=ver-livro&id=68",
+    "resumo": "Estudo sobre devoções a santos negros e outros santos católicos, catequese e experiências religiosas das populações negras na América Portuguesa, com atenção às relações entre imagem, escravidão e religiosidade.",
+    "temas": [
+      "Escravidão",
+      "Religiosidade",
+      "Devoções católicas",
+      "Santos negros",
+      "América Portuguesa",
+      "População negra"
+    ],
+    "imagem": "../assets/producao/capas/imagem-devocao-escravidao.jpg?v=4",
+    "observacao": "Livro eletrônico publicado pela EDUFRB, com acesso gratuito.",
+    "capa_status": "local",
+    "local": "Cruz das Almas",
+    "edicao": ""
   }
 ];
