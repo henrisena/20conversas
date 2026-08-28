@@ -1,24 +1,11 @@
-CORREÇÃO DAS IMAGENS — PERFIL DE HENRIQUE
+CORREÇÃO — CARTÕES DE PROFESSORES
 
-Este pacote corrige apenas a forma como as duas fotografias são usadas.
-
-1. PÁGINA INDIVIDUAL
-- remove os blocos extras que haviam sido inseridos;
-- a foto contextual agora substitui efetivamente a imagem genérica da abertura da página;
-- a foto de perfil substitui o placeholder “HS” dentro do cartão Perfil;
-- o restante da página continua inalterado;
-- a seção automática de livros continua funcionando normalmente via script.js.
-
-2. PÁGINA PROFESSORES
-- mantém a foto real de Henrique;
-- corrige o recorte da miniatura para priorizar o rosto.
-
-Arquivos substituídos:
-- pages/professor-henrique-sena.html
+Substitui apenas:
 - pages/professores.html
 
-Imagens mantidas:
-- assets/professores/henrique/perfil-henrique-sena.jpg
-- assets/professores/henrique/capa-henrique-sena.jpg
+Corrige:
+- Leandro Antonio de Almeida: volta a exibir a foto de perfil no cartão;
+- Dênis Renan Corrêa: preserva/restaura a foto de perfil no cartão;
+- Henrique Sena permanece com a foto já corrigida.
 
-Esta é uma correção pequena e pode ser extraída sobre a versão atual do projeto.
+As páginas individuais e as imagens não são alteradas.
