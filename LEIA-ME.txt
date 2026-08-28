@@ -1,11 +1,13 @@
-CORREÇÃO — CARTÕES DE PROFESSORES
+ATUALIZAÇÃO — GALERIA AMPLIADA + CARROSSEL DA HOME
 
-Substitui apenas:
-- pages/professores.html
+A Galeria passa a reunir 18 fotografias reais.
 
-Corrige:
-- Leandro Antonio de Almeida: volta a exibir a foto de perfil no cartão;
-- Dênis Renan Corrêa: preserva/restaura a foto de perfil no cartão;
-- Henrique Sena permanece com a foto já corrigida.
+Arquivos substituídos:
+- index.html
+- pages/galeria.html
 
-As páginas individuais e as imagens não são alteradas.
+Novas fotografias:
+- assets/galeria-real/
+
+O carrossel da Home foi atualizado com uma seleção de 8 imagens reais.
+Nenhuma página de professor é alterada neste pacote.
