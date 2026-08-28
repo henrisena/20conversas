@@ -1,0 +1,30 @@
+ATUALIZAÇÃO COMBINADA — GALERIA REAL + CARROSSEL DA HOME + IMAGENS DE HENRIQUE
+
+Este pacote reúne duas atualizações já preparadas:
+
+1. GALERIA REAL + HOME
+- substitui as imagens fictícias da aba Galeria por cinco fotografias reais;
+- atualiza o carrossel da Galeria na Home para usar fotografias reais;
+- preserva as mudanças recentes da Home (marcos 2006–2016–2026 e formulários de colaboração).
+
+2. PERFIL DE HENRIQUE
+- atualiza a foto de perfil no cartão da página Professores;
+- atualiza a foto individual na página de Henrique;
+- atualiza a imagem contextual de abertura da página de Henrique;
+- não altera ainda dados biográficos, projetos ou produções.
+
+ARQUIVOS PRINCIPAIS SUBSTITUÍDOS
+- index.html
+- pages/galeria.html
+- pages/professores.html
+- pages/professor-henrique-sena.html
+
+NOVAS IMAGENS
+- assets/galeria-real/*
+- assets/professores/henrique/*
+
+COMO ATUALIZAR
+1. Extraia este ZIP na raiz do projeto.
+2. Aceite a substituição dos arquivos existentes.
+3. Confira as mudanças no GitHub Desktop.
+4. Faça Commit e Push origin.

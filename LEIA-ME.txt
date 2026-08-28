@@ -1,27 +1,17 @@
-ATUALIZAÇÃO — PERFIL DE DÊNIS RENAN CORRÊA
+ATUALIZAÇÃO — IMAGENS DO PERFIL DE HENRIQUE
 
 Substitui:
-- pages/professor-denis-correa.html
+- pages/professor-henrique-sena.html
 - pages/professores.html
 
 Acrescenta:
-- assets/professores/denis/perfil-denis-correa.jpg
-- assets/professores/denis/capa-denis-correa.jpg
-- assets/professores/denis/projeto-historia-em-jogo.jpg
-- assets/professores/denis/encerramento-laboratorio.jpg
+- assets/professores/henrique/perfil-henrique-sena.jpg
+- assets/professores/henrique/capa-henrique-sena.jpg
 
-A página foi construída a partir do formulário e das fotografias enviadas pelo próprio docente.
+Alterações desta etapa:
+- foto de perfil real no cartão de Professores;
+- foto de perfil real na página individual;
+- imagem contextual real na abertura da página individual;
+- nenhum dado biográfico, produção, projeto ou seção de livros foi alterado.
 
-IMPORTANTE
-- A fotografia contextual aparece apenas na abertura e não é repetida na página.
-- A fotografia do encerramento da turma é utilizada como registro de vida docente.
-- A seção automática “Livros”, já existente no site, continua sendo acrescentada pelo script.js ao final da página.
-- “Produções em destaque” contém apenas os cinco trabalhos selecionados pelo professor no formulário.
-- O arquivo pages/professores.html deste pacote parte da versão que já continha a atualização do perfil de Leandro, evitando perder aquela modificação.
-
-COMO TESTAR
-1. Extraia o ZIP na raiz do projeto.
-2. Confira as alterações no GitHub Desktop.
-3. Commit e Push origin.
-4. No GitHub Pages, abra Professores e depois o perfil de Dênis.
-5. Confira especialmente a foto de capa, a imagem do Jogo das Cruzadas, a fotografia da turma e a seção automática de livros.
+Os demais conteúdos do perfil serão atualizados depois, quando os dados forem enviados.
