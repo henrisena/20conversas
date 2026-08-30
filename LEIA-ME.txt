@@ -1,13 +1,13 @@
-ATUALIZAÇÃO — GALERIA AMPLIADA + CARROSSEL DA HOME
+CORREÇÃO — TRAJETÓRIA EM IMAGENS DE LEANDRO
 
-A Galeria passa a reunir 18 fotografias reais.
+Este pacote substitui:
+- pages/professor-leandro-almeida.html
 
-Arquivos substituídos:
-- index.html
-- pages/galeria.html
+E acrescenta:
+- assets/professores/leandro/trajetoria/aula-campo-paraguassu-cec-2023.jpg
+- assets/professores/leandro/trajetoria/mesa-literatura-historia-coloquio-2017.jpg
+- assets/professores/leandro/trajetoria/visita-olaria-baixa-grande-2024.jpg
 
-Novas fotografias:
-- assets/galeria-real/
+A seção “Trajetória em imagens” foi inserida logo depois de “Projetos no Recôncavo” e antes de “Depoimento”.
 
-O carrossel da Home foi atualizado com uma seleção de 8 imagens reais.
-Nenhuma página de professor é alterada neste pacote.
+Desta vez ela usa as mesmas classes visuais dos projetos que já funcionam no site, sem depender de CSS novo.
