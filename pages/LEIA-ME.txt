@@ -1,0 +1,15 @@
+ATUALIZAÇÃO — LEANDRO | TRAJETÓRIA EM IMAGENS
+
+Substitui:
+- pages/professor-leandro-almeida.html
+
+Acrescenta:
+- assets/professores/leandro/trajetoria/aula-campo-paraguassu-cec-2023.jpg
+- assets/professores/leandro/trajetoria/mesa-literatura-historia-coloquio-2017.jpg
+- assets/professores/leandro/trajetoria/visita-olaria-baixa-grande-2024.jpg
+
+Alteração:
+- o antigo bloco “Uma imagem da trajetória” foi substituído pela seção “Trajetória em imagens”;
+- as três fotografias aparecem em blocos grandes alternados, com título, local/data e descrição;
+- as imagens podem ser abertas em tamanho maior;
+- projetos, produções, depoimento e seção automática de livros foram preservados.
