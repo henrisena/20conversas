@@ -217,5 +217,22 @@
     "pagina": "egresso-viviane-santos-silva.html",
     "descricao": "Aula de campo realizada em Cachoeira com estudantes da Escola Alcides Almeida, de Muritiba.",
     "fonte": "Informações e fotografia fornecidas por Viviane dos Santos Silva."
+  },
+  {
+    "id": "ivonildes-atual",
+    "titulo": "Atuação atual",
+    "categoria": "egressos",
+    "nome": "Ivonildes da Silva Santos",
+    "cidade": "São Félix",
+    "local": "Secretaria Municipal de Educação",
+    "ano": 2026,
+    "periodo": "atual",
+    "lat": -12.6106,
+    "lng": -38.9721,
+    "imagem": "assets/egressos/ivonildes/atual-ivonildes.jpg",
+    "pageImagem": "../assets/egressos/ivonildes/atual-ivonildes.jpg",
+    "pagina": "egresso-ivonildes-da-silva-santos.html",
+    "descricao": "Servidora pública municipal, professora e, no momento do registro, atuando na coordenação técnico-pedagógica da Secretaria Municipal de Educação de São Félix, nos Anos Finais do Ensino Fundamental.",
+    "fonte": "Informações e fotografia autorizadas por Ivonildes da Silva Santos."
   }
 ]

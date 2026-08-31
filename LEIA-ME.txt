@@ -1,38 +1,33 @@
-ATUALIZAÇÃO FINAL — VIVIANE DOS SANTOS SILVA
-
-Este ZIP já reúne tudo em um único pacote.
+ATUALIZAÇÃO — PERFIL DE IVONILDES DA SILVA SANTOS
 
 INCLUI:
-- perfil individual completo de Viviane;
-- cartão de Viviane na aba Egressos;
-- foto de perfil;
-- foto horizontal de contexto no hero, preservando o rosto;
-- quatro imagens da trajetória no CAHL;
-- as mesmas quatro imagens também na Galeria geral;
-- trajetória pós-UFRB;
-- integração ao Mapa das Trajetórias com painel lateral e linha do percurso;
-- depoimento em vídeo do YouTube no perfil individual;
-- depoimento em vídeo também na aba Depoimentos;
-- remoção dos dois vídeos anteriores da aba Depoimentos;
-- preservação da Cartografia da pós-graduação.
+- nova página individual de Ivonildes;
+- cartão na aba Egressos;
+- fotografia de perfil;
+- fotografia contextual na abertura;
+- fotografia atual na seção "Você hoje";
+- depoimento escrito preservado integralmente;
+- ingresso 2006.1 e conclusão 2010.8;
+- destaque para participação na primeira turma;
+- ponto atual em São Félix no Mapa das Trajetórias;
+- sem linha artificial de percurso, porque outros momentos pós-UFRB não foram informados.
 
-PERCURSO NO MAPA:
-- 2021–2023 — Santo Antônio de Jesus — Mestrado em História, UNEB Campus V;
-- 2023 — Cachoeira — Colégio Sacramentinas;
-- 2024 — Muritiba — EJA / Escola Alcides Almeida;
-- 2025 — Cachoeira — aula de campo da Escola Alcides Almeida;
-- atual — Muritiba — servidora pública / Escola Alcides Almeida.
+ATUAÇÃO ATUAL:
+- São Félix, Bahia;
+- servidora pública municipal;
+- professora;
+- coordenação técnico-pedagógica da Secretaria Municipal de Educação;
+- Anos Finais do Ensino Fundamental.
 
-DEPOIMENTO:
-https://youtu.be/jwLtFhx7jxM
+ARQUIVOS SUBSTITUÍDOS:
+- pages/egressos.html
+- pages/mapa.html
+- script.js
+- data/mapa.json
 
-COMO USAR:
-1. Extraia este ZIP na raiz do projeto.
-2. Aceite as substituições.
-3. Abra o GitHub Desktop.
-4. Revise os arquivos alterados.
-5. Faça Commit.
-6. Faça Push.
-7. Atualize o site com Ctrl+F5.
+ARQUIVOS NOVOS:
+- pages/egresso-ivonildes-da-silva-santos.html
+- assets/egressos/ivonildes/*
 
-Não é necessário aplicar os dois ZIPs anteriores separadamente.
+Este patch foi montado sobre a atualização final da Viviane.
+Extraia na raiz do projeto, aceite as substituições, faça Commit + Push e depois Ctrl+F5.
