@@ -1,20 +1,31 @@
-ABERTURA DA ABA EGRESSOS — MOSAICO APROVADO
+CARROSSEL DE EGRESSOS — RECORTES APROVADOS
 
-Aplica a prévia aprovada como plano de fundo da abertura da página Egressos.
+Foram criadas seis imagens próprias para o carrossel:
+- Alfredo
+- Leila
+- Viviane
+- Ivonildes
+- Nara
+- Jamile
 
-Imagem:
-- assets/mosaico-egressos-amplo-v4.jpg
+Os recortes usam o mesmo enquadramento aprovado no mosaico da abertura da aba Egressos.
 
-Página alterada:
-- pages/egressos.html
+Vantagens:
+- o carrossel continua com foto preenchendo o quadro;
+- o enquadramento não depende mais de object-position;
+- Alfredo e Ivonildes ficam com o enquadramento já aprovado;
+- Leila, Viviane, Nara e Jamile preservam os enquadramentos aprovados;
+- as fotos originais continuam intactas para perfis e outras páginas.
 
-A alteração é isolada:
-- não substitui style.css;
-- não altera a Home;
-- não altera os carrosséis;
-- não altera os marcos 2006/2016/2026;
-- não altera formulários;
-- não altera outras páginas.
+PADRÃO PARA NOVOS EGRESSOS
+Para cada novo egresso:
+1. preservar a foto original;
+2. criar uma cópia horizontal 3:2 para o carrossel;
+3. usar cover/crop apenas nessa cópia;
+4. ajustar individualmente o ponto focal para preservar rosto e tronco;
+5. salvar em assets/egressos/carrossel/;
+6. acrescentar essa versão ao carrossel.
 
-A página recebe apenas uma regra local de CSS para substituir o fundo de
-.page-hero.hero-egressos pela nova imagem.
+Arquivos alterados:
+- index.html
+- assets/egressos/carrossel/*.jpg
