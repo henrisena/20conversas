@@ -1,41 +1,15 @@
-ATUALIZAÇÃO — EGRESSOS REAIS + MAPA DAS TRAJETÓRIAS
+CORREÇÃO — MAPA COM TRAJETÓRIAS LIGADAS
 
-ABA EGRESSOS
-- remove todos os perfis fictícios;
-- mantém somente Alfredo Pinto da Silva Júnior e Leila Maria de Jesus Pereira;
-- substitui textos de demonstração por aviso de acervo em construção.
+Recupera a lógica visual da versão anterior do Mapa dos Egressos.
 
-MAPA DOS EGRESSOS — MAPA DAS TRAJETÓRIAS
-- mantém somente Alfredo e Leila;
-- remove todos os exemplos fictícios;
-- mantém 4 registros de Alfredo e 4 de Leila;
-- visão inicial: situação atual;
-- busca por nome;
-- filtro por localização atual;
-- filtro por atuação;
-- filtro por período de ingresso;
-- botão “Ver todos os egressos”;
-- botão “Limpar filtros”;
-- lista clicável dos egressos;
-- exploração opcional dos momentos das trajetórias;
-- filtro temporal dos momentos;
-- modo “Durante o período” e “Até o fim do período”;
-- retorno à situação atual;
-- links para os perfis individuais.
+- somente Alfredo e Leila;
+- busca por nome, “Ver todos os egressos” e “Limpar filtros”;
+- ao escolher um egresso, o mapa desenha uma linha entre os lugares informados em ordem cronológica;
+- cada momento aparece na sequência temporal;
+- pontos com fotografia exibem a imagem;
+- pontos sem fotografia continuam no mapa com registro textual;
+- momentos ocorridos na mesma cidade/local permanecem no mesmo ponto geográfico, sem inventar coordenadas diferentes;
+- Cartografia da pós-graduação não foi alterada.
 
-CARTOGRAFIA DA PÓS-GRADUAÇÃO
-- não foi alterada;
-- o link para cartografia-pos-graduacao.html permanece intacto.
-
-HOME
-- o mapa resumido de egressos passa a exibir somente Alfredo e Leila, pois usa a mesma base real.
-
-ARQUIVOS SUBSTITUÍDOS
-- index.html
-- script.js
-- data/mapa.json
-- pages/egressos.html
-- pages/mapa.html
-
-Depois de extrair na raiz do projeto, faça Commit + Push.
-No GitHub Pages, use Ctrl+F5 para evitar o cache do script anterior.
+LEILA: UEFS/Feira de Santana (2019, sem foto) → Sapeaçu (2019, com foto) → Sapeaçu (2024, com foto) → atuação atual em Sapeaçu (com foto).
+ALFREDO: UFBA/Salvador (2013) → UNEB/Salvador (2025) → Cachoeira (2026) → situação atual.

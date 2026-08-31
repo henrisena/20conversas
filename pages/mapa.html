@@ -1,13 +1,17 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mapa dos egressos | Memorial 20 anos</title><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="../style.css?v=56"></head><body class="map-page-wide"><header class="topbar">
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mapa dos egressos | Memorial 20 anos</title><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="../style.css?v=56"><style>
+.trajectory-detail-photo{width:100%;max-height:270px;object-fit:cover;border-radius:14px;margin:0 0 14px}
+.trajectory-detail-placeholder{display:grid;place-items:center;min-height:150px;padding:22px;background:#f3eee7;border:1px dashed #c9beb0;border-radius:14px;margin-bottom:14px;text-align:center;color:var(--navy);font-family:Georgia,serif}
+.trajectory-mini-list{display:grid;gap:7px;margin:16px 0}.trajectory-mini-item{width:100%;display:grid;grid-template-columns:58px 1fr;gap:9px;text-align:left;border:1px solid var(--line);border-radius:11px;background:#fff;padding:9px 10px;cursor:pointer}.trajectory-mini-item:hover,.trajectory-mini-item:focus{border-color:var(--purple);outline:none}.trajectory-mini-item.active{border-color:var(--gold);background:#fff9ec}.trajectory-mini-item span{font-weight:900;color:var(--purple)}.trajectory-mini-item div{display:grid;gap:2px}.trajectory-mini-item strong{color:var(--navy)}.trajectory-mini-item small{color:#756d67}.trajectory-back{width:100%;margin-bottom:12px}
+.trajectory-popup{min-width:220px}.trajectory-popup img{width:100%;height:120px;object-fit:cover;border-radius:9px;margin-bottom:8px}.trajectory-popup .no-photo{display:grid;place-items:center;height:90px;background:#f3eee7;border-radius:9px;margin-bottom:8px;text-align:center;padding:8px;color:#665f59;font-size:.82rem}.trajectory-popup strong,.trajectory-popup span{display:block}.trajectory-popup span{font-size:.82rem;color:#675f58;margin:3px 0 7px}.trajectory-popup p{font-size:.84rem;margin:0}
+.route-legend{display:flex;align-items:center;gap:8px;margin:10px 0 0;color:#756d67;font-size:.82rem}.route-legend i{display:block;width:34px;height:4px;background:#8b542b;border-radius:99px}
+.map-results-summary .trajectory-mode-name{color:var(--purple);font-weight:900}
+</style></head><body class="map-page-wide"><header class="topbar">
 <a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a><button class="menu-button" aria-label="Abrir menu">☰</button><nav class="menu"><a href="../index.html">Início</a><a href="curso.html">O curso</a><a href="linha-do-tempo.html">Linha do tempo</a><a href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a><a href="depoimentos.html">Depoimentos</a><a class="active" href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a></nav></header>
 <section class="page-hero hero-mapa"><div class="page-hero-inner"><p class="eyebrow">Memorial 20 anos</p><h1>Mapa dos egressos</h1><p>Conheça os lugares, atividades e percursos acadêmicos e profissionais das pessoas formadas no Curso de História da UFRB.</p></div></section>
 <main class="content"><nav class="egress-map-tabs" aria-label="Mapas de egressos">
 <a href="mapa.html" class="active"><span>Mapa das trajetórias</span><small>Atuação atual e percursos individuais</small></a>
 <a href="cartografia-pos-graduacao.html" class=""><span>Cartografia da pós-graduação</span><small>Especialização, mestrado e doutorado</small></a>
-</nav><section class="map-intro">
-      <h2>Trajetórias que partem do Recôncavo</h2>
-      <p>Este mapa reúne trajetórias compartilhadas e autorizadas pelos próprios egressos. A visualização inicial mostra onde Alfredo Pinto da Silva Júnior e Leila Maria de Jesus Pereira atuam atualmente. Você pode buscar pelo nome, filtrar por localização, atuação e período de ingresso, listar todos os egressos representados ou explorar momentos anteriores de seus percursos acadêmicos e profissionais.</p>
-    </section>
+</nav><section class="map-intro"><h2>Trajetórias que partem do Recôncavo</h2><p>O mapa reúne percursos acadêmicos e profissionais compartilhados e autorizados pelos próprios egressos. A visualização inicial mostra Alfredo Pinto da Silva Júnior e Leila Maria de Jesus Pereira. Ao escolher um nome, o mapa revela os lugares por onde cada egresso passou, liga esses pontos em ordem cronológica e apresenta as fotografias enviadas para cada momento quando elas existem.</p></section>
 <section class="alumni-map-filters alumni-map-filters-compact" aria-label="Filtros do Mapa dos Egressos"><div class="filter-field filter-search"><label for="alumniName">Buscar por nome</label><input id="alumniName" type="search" placeholder="Digite o nome do egresso"></div><div class="filter-field"><label for="alumniLocation">Localização atual</label><select id="alumniLocation"><option value="">Todas as localizações</option></select></div><div class="filter-field"><label for="alumniActivity">Atuação</label><select id="alumniActivity"><option value="">Todas as atuações</option></select></div><button id="toggleAlumniDirectory" class="button-outline alumni-directory-toggle alumni-directory-toggle-filter" type="button" aria-expanded="false" aria-controls="alumniDirectoryPanel">Ver todos os egressos</button><button id="clearAlumniFilters" class="button-outline clear-map-filters" type="button">Limpar filtros</button></section>
 <section class="alumni-year-range" aria-labelledby="alumniYearRangeTitle">
   <div class="alumni-year-range-heading">
@@ -86,325 +90,64 @@
     <div id="historyRecordsList" class="history-records-list" aria-live="polite"></div>
   </aside>
 </section>
-<p class="prototype-note"><strong>Sobre o mapa:</strong> esta cartografia é construída a partir de informações compartilhadas e autorizadas pelos próprios egressos. Novas trajetórias serão incorporadas à medida que outras contribuições forem recebidas.</p></main>
+<p class="prototype-note"><strong>Sobre o mapa:</strong> os percursos são construídos com os anos, locais, instituições, descrições e fotografias informados pelos próprios egressos. Quando um momento foi informado sem fotografia, ele permanece representado no mapa por um registro textual.</p></main>
 <footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer><script src="../script.js?v=64"></script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script>
+(function(){
+const PEOPLE={
+"Alfredo Pinto da Silva Júnior":{ingresso:2008,atividade:"Professor da rede estadual e doutorando em História",pagina:"egresso-alfredo-pinto.html",
+atual:{ano:2026,cidade:"Cachoeira",local:"Cachoeira, Bahia",instituicao:"SEC-BA / PPGH-UFBA",titulo:"Atuação atual",descricao:"Professor da Rede Estadual de Educação da Bahia e doutorando em História no PPGH-UFBA. No formulário, indicou Cachoeira como localização atual.",lat:-12.6016,lng:-38.9658,foto:"../assets/alfredo-jornada-pedagogica.jpeg"},
+momentos:[
+{ano:2013,cidade:"Salvador",local:"UFBA, Salvador, Bahia",instituicao:"Universidade Federal da Bahia (UFBA)",titulo:"Qualificação do mestrado",descricao:"Celebração da qualificação do mestrado na UFBA com colegas e amigos da UFRB.",lat:-13.0018,lng:-38.5087,foto:"../assets/alfredo-qualificacao.jpg"},
+{ano:2025,cidade:"Salvador",local:"UNEB, Campus I, Salvador, Bahia",instituicao:"Universidade do Estado da Bahia (UNEB)",titulo:"Fórum Internacional “Indígenas no Trabalho”",descricao:"Participação no Fórum Internacional “Indígenas no Trabalho”, no Campus I da UNEB, em Salvador.",lat:-12.9527,lng:-38.4594,foto:"../assets/alfredo-forum-indigenas.jpg"},
+{ano:2026,cidade:"Cachoeira",local:"Colégio Estadual da Cachoeira, Bahia",instituicao:"Colégio Estadual da Cachoeira",titulo:"Jornada Pedagógica",descricao:"Participação em oficina sobre o Plano Municipal de Educação Antirracista de Cachoeira, com reencontro de antigos docentes e do colega de graduação Fred Igor.",lat:-12.6012,lng:-38.9665,foto:"../assets/alfredo-fred-igor.jpeg"}]},
+"Leila Maria de Jesus Pereira":{ingresso:2013,atividade:"Professora de História",pagina:"egresso-leila-maria.html",
+atual:{ano:2026,cidade:"Sapeaçu",local:"Escola Moisés Alves, Sapeaçu, Bahia",instituicao:"Escola Moisés Alves",titulo:"Atuação atual",descricao:"Professora na Escola Moisés Alves, em Sapeaçu. O ponto representa sua atuação docente atual.",lat:-12.72944,lng:-39.18623,foto:"../assets/egressos/leila/leila-atual.jpg"},
+momentos:[
+{ano:2019,cidade:"Feira de Santana",local:"UEFS, Feira de Santana, Bahia",instituicao:"Universidade Estadual de Feira de Santana (UEFS)",titulo:"Ingresso no mestrado em História Social",descricao:"Ingresso no mestrado em História Social da Universidade Estadual de Feira de Santana.",lat:-12.19997,lng:-38.97115,foto:null},
+{ano:2019,cidade:"Sapeaçu",local:"Sapeaçu, Bahia",instituicao:"Cursinho popular e rede municipal",titulo:"Início da docência em História",descricao:"Começou a dar aulas de História no cursinho popular e na rede municipal de Sapeaçu.",lat:-12.72944,lng:-39.18623,foto:"../assets/egressos/leila/momento-2019-sapeacu.jpg"},
+{ano:2024,cidade:"Sapeaçu",local:"Prefeitura Municipal de Sapeaçu, Bahia",instituicao:"Prefeitura Municipal de Sapeaçu",titulo:"Posse como professora de História efetiva",descricao:"Tomada de posse no cargo de Professora de História efetiva da Prefeitura Municipal de Sapeaçu.",lat:-12.72944,lng:-39.18623,foto:"../assets/egressos/leila/momento-2024-posse.jpg"}]}
+};
 
-(function initAlumniTrajectoriesMap(){
-  const mapEl = document.getElementById('mapFull');
-  if (!mapEl || typeof L === 'undefined') return;
+const $=id=>document.getElementById(id), mapEl=$("mapFull"); if(!mapEl||typeof L==="undefined")return;
+const nameInput=$("alumniName"),locSel=$("alumniLocation"),actSel=$("alumniActivity"),clearBtn=$("clearAlumniFilters"),
+listToggle=$("toggleAlumniDirectory"),listPanel=$("alumniDirectoryPanel"),listEl=$("alumniResultList"),
+countEl=$("alumniResultCount"),summaryEl=$("alumniMapModeSummary"),detailEl=$("mapDetail"),
+ingStart=$("alumniYearStart"),ingEnd=$("alumniYearEnd"),ingOut=$("alumniYearRangeOutput"),
+histToggle=$("toggleHistoryExplorer"),histPanel=$("historyExplorerPanel"),tlStart=$("alumniTimelineStart"),
+tlEnd=$("alumniTimelineEnd"),tlOut=$("alumniTimelineRangeOutput"),tlMode=$("alumniTimelineMode"),
+showHist=$("showHistoricalPeriod"),returnCurrent=$("returnCurrentMap"),histSide=$("historyRecordsSidebar"),
+histList=$("historyRecordsList"),histCount=$("historyRecordsCount"),histPeriod=$("historyRecordsPeriod");
 
-  const profiles = {
-    'Alfredo Pinto da Silva Júnior': {
-      ingresso: 2008,
-      currentId: 'alfredo-atual',
-      atividade: 'Professor da rede estadual e doutorando em História',
-      pagina: 'egresso-alfredo-pinto.html'
-    },
-    'Leila Maria de Jesus Pereira': {
-      ingresso: 2013,
-      currentId: 'leila-atual',
-      atividade: 'Professora de História',
-      pagina: 'egresso-leila-maria.html'
-    }
-  };
+const map=L.map(mapEl,{scrollWheelZoom:false}).setView([-12.65,-38.95],8);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"&copy; OpenStreetMap"}).addTo(map);
+const markers=L.layerGroup().addTo(map),routes=L.layerGroup().addTo(map); let selected=null;
 
-  const allowedNames = Object.keys(profiles);
-  const records = mapData.filter(r => r.categoria === 'egressos' && allowedNames.includes(r.nome));
-  const currentRecords = allowedNames.map(name => records.find(r => r.id === profiles[name].currentId)).filter(Boolean);
-  const historyRecords = records.filter(r => !String(r.id).endsWith('-atual'));
-
-  const byId = id => document.getElementById(id);
-  const nameInput = byId('alumniName');
-  const locationSelect = byId('alumniLocation');
-  const activitySelect = byId('alumniActivity');
-  const clearBtn = byId('clearAlumniFilters');
-  const directoryToggle = byId('toggleAlumniDirectory');
-  const directoryPanel = byId('alumniDirectoryPanel');
-  const resultList = byId('alumniResultList');
-  const resultCount = byId('alumniResultCount');
-  const modeSummary = byId('alumniMapModeSummary');
-  const detail = byId('mapDetail');
-
-  const ingressStart = byId('alumniYearStart');
-  const ingressEnd = byId('alumniYearEnd');
-  const ingressOutput = byId('alumniYearRangeOutput');
-
-  const historyToggle = byId('toggleHistoryExplorer');
-  const historyPanel = byId('historyExplorerPanel');
-  const timelineStart = byId('alumniTimelineStart');
-  const timelineEnd = byId('alumniTimelineEnd');
-  const timelineOutput = byId('alumniTimelineRangeOutput');
-  const timelineMode = byId('alumniTimelineMode');
-  const showHistoricalBtn = byId('showHistoricalPeriod');
-  const returnCurrentBtn = byId('returnCurrentMap');
-  const historySidebar = byId('historyRecordsSidebar');
-  const historyList = byId('historyRecordsList');
-  const historyCount = byId('historyRecordsCount');
-  const historyPeriod = byId('historyRecordsPeriod');
-
-  let viewMode = 'current';
-  let selectedRecordId = null;
-
-  const map = L.map(mapEl, {scrollWheelZoom:false}).setView([-12.65,-38.95],8);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution:'&copy; OpenStreetMap'
-  }).addTo(map);
-  const markerLayer = L.layerGroup().addTo(map);
-
-  function esc(value){
-    return String(value ?? '').replace(/[&<>"']/g, ch => ({
-      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'
-    })[ch]);
-  }
-
-  function normalize(value){
-    return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-  }
-
-  function imageSrc(record){
-    if (!record) return '';
-    return record.pageImagem || (record.imagem ? '../' + record.imagem : '');
-  }
-
-  function detailHTML(record){
-    if (!record) {
-      return '<p class="eyebrow">Mapa das trajetórias</p><h2>Selecione um egresso</h2><p>Clique em um marcador ou em um nome da lista para conhecer sua trajetória.</p>';
-    }
-    const p = profiles[record.nome] || {};
-    const img = imageSrc(record);
-    return `
-      ${img ? `<img src="${esc(img)}" alt="${esc(record.nome)}" style="width:100%;max-height:270px;object-fit:cover;border-radius:14px;margin-bottom:14px">` : ''}
-      <p class="eyebrow">${viewMode === 'current' ? 'Situação atual' : 'Momento da trajetória'}</p>
-      <h2>${esc(record.nome)}</h2>
-      <h3>${esc(record.titulo)}</h3>
-      <p><strong>${esc(record.cidade)}</strong>${record.local ? ' · ' + esc(record.local) : ''}</p>
-      ${record.ano ? `<p><strong>Ano:</strong> ${esc(record.ano)}</p>` : ''}
-      <p>${esc(record.descricao)}</p>
-      <a class="button-outline" href="${esc(record.pagina || p.pagina || '#')}">Ver perfil completo</a>
-    `;
-  }
-
-  function updateDualRange(startEl, endEl, outputEl, container){
-    let a = Number(startEl.value), b = Number(endEl.value);
-    if (a > b) {
-      if (document.activeElement === startEl) endEl.value = a;
-      else startEl.value = b;
-      a = Number(startEl.value); b = Number(endEl.value);
-    }
-    if (outputEl) outputEl.textContent = `${a}–${b}`;
-    if (container) {
-      const min = Number(startEl.min), max = Number(startEl.max);
-      container.style.setProperty('--range-start', `${((a-min)/(max-min))*100}%`);
-      container.style.setProperty('--range-end', `${((b-min)/(max-min))*100}%`);
-    }
-    return [a,b];
-  }
-
-  function filteredNames(){
-    const q = normalize(nameInput?.value);
-    const loc = locationSelect?.value || '';
-    const act = activitySelect?.value || '';
-    const [yearA, yearB] = updateDualRange(
-      ingressStart, ingressEnd, ingressOutput,
-      ingressStart?.closest('.dual-range')
-    );
-    return allowedNames.filter(name => {
-      const p = profiles[name];
-      const current = currentRecords.find(r => r.nome === name);
-      if (!current) return false;
-      return (!q || normalize(name).includes(q))
-        && (!loc || current.cidade === loc)
-        && (!act || p.atividade === act)
-        && (p.ingresso >= yearA && p.ingresso <= yearB);
-    });
-  }
-
-  function populateSelect(select, values, firstText){
-    if (!select) return;
-    const current = select.value;
-    select.innerHTML = `<option value="">${firstText}</option>` +
-      [...new Set(values)].sort((a,b)=>a.localeCompare(b,'pt-BR')).map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('');
-    if ([...select.options].some(o=>o.value===current)) select.value=current;
-  }
-
-  populateSelect(locationSelect, currentRecords.map(r=>r.cidade), 'Todas as localizações');
-  populateSelect(activitySelect, allowedNames.map(n=>profiles[n].atividade), 'Todas as atuações');
-
-  function renderDirectory(names){
-    if (!resultList) return;
-    resultList.innerHTML = names.map(name => {
-      const current = currentRecords.find(r=>r.nome===name);
-      const p = profiles[name];
-      return `<button type="button" class="alumni-result-item" data-alumni-name="${esc(name)}">
-        <strong>${esc(name)}</strong>
-        <span>${esc(p.atividade)}</span>
-        <small>${esc(current?.cidade || '')}${current?.local ? ' · '+esc(current.local) : ''}</small>
-      </button>`;
-    }).join('') || '<p>Nenhum egresso corresponde aos filtros selecionados.</p>';
-
-    resultList.querySelectorAll('[data-alumni-name]').forEach(btn => {
-      btn.addEventListener('click', () => focusPerson(btn.dataset.alumniName));
-    });
-  }
-
-  function markerFor(record){
-    const marker = L.marker([record.lat,record.lng]).addTo(markerLayer);
-    marker.bindTooltip(`<strong>${esc(record.nome)}</strong><br>${esc(record.titulo)}`, {direction:'top'});
-    marker.on('click', () => {
-      selectedRecordId = record.id;
-      detail.innerHTML = detailHTML(record);
-    });
-    return marker;
-  }
-
-  function fit(recordsToFit){
-    if (!recordsToFit.length) {
-      map.setView([-12.65,-38.95],8);
-      return;
-    }
-    if (recordsToFit.length === 1) {
-      map.setView([recordsToFit[0].lat, recordsToFit[0].lng], 10);
-    } else {
-      map.fitBounds(L.latLngBounds(recordsToFit.map(r=>[r.lat,r.lng])), {padding:[45,45],maxZoom:9});
-    }
-    setTimeout(()=>map.invalidateSize(),50);
-  }
-
-  function currentViewRecords(){
-    const names = filteredNames();
-    return currentRecords.filter(r => names.includes(r.nome));
-  }
-
-  function historicalViewRecords(){
-    const names = filteredNames();
-    const [a,b] = updateDualRange(
-      timelineStart, timelineEnd, timelineOutput,
-      timelineStart?.closest('.dual-range')
-    );
-    const mode = timelineMode?.value || 'during';
-    return historyRecords.filter(r => {
-      if (!names.includes(r.nome)) return false;
-      return mode === 'until' ? r.ano <= b : (r.ano >= a && r.ano <= b);
-    });
-  }
-
-  function renderHistorySidebar(items){
-    if (!historySidebar) return;
-    if (viewMode !== 'history') {
-      historySidebar.hidden = true;
-      return;
-    }
-    historySidebar.hidden = false;
-    const a = Number(timelineStart.value), b = Number(timelineEnd.value);
-    historyCount.textContent = `${items.length} ${items.length === 1 ? 'momento' : 'momentos'}`;
-    historyPeriod.textContent = timelineMode.value === 'until'
-      ? `Registros acumulados até ${b}.`
-      : `Registros entre ${Math.min(a,b)} e ${Math.max(a,b)}.`;
-    historyList.innerHTML = items.map(r => `
-      <button type="button" class="history-record-item" data-record-id="${esc(r.id)}">
-        <span>${esc(r.ano)}</span>
-        <strong>${esc(r.nome)}</strong>
-        <small>${esc(r.titulo)} · ${esc(r.cidade)}</small>
-      </button>
-    `).join('') || '<p>Nenhum momento registrado para este recorte.</p>';
-    historyList.querySelectorAll('[data-record-id]').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        const r=records.find(x=>x.id===btn.dataset.recordId);
-        if(r){ map.setView([r.lat,r.lng],10); detail.innerHTML=detailHTML(r); }
-      });
-    });
-  }
-
-  function render(){
-    markerLayer.clearLayers();
-    const names = filteredNames();
-    renderDirectory(names);
-
-    let items;
-    if (viewMode === 'history') {
-      items = historicalViewRecords();
-      modeSummary.textContent = 'Exibindo momentos das trajetórias dos egressos.';
-    } else {
-      items = currentViewRecords();
-      modeSummary.textContent = 'Exibindo a situação atual dos egressos.';
-    }
-
-    items.forEach(markerFor);
-    fit(items);
-    resultCount.textContent = `${names.length} ${names.length === 1 ? 'egresso encontrado' : 'egressos encontrados'}`;
-    renderHistorySidebar(items);
-
-    const selected = records.find(r=>r.id===selectedRecordId && items.some(i=>i.id===r.id));
-    detail.innerHTML = selected ? detailHTML(selected) : detailHTML(null);
-  }
-
-  function focusPerson(name){
-    const item = viewMode === 'history'
-      ? historicalViewRecords().find(r=>r.nome===name)
-      : currentRecords.find(r=>r.nome===name);
-    if (!item) return;
-    map.setView([item.lat,item.lng],10);
-    selectedRecordId = item.id;
-    detail.innerHTML = detailHTML(item);
-  }
-
-  function resetFilters(){
-    if(nameInput) nameInput.value='';
-    if(locationSelect) locationSelect.value='';
-    if(activitySelect) activitySelect.value='';
-    if(ingressStart) ingressStart.value=ingressStart.min;
-    if(ingressEnd) ingressEnd.value=ingressEnd.max;
-    if(timelineStart) timelineStart.value=timelineStart.min;
-    if(timelineEnd) timelineEnd.value=timelineEnd.max;
-    if(timelineMode) timelineMode.value='during';
-    viewMode='current';
-    selectedRecordId=null;
-    if(historySidebar) historySidebar.hidden=true;
-    render();
-  }
-
-  [nameInput,locationSelect,activitySelect,ingressStart,ingressEnd].filter(Boolean)
-    .forEach(el=>el.addEventListener('input',render));
-
-  clearBtn?.addEventListener('click',resetFilters);
-
-  directoryToggle?.addEventListener('click',()=>{
-    const open = directoryPanel.hidden;
-    directoryPanel.hidden = !open;
-    directoryToggle.setAttribute('aria-expanded', String(open));
-    directoryToggle.textContent = open ? 'Ocultar lista de egressos' : 'Ver todos os egressos';
-    if(open) renderDirectory(filteredNames());
-  });
-
-  historyToggle?.addEventListener('click',()=>{
-    const open=historyPanel.hidden;
-    historyPanel.hidden=!open;
-    historyToggle.setAttribute('aria-expanded',String(open));
-    historyToggle.textContent=open?'Ocultar exploração das trajetórias':'Explorar momentos das trajetórias';
-    if(open) updateDualRange(timelineStart,timelineEnd,timelineOutput,timelineStart.closest('.dual-range'));
-  });
-
-  [timelineStart,timelineEnd].filter(Boolean).forEach(el=>el.addEventListener('input',()=>{
-    updateDualRange(timelineStart,timelineEnd,timelineOutput,timelineStart.closest('.dual-range'));
-    if(viewMode==='history') render();
-  }));
-  timelineMode?.addEventListener('change',()=>{ if(viewMode==='history') render(); });
-
-  showHistoricalBtn?.addEventListener('click',()=>{
-    viewMode='history';
-    selectedRecordId=null;
-    render();
-  });
-
-  returnCurrentBtn?.addEventListener('click',()=>{
-    viewMode='current';
-    selectedRecordId=null;
-    render();
-  });
-
-  updateDualRange(ingressStart,ingressEnd,ingressOutput,ingressStart.closest('.dual-range'));
-  updateDualRange(timelineStart,timelineEnd,timelineOutput,timelineStart.closest('.dual-range'));
-  render();
+const esc=v=>String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+const norm=v=>String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const names=()=>Object.keys(PEOPLE);
+function range(a,b,out){let x=+a.value,y=+b.value;if(x>y){if(document.activeElement===a)b.value=x;else a.value=y;x=+a.value;y=+b.value}if(out)out.textContent=`${x}–${y}`;return[x,y]}
+function filtered(){const q=norm(nameInput.value),loc=locSel.value,act=actSel.value,[a,b]=range(ingStart,ingEnd,ingOut);return names().filter(n=>{const p=PEOPLE[n];return(!q||norm(n).includes(q))&&(!loc||p.atual.cidade===loc)&&(!act||p.atividade===act)&&p.ingresso>=a&&p.ingresso<=b})}
+function populate(){locSel.innerHTML='<option value="">Todas as localizações</option>'+[...new Set(names().map(n=>PEOPLE[n].atual.cidade))].sort().map(v=>`<option>${esc(v)}</option>`).join("");actSel.innerHTML='<option value="">Todas as atuações</option>'+[...new Set(names().map(n=>PEOPLE[n].atividade))].sort().map(v=>`<option>${esc(v)}</option>`).join("")}
+function iconCurrent(n){const s=n.split(" ").slice(0,2).map(x=>x[0]).join("");return L.divIcon({className:"",html:`<div class="pin egressos"><span>${esc(s)}</span></div>`,iconSize:[40,40],iconAnchor:[20,20]})}
+function iconRoute(i){return L.divIcon({className:"",html:`<div class="pin trajectory"><span>${i}</span></div>`,iconSize:[38,38],iconAnchor:[19,19]})}
+function popup(m){return `<div class="trajectory-popup">${m.foto?`<img src="${esc(m.foto)}" alt="${esc(m.titulo)}">`:`<div class="no-photo">Momento registrado sem fotografia</div>`}<strong>${esc(m.ano)} · ${esc(m.titulo)}</strong><span>${esc(m.local)}</span><p>${esc(m.descricao)}</p></div>`}
+function seq(n){const p=PEOPLE[n];return[...p.momentos,{...p.atual,isCurrent:true}].sort((a,b)=>(a.ano-b.ano)||(a.isCurrent?1:0))}
+function fit(items){if(!items.length){map.setView([-12.65,-38.95],8);return}map.fitBounds(L.latLngBounds(items.map(x=>[x.lat,x.lng])),{padding:[50,50],maxZoom:10})}
+function detailCurrent(n){const p=PEOPLE[n],a=p.atual;return `${a.foto?`<img class="trajectory-detail-photo" src="${esc(a.foto)}" alt="${esc(n)}">`:""}<p class="eyebrow">Situação atual</p><h2>${esc(n)}</h2><h3>${esc(p.atividade)}</h3><p><strong>${esc(a.local)}</strong></p><p>${esc(a.descricao)}</p><button class="button trajectory-toggle" type="button" data-route="${esc(n)}">Ver trajetória completa</button><a class="button-outline" href="${esc(p.pagina)}">Ver perfil individual</a>`}
+function detailRoute(n,m,idx){const p=PEOPLE[n],s=seq(n);return `<button class="button-outline trajectory-back" type="button" data-back>← Voltar aos egressos</button>${m.foto?`<img class="trajectory-detail-photo" src="${esc(m.foto)}" alt="${esc(m.titulo)}">`:`<div class="trajectory-detail-placeholder">Este momento foi informado no formulário sem fotografia.</div>`}<p class="eyebrow">Trajetória de egresso</p><h2>${esc(n)}</h2><h3>${esc(m.ano)} · ${esc(m.titulo)}</h3><p><strong>${esc(m.local)}</strong></p><p>${esc(m.instituicao)}</p><p>${esc(m.descricao)}</p><div class="route-legend"><i></i><span>A linha liga os lugares informados em ordem cronológica.</span></div><div class="trajectory-mini-list">${s.map((x,i)=>`<button class="trajectory-mini-item ${i===idx?"active":""}" type="button" data-idx="${i}"><span>${x.ano}</span><div><strong>${esc(x.titulo)}</strong><small>${esc(x.cidade)}${x.foto?" · com fotografia":" · sem fotografia"}</small></div></button>`).join("")}</div><a class="button-outline" href="${esc(p.pagina)}">Ver perfil individual</a>`}
+function actions(){detailEl.querySelector("[data-route]")?.addEventListener("click",e=>showRoute(e.currentTarget.dataset.route));detailEl.querySelector("[data-back]")?.addEventListener("click",()=>{selected=null;overview()});detailEl.querySelectorAll("[data-idx]").forEach(b=>b.addEventListener("click",()=>focus(+b.dataset.idx)))}
+function directory(ns){listEl.innerHTML=ns.map(n=>`<button class="alumni-result" type="button" data-name="${esc(n)}"><strong>${esc(n)}</strong><span>${esc(PEOPLE[n].atividade)}</span><small>${esc(PEOPLE[n].atual.cidade)}</small><em>Ver percurso</em></button>`).join("")||'<div class="empty-results">Nenhum egresso corresponde aos filtros.</div>';listEl.querySelectorAll("[data-name]").forEach(b=>b.addEventListener("click",()=>showRoute(b.dataset.name)))}
+function overview(){markers.clearLayers();routes.clearLayers();document.body.classList.remove("trajectory-view-active");const ns=filtered();directory(ns);countEl.textContent=`${ns.length} ${ns.length===1?"egresso encontrado":"egressos encontrados"}`;summaryEl.textContent="Exibindo a situação atual dos egressos.";const items=[];ns.forEach(n=>{const a=PEOPLE[n].atual;items.push(a);const mk=L.marker([a.lat,a.lng],{icon:iconCurrent(n)}).addTo(markers).bindPopup(`<strong>${esc(n)}</strong><br>${esc(PEOPLE[n].atividade)}<br>${esc(a.cidade)}`);mk.on("click",()=>{detailEl.innerHTML=detailCurrent(n);actions()})});fit(items);detailEl.innerHTML='<p class="eyebrow">Mapa das trajetórias</p><h2>Escolha um egresso</h2><p>Clique em um marcador, use a busca por nome ou abra “Ver todos os egressos”. Depois, selecione “Ver trajetória completa” para acompanhar o percurso no mapa.</p>';histSide.hidden=true}
+function uniqueCoords(s){const r=[];s.forEach(m=>{const last=r[r.length-1];if(!last||last[0]!==m.lat||last[1]!==m.lng)r.push([m.lat,m.lng])});return r}
+function showRoute(n){selected=n;markers.clearLayers();routes.clearLayers();document.body.classList.add("trajectory-view-active");const s=seq(n),coords=uniqueCoords(s);if(coords.length>1)L.polyline(coords,{color:"#8b542b",weight:5,opacity:.82,dashArray:"10 7"}).addTo(routes);const groups={};s.forEach((m,i)=>{const k=`${m.lat},${m.lng}`;(groups[k]||(groups[k]=[])).push({m,i})});Object.values(groups).forEach(g=>{const m=g[0].m,mk=L.marker([m.lat,m.lng],{icon:iconRoute(g[0].i+1)}).addTo(markers);mk.bindPopup(g.length===1?popup(m):`<div class="trajectory-popup"><strong>${esc(m.cidade)}</strong><span>${g.length} momentos registrados neste lugar</span>${g.map(x=>`<p><b>${x.m.ano}</b> · ${esc(x.m.titulo)}</p>`).join("")}</div>`);mk.on("click",()=>focus(g[0].i,false))});fit(s);summaryEl.innerHTML=`Trajetória selecionada: <span class="trajectory-mode-name">${esc(n)}</span>`;countEl.textContent=`${s.length} momentos no percurso`;detailEl.innerHTML=detailRoute(n,s[0],0);actions();histSide.hidden=false;histCount.textContent=`${s.length} momentos`;histPeriod.textContent=`Percurso cronológico de ${n}.`;histList.innerHTML=s.map((m,i)=>`<button type="button" class="history-record-item" data-h="${i}"><span>${m.ano}</span><strong>${esc(m.titulo)}</strong><small>${esc(m.cidade)}${m.foto?" · fotografia":" · sem fotografia"}</small></button>`).join("");histList.querySelectorAll("[data-h]").forEach(b=>b.addEventListener("click",()=>focus(+b.dataset.h)))}
+function focus(i,move=true){if(!selected)return;const s=seq(selected),m=s[i];if(!m)return;if(move)map.setView([m.lat,m.lng],10);detailEl.innerHTML=detailRoute(selected,m,i);actions()}
+function historical(){selected=null;document.body.classList.remove("trajectory-view-active");markers.clearLayers();routes.clearLayers();const[a,b]=range(tlStart,tlEnd,tlOut),mode=tlMode.value,ns=filtered(),items=[];ns.forEach(n=>seq(n).forEach(m=>{if(mode==="until"?m.ano<=b:m.ano>=a&&m.ano<=b)items.push({...m,name:n})}));items.forEach((m,i)=>L.marker([m.lat,m.lng],{icon:iconRoute(i+1)}).addTo(markers).bindPopup(popup(m)));fit(items);countEl.textContent=`${ns.length} ${ns.length===1?"egresso encontrado":"egressos encontrados"}`;summaryEl.textContent="Exibindo momentos das trajetórias no período selecionado.";histSide.hidden=false;histCount.textContent=`${items.length} ${items.length===1?"momento":"momentos"}`;histPeriod.textContent=mode==="until"?`Registros acumulados até ${b}.`:`Registros entre ${a} e ${b}.`;histList.innerHTML=items.map(m=>`<div class="history-record-item"><span>${m.ano}</span><strong>${esc(m.name)}</strong><small>${esc(m.titulo)} · ${esc(m.cidade)}</small></div>`).join("")||"<p>Nenhum momento neste recorte.</p>"}
+function reset(){nameInput.value="";locSel.value="";actSel.value="";ingStart.value=ingStart.min;ingEnd.value=ingEnd.max;tlStart.value=tlStart.min;tlEnd.value=tlEnd.max;tlMode.value="during";selected=null;range(ingStart,ingEnd,ingOut);range(tlStart,tlEnd,tlOut);overview()}
+populate();range(ingStart,ingEnd,ingOut);range(tlStart,tlEnd,tlOut);
+[nameInput,locSel,actSel,ingStart,ingEnd].forEach(el=>el.addEventListener("input",()=>{if(!selected)overview()}));clearBtn.addEventListener("click",reset);
+listToggle.addEventListener("click",()=>{const open=listPanel.hidden;listPanel.hidden=!open;listToggle.setAttribute("aria-expanded",String(open));listToggle.textContent=open?"Ocultar lista de egressos":"Ver todos os egressos";if(open)directory(filtered())});
+histToggle.addEventListener("click",()=>{const open=histPanel.hidden;histPanel.hidden=!open;histToggle.setAttribute("aria-expanded",String(open));histToggle.textContent=open?"Ocultar exploração das trajetórias":"Explorar momentos das trajetórias"});
+[tlStart,tlEnd].forEach(el=>el.addEventListener("input",()=>range(tlStart,tlEnd,tlOut)));showHist.addEventListener("click",historical);returnCurrent.addEventListener("click",()=>{selected=null;overview()});
+overview();
 })();
-
 </script></body></html>
