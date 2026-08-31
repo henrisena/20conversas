@@ -1,24 +1,21 @@
-CORREÇÃO DA HOME — FORMULÁRIOS RESTAURADOS
+CORREÇÃO MOBILE — PÁGINAS 2006 E 2016
 
-Restaura os três cartões/ícones de participação no final da Home:
+Problema corrigido:
+- os documentos/imagens não ocupam mais largura ou altura excessivas no celular;
+- miniaturas ficam contidas e organizadas na página;
+- a galeria de 2016 passa para uma coluna no celular;
+- documentos horizontais e verticais respeitam a largura da tela.
 
-1. Docentes e ex-docentes
-2. Estudantes e egressos
-3. Memórias do curso
+Novo comportamento:
+- na página, o documento aparece em tamanho reduzido;
+- ao tocar/clicar na miniatura, abre um visualizador sobre a própria página;
+- no visualizador, a imagem inteira é ajustada à tela (max-width/max-height);
+- toque fora da imagem, botão × ou tecla Esc fecha o documento;
+- não abre mais a imagem crua gigante em outra aba.
 
-Links restaurados:
-- formulário de docentes/ex-docentes;
-- formulário de estudantes/egressos;
-- formulário geral de memórias.
-
-Também preserva:
-- marcos 2006, 2016 e 2026 alinhados;
-- links de 2006 e 2016;
-- carrossel de Egressos;
-- carrossel da Galeria com imagens reais.
-
-Arquivos:
-- index.html
+Arquivos alterados:
 - style.css
 - pages/2006.html
 - pages/2016.html
+
+Aplique sobre a versão mais recente do site.

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2016 — Continuando a conversa... | Memorial 20 anos</title>
-<link rel="stylesheet" href="../style.css?v=44">
+<link rel="stylesheet" href="../style.css?v=79">
 </head>
 <body>
 <header class="topbar">
@@ -35,9 +35,9 @@
 <section class="memory-section">
   <h2>Cartaz, convite e texto curatorial</h2>
   <div class="memory-gallery">
-    <figure><a href="../assets/marcos/2016/cartaz-2016.jpg" target="_blank"><img src="../assets/marcos/2016/cartaz-2016.jpg" alt="Cartaz da comemoração de 10 anos do Curso de História em 2016"></a><figcaption>Cartaz e programação do evento realizado em 2016.</figcaption></figure>
-    <figure><a href="../assets/marcos/2016/convite-2016.jpg" target="_blank"><img src="../assets/marcos/2016/convite-2016.jpg" alt="Convite da comemoração 10 Anos de Histórias"></a><figcaption>Convite para “10 Anos de Histórias: continuando a conversa...”.</figcaption></figure>
-    <figure class="wide"><a href="../assets/marcos/2016/texto-curatorial-2016.jpg" target="_blank"><img src="../assets/marcos/2016/texto-curatorial-2016.jpg" alt="Texto curatorial da exposição dos 10 anos"></a><figcaption>Texto curatorial da exposição. O documento relaciona explicitamente a comemoração de 2016 à recepção realizada em 2006.</figcaption></figure>
+    <figure><a href="../assets/marcos/2016/cartaz-2016.jpg" data-memory-viewer><img src="../assets/marcos/2016/cartaz-2016.jpg" alt="Cartaz da comemoração de 10 anos do Curso de História em 2016"></a><figcaption>Cartaz e programação do evento realizado em 2016.</figcaption></figure>
+    <figure><a href="../assets/marcos/2016/convite-2016.jpg" data-memory-viewer><img src="../assets/marcos/2016/convite-2016.jpg" alt="Convite da comemoração 10 Anos de Histórias"></a><figcaption>Convite para “10 Anos de Histórias: continuando a conversa...”.</figcaption></figure>
+    <figure class="wide"><a href="../assets/marcos/2016/texto-curatorial-2016.jpg" data-memory-viewer><img src="../assets/marcos/2016/texto-curatorial-2016.jpg" alt="Texto curatorial da exposição dos 10 anos"></a><figcaption>Texto curatorial da exposição. O documento relaciona explicitamente a comemoração de 2016 à recepção realizada em 2006.</figcaption></figure>
   </div>
 </section>
 
@@ -45,8 +45,8 @@
   <h2>Quem construiu o curso</h2>
   <p>Dois grandes painéis da exposição procuraram registrar as pessoas que haviam construído a primeira década: um reuniu os nomes dos discentes graduados até 2016; o outro apresentou docentes que passaram pelo curso e breves informações sobre suas trajetórias e áreas de atuação. São documentos produzidos pelo próprio curso para representar sua história naquele momento.</p>
   <div class="memory-gallery">
-    <figure class="wide"><a href="../assets/marcos/2016/egressos-2006-2016.jpg" target="_blank"><img src="../assets/marcos/2016/egressos-2006-2016.jpg" alt="Painel de discentes graduados entre 2006 e 2016"></a><figcaption>Discentes graduados — 2006–2016.</figcaption></figure>
-    <figure class="wide"><a href="../assets/marcos/2016/docentes-2006-2016.jpg" target="_blank"><img src="../assets/marcos/2016/docentes-2006-2016.jpg" alt="Painel de docentes do curso entre 2006 e 2016"></a><figcaption>Docentes do curso — 2006–2016.</figcaption></figure>
+    <figure class="wide"><a href="../assets/marcos/2016/egressos-2006-2016.jpg" data-memory-viewer><img src="../assets/marcos/2016/egressos-2006-2016.jpg" alt="Painel de discentes graduados entre 2006 e 2016"></a><figcaption>Discentes graduados — 2006–2016.</figcaption></figure>
+    <figure class="wide"><a href="../assets/marcos/2016/docentes-2006-2016.jpg" data-memory-viewer><img src="../assets/marcos/2016/docentes-2006-2016.jpg" alt="Painel de docentes do curso entre 2006 e 2016"></a><figcaption>Docentes do curso — 2006–2016.</figcaption></figure>
   </div>
 </section>
 
@@ -62,6 +62,48 @@
   <div class="memory-year-nav"><a href="2006.html">← Voltar a 2006</a><a href="../index.html">2026 — Este memorial</a><a href="documentos.html">Ver o acervo documental</a></div>
 </section>
 </main>
+
+<div class="memory-viewer" id="memoryViewer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visualizador de documento">
+  <div class="memory-viewer-dialog">
+    <button class="memory-viewer-close" type="button" aria-label="Fechar documento">×</button>
+    <img src="" alt="">
+  </div>
+</div>
+
 <footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer>
-<script src="../script.js?v=44"></script>
+<script src="../script.js?v=79"></script>
+
+<script>
+(function(){
+  const viewer=document.getElementById('memoryViewer');
+  if(!viewer)return;
+  const image=viewer.querySelector('img');
+  const closeBtn=viewer.querySelector('.memory-viewer-close');
+  function openViewer(src,alt){
+    image.src=src;
+    image.alt=alt||'Documento ampliado';
+    viewer.classList.add('open');
+    viewer.setAttribute('aria-hidden','false');
+    document.body.classList.add('memory-viewer-open');
+    closeBtn.focus();
+  }
+  function closeViewer(){
+    viewer.classList.remove('open');
+    viewer.setAttribute('aria-hidden','true');
+    document.body.classList.remove('memory-viewer-open');
+    image.src='';
+  }
+  document.querySelectorAll('[data-memory-viewer]').forEach(link=>{
+    link.addEventListener('click',function(e){
+      e.preventDefault();
+      const img=this.querySelector('img');
+      openViewer(this.getAttribute('href'),img?img.alt:'Documento');
+    });
+  });
+  closeBtn.addEventListener('click',closeViewer);
+  viewer.addEventListener('click',e=>{if(e.target===viewer)closeViewer()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&viewer.classList.contains('open'))closeViewer()});
+})();
+</script>
+
 </body></html>

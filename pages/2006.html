@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2006 — Para início de conversa... | Memorial 20 anos</title>
-<link rel="stylesheet" href="../style.css?v=44">
+<link rel="stylesheet" href="../style.css?v=79">
 </head>
 <body>
 <header class="topbar">
@@ -26,7 +26,7 @@
 </section>
 
 <figure class="memory-document-hero">
-  <a href="../assets/marcos/2006/para-inicio-de-conversa-2006.jpg" target="_blank" rel="noopener noreferrer" title="Abrir o folder em tamanho maior">
+  <a href="../assets/marcos/2006/para-inicio-de-conversa-2006.jpg" data-memory-viewer>
     <img src="../assets/marcos/2006/para-inicio-de-conversa-2006.jpg" alt="Folder Para início de conversa, Semana de Recepção aos Alunos do Curso de História, outubro de 2006">
   </a>
 </figure>
@@ -43,6 +43,48 @@
   <div class="memory-year-nav"><a href="2016.html">Seguir para 2016 →</a><a href="documentos.html">Ver o acervo documental</a></div>
 </section>
 </main>
+
+<div class="memory-viewer" id="memoryViewer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visualizador de documento">
+  <div class="memory-viewer-dialog">
+    <button class="memory-viewer-close" type="button" aria-label="Fechar documento">×</button>
+    <img src="" alt="">
+  </div>
+</div>
+
 <footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer>
-<script src="../script.js?v=44"></script>
+<script src="../script.js?v=79"></script>
+
+<script>
+(function(){
+  const viewer=document.getElementById('memoryViewer');
+  if(!viewer)return;
+  const image=viewer.querySelector('img');
+  const closeBtn=viewer.querySelector('.memory-viewer-close');
+  function openViewer(src,alt){
+    image.src=src;
+    image.alt=alt||'Documento ampliado';
+    viewer.classList.add('open');
+    viewer.setAttribute('aria-hidden','false');
+    document.body.classList.add('memory-viewer-open');
+    closeBtn.focus();
+  }
+  function closeViewer(){
+    viewer.classList.remove('open');
+    viewer.setAttribute('aria-hidden','true');
+    document.body.classList.remove('memory-viewer-open');
+    image.src='';
+  }
+  document.querySelectorAll('[data-memory-viewer]').forEach(link=>{
+    link.addEventListener('click',function(e){
+      e.preventDefault();
+      const img=this.querySelector('img');
+      openViewer(this.getAttribute('href'),img?img.alt:'Documento');
+    });
+  });
+  closeBtn.addEventListener('click',closeViewer);
+  viewer.addEventListener('click',e=>{if(e.target===viewer)closeViewer()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&viewer.classList.contains('open'))closeViewer()});
+})();
+</script>
+
 </body></html>

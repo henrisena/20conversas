@@ -2146,3 +2146,157 @@ img[src*="egresso-ficticio-6.jpg"]{object-position:center 20% !important;}
 }
 .collaboration-card .button { display: inline-flex; text-decoration: none; }
 .collaboration-card p { min-height: 0; }
+
+/* Versão 79 — documentos dos marcos 2006/2016 responsivos e visualizador */
+.memory-document-hero{
+  max-width:760px;
+  margin:32px auto 48px;
+}
+.memory-document-hero a,
+.memory-gallery figure a{
+  display:block;
+  width:100%;
+  overflow:hidden;
+  border-radius:14px;
+  background:#f3eee7;
+  cursor:zoom-in;
+}
+.memory-document-hero img{
+  display:block;
+  width:100%;
+  max-height:520px;
+  object-fit:contain;
+  margin:0 auto;
+  background:#f3eee7;
+}
+.memory-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  align-items:start;
+}
+.memory-gallery figure{
+  min-width:0;
+  margin:0;
+}
+.memory-gallery figure.wide{
+  grid-column:1/-1;
+  max-width:880px;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.memory-gallery figure img{
+  display:block;
+  width:100%;
+  height:300px;
+  object-fit:contain;
+  background:#f3eee7;
+}
+.memory-gallery figure.wide img{
+  height:auto;
+  max-height:500px;
+}
+.memory-gallery figcaption{
+  padding:12px 4px 0;
+  line-height:1.45;
+}
+
+/* Modal usado para ler os documentos sem abrir a imagem crua em tamanho gigante */
+.memory-viewer{
+  position:fixed;
+  inset:0;
+  z-index:10000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(5,14,32,.92);
+}
+.memory-viewer.open{
+  display:flex;
+}
+.memory-viewer-dialog{
+  position:relative;
+  width:min(1100px,96vw);
+  max-height:94vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.memory-viewer img{
+  display:block;
+  max-width:100%;
+  max-height:86vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  background:#fff;
+  box-shadow:0 16px 50px rgba(0,0,0,.35);
+}
+.memory-viewer-close{
+  position:absolute;
+  top:-10px;
+  right:-2px;
+  z-index:2;
+  width:44px;
+  height:44px;
+  border:0;
+  border-radius:50%;
+  background:#fff;
+  color:#071e46;
+  font-size:1.55rem;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+}
+body.memory-viewer-open{
+  overflow:hidden;
+}
+
+@media(max-width:700px){
+  .memory-year-intro,
+  .memory-section{
+    min-width:0;
+    overflow:hidden;
+  }
+  .memory-document-hero{
+    width:100%;
+    max-width:100%;
+    margin:22px auto 34px;
+  }
+  .memory-document-hero img{
+    max-height:360px;
+  }
+  .memory-gallery{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .memory-gallery figure.wide{
+    grid-column:auto;
+    max-width:100%;
+  }
+  .memory-gallery figure img,
+  .memory-gallery figure.wide img{
+    width:100%;
+    height:260px;
+    max-height:260px;
+    object-fit:contain;
+  }
+  .memory-viewer{
+    padding:12px;
+  }
+  .memory-viewer-dialog{
+    width:100%;
+    max-height:96vh;
+  }
+  .memory-viewer img{
+    max-width:100%;
+    max-height:82vh;
+  }
+  .memory-viewer-close{
+    top:-8px;
+    right:0;
+  }
+}
