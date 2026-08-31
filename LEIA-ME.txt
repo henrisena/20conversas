@@ -1,13 +1,32 @@
-CORREÇÃO — TRAJETÓRIA EM IMAGENS DE LEANDRO
+ATUALIZAÇÃO — LEILA V2 | PERFIL VISUAL + MAPA DOS EGRESSOS
 
-Este pacote substitui:
-- pages/professor-leandro-almeida.html
+Este pacote substitui integralmente o pacote anterior da Leila.
 
-E acrescenta:
-- assets/professores/leandro/trajetoria/aula-campo-paraguassu-cec-2023.jpg
-- assets/professores/leandro/trajetoria/mesa-literatura-historia-coloquio-2017.jpg
-- assets/professores/leandro/trajetoria/visita-olaria-baixa-grande-2024.jpg
+Mantido SEM ALTERAÇÃO:
+- os quatro registros de Leila no data/mapa.json;
+- a lógica do Mapa dos Egressos usada no perfil de Alfredo;
+- Feira de Santana / UEFS (2019);
+- Sapeaçu / início da docência (2019);
+- Sapeaçu / posse como professora efetiva (2024);
+- Sapeaçu / atuação atual;
+- as três fotografias de Leila na Galeria geral;
+- o Apitaço no CAHL no carrossel da Home;
+- cartão de Leila na página Egressos.
 
-A seção “Trajetória em imagens” foi inserida logo depois de “Projetos no Recôncavo” e antes de “Depoimento”.
+ALTERADO:
+- pages/egresso-leila-maria.html
 
-Desta vez ela usa as mesmas classes visuais dos projetos que já funcionam no site, sem depender de CSS novo.
+A página individual agora é construída como narrativa visual:
+1. abertura contextual;
+2. apresentação;
+3. 2013–2018: viver o CAHL;
+4. Sala de aula (2013);
+5. Fórum Tripartite (2014);
+6. Apitaço no CAHL (2015);
+7. depoimento integrado às imagens;
+8. trajetória pós-UFRB em linha temporal;
+9. chamada para o Mapa dos Egressos;
+10. Leila hoje;
+11. fechamento memorialístico.
+
+Pode ser extraído diretamente na raiz do site.
