@@ -1,20 +1,20 @@
-AJUSTE DOS CARROSSÉIS DA HOME
+AJUSTE FINAL DOS CARROSSÉIS DA HOME
 
 EGRESSOS
-- volta a usar object-fit: cover;
-- a foto ocupa todo o quadro do ícone;
-- pequenos cortes são permitidos;
-- a imagem começa mais ampliada e faz um zoom-out mais lento;
-- cada egresso permanece por cerca de 5,6 segundos antes da próxima foto;
-- o zoom termina ainda com a foto levemente ampliada para manter boa presença visual.
+- object-fit: cover;
+- foto ocupa todo o quadro;
+- pequenos cortes são mantidos;
+- zoom-out lento de scale(1.25) para scale(1.05);
+- duração do movimento: 7,6 segundos;
+- cada egresso permanece cerca de 8 segundos antes da troca.
 
 GALERIA
-- mantém apenas as fotografias reais já presentes na aba Galeria;
-- volta ao comportamento visual original;
+- mantém apenas fotos reais já presentes na aba Galeria;
+- comportamento visual original;
 - object-fit: cover;
-- as fotos ocupam todo o quadro do ícone;
-- intervalo de aproximadamente 3,2 segundos.
+- imagem ocupa todo o quadro;
+- troca a cada 3,5 segundos.
 
-Arquivos alterados:
+Arquivos:
 - index.html
 - style.css
