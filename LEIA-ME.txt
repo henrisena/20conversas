@@ -1,14 +1,20 @@
-AJUSTE — CARROSSEL DE EGRESSOS NA HOME
+AJUSTE DOS CARROSSÉIS DA HOME
 
-- Mantém os seis egressos reais.
-- A foto volta a ocupar visualmente todo o quadro do ícone.
-- Cada imagem entra levemente ampliada.
-- Durante a permanência no carrossel, ela reduz suavemente até mostrar a fotografia inteira.
-- O movimento usa uma transição de zoom-out, sem recortar definitivamente a imagem.
-- A Galeria continua usando apenas fotografias reais.
+EGRESSOS
+- volta a usar object-fit: cover;
+- a foto ocupa todo o quadro do ícone;
+- pequenos cortes são permitidos;
+- a imagem começa mais ampliada e faz um zoom-out mais lento;
+- cada egresso permanece por cerca de 5,6 segundos antes da próxima foto;
+- o zoom termina ainda com a foto levemente ampliada para manter boa presença visual.
+
+GALERIA
+- mantém apenas as fotografias reais já presentes na aba Galeria;
+- volta ao comportamento visual original;
+- object-fit: cover;
+- as fotos ocupam todo o quadro do ícone;
+- intervalo de aproximadamente 3,2 segundos.
 
 Arquivos alterados:
 - index.html
 - style.css
-
-Aplique sobre a atualização mais recente, extraindo na raiz do projeto.
