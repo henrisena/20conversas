@@ -1,21 +1,14 @@
-ATUALIZAÇÃO — HOME: GALERIA REAL + EGRESSOS SEM CORTE
+AJUSTE — CARROSSEL DE EGRESSOS NA HOME
 
-1. ÍCONE/CARROSSEL DA GALERIA NA PÁGINA INICIAL
-- remove todas as imagens fictícias;
-- usa somente fotografias que já constam na página da Galeria geral;
-- foram encontrados 28 registros reais na Galeria e todos entram na rotação;
-- não adiciona fotografias novas ao acervo: apenas reaproveita as já publicadas na Galeria.
+- Mantém os seis egressos reais.
+- A foto volta a ocupar visualmente todo o quadro do ícone.
+- Cada imagem entra levemente ampliada.
+- Durante a permanência no carrossel, ela reduz suavemente até mostrar a fotografia inteira.
+- O movimento usa uma transição de zoom-out, sem recortar definitivamente a imagem.
+- A Galeria continua usando apenas fotografias reais.
 
-2. ÍCONE/CARROSSEL DE EGRESSOS NA PÁGINA INICIAL
-- mantém os seis egressos reais;
-- altera o enquadramento para object-fit: contain;
-- deixa de cortar cabeça, rosto ou laterais das fotografias;
-- a fotografia inteira passa a caber na área disponível, com fundo neutro quando sobrar espaço;
-- desativa o pequeno zoom do carrossel especificamente para os egressos.
-
-ARQUIVOS ALTERADOS
+Arquivos alterados:
 - index.html
 - style.css
 
-Este patch pode ser aplicado sobre o reparo completo da Jamile.
-Extraia na raiz do projeto, aceite as substituições, faça Commit + Push e use Ctrl+F5.
+Aplique sobre a atualização mais recente, extraindo na raiz do projeto.

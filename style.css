@@ -1937,20 +1937,6 @@ img[src*="egresso-ficticio-6.jpg"]{object-position:center 20% !important;}
 @media(max-width:720px){.production-cover-mosaic{min-height:auto;padding:10px 0 4px}.production-cover-mosaic img{max-height:310px}.section-heading-row{align-items:flex-start;flex-direction:column}.profile-book-grid{grid-template-columns:1fr}.profile-book-card{grid-template-columns:92px 1fr}.profile-book-cover img{width:92px;height:138px}}
 
 
-/* Versão 72 — Home: egressos sem corte e Galeria apenas com acervo real */
-.feature-card-image[href$="egressos.html"] .card-media-carousel{
-  background:#ece8e1;
-}
-.feature-card-image[href$="egressos.html"] .card-media-carousel > img{
-  object-fit:contain !important;
-  object-position:center !important;
-  padding:6px;
-  background:#ece8e1;
-  transform:none !important;
-}
-.feature-card-image[href$="egressos.html"] .card-media-carousel > img.active{
-  transform:none !important;
-}
 .gallery-card-carousel{
   background:#e8e4dc;
 }
@@ -1963,4 +1949,36 @@ img[src*="egresso-ficticio-6.jpg"]{object-position:center 20% !important;}
 }
 .gallery-card-carousel > img.active{
   transform:none !important;
+}
+
+
+/* Versão 73 — carrossel de Egressos: aproxima e revela a foto inteira */
+.feature-card-image[href$="egressos.html"] .card-media-carousel{
+  background:#e9e3d7;
+}
+.feature-card-image[href$="egressos.html"] .card-media-carousel > img{
+  width:100%;
+  height:100%;
+  object-fit:contain !important;
+  object-position:center !important;
+  padding:0 !important;
+  background:#e9e3d7;
+  opacity:0;
+  transform:scale(1.18);
+  transition:opacity .8s ease;
+}
+.feature-card-image[href$="egressos.html"] .card-media-carousel > img.active{
+  opacity:1;
+  animation:egressoReveal 3.8s ease-out forwards;
+}
+@keyframes egressoReveal{
+  0%{transform:scale(1.18)}
+  22%{transform:scale(1.12)}
+  100%{transform:scale(1)}
+}
+@media (prefers-reduced-motion: reduce){
+  .feature-card-image[href$="egressos.html"] .card-media-carousel > img.active{
+    animation:none;
+    transform:scale(1);
+  }
 }
