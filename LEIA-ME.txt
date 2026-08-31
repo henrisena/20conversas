@@ -1,15 +1,46 @@
-CORREÇÃO — MAPA COM TRAJETÓRIAS LIGADAS
+ATUALIZAÇÃO — MAPA DAS TRAJETÓRIAS COM PAINEL LATERAL
 
-Recupera a lógica visual da versão anterior do Mapa dos Egressos.
+Esta versão reorganiza o Mapa das Trajetórias para evitar rolagem excessiva e cortes nas fotografias.
 
-- somente Alfredo e Leila;
-- busca por nome, “Ver todos os egressos” e “Limpar filtros”;
-- ao escolher um egresso, o mapa desenha uma linha entre os lugares informados em ordem cronológica;
-- cada momento aparece na sequência temporal;
-- pontos com fotografia exibem a imagem;
-- pontos sem fotografia continuam no mapa com registro textual;
-- momentos ocorridos na mesma cidade/local permanecem no mesmo ponto geográfico, sem inventar coordenadas diferentes;
-- Cartografia da pós-graduação não foi alterada.
+DESKTOP
+- mapa ocupa aproximadamente 70% da largura;
+- painel de percurso ocupa aproximadamente 30% da largura;
+- painel permanece ao lado do mapa;
+- ao selecionar um egresso, a linha da trajetória aparece no mapa;
+- os pontos permanecem numerados;
+- o painel lateral mostra a fotografia selecionada, ano, local, instituição, descrição e a sequência cronológica completa;
+- cada item da sequência é clicável e centraliza o ponto correspondente no mapa;
+- botão para voltar a todos os egressos;
+- botão para abrir o perfil individual.
 
-LEILA: UEFS/Feira de Santana (2019, sem foto) → Sapeaçu (2019, com foto) → Sapeaçu (2024, com foto) → atuação atual em Sapeaçu (com foto).
-ALFREDO: UFBA/Salvador (2013) → UNEB/Salvador (2025) → Cachoeira (2026) → situação atual.
+FOTOGRAFIAS
+- popups usam object-fit: contain;
+- painel lateral usa object-fit: contain;
+- imagens ficam totalmente visíveis, sem cortes;
+- fundo neutro preenche eventuais sobras de proporção;
+- pontos sem fotografia continuam com cartão textual, como UEFS/Feira de Santana em 2019 na trajetória de Leila.
+
+MAPA
+- linha liga apenas lugares distintos, em ordem cronológica;
+- momentos no mesmo local não recebem coordenadas artificiais;
+- ao clicar no marcador, o popup apresenta o momento e a foto integral quando houver.
+
+CONTROLES PRESERVADOS
+- busca por nome;
+- localização;
+- atuação;
+- período de ingresso;
+- Ver todos os egressos;
+- Limpar filtros;
+- exploração temporal;
+- apenas Alfredo e Leila.
+
+CARTOGRAFIA DA PÓS-GRADUAÇÃO
+- não foi alterada.
+
+RESPONSIVO
+- em telas menores, o painel passa para baixo do mapa.
+
+Arquivos do pacote:
+- pages/mapa.html
+- e os arquivos já preservados da atualização anterior para manter a base consistente.
