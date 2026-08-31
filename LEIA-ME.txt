@@ -1,23 +1,16 @@
-ATUALIZAÇÃO — PERFIL DE IVONILDES DA SILVA SANTOS
+ATUALIZAÇÃO — PERFIL DE NARA FALCÓN LAGO DE JESUS
 
 INCLUI:
-- nova página individual de Ivonildes;
+- nova página individual de Nara;
 - cartão na aba Egressos;
 - fotografia de perfil;
 - fotografia contextual na abertura;
 - fotografia atual na seção "Você hoje";
-- depoimento escrito preservado integralmente;
-- ingresso 2006.1 e conclusão 2010.8;
-- destaque para participação na primeira turma;
-- ponto atual em São Félix no Mapa das Trajetórias;
-- sem linha artificial de percurso, porque outros momentos pós-UFRB não foram informados.
-
-ATUAÇÃO ATUAL:
-- São Félix, Bahia;
-- servidora pública municipal;
-- professora;
-- coordenação técnico-pedagógica da Secretaria Municipal de Educação;
-- Anos Finais do Ensino Fundamental.
+- ingresso 2007.1 e conclusão 2010;
+- atuação atual como professora e coordenadora;
+- Escola São Luís, Muritiba;
+- ponto atual em Muritiba no Mapa das Trajetórias;
+- sem linha artificial de percurso, porque não foram informados outros momentos pós-UFRB.
 
 ARQUIVOS SUBSTITUÍDOS:
 - pages/egressos.html
@@ -26,8 +19,8 @@ ARQUIVOS SUBSTITUÍDOS:
 - data/mapa.json
 
 ARQUIVOS NOVOS:
-- pages/egresso-ivonildes-da-silva-santos.html
-- assets/egressos/ivonildes/*
+- pages/egresso-nara-falcon-lago-de-jesus.html
+- assets/egressos/nara/*
 
-Este patch foi montado sobre a atualização final da Viviane.
+Este patch foi montado sobre a versão que já contém Viviane e Ivonildes.
 Extraia na raiz do projeto, aceite as substituições, faça Commit + Push e depois Ctrl+F5.

@@ -236,6 +236,23 @@ const mapData=[
     "pagina": "egresso-ivonildes-da-silva-santos.html",
     "descricao": "Servidora pública municipal, professora e, no momento do registro, atuando na coordenação técnico-pedagógica da Secretaria Municipal de Educação de São Félix, nos Anos Finais do Ensino Fundamental.",
     "fonte": "Informações e fotografia autorizadas por Ivonildes da Silva Santos."
+  },
+  {
+    "id": "nara-atual",
+    "titulo": "Atuação atual",
+    "categoria": "egressos",
+    "nome": "Nara Falcón Lago de Jesus",
+    "cidade": "Muritiba",
+    "local": "Escola São Luís",
+    "ano": 2026,
+    "periodo": "atual",
+    "lat": -12.9167,
+    "lng": -39.25,
+    "imagem": "assets/egressos/nara/atual-nara.jpg",
+    "pageImagem": "../assets/egressos/nara/atual-nara.jpg",
+    "pagina": "egresso-nara-falcon-lago-de-jesus.html",
+    "descricao": "Professora e coordenadora na Escola São Luís, em Muritiba.",
+    "fonte": "Informações e fotografia autorizadas por Nara Falcón Lago de Jesus."
   }
 ];
 function letterFor(cat){return {ensino:"E",pesquisa:"P",extensao:"X",egressos:"G",professores:"D"}[cat]||"•"}
