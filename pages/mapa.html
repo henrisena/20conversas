@@ -1,8 +1,39 @@
 <!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mapa dos egressos | Memorial 20 anos</title><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="../style.css?v=56"><style>
 .trajectory-detail-photo{width:100%;max-height:270px;object-fit:cover;border-radius:14px;margin:0 0 14px}
 .trajectory-detail-placeholder{display:grid;place-items:center;min-height:150px;padding:22px;background:#f3eee7;border:1px dashed #c9beb0;border-radius:14px;margin-bottom:14px;text-align:center;color:var(--navy);font-family:Georgia,serif}
-.trajectory-mini-list{display:grid;gap:7px;margin:16px 0}.trajectory-mini-item{width:100%;display:grid;grid-template-columns:58px 1fr;gap:9px;text-align:left;border:1px solid var(--line);border-radius:11px;background:#fff;padding:9px 10px;cursor:pointer}.trajectory-mini-item:hover,.trajectory-mini-item:focus{border-color:var(--purple);outline:none}.trajectory-mini-item.active{border-color:var(--gold);background:#fff9ec}.trajectory-mini-item span{font-weight:900;color:var(--purple)}.trajectory-mini-item div{display:grid;gap:2px}.trajectory-mini-item strong{color:var(--navy)}.trajectory-mini-item small{color:#756d67}.trajectory-back{width:100%;margin-bottom:12px}
-.trajectory-popup{min-width:220px}.trajectory-popup img{width:100%;height:120px;object-fit:cover;border-radius:9px;margin-bottom:8px}.trajectory-popup .no-photo{display:grid;place-items:center;height:90px;background:#f3eee7;border-radius:9px;margin-bottom:8px;text-align:center;padding:8px;color:#665f59;font-size:.82rem}.trajectory-popup strong,.trajectory-popup span{display:block}.trajectory-popup span{font-size:.82rem;color:#675f58;margin:3px 0 7px}.trajectory-popup p{font-size:.84rem;margin:0}
+.trajectory-mini-list{display:grid;gap:7px;margin:16px 0}.trajectory-mini-item{width:100%;display:grid;grid-template-columns:58px 1fr;gap:9px;text-align:left;border:1px solid var(--line);border-radius:11px;background:#fff;padding:9px 10px;cursor:pointer}.trajectory-mini-thumb{
+  width:54px;
+  height:54px;
+  object-fit:contain;
+  background:#f5f2ee;
+  border-radius:8px;
+}
+.trajectory-mini-no-photo{
+  width:54px;
+  height:54px;
+  display:grid;
+  place-items:center;
+  background:#f3eee7;
+  border-radius:8px;
+  color:#756d67;
+  font-size:.68rem;
+  text-align:center;
+}
+.trajectory-mini-item:hover,.trajectory-mini-item:focus{border-color:var(--purple);outline:none}.trajectory-mini-item.active{border-color:var(--gold);background:#fff9ec}.trajectory-mini-item span{font-weight:900;color:var(--purple)}.trajectory-mini-item div{display:grid;gap:2px}.trajectory-mini-item strong{color:var(--navy)}.trajectory-mini-item small{color:#756d67}.trajectory-back{width:100%;margin-bottom:12px}
+.trajectory-popup{min-width:220px}.trajectory-popup img{width:100%;height:120px;object-fit:cover;border-radius:9px;margin-bottom:8px}.trajectory-popup-choice{
+  width:100%;
+  display:block;
+  border:1px solid #ddd3c8;
+  background:#fff;
+  border-radius:8px;
+  padding:7px 9px;
+  margin:6px 0 0;
+  text-align:left;
+  cursor:pointer;
+  color:var(--navy);
+}
+.trajectory-popup-choice:hover,.trajectory-popup-choice:focus{border-color:var(--gold);background:#fff9ec}
+.trajectory-popup .no-photo{display:grid;place-items:center;height:90px;background:#f3eee7;border-radius:9px;margin-bottom:8px;text-align:center;padding:8px;color:#665f59;font-size:.82rem}.trajectory-popup strong,.trajectory-popup span{display:block}.trajectory-popup span{font-size:.82rem;color:#675f58;margin:3px 0 7px}.trajectory-popup p{font-size:.84rem;margin:0}
 .route-legend{display:flex;align-items:center;gap:8px;margin:10px 0 0;color:#756d67;font-size:.82rem}.route-legend i{display:block;width:34px;height:4px;background:#8b542b;border-radius:99px}
 .map-results-summary .trajectory-mode-name{color:var(--purple);font-weight:900}
 </style>
@@ -89,7 +120,7 @@
 .trajectory-mini-item{
   width:100%;
   display:grid;
-  grid-template-columns:56px 1fr;
+  grid-template-columns:56px 54px 1fr;
   gap:9px;
   text-align:left;
   border:1px solid var(--line);
@@ -172,7 +203,7 @@
 <a href="cartografia-pos-graduacao.html" class=""><span>Cartografia da pós-graduação</span><small>Especialização, mestrado e doutorado</small></a>
 </nav><section class="map-intro">
       <h2>Trajetórias que partem do Recôncavo</h2>
-      <p>Este mapa apresenta as trajetórias acadêmicas e profissionais compartilhadas e autorizadas pelos próprios egressos. Escolha um nome para acompanhar o percurso de Alfredo Pinto da Silva Júnior, Leila Maria de Jesus Pereira, Viviane dos Santos Silva, Ivonildes da Silva Santos ou Nara Falcón Lago de Jesus: os pontos aparecem em ordem cronológica, são ligados por uma linha e exibem as fotografias correspondentes quando elas foram enviadas. O painel ao lado do mapa reúne os detalhes e a sequência completa do percurso.</p>
+      <p>Este mapa apresenta as trajetórias acadêmicas e profissionais compartilhadas e autorizadas pelos próprios egressos. Escolha um nome para acompanhar as trajetórias individuais registradas no memorial: os pontos aparecem em ordem cronológica, são ligados por uma linha e exibem as fotografias correspondentes quando elas foram enviadas. O painel ao lado do mapa reúne os detalhes e a sequência completa do percurso.</p>
     </section>
 <section class="alumni-map-filters alumni-map-filters-compact" aria-label="Filtros do Mapa dos Egressos"><div class="filter-field filter-search"><label for="alumniName">Buscar por nome</label><input id="alumniName" type="search" placeholder="Digite o nome do egresso"></div><div class="filter-field"><label for="alumniLocation">Localização atual</label><select id="alumniLocation"><option value="">Todas as localizações</option></select></div><div class="filter-field"><label for="alumniActivity">Atuação</label><select id="alumniActivity"><option value="">Todas as atuações</option></select></div><button id="toggleAlumniDirectory" class="button-outline alumni-directory-toggle alumni-directory-toggle-filter" type="button" aria-expanded="false" aria-controls="alumniDirectoryPanel">Ver todos os egressos</button><button id="clearAlumniFilters" class="button-outline clear-map-filters" type="button">Limpar filtros</button></section>
 <section class="alumni-year-range" aria-labelledby="alumniYearRangeTitle">
@@ -253,7 +284,7 @@
   </aside>
 </section>
 <p class="prototype-note"><strong>Sobre o mapa:</strong> os percursos são construídos com os anos, locais, instituições, descrições e fotografias informados pelos próprios egressos. Quando um momento foi informado sem fotografia, ele permanece representado no mapa por um registro textual.</p></main>
-<footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer><script src="../script.js?v=69"></script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script>
+<footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer><script src="../script.js?v=71"></script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script>
 (function(){
 const PEOPLE={
 "Alfredo Pinto da Silva Júnior":{ingresso:2008,atividade:"Professor da rede estadual e doutorando em História",pagina:"egresso-alfredo-pinto.html",
@@ -280,7 +311,12 @@ atual:{ano:2026,cidade:"São Félix",local:"Secretaria Municipal de Educação, 
 momentos:[]},
 "Nara Falcón Lago de Jesus":{ingresso:2007,atividade:"Professora e coordenadora",pagina:"egresso-nara-falcon-lago-de-jesus.html",
 atual:{ano:2026,cidade:"Muritiba",local:"Escola São Luís, Muritiba, Bahia",instituicao:"Escola São Luís",titulo:"Atuação atual",descricao:"Atualmente, Nara atua em Muritiba como professora e coordenadora na Escola São Luís.",lat:-12.9167,lng:-39.25,foto:"../assets/egressos/nara/atual-nara.jpg"},
-momentos:[]}
+momentos:[]},
+"Jamile Santana Fernandes":{ingresso:2021,atividade:"Mestranda",pagina:"egresso-jamile-santana-fernandes.html",
+atual:{ano:2026,cidade:"Rio de Janeiro",local:"Casa de Oswaldo Cruz — Fiocruz, Rio de Janeiro, RJ",instituicao:"Casa de Oswaldo Cruz — Fiocruz",titulo:"Mestrado em História das Ciências e da Saúde",descricao:"Mestranda no Programa de Pós-Graduação em História das Ciências e da Saúde da Casa de Oswaldo Cruz — Fiocruz.",lat:-22.8975,lng:-43.1847,foto:"../assets/egressos/jamile/atual-jamile.jpg"},
+momentos:[
+{ano:2026,cidade:"Salvador",local:"Aeroporto Internacional de Salvador Luís Eduardo Magalhães, Salvador, Bahia",instituicao:"Aeroporto Internacional de Salvador Luís Eduardo Magalhães",titulo:"Partida para o intercâmbio",descricao:"Despedida da mãe e da irmã antes da viagem de intercâmbio; Jamile descreveu o registro como um momento de pura emoção.",lat:-12.9086,lng:-38.3225,foto:"../assets/egressos/jamile/trajetoria-aeroporto-2026.jpg"},
+{ano:2026,cidade:"Rio de Janeiro",local:"Casa de Oswaldo Cruz — Fiocruz, Rio de Janeiro, RJ",instituicao:"Casa de Oswaldo Cruz — Fiocruz",titulo:"1º Seminário NECOHM-NERAS",descricao:"Primeira experiência de Jamile mediando uma mesa, em atividade vinculada ao Núcleo de Estudos Escravidão, Raça e Saúde.",lat:-22.8975,lng:-43.1847,foto:"../assets/egressos/jamile/trajetoria-seminario-2026.jpg"}]}
 };
 
 const $=id=>document.getElementById(id), mapEl=$("mapFull"); if(!mapEl||typeof L==="undefined")return;
@@ -309,12 +345,12 @@ function popup(m){return `<div class="trajectory-popup">${m.foto?`<img src="${es
 function seq(n){const p=PEOPLE[n];return[...p.momentos,{...p.atual,isCurrent:true}].sort((a,b)=>(a.ano-b.ano)||(a.isCurrent?1:0))}
 function fit(items){if(!items.length){map.setView([-12.65,-38.95],8);return}map.fitBounds(L.latLngBounds(items.map(x=>[x.lat,x.lng])),{padding:[50,50],maxZoom:10})}
 function detailCurrent(n){const p=PEOPLE[n],a=p.atual;return `${a.foto?`<img class="trajectory-detail-photo" src="${esc(a.foto)}" alt="${esc(n)}">`:""}<p class="eyebrow">Situação atual</p><h2>${esc(n)}</h2><h3>${esc(p.atividade)}</h3><p><strong>${esc(a.local)}</strong></p><p>${esc(a.descricao)}</p><button class="button trajectory-toggle" type="button" data-route="${esc(n)}">Ver trajetória completa</button><a class="button-outline" href="${esc(p.pagina)}">Ver perfil individual</a>`}
-function detailRoute(n,m,idx){const p=PEOPLE[n],s=seq(n);return `<button class="button-outline trajectory-back" type="button" data-back>← Voltar aos egressos</button>${m.foto?`<img class="trajectory-detail-photo" src="${esc(m.foto)}" alt="${esc(m.titulo)}">`:`<div class="trajectory-detail-placeholder">Este momento foi informado no formulário sem fotografia.</div>`}<p class="eyebrow">Percurso</p><h2>${esc(n)}</h2><h3>${esc(m.ano)} · ${esc(m.titulo)}</h3><p><strong>${esc(m.local)}</strong></p><p>${esc(m.instituicao)}</p><p>${esc(m.descricao)}</p><div class="route-legend"><i></i><span>A linha liga os lugares informados em ordem cronológica.</span></div><div class="trajectory-mini-list">${s.map((x,i)=>`<button class="trajectory-mini-item ${i===idx?"active":""}" type="button" data-idx="${i}"><span>${x.ano}</span><div><strong>${esc(x.titulo)}</strong><small>${esc(x.cidade)}${x.foto?" · com fotografia":" · sem fotografia"}</small></div></button>`).join("")}</div><a class="button-outline" href="${esc(p.pagina)}">Ver perfil individual</a>`}
+function detailRoute(n,m,idx){const p=PEOPLE[n],s=seq(n);return `<button class="button-outline trajectory-back" type="button" data-back>← Voltar aos egressos</button>${m.foto?`<img class="trajectory-detail-photo" src="${esc(m.foto)}" alt="${esc(m.titulo)}">`:`<div class="trajectory-detail-placeholder">Este momento foi informado no formulário sem fotografia.</div>`}<p class="eyebrow">Percurso</p><h2>${esc(n)}</h2><h3>${esc(m.ano)} · ${esc(m.titulo)}</h3><p><strong>${esc(m.local)}</strong></p><p>${esc(m.instituicao)}</p><p>${esc(m.descricao)}</p><div class="route-legend"><i></i><span>A linha liga os lugares informados em ordem cronológica.</span></div><div class="trajectory-mini-list">${s.map((x,i)=>`<button class="trajectory-mini-item ${i===idx?"active":""}" type="button" data-idx="${i}"><span>${x.ano}</span>${x.foto?`<img class="trajectory-mini-thumb" src="${esc(x.foto)}" alt="">`:`<span class="trajectory-mini-no-photo">sem foto</span>`}<div><strong>${esc(x.titulo)}</strong><small>${esc(x.cidade)}${x.foto?" · com fotografia":" · sem fotografia"}</small></div></button>`).join("")}</div><a class="button-outline" href="${esc(p.pagina)}">Ver perfil individual</a>`}
 function actions(){detailEl.querySelector("[data-route]")?.addEventListener("click",e=>showRoute(e.currentTarget.dataset.route));detailEl.querySelector("[data-back]")?.addEventListener("click",()=>{selected=null;overview()});detailEl.querySelectorAll("[data-idx]").forEach(b=>b.addEventListener("click",()=>focus(+b.dataset.idx)))}
 function directory(ns){listEl.innerHTML=ns.map(n=>`<button class="alumni-result" type="button" data-name="${esc(n)}"><strong>${esc(n)}</strong><span>${esc(PEOPLE[n].atividade)}</span><small>${esc(PEOPLE[n].atual.cidade)}</small><em>Ver percurso</em></button>`).join("")||'<div class="empty-results">Nenhum egresso corresponde aos filtros.</div>';listEl.querySelectorAll("[data-name]").forEach(b=>b.addEventListener("click",()=>showRoute(b.dataset.name)))}
-function overview(){markers.clearLayers();routes.clearLayers();document.body.classList.remove("trajectory-view-active");const ns=filtered();directory(ns);countEl.textContent=`${ns.length} ${ns.length===1?"egresso encontrado":"egressos encontrados"}`;summaryEl.textContent="Exibindo a situação atual dos egressos.";const items=[];ns.forEach(n=>{const a=PEOPLE[n].atual;items.push(a);const mk=L.marker([a.lat,a.lng],{icon:iconCurrent(n)}).addTo(markers).bindPopup(`<strong>${esc(n)}</strong><br>${esc(PEOPLE[n].atividade)}<br>${esc(a.cidade)}`);mk.on("click",()=>{detailEl.innerHTML=detailCurrent(n);actions()})});fit(items);detailEl.innerHTML='<p class="eyebrow">Percursos dos egressos</p><h2>Escolha um egresso</h2><p>Use a busca por nome, clique em um marcador ou abra “Ver todos os egressos”. Ao selecionar Alfredo ou Leila, a trajetória completa será desenhada no mapa e os detalhes aparecerão neste painel.</p>';histSide.hidden=true}
+function overview(){markers.clearLayers();routes.clearLayers();document.body.classList.remove("trajectory-view-active");const ns=filtered();directory(ns);countEl.textContent=`${ns.length} ${ns.length===1?"egresso encontrado":"egressos encontrados"}`;summaryEl.textContent="Exibindo a situação atual dos egressos.";const items=[];ns.forEach(n=>{const a=PEOPLE[n].atual;items.push(a);const mk=L.marker([a.lat,a.lng],{icon:iconCurrent(n)}).addTo(markers).bindPopup(`<strong>${esc(n)}</strong><br>${esc(PEOPLE[n].atividade)}<br>${esc(a.cidade)}`);mk.on("click",()=>{detailEl.innerHTML=detailCurrent(n);actions()})});fit(items);detailEl.innerHTML='<p class="eyebrow">Percursos dos egressos</p><h2>Escolha um egresso</h2><p>Use a busca por nome, clique em um marcador ou abra “Ver todos os egressos”. Ao selecionar uma pessoa, a trajetória registrada será desenhada no mapa e as fotografias, anos, locais, instituições e descrições aparecerão neste painel.</p>';histSide.hidden=true}
 function uniqueCoords(s){const r=[];s.forEach(m=>{const last=r[r.length-1];if(!last||last[0]!==m.lat||last[1]!==m.lng)r.push([m.lat,m.lng])});return r}
-function showRoute(n){selected=n;markers.clearLayers();routes.clearLayers();document.body.classList.add("trajectory-view-active");const s=seq(n),coords=uniqueCoords(s);if(coords.length>1)L.polyline(coords,{color:"#8b542b",weight:5,opacity:.82,dashArray:"10 7"}).addTo(routes);const groups={};s.forEach((m,i)=>{const k=`${m.lat},${m.lng}`;(groups[k]||(groups[k]=[])).push({m,i})});Object.values(groups).forEach(g=>{const m=g[0].m,mk=L.marker([m.lat,m.lng],{icon:iconRoute(g[0].i+1)}).addTo(markers);mk.bindPopup(g.length===1?popup(m):`<div class="trajectory-popup"><strong>${esc(m.cidade)}</strong><span>${g.length} momentos registrados neste lugar</span><p>Selecione o ponto e navegue pelos momentos no painel ao lado.</p>${g.map(x=>`<p><b>${x.m.ano}</b> · ${esc(x.m.titulo)}</p>`).join("")}</div>`);mk.on("click",()=>focus(g[0].i,false))});fit(s);summaryEl.innerHTML=`Trajetória selecionada: <span class="trajectory-mode-name">${esc(n)}</span>`;countEl.textContent=`${s.length} momentos no percurso`;detailEl.innerHTML=detailRoute(n,s[0],0);actions();histSide.hidden=true;}
+function showRoute(n){selected=n;markers.clearLayers();routes.clearLayers();document.body.classList.add("trajectory-view-active");const s=seq(n),coords=uniqueCoords(s);if(coords.length>1)L.polyline(coords,{color:"#8b542b",weight:5,opacity:.82,dashArray:"10 7"}).addTo(routes);const groups={};s.forEach((m,i)=>{const k=`${m.lat},${m.lng}`;(groups[k]||(groups[k]=[])).push({m,i})});Object.values(groups).forEach(g=>{const m=g[0].m,mk=L.marker([m.lat,m.lng],{icon:iconRoute(g[0].i+1)}).addTo(markers);mk.bindPopup(g.length===1?popup(m):`<div class="trajectory-popup"><strong>${esc(m.cidade)}</strong><span>${g.length} momentos registrados neste lugar</span><p>Escolha um momento para exibi-lo também no painel ao lado.</p>${g.map(x=>`<button type="button" class="trajectory-popup-choice" data-popup-idx="${x.i}"><b>${x.m.ano}</b> · ${esc(x.m.titulo)}</button>`).join("")}</div>`);mk.on("click",()=>focus(g[0].i,false));mk.on("popupopen",()=>{document.querySelectorAll("[data-popup-idx]").forEach(b=>b.addEventListener("click",()=>focus(+b.dataset.popupIdx,false)))})});fit(s);summaryEl.innerHTML=`Trajetória selecionada: <span class="trajectory-mode-name">${esc(n)}</span>`;countEl.textContent=`${s.length} momentos no percurso`;detailEl.innerHTML=detailRoute(n,s[0],0);actions();histSide.hidden=true;}
 function focus(i,move=true){if(!selected)return;const s=seq(selected),m=s[i];if(!m)return;if(move)map.setView([m.lat,m.lng],10);detailEl.innerHTML=detailRoute(selected,m,i);actions()}
 function historical(){selected=null;document.body.classList.remove("trajectory-view-active");markers.clearLayers();routes.clearLayers();const[a,b]=range(tlStart,tlEnd,tlOut),mode=tlMode.value,ns=filtered(),items=[];ns.forEach(n=>seq(n).forEach(m=>{if(mode==="until"?m.ano<=b:m.ano>=a&&m.ano<=b)items.push({...m,name:n})}));items.forEach((m,i)=>L.marker([m.lat,m.lng],{icon:iconRoute(i+1)}).addTo(markers).bindPopup(popup(m)));fit(items);countEl.textContent=`${ns.length} ${ns.length===1?"egresso encontrado":"egressos encontrados"}`;summaryEl.textContent="Exibindo momentos das trajetórias no período selecionado.";histSide.hidden=false;histCount.textContent=`${items.length} ${items.length===1?"momento":"momentos"}`;histPeriod.textContent=mode==="until"?`Registros acumulados até ${b}.`:`Registros entre ${a} e ${b}.`;histList.innerHTML=items.map(m=>`<div class="history-record-item"><span>${m.ano}</span><strong>${esc(m.name)}</strong><small>${esc(m.titulo)} · ${esc(m.cidade)}</small></div>`).join("")||"<p>Nenhum momento neste recorte.</p>"}
 function reset(){nameInput.value="";locSel.value="";actSel.value="";ingStart.value=ingStart.min;ingEnd.value=ingEnd.max;tlStart.value=tlStart.min;tlEnd.value=tlEnd.max;tlMode.value="during";selected=null;range(ingStart,ingEnd,ingOut);range(tlStart,tlEnd,tlOut);overview()}

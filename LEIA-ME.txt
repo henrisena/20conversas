@@ -1,26 +1,34 @@
-ATUALIZAÇÃO — PERFIL DE NARA FALCÓN LAGO DE JESUS
+ATUALIZAÇÃO — HOME, MOSAICOS E MAPA DA VIVIANE
 
-INCLUI:
-- nova página individual de Nara;
-- cartão na aba Egressos;
-- fotografia de perfil;
-- fotografia contextual na abertura;
-- fotografia atual na seção "Você hoje";
-- ingresso 2007.1 e conclusão 2010;
-- atuação atual como professora e coordenadora;
-- Escola São Luís, Muritiba;
-- ponto atual em Muritiba no Mapa das Trajetórias;
-- sem linha artificial de percurso, porque não foram informados outros momentos pós-UFRB.
+1. MAPA DAS TRAJETÓRIAS
+- reforça a exibição das fotografias na barra lateral;
+- a fotografia grande muda conforme o momento selecionado;
+- a cronologia lateral agora também mostra miniaturas das fotos;
+- em locais com mais de um momento (como Muritiba e Cachoeira na trajetória de Viviane), o popup permite escolher qual momento exibir no painel lateral;
+- preserva a linha do percurso e os demais perfis.
 
-ARQUIVOS SUBSTITUÍDOS:
-- pages/egressos.html
-- pages/mapa.html
-- script.js
-- data/mapa.json
+2. HOME — EGRESSOS
+Substitui os seis retratos fictícios do carrossel por seis egressos reais com perfil:
+- Alfredo Pinto da Silva Júnior
+- Leila Maria de Jesus Pereira
+- Viviane dos Santos Silva
+- Ivonildes da Silva Santos
+- Nara Falcón Lago de Jesus
+- Jamile Santana Fernandes
 
-ARQUIVOS NOVOS:
-- pages/egresso-nara-falcon-lago-de-jesus.html
-- assets/egressos/nara/*
+Também substitui a miniatura antiga da seção Depoimentos na Home pela miniatura do depoimento atual de Viviane.
 
-Este patch foi montado sobre a versão que já contém Viviane e Ivonildes.
+3. ABA EGRESSOS
+Novo mosaico de abertura com os seis egressos reais acima.
+
+4. ABA DEPOIMENTOS
+Novo mosaico de abertura com:
+- Leandro Antonio de Almeida
+- Viviane dos Santos Silva
+- Jamile Santana Fernandes
+- Ivonildes da Silva Santos
+- Dênis Renan Corrêa
+- Henrique Sena
+
+Este patch foi montado sobre a versão cumulativa com Viviane, Ivonildes, Nara e Jamile.
 Extraia na raiz do projeto, aceite as substituições, faça Commit + Push e depois Ctrl+F5.
