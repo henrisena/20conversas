@@ -1935,3 +1935,32 @@ img[src*="egresso-ficticio-6.jpg"]{object-position:center 20% !important;}
 .book-note{padding:.7rem .85rem;background:#f5efe5;border-left:3px solid #b7893b;border-radius:6px}.book-link-pending{display:inline-flex;padding:.65rem .9rem;border-radius:999px;background:#eee9e1;color:#6d655b;font-weight:700;font-size:.9rem}
 .production-empty{padding:24px;background:#f7f3ec;border-radius:12px;color:#6d655b}
 @media(max-width:720px){.production-cover-mosaic{min-height:auto;padding:10px 0 4px}.production-cover-mosaic img{max-height:310px}.section-heading-row{align-items:flex-start;flex-direction:column}.profile-book-grid{grid-template-columns:1fr}.profile-book-card{grid-template-columns:92px 1fr}.profile-book-cover img{width:92px;height:138px}}
+
+
+/* Versão 72 — Home: egressos sem corte e Galeria apenas com acervo real */
+.feature-card-image[href$="egressos.html"] .card-media-carousel{
+  background:#ece8e1;
+}
+.feature-card-image[href$="egressos.html"] .card-media-carousel > img{
+  object-fit:contain !important;
+  object-position:center !important;
+  padding:6px;
+  background:#ece8e1;
+  transform:none !important;
+}
+.feature-card-image[href$="egressos.html"] .card-media-carousel > img.active{
+  transform:none !important;
+}
+.gallery-card-carousel{
+  background:#e8e4dc;
+}
+.gallery-card-carousel > img{
+  object-fit:contain !important;
+  object-position:center !important;
+  padding:4px;
+  background:#e8e4dc;
+  transform:none !important;
+}
+.gallery-card-carousel > img.active{
+  transform:none !important;
+}

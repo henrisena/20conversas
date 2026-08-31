@@ -1,43 +1,21 @@
-REPARO COMPLETO — JAMILE SANTANA FERNANDES
+ATUALIZAÇÃO — HOME: GALERIA REAL + EGRESSOS SEM CORTE
 
-Este pacote corrige o erro de carregamento do perfil e das imagens da Jamile.
+1. ÍCONE/CARROSSEL DA GALERIA NA PÁGINA INICIAL
+- remove todas as imagens fictícias;
+- usa somente fotografias que já constam na página da Galeria geral;
+- foram encontrados 28 registros reais na Galeria e todos entram na rotação;
+- não adiciona fotografias novas ao acervo: apenas reaproveita as já publicadas na Galeria.
 
-O problema foi identificado: a atualização posterior da Home/mosaicos referenciava Jamile,
-mas aquele patch não carregava novamente a página individual nem os arquivos de imagem dela.
-Se o ZIP anterior da Jamile não tivesse sido aplicado corretamente, os links ficavam quebrados.
+2. ÍCONE/CARROSSEL DE EGRESSOS NA PÁGINA INICIAL
+- mantém os seis egressos reais;
+- altera o enquadramento para object-fit: contain;
+- deixa de cortar cabeça, rosto ou laterais das fotografias;
+- a fotografia inteira passa a caber na área disponível, com fundo neutro quando sobrar espaço;
+- desativa o pequeno zoom do carrossel especificamente para os egressos.
 
-ESTE REPARO É AUTOSSUFICIENTE PARA A JAMILE E INCLUI:
-- pages/egresso-jamile-santana-fernandes.html
-- assets/egressos/jamile/perfil-jamile.jpg
-- assets/egressos/jamile/contexto-jamile.jpg
-- assets/egressos/jamile/atual-jamile.jpg
-- assets/egressos/jamile/galeria-intercambio-2025.jpg
-- assets/egressos/jamile/galeria-consciencia-negra-2025.jpg
-- assets/egressos/jamile/galeria-estagio-2025.jpg
-- assets/egressos/jamile/trajetoria-aeroporto-2026.jpg
-- assets/egressos/jamile/trajetoria-seminario-2026.jpg
-- cópias das três imagens de Jamile em assets/galeria-real/
-- pages/egressos.html
-- pages/galeria.html
-- pages/mapa.html
-- data/mapa.json
-- script.js
+ARQUIVOS ALTERADOS
 - index.html
 - style.css
-- mosaicos reais de Egressos e Depoimentos
-- pages/depoimentos.html
 
-Também PRESERVA:
-- correção da barra lateral do mapa da Viviane;
-- carrossel real de egressos na Home;
-- mosaico real da aba Egressos;
-- mosaico real da aba Depoimentos.
-
-COMO USAR
-1. Extraia este ZIP na raiz do projeto.
-2. Aceite todas as substituições.
-3. No GitHub Desktop, confira os arquivos.
-4. Faça Commit e Push.
-5. No site publicado, use Ctrl+F5.
-
-Não é necessário reaplicar os ZIPs anteriores da Jamile ou dos mosaicos depois deste.
+Este patch pode ser aplicado sobre o reparo completo da Jamile.
+Extraia na raiz do projeto, aceite as substituições, faça Commit + Push e use Ctrl+F5.
