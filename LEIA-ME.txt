@@ -1,14 +1,24 @@
-RESTAURAÇÃO DOS MARCOS NA HOME
+CORREÇÃO DA HOME — FORMULÁRIOS RESTAURADOS
 
-2006 — Para início de conversa...
-- clicável
-- abre pages/2006.html
+Restaura os três cartões/ícones de participação no final da Home:
 
-2016 — 10 Anos de Histórias: continuando a conversa...
-- clicável
-- abre pages/2016.html
+1. Docentes e ex-docentes
+2. Estudantes e egressos
+3. Memórias do curso
 
-2026 — Este memorial
-- sem link
+Links restaurados:
+- formulário de docentes/ex-docentes;
+- formulário de estudantes/egressos;
+- formulário geral de memórias.
 
-O patch parte da Home mais recente e preserva os carrosséis atuais de Egressos e Galeria.
+Também preserva:
+- marcos 2006, 2016 e 2026 alinhados;
+- links de 2006 e 2016;
+- carrossel de Egressos;
+- carrossel da Galeria com imagens reais.
+
+Arquivos:
+- index.html
+- style.css
+- pages/2006.html
+- pages/2016.html
