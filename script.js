@@ -253,6 +253,57 @@ const mapData=[
     "pagina": "egresso-nara-falcon-lago-de-jesus.html",
     "descricao": "Professora e coordenadora na Escola São Luís, em Muritiba.",
     "fonte": "Informações e fotografia autorizadas por Nara Falcón Lago de Jesus."
+  },
+  {
+    "id": "jamile-atual",
+    "titulo": "Mestrado em História das Ciências e da Saúde",
+    "categoria": "egressos",
+    "nome": "Jamile Santana Fernandes",
+    "cidade": "Rio de Janeiro",
+    "local": "Casa de Oswaldo Cruz — Fiocruz",
+    "ano": 2026,
+    "periodo": "atual",
+    "lat": -22.8975,
+    "lng": -43.1847,
+    "imagem": "assets/egressos/jamile/atual-jamile.jpg",
+    "pageImagem": "../assets/egressos/jamile/atual-jamile.jpg",
+    "pagina": "egresso-jamile-santana-fernandes.html",
+    "descricao": "Mestranda no Programa de Pós-Graduação em História das Ciências e da Saúde da Casa de Oswaldo Cruz — Fiocruz.",
+    "fonte": "Informações e fotografia autorizadas por Jamile Santana Fernandes."
+  },
+  {
+    "id": "jamile-2026-aeroporto",
+    "titulo": "Partida para o intercâmbio",
+    "categoria": "egressos",
+    "nome": "Jamile Santana Fernandes",
+    "cidade": "Salvador",
+    "local": "Aeroporto Internacional de Salvador Luís Eduardo Magalhães",
+    "ano": 2026,
+    "periodo": "2026",
+    "lat": -12.9086,
+    "lng": -38.3225,
+    "imagem": "assets/egressos/jamile/trajetoria-aeroporto-2026.jpg",
+    "pageImagem": "../assets/egressos/jamile/trajetoria-aeroporto-2026.jpg",
+    "pagina": "egresso-jamile-santana-fernandes.html",
+    "descricao": "Despedida da mãe e da irmã antes da viagem de intercâmbio.",
+    "fonte": "Informações e fotografia fornecidas por Jamile Santana Fernandes."
+  },
+  {
+    "id": "jamile-2026-seminario",
+    "titulo": "1º Seminário NECOHM-NERAS",
+    "categoria": "egressos",
+    "nome": "Jamile Santana Fernandes",
+    "cidade": "Rio de Janeiro",
+    "local": "Casa de Oswaldo Cruz — Fiocruz",
+    "ano": 2026,
+    "periodo": "2026",
+    "lat": -22.8975,
+    "lng": -43.1847,
+    "imagem": "assets/egressos/jamile/trajetoria-seminario-2026.jpg",
+    "pageImagem": "../assets/egressos/jamile/trajetoria-seminario-2026.jpg",
+    "pagina": "egresso-jamile-santana-fernandes.html",
+    "descricao": "Primeira experiência mediando uma mesa, em atividade vinculada ao Núcleo de Estudos Escravidão, Raça e Saúde.",
+    "fonte": "Informações e fotografia fornecidas por Jamile Santana Fernandes."
   }
 ];
 function letterFor(cat){return {ensino:"E",pesquisa:"P",extensao:"X",egressos:"G",professores:"D"}[cat]||"•"}

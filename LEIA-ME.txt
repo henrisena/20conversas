@@ -1,34 +1,43 @@
-ATUALIZAÇÃO — HOME, MOSAICOS E MAPA DA VIVIANE
+REPARO COMPLETO — JAMILE SANTANA FERNANDES
 
-1. MAPA DAS TRAJETÓRIAS
-- reforça a exibição das fotografias na barra lateral;
-- a fotografia grande muda conforme o momento selecionado;
-- a cronologia lateral agora também mostra miniaturas das fotos;
-- em locais com mais de um momento (como Muritiba e Cachoeira na trajetória de Viviane), o popup permite escolher qual momento exibir no painel lateral;
-- preserva a linha do percurso e os demais perfis.
+Este pacote corrige o erro de carregamento do perfil e das imagens da Jamile.
 
-2. HOME — EGRESSOS
-Substitui os seis retratos fictícios do carrossel por seis egressos reais com perfil:
-- Alfredo Pinto da Silva Júnior
-- Leila Maria de Jesus Pereira
-- Viviane dos Santos Silva
-- Ivonildes da Silva Santos
-- Nara Falcón Lago de Jesus
-- Jamile Santana Fernandes
+O problema foi identificado: a atualização posterior da Home/mosaicos referenciava Jamile,
+mas aquele patch não carregava novamente a página individual nem os arquivos de imagem dela.
+Se o ZIP anterior da Jamile não tivesse sido aplicado corretamente, os links ficavam quebrados.
 
-Também substitui a miniatura antiga da seção Depoimentos na Home pela miniatura do depoimento atual de Viviane.
+ESTE REPARO É AUTOSSUFICIENTE PARA A JAMILE E INCLUI:
+- pages/egresso-jamile-santana-fernandes.html
+- assets/egressos/jamile/perfil-jamile.jpg
+- assets/egressos/jamile/contexto-jamile.jpg
+- assets/egressos/jamile/atual-jamile.jpg
+- assets/egressos/jamile/galeria-intercambio-2025.jpg
+- assets/egressos/jamile/galeria-consciencia-negra-2025.jpg
+- assets/egressos/jamile/galeria-estagio-2025.jpg
+- assets/egressos/jamile/trajetoria-aeroporto-2026.jpg
+- assets/egressos/jamile/trajetoria-seminario-2026.jpg
+- cópias das três imagens de Jamile em assets/galeria-real/
+- pages/egressos.html
+- pages/galeria.html
+- pages/mapa.html
+- data/mapa.json
+- script.js
+- index.html
+- style.css
+- mosaicos reais de Egressos e Depoimentos
+- pages/depoimentos.html
 
-3. ABA EGRESSOS
-Novo mosaico de abertura com os seis egressos reais acima.
+Também PRESERVA:
+- correção da barra lateral do mapa da Viviane;
+- carrossel real de egressos na Home;
+- mosaico real da aba Egressos;
+- mosaico real da aba Depoimentos.
 
-4. ABA DEPOIMENTOS
-Novo mosaico de abertura com:
-- Leandro Antonio de Almeida
-- Viviane dos Santos Silva
-- Jamile Santana Fernandes
-- Ivonildes da Silva Santos
-- Dênis Renan Corrêa
-- Henrique Sena
+COMO USAR
+1. Extraia este ZIP na raiz do projeto.
+2. Aceite todas as substituições.
+3. No GitHub Desktop, confira os arquivos.
+4. Faça Commit e Push.
+5. No site publicado, use Ctrl+F5.
 
-Este patch foi montado sobre a versão cumulativa com Viviane, Ivonildes, Nara e Jamile.
-Extraia na raiz do projeto, aceite as substituições, faça Commit + Push e depois Ctrl+F5.
+Não é necessário reaplicar os ZIPs anteriores da Jamile ou dos mosaicos depois deste.
