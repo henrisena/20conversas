@@ -1,31 +1,20 @@
-CARROSSEL DE EGRESSOS — RECORTES APROVADOS
+CORREÇÃO — FUNDO DA ABA EGRESSOS SEM SOBREPOSIÇÃO
 
-Foram criadas seis imagens próprias para o carrossel:
-- Alfredo
-- Leila
-- Viviane
-- Ivonildes
-- Nara
-- Jamile
+Problema:
+A imagem aplicada anteriormente era uma prévia já composta com:
+- mosaico;
+- degradê azul;
+- texto da abertura.
 
-Os recortes usam o mesmo enquadramento aprovado no mosaico da abertura da aba Egressos.
+A própria página adicionava novamente o degradê e o texto, produzindo efeito de sobreposição.
 
-Vantagens:
-- o carrossel continua com foto preenchendo o quadro;
-- o enquadramento não depende mais de object-position;
-- Alfredo e Ivonildes ficam com o enquadramento já aprovado;
-- Leila, Viviane, Nara e Jamile preservam os enquadramentos aprovados;
-- as fotos originais continuam intactas para perfis e outras páginas.
+Correção:
+- novo arquivo contém SOMENTE as seis fotografias;
+- preserva exatamente os enquadramentos aprovados da versão v4;
+- a página aplica uma única camada de degradê azul;
+- o título e o texto continuam sendo HTML da página;
+- a imagem antiga não é combinada com a nova.
 
-PADRÃO PARA NOVOS EGRESSOS
-Para cada novo egresso:
-1. preservar a foto original;
-2. criar uma cópia horizontal 3:2 para o carrossel;
-3. usar cover/crop apenas nessa cópia;
-4. ajustar individualmente o ponto focal para preservar rosto e tronco;
-5. salvar em assets/egressos/carrossel/;
-6. acrescentar essa versão ao carrossel.
-
-Arquivos alterados:
-- index.html
-- assets/egressos/carrossel/*.jpg
+Arquivos:
+- assets/mosaico-egressos-amplo-limpo.jpg
+- pages/egressos.html
