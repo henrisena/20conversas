@@ -1,32 +1,41 @@
-ATUALIZAÇÃO — LEILA V2 | PERFIL VISUAL + MAPA DOS EGRESSOS
+ATUALIZAÇÃO — EGRESSOS REAIS + MAPA DAS TRAJETÓRIAS
 
-Este pacote substitui integralmente o pacote anterior da Leila.
+ABA EGRESSOS
+- remove todos os perfis fictícios;
+- mantém somente Alfredo Pinto da Silva Júnior e Leila Maria de Jesus Pereira;
+- substitui textos de demonstração por aviso de acervo em construção.
 
-Mantido SEM ALTERAÇÃO:
-- os quatro registros de Leila no data/mapa.json;
-- a lógica do Mapa dos Egressos usada no perfil de Alfredo;
-- Feira de Santana / UEFS (2019);
-- Sapeaçu / início da docência (2019);
-- Sapeaçu / posse como professora efetiva (2024);
-- Sapeaçu / atuação atual;
-- as três fotografias de Leila na Galeria geral;
-- o Apitaço no CAHL no carrossel da Home;
-- cartão de Leila na página Egressos.
+MAPA DOS EGRESSOS — MAPA DAS TRAJETÓRIAS
+- mantém somente Alfredo e Leila;
+- remove todos os exemplos fictícios;
+- mantém 4 registros de Alfredo e 4 de Leila;
+- visão inicial: situação atual;
+- busca por nome;
+- filtro por localização atual;
+- filtro por atuação;
+- filtro por período de ingresso;
+- botão “Ver todos os egressos”;
+- botão “Limpar filtros”;
+- lista clicável dos egressos;
+- exploração opcional dos momentos das trajetórias;
+- filtro temporal dos momentos;
+- modo “Durante o período” e “Até o fim do período”;
+- retorno à situação atual;
+- links para os perfis individuais.
 
-ALTERADO:
-- pages/egresso-leila-maria.html
+CARTOGRAFIA DA PÓS-GRADUAÇÃO
+- não foi alterada;
+- o link para cartografia-pos-graduacao.html permanece intacto.
 
-A página individual agora é construída como narrativa visual:
-1. abertura contextual;
-2. apresentação;
-3. 2013–2018: viver o CAHL;
-4. Sala de aula (2013);
-5. Fórum Tripartite (2014);
-6. Apitaço no CAHL (2015);
-7. depoimento integrado às imagens;
-8. trajetória pós-UFRB em linha temporal;
-9. chamada para o Mapa dos Egressos;
-10. Leila hoje;
-11. fechamento memorialístico.
+HOME
+- o mapa resumido de egressos passa a exibir somente Alfredo e Leila, pois usa a mesma base real.
 
-Pode ser extraído diretamente na raiz do site.
+ARQUIVOS SUBSTITUÍDOS
+- index.html
+- script.js
+- data/mapa.json
+- pages/egressos.html
+- pages/mapa.html
+
+Depois de extrair na raiz do projeto, faça Commit + Push.
+No GitHub Pages, use Ctrl+F5 para evitar o cache do script anterior.
