@@ -1,21 +1,14 @@
-CORREÇÃO MOBILE — PÁGINAS 2006 E 2016
+AJUSTE INDIVIDUAL DO CARROSSEL DE EGRESSOS
 
-Problema corrigido:
-- os documentos/imagens não ocupam mais largura ou altura excessivas no celular;
-- miniaturas ficam contidas e organizadas na página;
-- a galeria de 2016 passa para uma coluna no celular;
-- documentos horizontais e verticais respeitam a largura da tela.
+Alterado somente o enquadramento de:
+- Alfredo
+- Ivonildes
+- Viviane
 
-Novo comportamento:
-- na página, o documento aparece em tamanho reduzido;
-- ao tocar/clicar na miniatura, abre um visualizador sobre a própria página;
-- no visualizador, a imagem inteira é ajustada à tela (max-width/max-height);
-- toque fora da imagem, botão × ou tecla Esc fecha o documento;
-- não abre mais a imagem crua gigante em outra aba.
+Leila, Nara e Jamile permanecem exatamente com o enquadramento padrão atual.
 
-Arquivos alterados:
-- style.css
-- pages/2006.html
-- pages/2016.html
+O ajuste foi colocado diretamente no index.html para não substituir o style.css
+e, assim, não desfazer as correções mais recentes das páginas 2006 e 2016.
 
-Aplique sobre a versão mais recente do site.
+Se algum dos três ainda precisar subir/descer um pouco, basta fazer um novo ajuste
+individual sem mexer nos demais.

@@ -3,7 +3,28 @@
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Memorial 20 anos | História UFRB</title>
 <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
-<link href="style.css?v=78" rel="stylesheet"/></head><body>
+<link href="style.css?v=78" rel="stylesheet"/>
+<style id="egressos-enquadramento-individual">
+/* Ajustes individuais do carrossel de Egressos.
+   Leila, Nara e Jamile permanecem com o enquadramento padrão. */
+
+/* Alfredo: desloca o foco para cima para preservar melhor rosto/cabeça */
+.feature-card-image[href$="egressos.html"] .card-media-carousel > img.egresso-alfredo{
+  object-position:center 18% !important;
+}
+
+/* Ivonildes: foco mais alto, reduzindo o corte do retrato */
+.feature-card-image[href$="egressos.html"] .card-media-carousel > img.egresso-ivonildes{
+  object-position:center 16% !important;
+}
+
+/* Viviane: sobe discretamente o enquadramento para mostrar o rosto inteiro */
+.feature-card-image[href$="egressos.html"] .card-media-carousel > img.egresso-viviane{
+  object-position:center 20% !important;
+}
+</style>
+
+</head><body>
 <header class="topbar">
 <a class="logo" href="index.html"><span class="mark">20</span><span>História<br/>UFRB</span></a>
 <button aria-label="Abrir menu" class="menu-button">☰</button>
@@ -51,10 +72,10 @@
 </a>
 <a class="feature-card feature-card-image" href="pages/egressos.html">
 <div aria-label="Fotografias de egressos com perfis no memorial" class="card-media-carousel auto-carousel" data-interval="8000">
-<img alt="Alfredo Pinto da Silva Júnior" class="active" src="assets/alfredo-perfil.jpg"/>
+<img alt="Alfredo Pinto da Silva Júnior" class="active" src="assets/alfredo-perfil.jpg"/ class="egresso-alfredo">
 <img alt="Leila Maria de Jesus Pereira" src="assets/egressos/leila/perfil-leila.jpg"/>
-<img alt="Viviane dos Santos Silva" src="assets/egressos/viviane/perfil-viviane.jpg"/>
-<img alt="Ivonildes da Silva Santos" src="assets/egressos/ivonildes/perfil-ivonildes.jpg"/>
+<img alt="Viviane dos Santos Silva" src="assets/egressos/viviane/perfil-viviane.jpg"/ class="egresso-viviane">
+<img alt="Ivonildes da Silva Santos" src="assets/egressos/ivonildes/perfil-ivonildes.jpg"/ class="egresso-ivonildes">
 <img alt="Nara Falcón Lago de Jesus" src="assets/egressos/nara/perfil-nara.jpg"/>
 <img alt="Jamile Santana Fernandes" src="assets/egressos/jamile/perfil-jamile.jpg"/>
 </div>
