@@ -1,14 +1,20 @@
-AJUSTE INDIVIDUAL DO CARROSSEL DE EGRESSOS
+ABERTURA DA ABA EGRESSOS — MOSAICO APROVADO
 
-Alterado somente o enquadramento de:
-- Alfredo
-- Ivonildes
-- Viviane
+Aplica a prévia aprovada como plano de fundo da abertura da página Egressos.
 
-Leila, Nara e Jamile permanecem exatamente com o enquadramento padrão atual.
+Imagem:
+- assets/mosaico-egressos-amplo-v4.jpg
 
-O ajuste foi colocado diretamente no index.html para não substituir o style.css
-e, assim, não desfazer as correções mais recentes das páginas 2006 e 2016.
+Página alterada:
+- pages/egressos.html
 
-Se algum dos três ainda precisar subir/descer um pouco, basta fazer um novo ajuste
-individual sem mexer nos demais.
+A alteração é isolada:
+- não substitui style.css;
+- não altera a Home;
+- não altera os carrosséis;
+- não altera os marcos 2006/2016/2026;
+- não altera formulários;
+- não altera outras páginas.
+
+A página recebe apenas uma regra local de CSS para substituir o fundo de
+.page-hero.hero-egressos pela nova imagem.
