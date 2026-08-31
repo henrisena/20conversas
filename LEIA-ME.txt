@@ -1,46 +1,38 @@
-ATUALIZAÇÃO — MAPA DAS TRAJETÓRIAS COM PAINEL LATERAL
+ATUALIZAÇÃO FINAL — VIVIANE DOS SANTOS SILVA
 
-Esta versão reorganiza o Mapa das Trajetórias para evitar rolagem excessiva e cortes nas fotografias.
+Este ZIP já reúne tudo em um único pacote.
 
-DESKTOP
-- mapa ocupa aproximadamente 70% da largura;
-- painel de percurso ocupa aproximadamente 30% da largura;
-- painel permanece ao lado do mapa;
-- ao selecionar um egresso, a linha da trajetória aparece no mapa;
-- os pontos permanecem numerados;
-- o painel lateral mostra a fotografia selecionada, ano, local, instituição, descrição e a sequência cronológica completa;
-- cada item da sequência é clicável e centraliza o ponto correspondente no mapa;
-- botão para voltar a todos os egressos;
-- botão para abrir o perfil individual.
+INCLUI:
+- perfil individual completo de Viviane;
+- cartão de Viviane na aba Egressos;
+- foto de perfil;
+- foto horizontal de contexto no hero, preservando o rosto;
+- quatro imagens da trajetória no CAHL;
+- as mesmas quatro imagens também na Galeria geral;
+- trajetória pós-UFRB;
+- integração ao Mapa das Trajetórias com painel lateral e linha do percurso;
+- depoimento em vídeo do YouTube no perfil individual;
+- depoimento em vídeo também na aba Depoimentos;
+- remoção dos dois vídeos anteriores da aba Depoimentos;
+- preservação da Cartografia da pós-graduação.
 
-FOTOGRAFIAS
-- popups usam object-fit: contain;
-- painel lateral usa object-fit: contain;
-- imagens ficam totalmente visíveis, sem cortes;
-- fundo neutro preenche eventuais sobras de proporção;
-- pontos sem fotografia continuam com cartão textual, como UEFS/Feira de Santana em 2019 na trajetória de Leila.
+PERCURSO NO MAPA:
+- 2021–2023 — Santo Antônio de Jesus — Mestrado em História, UNEB Campus V;
+- 2023 — Cachoeira — Colégio Sacramentinas;
+- 2024 — Muritiba — EJA / Escola Alcides Almeida;
+- 2025 — Cachoeira — aula de campo da Escola Alcides Almeida;
+- atual — Muritiba — servidora pública / Escola Alcides Almeida.
 
-MAPA
-- linha liga apenas lugares distintos, em ordem cronológica;
-- momentos no mesmo local não recebem coordenadas artificiais;
-- ao clicar no marcador, o popup apresenta o momento e a foto integral quando houver.
+DEPOIMENTO:
+https://youtu.be/jwLtFhx7jxM
 
-CONTROLES PRESERVADOS
-- busca por nome;
-- localização;
-- atuação;
-- período de ingresso;
-- Ver todos os egressos;
-- Limpar filtros;
-- exploração temporal;
-- apenas Alfredo e Leila.
+COMO USAR:
+1. Extraia este ZIP na raiz do projeto.
+2. Aceite as substituições.
+3. Abra o GitHub Desktop.
+4. Revise os arquivos alterados.
+5. Faça Commit.
+6. Faça Push.
+7. Atualize o site com Ctrl+F5.
 
-CARTOGRAFIA DA PÓS-GRADUAÇÃO
-- não foi alterada.
-
-RESPONSIVO
-- em telas menores, o painel passa para baixo do mapa.
-
-Arquivos do pacote:
-- pages/mapa.html
-- e os arquivos já preservados da atualização anterior para manter a base consistente.
+Não é necessário aplicar os dois ZIPs anteriores separadamente.
