@@ -30,10 +30,13 @@
 .project-copy h3{font-family:Georgia,serif;color:var(--navy);font-size:1.35rem;margin:.2rem 0 .6rem}
 .project-meta{font-size:.78rem;text-transform:uppercase;letter-spacing:.055em;font-weight:900;color:var(--gold)}
 .teacher-note{background:#f4efe7;border-left:4px solid var(--gold);border-radius:0 14px 14px 0;padding:18px 20px;line-height:1.7;color:#51473f}
+.egresso-voice{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(7,30,70,.055);margin-top:22px}
+.egresso-voice-video{background:#0b1323}.egresso-voice-video iframe{display:block;width:100%;aspect-ratio:16/9;border:0}
+.egresso-voice-copy{padding:26px;display:flex;flex-direction:column;justify-content:center}.egresso-voice-copy h3{font-family:Georgia,serif;color:var(--navy);font-size:1.35rem;margin:.2rem 0 .6rem}.egresso-voice-copy p{margin:.3rem 0}.egresso-voice-copy a{font-weight:800;margin-top:10px}
 @media(max-width:800px){
  .teacher-intro{grid-template-columns:1fr}.teacher-profile-photo{max-width:300px}
  .teacher-grid{grid-template-columns:1fr}.project-card{grid-template-columns:1fr}.project-card img{min-height:0;max-height:520px}
- .teacher-hero{min-height:440px}
+ .teacher-hero{min-height:440px}.egresso-voice{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -189,10 +192,21 @@
     </article>
   </section>
 
-  <section class="teacher-section">
-    <p class="eyebrow">Depoimento</p>
-    <h2>Memórias do curso</h2>
-    <p>O espaço permanece aberto para a incorporação futura de depoimento em texto, áudio ou vídeo.</p>
+  <section class="teacher-section" id="leandro-pelos-egressos">
+    <p class="eyebrow">Vozes dos egressos</p>
+    <h2>Leandro pelos egressos</h2>
+    <p>Memórias de ex-estudantes ajudam a registrar a trajetória docente de Leandro Almeida a partir das experiências de formação construídas no Curso de História da UFRB.</p>
+    <article class="egresso-voice">
+      <div class="egresso-voice-video">
+        <iframe src="https://www.youtube.com/embed/JmdI3qJNpJY" title="Depoimento de Sandro Augusto da Silva Cerqueira Junior sobre o professor Leandro Antonio de Almeida" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="egresso-voice-copy">
+        <span class="project-meta">Depoimento de egresso</span>
+        <h3>Sandro Júnior sobre Leandro Almeida</h3>
+        <p>Sandro Augusto da Silva Cerqueira Junior, egresso do Curso de História da UFRB, compartilha suas memórias sobre o professor Leandro Almeida e sua experiência de formação no curso.</p>
+        <a href="egresso-sandro-augusto-da-silva-cerqueira-junior.html">Conhecer a trajetória de Sandro →</a>
+      </div>
+    </article>
   </section>
 </main>
 
