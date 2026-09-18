@@ -2938,3 +2938,40 @@ window.PRODUCAO_DOCENTES = [
   }
   window.renderProfessorBooks(nome);
 })();
+
+
+/* Versão 79 — ligação dos perfis docentes às páginas individuais de produção */
+(function(){
+  const file=(location.pathname.split('/').pop()||'').toLowerCase();
+  const productionByProfile={
+    'professora-aline-goncalves.html':'producao-aline-goncalves.html',
+    'professor-andre-rego.html':'producao-andre-rego.html',
+    'professor-antonio-liberac.html':'producao-antonio-liberac.html',
+    'professora-camila.html':'producao-camila-santiago.html',
+    'professor-denis-correa.html':'producao-denis-correa.html',
+    'professor-fabricio.html':'producao-fabricio-lyrio.html',
+    'professor-gabriel-avila.html':'producao-gabriel-avila.html',
+    'professor-henrique-sena.html':'producao-henrique-sena.html',
+    'professora-isabel.html':'producao-isabel-reis.html',
+    'professor-juvenal-conceicao.html':'producao-juvenal-conceicao.html',
+    'professor-leandro-almeida.html':'producao-leandro-almeida.html',
+    'professora-luciana-brito.html':'producao-luciana-brito.html',
+    'professor-marco-nunes.html':'producao-marco-nunes.html',
+    'professora-martha.html':'producao-martha-queiroz.html',
+    'professor-nuno-pereira.html':'producao-nuno-pereira.html',
+    'professor-paulo-cesar.html':'producao-paulo-cesar.html',
+    'professor-sergio.html':'producao-sergio-guerra.html',
+    'professora-solyane-lima.html':'producao-solyane-lima.html',
+    'professora-tania-santana.html':'producao-tania-santana.html',
+    'professor-walter.html':'producao-walter-fraga.html'
+  };
+  const target=productionByProfile[file]; if(!target)return;
+  const apply=()=>{
+    const section=document.querySelector('.profile-books'); if(!section)return;
+    let link=section.querySelector('.section-heading-row .button-outline');
+    if(link){link.href=target;link.textContent='Ver produção docente';return;}
+    const head=section.querySelector('.section-heading-row');
+    if(head){link=document.createElement('a');link.className='button-outline';link.href=target;link.textContent='Ver produção docente';head.appendChild(link);}
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(apply,0));else setTimeout(apply,0);
+})();
