@@ -1,20 +1,44 @@
-CORREÇÃO — FUNDO DA ABA EGRESSOS SEM SOBREPOSIÇÃO
+PACOTE ATUALIZADO DE FOTOS — MEMORIAL 20 ANOS DO CURSO DE HISTÓRIA/UFRB
 
-Problema:
-A imagem aplicada anteriormente era uma prévia já composta com:
-- mosaico;
-- degradê azul;
-- texto da abertura.
+Este ZIP substitui o pacote anterior. Extraia-o na raiz do repositório
+henrisena/20conversas e faça o commit/push pelo GitHub Desktop.
 
-A própria página adicionava novamente o degradê e o texto, produzindo efeito de sobreposição.
+DOCENTES ATIVOS — atualizar em quatro pontos
+1. aba Professores
+2. foto de perfil da página individual
+3. camafeu menor da aba Produção
+4. camafeu da página individual de produção
 
-Correção:
-- novo arquivo contém SOMENTE as seis fotografias;
-- preserva exatamente os enquadramentos aprovados da versão v4;
-- a página aplica uma única camada de degradê azul;
-- o título e o texto continuam sendo HTML da página;
-- a imagem antiga não é combinada com a nova.
+Antonio Liberac:
+assets/professores/antonio-liberac/perfil-antonio-liberac.png
 
-Arquivos:
-- assets/mosaico-egressos-amplo-limpo.jpg
-- pages/egressos.html
+Marco Antônio Nunes da Silva:
+assets/professores/marco-antonio/perfil-marco-antonio.jpg
+
+Paulo César Oliveira de Jesus:
+assets/professores/paulo-cesar/perfil-paulo-cesar.jpeg
+
+DOCENTES QUE JÁ PASSARAM PELO CURSO / SUBSTITUTOS
+Usar apenas nos camafeus de "Docentes que passaram pelo curso":
+
+assets/professores/historico/jorge-nery.jpg
+assets/professores/historico/antonio-augusto.gif
+assets/professores/historico/emily.gif
+assets/professores/historico/rita-dias.jpg
+assets/professores/historico/miranice.jpeg
+assets/professores/historico/rita-almico.gif
+assets/professores/historico/joana-medrado.gif
+assets/professores/historico/thiago-machado-lima.gif
+assets/professores/historico/jamile-macedo.gif
+assets/professores/historico/mayara-placido.gif
+
+ARQUIVO AINDA SEM IDENTIFICAÇÃO
+Se presente:
+assets/professores/_identificar/imagem-a-identificar.png
+
+Depois que este pacote estiver no GitHub, as páginas HTML podem ser atualizadas
+para usar esses caminhos locais, substituindo links externos e placeholders.
+
+NOVOS DOCENTES ACRESCENTADOS
+assets/professores/historico/eliazar-joao-da-silva.jpeg
+assets/professores/historico/wayra-silveira.jpeg
