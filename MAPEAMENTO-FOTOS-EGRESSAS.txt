@@ -1,0 +1,31 @@
+FOTOS ORGANIZADAS — EGRESSAS
+
+CAMILA SENA DA LUZ
+- perfil-camila-sena.jpeg — fotografia individual / cartão de Egressos
+- contexto-camila-sena.jpeg — imagem de abertura da página
+- defesa-tcc-2023.jpeg — defesa de TCC, Arquivo Público Municipal de Cachoeira, 2023
+- atuacao-atual-camila.jpeg — imagem da situação atual / mestrado na UFRB
+- upenn-2025.jpeg — intercâmbio na University of Pennsylvania, 2025
+- princeton-2025.jpeg — visita/workshop na Princeton University, 2025
+
+HÉLIA REGINA MESQUITA
+- perfil-helia-regina.JPG — fotografia individual / cartão de Egressos
+- contexto-helia-regina.jpg — imagem de abertura da página
+- pibid-encontro-2016.JPG — Encontro do PIBID no CAHL, 24/05/2016
+- pibid-castelo-2014.JPG — visita PIBID ao Castelo Garcia D’Ávila, 12/11/2014
+- patrimonio-cachoeira-2015.JPG — Um Olhar Patrimonial em Cachoeira, 18/08/2015
+- atuacao-atual-salvador.jpg — imagem da situação atual em Salvador
+- mestrado-uneb-2018.jpg — ingresso/experiência no mestrado da UNEB, a partir de 2018
+- reencontro-ufrb-2026.jpg — reencontro com amigos da UFRB em Salvador, 2026
+
+EDUARDA VITÓRIA SENA AMORIM
+- perfil-eduarda-sena.jpeg — fotografia individual / cartão de Egressos
+- contexto-eduarda-sena.jpeg — imagem de abertura da página
+- anpuh-pibic-2025.jpeg — apresentação de PIBIC no 33º Simpósio Nacional de História, UFMG, 2025
+- defesa-tcc-2026.jpeg — defesa de TCC na Fundação Hansen Bahia, 2026
+- colacao-2026.jpeg — formatura e colação de grau 2026.1
+- atuacao-atual-if-baiano.jpeg — atuação atual no IF Baiano, Campus Bom Jesus da Lapa
+
+COMO USAR
+Extraia este ZIP na raiz do repositório. A pasta assets/egressos/ será incorporada às pastas já existentes.
+Depois faça commit e push pelo GitHub Desktop.
