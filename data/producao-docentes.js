@@ -2090,10 +2090,12 @@ window.PRODUCAO_DOCENTES = [
     "titulo": "(Des)caminhos da Fé",
     "subtitulo": "religiões e religiosidades no Mundo Atlântico",
     "docentes": [
-      "Tânia Maria Pinto de Santana"
+      "Tânia Maria Pinto de Santana",
+      "Fabrício Lyrio Santos"
     ],
     "participacoes": {
-      "Tânia Maria Pinto de Santana": "Coorganizadora"
+      "Tânia Maria Pinto de Santana": "Coorganizadora",
+      "Fabrício Lyrio Santos": "Coorganizador"
     },
     "tipo": "Livro",
     "ano": "2020",
@@ -2175,10 +2177,12 @@ window.PRODUCAO_DOCENTES = [
     "titulo": "Fontes do viver religioso na Bahia",
     "subtitulo": "séculos XVI–XIX",
     "docentes": [
-      "Tânia Maria Pinto de Santana"
+      "Tânia Maria Pinto de Santana",
+      "Fabrício Lyrio Santos"
     ],
     "participacoes": {
-      "Tânia Maria Pinto de Santana": "Coorganizadora"
+      "Tânia Maria Pinto de Santana": "Coorganizadora",
+      "Fabrício Lyrio Santos": "Coorganizador"
     },
     "tipo": "Livro",
     "ano": "2024",
