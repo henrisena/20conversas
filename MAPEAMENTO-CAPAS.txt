@@ -1,0 +1,38 @@
+CAPAS E ASSOCIAÇÕES
+
+1. problemas-historiografia-antiga-moderna.jpg
+   Docente: Dênis Renan Corrêa
+   Livro: Problemas de historiografia antiga e moderna: Estudos e discussões em tempos de pandemia
+   Capítulo: Tempo em disputa: problemas do tempo na historiografia grega
+
+2. black-women-of-brazil.jpg
+   Docente: Isabel Cristina Ferreira dos Reis
+   Livro: Black Women of Brazil in Slavery and Post-Emancipation
+   Capítulo: Gender Relations in the Daily Life of Black Women in 19th Century Bahia
+
+3. historia-da-ciencia-no-cinema-3.webp
+   Docente: Gabriel da Costa Ávila
+   Livro: História da Ciência no Cinema 3
+   Capítulo: Césio 137 — O pesadelo de Goiânia
+
+4. politicas-afirmativas-ufrb.jpg
+   Docente: Juvenal de Carvalho Conceição
+   Livro: As políticas afirmativas na UFRB: percursos, dobras e pontes
+   Capítulo: A UFRB e as conexões entre a África e o Recôncavo da Bahia
+
+5. historia-uma-disciplina-sob-suspeita.jpeg
+   Docente: Martha Rosa Figueira Queiroz
+   Livro: História: uma disciplina sob suspeita
+   Capítulo: Tramas impressas: a utilização dos jornais negros como fontes no ensino de História
+
+6. a-partir-de-um-ponto-de-vista-grande-decoracao-barroca.jpeg
+   Docente: Camila Fernanda Guimarães Santiago
+   Livro: A partir de um ponto de vista: a grande decoração barroca
+   Capítulo: “Para que também os nossos Irmãos Terceiros [...] tratem de os seguir, & imitar”: santos terceiros carmelitas representados em letras e imagens
+   Edição: 1ª ed.
+   Local: Belo Horizonte
+   Editora/Instituição: Faculdade de Filosofia e Ciências Humanas da Universidade Federal de Minas Gerais; Grupo de Pesquisa
+   Ano: 2024
+   Páginas: 36–53
+
+Extraia a pasta assets na raiz do repositório.
