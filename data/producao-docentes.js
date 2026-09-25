@@ -508,9 +508,9 @@ window.PRODUCAO_DOCENTES = [
       "Arte sacra",
       "Cachoeira"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
+    "imagem": "../assets/producao/capas/barroco-na-america-portuguesa.jpeg",
     "observacao": "Editora e ISBN em atualização.",
-    "capa_status": "nao-localizada",
+    "capa_status": "local",
     "local": "Sevilha / João Pessoa",
     "edicao": ""
   },
