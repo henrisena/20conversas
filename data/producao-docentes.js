@@ -509,7 +509,7 @@ window.PRODUCAO_DOCENTES = [
       "Cachoeira"
     ],
     "imagem": "../assets/producao/capas/barroco-na-america-portuguesa.jpeg",
-    "observacao": "Editora e ISBN em atualização.",
+    "observacao": "Capítulo de Camila Fernanda Guimarães Santiago: “Profecia, martírio e penitência: as origens da Ordem Terceira do Carmo nas pinturas da capela-mor dos terceiros carmelitas de Cachoeira, Bahia”.",
     "capa_status": "local",
     "local": "Sevilha / João Pessoa",
     "edicao": ""
