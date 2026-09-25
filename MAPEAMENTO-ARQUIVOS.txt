@@ -1,0 +1,42 @@
+confederação equador.jpg -> assets/producao/capas/confederacao-do-equador.jpg
+mulheres educação e catolicismo.jpeg -> assets/producao/capas/mulheres-educacao-e-catolicismo.jpeg
+capoeira pelas lentes.jpeg -> assets/producao/capas/capoeira-pelas-lentes.jpeg
+educação subjetividade e trabalho docentes.webp -> assets/producao/capas/educacao-subjetividade-e-trabalho-docente.webp
+escravidão e cultura afrobrasileria.jpg -> assets/producao/capas/escravidao-e-cultura-afro-brasileira.jpg
+historia territorias fronteiras.jpeg -> assets/producao/capas/historia-territorios-e-fronteiras.jpeg
+politicas da raça.jpg -> assets/producao/capas/politicas-da-raca.jpg
+lugares de memorias dos trabalhadores.jpg -> assets/producao/capas/lugares-de-memoria-dos-trabalhadores.jpg
+povo gamela.jpg -> assets/producao/capas/povo-gamela.jpg
+historia regional e local ii.jpg -> assets/producao/capas/historia-regional-e-local-ii.jpg
+historia das desigualdades escolares.webp -> assets/producao/capas/historia-das-desigualdades-escolares.webp
+independencia do brasil.jpeg -> assets/producao/capas/independencia-do-brasil.jpeg
+paradoxos.webp -> assets/producao/capas/paradoxos-do-iluminismo.webp
+biografia historia das ciencias.jpeg -> assets/producao/capas/biografia-historia-das-ciencias.jpeg
+teologia negra brasileira.webp -> assets/producao/capas/teologia-negra-brasileira.webp
+independencia do brasil independente.jpeg -> assets/producao/capas/a-independencia-e-o-brasil-independente.jpeg
+inquisicao em xeque.webp -> assets/producao/capas/inquisicao-em-xeque.webp
+historia da ciencia no cinema.jpg -> assets/producao/capas/historia-da-ciencia-no-cinema.jpg
+proletários escravos.jpeg -> assets/producao/capas/proletarios-escravos.jpeg
+historia uma disciplina sob.jpeg -> assets/producao/capas/historia-uma-disciplina-sob-suspeita.jpeg
+trilhando caminhos.avif -> assets/producao/capas/trilhando-caminhos.avif
+arquivo pandemia.jpg -> assets/producao/capas/arquivo-pandemia.jpg
+emancipacao.jpg -> assets/producao/capas/emancipacao-inclusao-exclusao.jpg
+a cultura history.jpg -> assets/producao/capas/a-cultural-history-of-slavery.jpg
+populações negras na bahia.jpg -> assets/producao/capas/populacoes-negras-na-bahia.jpg
+vitorianos.webp -> assets/producao/capas/vitorianos.webp
+resistencias.jpeg -> assets/producao/capas/resistencias.jpeg
+handbook historiografia das ciencias.jpg -> assets/producao/capas/handbook-historiografia-das-ciencias.jpg
+resistance.jpeg -> assets/producao/capas/resistance-in-the-iberian-world.jpeg
+fundamentos teoria da histoira.jpg -> assets/producao/capas/fundamentos-teoria-da-historia.jpg
+conversas sobre as áfricas.jpeg -> assets/producao/capas/uma-conversa-sobre-as-africas.jpeg
+tranças e redes.jpeg -> assets/producao/capas/trancas-e-redes.jpeg
+politica instituicoes e personages.webp -> assets/producao/capas/politica-instituicoes-e-personagens.webp
+historia indigena na bahia.jpeg -> assets/producao/capas/historia-indigena-na-bahia.jpeg
+encicopledia negra.jpg -> assets/producao/capas/enciclopedia-negra.jpg
+religião controlo.jpeg -> assets/producao/capas/religiao-controlo-consciencias-interculturalidade.jpeg
+imprensa nacional camila.jpeg -> assets/producao/capas/imprensa-nacional-250-anos.jpeg
+sos formas e cores.jpg -> assets/producao/capas/sons-formas-cores-movimentos-modernidade-atlantica.jpg
+o belo contemporaneo.jpeg -> assets/producao/capas/o-belo-contemporaneo.jpeg
+estudos azulejaria.jpeg -> assets/producao/capas/estudos-de-azulejaria.jpeg
+barroco na america portugusa.jpeg -> assets/producao/capas/barroco-na-america-portuguesa.jpeg
+cultura artistica.jpeg -> assets/producao/capas/cultura-artistica-conservacao-acervos-coloniais.jpeg

@@ -1,0 +1,84 @@
+PACOTE DE CAPAS — MEMORIAL 20 ANOS DO CURSO DE HISTÓRIA/UFRB
+
+Extraia este ZIP na raiz do repositório henrisena/20conversas.
+As imagens entrarão em:
+assets/producao/capas/
+
+MAPEAMENTO CONFIRMADO / CONSOLIDADO
+
+Antonio Liberac
+- proletarios-escravos
+- capoeira-pelas-lentes
+- enciclopedia-negra (dois verbetes)
+
+André de Almeida Rego
+- historia-indigena-na-bahia
+- povo-gamela
+
+Camila Fernanda Guimarães Santiago
+- imprensa-nacional-250-anos
+- sons-formas-cores-movimentos-modernidade-atlantica
+- estudos-de-azulejaria
+- barroco-na-america-portuguesa
+- cultura-artistica-conservacao-acervos-coloniais
+
+Gabriel da Costa Ávila
+- biografia-historia-das-ciencias
+- historia-da-ciencia-no-cinema
+- handbook-historiografia-das-ciencias
+- fundamentos-teoria-da-historia
+
+Henrique Sena
+- o-belo-contemporaneo
+
+Isabel Cristina Ferreira dos Reis
+- escravidao-e-cultura-afro-brasileira
+
+Juvenal de Carvalho Conceição
+- uma-conversa-sobre-as-africas (LIVRO AUTORAL, não capítulo)
+- trancas-e-redes
+
+Leandro Antonio de Almeida
+- trilhando-caminhos
+- historia-territorios-e-fronteiras
+- vitorianos
+
+Luciana da Cruz Brito
+- emancipacao-inclusao-exclusao
+- arquivo-pandemia
+- a-independencia-e-o-brasil-independente
+- a-cultural-history-of-slavery
+
+Marco Antônio Nunes da Silva
+- inquisicao-em-xeque
+- historia-regional-e-local-ii
+- religiao-controlo-consciencias-interculturalidade (livro/coletânea)
+
+Sérgio Armando Diniz Guerra Filho
+- populacoes-negras-na-bahia
+- independencia-do-brasil
+- confederacao-do-equador
+
+Solyane Silveira Lima
+- educacao-subjetividade-e-trabalho-docente
+- mulheres-educacao-e-catolicismo
+- historia-das-desigualdades-escolares
+
+Tânia Maria Pinto de Santana
+- teologia-negra-brasileira
+
+Walter da Silva Fraga Filho
+- politica-instituicoes-e-personagens
+- politicas-da-raca
+- escravidao-e-cultura-afro-brasileira
+- lugares-de-memoria-dos-trabalhadores
+
+Fabrício Lyrio Santos
+- resistencias
+- paradoxos-do-iluminismo
+- resistance-in-the-iberian-world
+
+OBSERVAÇÃO
+- "historia-uma-disciplina-sob-suspeita" foi preservada no pacote, mas a associação a um docente ainda não foi confirmada nesta conversa.
+- Se houver mais de uma capa para o mesmo título no ZIP original, os arquivos foram preservados com sufixos numéricos.
+- Nenhuma imagem foi redimensionada ou alterada; apenas organizada e, quando necessário, renomeada.
