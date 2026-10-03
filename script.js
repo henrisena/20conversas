@@ -1,3 +1,12 @@
+const memorialScript=document.currentScript;
+if(memorialScript){
+  const favicon=document.createElement("link");
+  favicon.rel="icon";
+  favicon.type="image/svg+xml";
+  favicon.href=new URL("assets/favicon.svg",new URL(".",memorialScript.src)).href;
+  document.head.appendChild(favicon);
+}
+
 
 document.querySelectorAll(".menu-button").forEach(btn=>btn.addEventListener("click",()=>document.querySelector(".menu").classList.toggle("open")));
 const mapData=[
