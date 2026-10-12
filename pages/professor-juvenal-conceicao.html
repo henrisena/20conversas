@@ -13,6 +13,14 @@
 .egresso-voice-copy p{margin:.3rem 0}
 .egresso-voice-copy a{font-weight:800;margin-top:10px}
 @media(max-width:800px){.egresso-voice{grid-template-columns:1fr}}
+.teacher-hero{position:relative;min-height:520px;display:flex;align-items:flex-end;overflow:hidden;background:#18202a}
+.teacher-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.teacher-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,34,.92) 0%,rgba(8,18,34,.42) 50%,rgba(8,18,34,.08) 100%)}
+.teacher-hero-copy{position:relative;z-index:2;width:min(1180px,92%);margin:0 auto;padding:54px 0;color:#fff}
+.teacher-hero-copy .eyebrow{color:#ead9a6}
+.teacher-hero-copy h1{font-family:Georgia,serif;font-size:clamp(2.3rem,5vw,4.5rem);line-height:1;margin:.25rem 0 .75rem}
+.teacher-hero-copy p{max-width:780px;font-size:1.08rem;line-height:1.55;margin:0}
+@media(max-width:800px){.teacher-hero{min-height:440px}}
 </style>
 </head><body>
 <header class="topbar">
@@ -24,12 +32,12 @@
     <a href="depoimentos.html">Depoimentos</a><a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a>
   </nav>
 </header>
-<section class="page-hero"><div class="page-hero-inner"><p class="eyebrow">Memorial 20 anos · Perfil docente</p><h1>Juvenal de Carvalho Conceição</h1><p>Professor(a) do Curso de História da UFRB</p></div></section>
+<section class="teacher-hero"><img src="../assets/professores/juvenal/contexto-juvenal-conceicao.jpeg" alt="Juvenal de Carvalho Conceição em atividade do PIBID História"><div class="teacher-hero-copy"><p class="eyebrow">Memorial 20 anos · Perfil docente</p><h1>Juvenal de Carvalho Conceição</h1><p>Professor do Curso de História da UFRB</p></div></section>
 <main class="content">
   <p style="margin-top:0"><a href="professores.html">← Voltar aos professores</a></p>
   <div class="grid">
     <article class="card">
-      <div class="faculty-profile-placeholder"><div><strong>JC</strong><span>Fotografia do perfil a inserir</span></div></div>
+      <img src="../assets/professores/juvenal/perfil-juvenal-conceicao.jpeg" alt="Juvenal de Carvalho Conceição" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;border-radius:14px;background:#ddd;margin-bottom:14px">
       <h3>Perfil</h3>
       <p>Espaço preparado para apresentar a trajetória docente e a relação com o Curso de História da UFRB.</p>
     </article>
