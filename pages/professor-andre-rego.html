@@ -1,35 +1,171 @@
-<!DOCTYPE html><html lang="pt-BR"><head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>André de Almeida Rego | Memorial 20 anos</title><link rel="stylesheet" href="../style.css?v=58"></head><body>
+<title>André de Almeida Rego | Memorial 20 anos</title>
+<link rel="stylesheet" href="../style.css?v=80">
+<style>
+.teacher-hero{position:relative;min-height:520px;display:flex;align-items:flex-end;overflow:hidden;background:#18202a}
+.teacher-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.teacher-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,34,.92) 0%,rgba(8,18,34,.44) 52%,rgba(8,18,34,.10) 100%)}
+.teacher-hero-copy{position:relative;z-index:2;width:min(1180px,92%);margin:0 auto;padding:54px 0;color:#fff}
+.teacher-hero-copy .eyebrow{color:#ead9a6}
+.teacher-hero-copy h1{font-family:Georgia,serif;font-size:clamp(2.3rem,5vw,4.5rem);line-height:1;margin:.25rem 0 .75rem;max-width:850px}
+.teacher-hero-copy p{max-width:850px;font-size:1.08rem;line-height:1.55;margin:0}
+.teacher-intro{display:grid;grid-template-columns:280px 1fr;gap:36px;align-items:start;margin:42px 0}
+.teacher-profile-photo{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 28%;border-radius:22px;box-shadow:0 18px 42px rgba(7,30,70,.14)}
+.teacher-facts{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 0}
+.teacher-facts span{padding:.42rem .7rem;border-radius:999px;background:#f0ebe4;color:#554638;font-size:.82rem}
+.teacher-intro h2,.teacher-section h2{font-family:Georgia,serif;color:var(--navy);font-size:clamp(1.7rem,3vw,2.35rem);margin:0 0 12px}
+.teacher-intro p,.teacher-section p{line-height:1.75;color:#4e4742}
+.teacher-section{margin:56px 0}
+.teacher-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.teacher-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 10px 26px rgba(7,30,70,.05)}
+.teacher-card h3{font-family:Georgia,serif;color:var(--navy);font-size:1.18rem;margin:0 0 8px}
+.teacher-card .tag,.project-meta{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;font-weight:900;color:var(--gold);margin-bottom:8px}
+.project-card{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;margin:20px 0;box-shadow:0 12px 30px rgba(7,30,70,.055)}
+.project-card img{width:100%;height:100%;min-height:330px;object-fit:cover;background:#eee9e2}
+.project-copy{padding:26px}
+.project-copy h3{font-family:Georgia,serif;color:var(--navy);font-size:1.35rem;margin:.2rem 0 .6rem}
+.teacher-quote{background:#f4efe7;border-left:4px solid var(--gold);border-radius:0 14px 14px 0;padding:22px 24px;font:italic 1.08rem/1.75 Georgia,serif;color:#51473f}
+.gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.gallery-item{margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.gallery-item img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.gallery-item figcaption{padding:16px 18px;line-height:1.55;color:#62574f}
+.video-embed{margin-top:18px}
+.profile-link{display:inline-flex;margin-top:10px;font-weight:800}
+@media(max-width:800px){
+ .teacher-intro{grid-template-columns:1fr}.teacher-profile-photo{max-width:300px}
+ .teacher-grid,.gallery-grid{grid-template-columns:1fr}.project-card{grid-template-columns:1fr}
+ .project-card img{min-height:0;max-height:620px}.teacher-hero{min-height:440px}
+}
+</style>
+</head>
+<body>
 <header class="topbar">
   <a class="logo" href="../index.html"><span class="mark">20</span><span>História<br>UFRB</span></a>
   <button class="menu-button" aria-label="Abrir menu">☰</button>
   <nav class="menu">
     <a href="../index.html">Início</a><a href="curso.html">O curso</a><a href="linha-do-tempo.html">Linha do tempo</a>
-    <a href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a><a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a>
-    <a href="depoimentos.html">Depoimentos</a><a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a>
+    <a class="active" href="professores.html">Professores</a><a href="egressos.html">Egressos</a><a href="projetos.html">Projetos</a>
+    <a href="producao.html">Produção</a><a href="tccs.html">Pesquisa discente</a><a href="depoimentos.html">Depoimentos</a>
+    <a href="mapa.html">Mapa dos egressos</a><a href="galeria.html">Galeria</a><a href="documentos.html">Documentos</a>
   </nav>
 </header>
-<section class="page-hero"><div class="page-hero-inner"><p class="eyebrow">Memorial 20 anos · Perfil docente</p><h1>André de Almeida Rego</h1><p>Professor(a) do Curso de História da UFRB</p></div></section>
+
+<section class="teacher-hero">
+  <img src="../assets/professores/andre/contexto-andre-rego.jpeg" alt="André de Almeida Rego em atividade de ensino">
+  <div class="teacher-hero-copy">
+    <p class="eyebrow">Memorial 20 anos · Perfil docente</p>
+    <h1>André de Almeida Rego</h1>
+    <p>História indígena · História do Brasil e da Bahia · História de quilombos · Ensino de História</p>
+  </div>
+</section>
+
 <main class="content">
   <p style="margin-top:0"><a href="professores.html">← Voltar aos professores</a></p>
-  <div class="grid">
-    <article class="card">
-      <div class="faculty-profile-placeholder"><div><strong>AA</strong><span>Fotografia do perfil a inserir</span></div></div>
-      <h3>Perfil</h3>
-      <p>Espaço preparado para apresentar a trajetória docente e a relação com o Curso de História da UFRB.</p>
+
+  <section class="teacher-intro">
+    <img class="teacher-profile-photo" src="../assets/professores/andre/perfil-andre-rego.jpg" alt="Retrato de André de Almeida Rego">
+    <div>
+      <p class="eyebrow">Trajetória no curso</p>
+      <h2>Ensino, pesquisa, extensão e formação histórica</h2>
+      <p>André de Almeida Rego é docente efetivo do Curso de Licenciatura em História da UFRB desde 2023. Atua nas áreas de História indígena, História do Brasil e da Bahia, História de quilombos e Ensino de História. No curso, exerce as funções de professor e membro do Colegiado e do Núcleo Docente Estruturante (NDE).</p>
+      <div class="teacher-facts">
+        <span>Ingresso: 2023</span><span>Docente efetivo</span><span>História indígena</span><span>História da Bahia</span><span>Quilombos</span><span>Ensino de História</span>
+      </div>
+      <a class="profile-link" href="producao-andre-rego.html">Ver produção acadêmica de André →</a>
+    </div>
+  </section>
+
+  <section class="teacher-section">
+    <p class="eyebrow">Seleção do professor</p>
+    <h2>Produções em destaque</h2>
+    <p>Entre as produções indicadas por André para o Memorial, estão um capítulo dedicado ao ensino de História no Programa Universidade para Todos e um relatório de identificação territorial de comunidade quilombola.</p>
+    <div class="teacher-grid">
+      <article class="teacher-card">
+        <span class="tag">Capítulo de livro</span>
+        <h3>O ensino de História no Programa UPT da UFRB: possibilidades e desafios para aprendizagens significativas</h3>
+      </article>
+      <article class="teacher-card">
+        <span class="tag">Relatório técnico</span>
+        <h3>Relatório de Identificação do Território da Comunidade Quilombola Lagoinha, município de Nova Canaã/BA</h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="teacher-section">
+    <p class="eyebrow">Ensino, pesquisa e extensão</p>
+    <h2>Projetos</h2>
+
+    <article class="project-card">
+      <a href="../assets/professores/andre/projeto-upt.jpeg" target="_blank" rel="noopener noreferrer">
+        <img src="../assets/professores/andre/projeto-upt.jpeg" alt="Atividade do Programa Universidade para Todos">
+      </a>
+      <div class="project-copy">
+        <span class="project-meta">Extensão · 2023–2024</span>
+        <h3>Universidade para Todos — UPT</h3>
+        <p>Coordenação da área de História, com supervisão de monitores responsáveis por aulas de caráter pré-vestibular em cidades do Recôncavo da Bahia nos anos de 2023 e 2024.</p>
+      </div>
     </article>
-    <article class="card">
-      <h3>Depoimento oral</h3>
-      <p>Espaço preparado para áudio ou vídeo do(a) professor(a).</p>
+
+    <article class="project-card">
+      <a href="../assets/professores/andre/projeto-quilombolas.jpeg" target="_blank" rel="noopener noreferrer">
+        <img src="../assets/professores/andre/projeto-quilombolas.jpeg" alt="Atividade de pesquisa com comunidade quilombola">
+      </a>
+      <div class="project-copy">
+        <span class="project-meta">Pesquisa · desde 2024</span>
+        <h3>Comunidades Quilombolas da Bahia: Identidades, Territorialidades e Processos de Regularização Fundiária</h3>
+        <p>Pesquisa histórica voltada à produção de subsídios para a regularização fundiária de comunidades quilombolas da Bahia, desenvolvida em parceria entre a UFRB e o Instituto Nacional de Colonização e Reforma Agrária (INCRA).</p>
+      </div>
     </article>
-    <article class="card">
-      <h3>Atividades no curso</h3>
-      <p>Espaço para disciplinas, projetos, orientações, eventos, pesquisa, extensão e outras atividades.</p>
+
+    <article class="project-card">
+      <a href="../assets/professores/andre/projeto-pibid.jpeg" target="_blank" rel="noopener noreferrer">
+        <img src="../assets/professores/andre/projeto-pibid.jpeg" alt="Atividade vinculada ao PIBID História">
+      </a>
+      <div class="project-copy">
+        <span class="project-meta">Ensino · 2024–2026</span>
+        <h3>Programa Institucional de Bolsas de Iniciação à Docência — PIBID</h3>
+        <p>Atuação na coordenação de núcleo de iniciação à docência do subprojeto de História, coordenando 24 bolsistas de iniciação à docência, estudantes da Licenciatura em História, e três supervisores da educação básica.</p>
+      </div>
     </article>
-    <article class="card">
-      <h3>Produção e memória</h3>
-      <p>Espaço para publicações, fotografias, documentos, registros e outros materiais selecionados para o Memorial.</p>
-    </article>
-  </div>
-</main><footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer><script src="../script.js?v=41"></script></body></html>
+  </section>
+
+  <section class="teacher-section">
+    <p class="eyebrow">Memórias do curso</p>
+    <h2>Depoimento de André</h2>
+    <div class="teacher-quote">“Sou André de Almeida Rego e cheguei na UFRB, no curso de Licenciatura em História, em 2023. Logo de início, fui muito bem acolhido e passei a atuar em atividades de ensino, pesquisa, extensão e gestão acadêmica. Nesses mais de três anos na instituição, tenho procurado colaborar nas ações que fazem desta universidade referência de inclusão e conhecimento. Especificamente no campo da História, busco contribuir para que a consciência histórica seja veículo de fortalecimento da cidadania e de superação das dificuldades individuais e coletivas.”</div>
+  </section>
+
+  <section class="teacher-section">
+    <p class="eyebrow">Memória visual</p>
+    <h2>Trajetória em imagens</h2>
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <a href="../assets/professores/andre/trajetoria/palestra-historia-indigena-2025.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/professores/andre/trajetoria/palestra-historia-indigena-2025.jpg" alt="André em atividade do PIBID sobre Ensino de História Indígena">
+        </a>
+        <figcaption><strong>Palestra do PIBID sobre Ensino de História Indígena.</strong><br>Auditório do CAHL/UFRB, 2025. Mediação realizada em atividade destinada aos bolsistas do subprojeto de História.</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <a href="../assets/professores/andre/trajetoria/palestra-historias-africa-2025.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/professores/andre/trajetoria/palestra-historias-africa-2025.jpg" alt="Registro de palestra no Auditório do CAHL">
+        </a>
+        <figcaption><strong>Palestra sobre histórias da África e ensino de História.</strong><br>Auditório do CAHL/UFRB, 2025.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="teacher-section">
+    <p class="eyebrow">Depoimento de estudante</p>
+    <h2>Juliane homenageia André de Almeida Rego</h2>
+    <div class="video-embed"><iframe src="https://www.youtube.com/embed/KZ2nRHdbAWw" title="Juliane homenageia André de Almeida Rego" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <p>Juliane compartilha memórias de sua convivência com o professor André Rego e fala sobre sua importância em sua trajetória no Curso de História da UFRB.</p>
+  </section>
+</main>
+
+<footer class="footer"><p>Memorial dos 20 anos do Curso de História da UFRB</p><p>Cachoeira — Bahia</p></footer>
+<script src="../script.js?v=80"></script>
+</body>
+</html>
