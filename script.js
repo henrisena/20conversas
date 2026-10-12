@@ -8,6 +8,18 @@ if(memorialScript){
 }
 
 
+document.querySelectorAll(".menu").forEach(menu=>{
+  if(!menu.querySelector('a[href$="pos-graduacao.html"]')){
+    const tcc=menu.querySelector('a[href$="tccs.html"]');
+    if(tcc){
+      const a=document.createElement("a");
+      a.href=location.pathname.includes("/pages/")?"pos-graduacao.html":"pages/pos-graduacao.html";
+      a.textContent="Pós-graduação";
+      tcc.insertAdjacentElement("afterend",a);
+    }
+  }
+});
+
 document.querySelectorAll(".menu-button").forEach(btn=>btn.addEventListener("click",()=>document.querySelector(".menu").classList.toggle("open")));
 const mapData=[
   {
