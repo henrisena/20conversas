@@ -1,11 +1,14 @@
-Arquivos para Nuno Gonçalves Pereira e Juvenal de Carvalho Conceição.
+Atualização da página de Solyane Silveira Lima
 
 Extraia/copiei a pasta assets para a raiz do repositório.
 
 Estrutura:
-assets/professores/nuno/
-  perfil-nuno-pereira.jpg
+assets/professores/solyane/
+  projeto-educacao-reconcavo.jpeg
+  atividade-exposicao-2018.jpeg
+  atividade-ciclo-palestras-2021.jpeg
 
-assets/professores/juvenal/
-  perfil-juvenal-conceicao.jpeg
-  contexto-juvenal-conceicao.jpeg
+assets/producao/capas/
+  sujeitos-culturas-instituicoes-educacao.jpeg
+
+Os nomes correspondem aos caminhos já usados no HTML e no banco de produção do Memorial.
