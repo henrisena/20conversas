@@ -2052,9 +2052,9 @@ window.PRODUCAO_DOCENTES = [
       "Cultura",
       "Instituições"
     ],
-    "imagem": "../assets/producao/capa-nao-localizada.svg?v=2",
+    "imagem": "../assets/producao/capas/sujeitos-culturas-instituicoes-educacao.jpeg",
     "observacao": "Tipo de participação e dados completos em atualização.",
-    "capa_status": "nao-localizada",
+    "capa_status": "local",
     "local": "",
     "edicao": ""
   },
