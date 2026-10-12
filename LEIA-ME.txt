@@ -1,5 +1,16 @@
-Extraia este ZIP na raiz do repositório.
+Arquivos para a página de André de Almeida Rego
 
-Arquivos incluídos:
-- assets/professores/historico/antonio-mauricio-freitas-brito.png
-- assets/professores/historico/leonardo-guimaraes-leite.gif
+Extraia/copiei a pasta assets para a raiz do repositório.
+
+Estrutura:
+assets/professores/andre/
+  perfil-andre-rego.jpg
+  contexto-andre-rego.jpeg
+  projeto-upt.jpeg
+  projeto-quilombolas.jpeg
+  projeto-pibid.jpeg
+  trajetoria/
+    palestra-historia-indigena-2025.jpg
+    palestra-historias-africa-2025.jpg
+
+Os nomes já correspondem aos caminhos usados no HTML do Memorial.
