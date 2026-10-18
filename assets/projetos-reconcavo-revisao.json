@@ -1,5 +1,5 @@
 {
-  "metodologia": "Triagem interpretativa dos 30 registros selecionados: objeto quando a região ou localidades constituem foco explícito da investigação; território quando o projeto prevê atuação, formação, cooperação ou preservação documental na região. Casos com ambas as dimensões receberam a dimensão predominante segundo a descrição. A classificação não é definitiva.",
+  "metodologia": "Triagem interpretativa dos 30 registros selecionados: objeto quando a região ou localidades constituem foco explícito da investigação; território quando o projeto prevê atuação, formação, cooperação ou preservação documental na região. Casos com ambas as dimensões receberam a dimensão predominante segundo a descrição. A classificação não é definitiva. Projetos com objeto educacional localizado no Recôncavo foram classificados como objeto de pesquisa, mesmo quando também preveem interlocução com escolas.",
   "classificacoes": {
     "LAT-001": "obj",
     "LAT-002": "obj",
@@ -19,14 +19,14 @@
     "LAT-196": "obj",
     "LAT-043": "territory",
     "LAT-060": "territory",
-    "LAT-064": "territory",
+    "LAT-064": "obj",
     "LAT-084": "territory",
     "LAT-090": "territory",
     "LAT-091": "territory",
     "LAT-092": "territory",
     "LAT-109": "territory",
     "LAT-110": "territory",
-    "LAT-128": "territory",
+    "LAT-128": "obj",
     "LAT-167": "territory",
     "LAT-179": "territory",
     "LAT-181": "territory",
