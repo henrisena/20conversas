@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pesquisa discente | Memorial 20 anos</title>
   <link rel="stylesheet" href="../style.css?v=41">
+
+<style>
+.discente-reconcavo{--rec:#8b3527;margin:48px 0;padding:36px;background:#faf7f2;border:1px solid #e9dfd3;border-radius:20px}
+.discente-reconcavo h2,.discente-reconcavo h3{font-family:Georgia,serif;color:var(--navy)}
+.discente-reconcavo h2{font-size:clamp(1.7rem,3vw,2.4rem);margin:6px 0 14px}
+.discente-reconcavo h3{font-size:1.35rem;margin:0 0 8px}
+.discente-reconcavo p{line-height:1.65;color:#514c48}
+.rec-head{max-width:850px}.rec-numbers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:24px 0}
+.rec-num{background:#fff;border:1px solid #e5d9ce;border-radius:15px;padding:22px}
+.rec-num strong{display:block;font:700 2.4rem Georgia,serif;color:var(--rec)}
+.rec-num span,.rec-num small{display:block;line-height:1.5}.rec-num span{font-weight:800}.rec-num small{color:#655d55;margin-top:4px}
+.rec-caution,.rec-method{background:#fff;border-left:4px solid var(--rec);padding:16px 20px;border-radius:0 12px 12px 0}
+.rec-views{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:36px 0}
+.rec-places,.rec-results{margin:36px 0}.rec-bar{display:grid;grid-template-columns:minmax(115px,1.2fr) minmax(60px,2fr) 36px;gap:10px;align-items:center;margin:9px 0;font-size:.82rem}
+.rec-bar-track{background:#e7ddd2;border-radius:99px;overflow:hidden;height:12px}.rec-bar-track>div{height:100%;background:var(--rec);border-radius:99px}
+.rec-bar strong{text-align:right;font-variant-numeric:tabular-nums}.rec-filters{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
+.rec-filters label{display:grid;gap:6px;font-size:.8rem;font-weight:800}.rec-filters select{padding:10px;max-width:240px;border:1px solid #d5c7ba;border-radius:8px;background:#fff}
+.rec-item{background:#fff;border:1px solid #e5d9ce;border-radius:12px;padding:16px 20px;margin:10px 0}
+.rec-item span{font-size:.76rem;color:var(--rec);font-weight:800}.rec-item h4{font:700 1.04rem/1.4 Georgia,serif;color:var(--navy);margin:6px 0}.rec-item p{font-size:.83rem;margin:0}
+#rec-more{background:var(--navy);color:white;border:0;border-radius:8px;padding:11px 18px;cursor:pointer}
+@media(max-width:750px){.discente-reconcavo{padding:20px}.rec-views,.rec-numbers{grid-template-columns:1fr}.rec-bar{grid-template-columns:minmax(95px,1fr) minmax(55px,1fr) 28px}}
+</style>
 </head>
 <body>
 <header class="topbar">
@@ -34,6 +56,8 @@
     <p>Este espaço reúne pesquisas desenvolvidas por estudantes ao longo da trajetória do curso. Consulte os TCCs defendidos e as iniciações científicas concluídas, com dados recuperados dos currículos Lattes de docentes.</p>
   </section>
 
+
+<section class="tcc-section discente-reconcavo" id="discente-reconcavo" aria-label="O Recôncavo na pesquisa discente"><p>Carregando levantamento regional…</p></section>
   <div class="research-tabs" role="tablist" aria-label="Tipos de pesquisa discente">
     <button class="active" type="button" role="tab" aria-selected="true" data-research-tab="tcc">TCCs do curso</button>
     <button type="button" role="tab" aria-selected="false" data-research-tab="ic">Iniciação científica</button>
@@ -185,5 +209,6 @@
 <script src="../script.js?v=41"></script>
 <script src="../tccs.js"></script>
 <script src="../ic.js"></script>
+<script src="../assets/pesquisa-discente-reconcavo.js?v=1"></script>
 </body>
 </html>
